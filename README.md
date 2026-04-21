@@ -250,13 +250,36 @@ print(finder.render_markdown())
 
 ## 🔗 相关技能 (Related Skills)
 
-本技能可与以下技能配合使用，形成完整的用户洞察 - 产品设计闭环：
+本技能是 **AliDujie 技能生态系统** 的需求洞察核心，可与以下技能配合使用：
 
-- **[Universal Design Methods](../universal-design-methods/)** — 用 UDM 的访谈方法收集 JTBD 分析所需数据
-- **[Value Proposition Design](../value-proposition-design/)** — 将 JTBD 洞察转化为价值主张画布
-- **[Web Persona Skill](../web-persona-skill/)** — 基于 JTBD 创建更精准的人物角色
-- **[Quantitative UX Research](../quantitative-ux-research/)** — 量化验证 JTBD 假设
-- **[Storytelling with Data](../storytelling-with-data/)** — 将 JTBD 研究发现呈现给利益相关者
+```
+┌─────────────────────────────────────────────────────────────┐
+│           AliDujie 技能生态系统 (Skill Ecosystem)            │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│   📊 Quantitative UX Research ←───→ 📖 Universal Design     │
+│         (量化研究)   三角测量            Methods (通用设计)  │
+│              ↑                          ↓                   │
+│              │                    🎯 JTBD Knowledge          │
+│              │                      (需求洞察)               │
+│   📈 Storytelling with Data ←───→ 💎 Value Proposition      │
+│         (数据叙事)   呈现              Design (价值设计)      │
+│              ↑                          ↑                   │
+│              │                    👤 Web Persona             │
+│              └────────────────────  (人物角色)               │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**配合使用场景:**
+
+- **JTBD + UDM** → 用 UDM 的访谈方法收集 JTBD 分析所需的用户故事和数据
+- **JTBD + VPD** → 将 JTBD 洞察直接输入到价值主张画布的客户概况
+- **JTBD + Persona** → 基于 JTBD 任务和目标创建更精准的人物角色
+- **JTBD + QuantUX** → 量化验证 JTBD 假设和机会市场规模
+- **JTBD + SWD** → 将 JTBD 研究发现用故事方式呈现，提升共情
+
+👉 **探索完整生态系统**: [通用设计方法](../universal-design-methods/) | [价值主张设计](../value-proposition-design/) | [量化 UX 研究](../quantitative-ux-research/) | [人物角色](../web-persona-skill/) | [数据叙事](../storytelling-with-data/)
 
 ## 🌟 为什么选择 AliDujie 技能生态系统？(Why Choose AliDujie Skill Ecosystem?)
 
