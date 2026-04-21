@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: jtbd-knowledge-skill
+Version: 2.0.0
+Summary: JTBD (Jobs to Be Done) 理论工具包 - 基于《When Coffee and Kale Compete》
+Author: fliggy-design-UR
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+
+# JTBD Knowledge Skill
+
+基于 Alan Klement《When Coffee and Kale Compete》（第二版）的完整 JTBD 理论工具包。
+
+## 功能概览
+
+- **知识库**: 11 篇结构化 Markdown 文档，涵盖理论基础、核心原则、研究方法、创新指南等
+- **分析引擎** (`JTBDAnalyzer`): 创建 JTBD 描述、管理四力分析、生成完整分析报告
+- **访谈框架** (`InterviewBuilder`): 按维度自动生成定制化访谈问题，支持自定义追加
+- **力量分析** (`ForcesProfile`): 结构化的推力/拉力/焦虑/惯性分析，含诊断洞察
+- **创新发现** (`InnovationFinder`): 创新信号识别、机会评估、检查清单
+
+## 快速开始
+
+```python
+from jtbd import JTBDAnalyzer, InterviewBuilder, ForcesProfile, InnovationFinder
+
+# 创建分析器
+analyzer = JTBDAnalyzer("旅行预订平台")
+analyzer.add_statement("Help me", "在出差时快速找到合适的住处", "专注于工作而不是为住宿烦恼")
+analyzer.add_force("push", "频繁出差导致每次都要花大量时间找酒店", intensity=4)
+analyzer.add_force("anxiety", "担心照片与实际不符", intensity=3)
+print(analyzer.generate_report())
+
+# 生成访谈框架
+builder = InterviewBuilder("用户访谈")
+builder.set_context("针对过去3个月使用过竞品的用户")
+builder.include_dimensions(["competition", "push", "pull", "anxiety"])
+guide = builder.build()
+print(InterviewBuilder.render_markdown(guide))
+
+# 四力分析
+profile = ForcesProfile()
+profile.add("push", "external", "市场竞争加剧", intensity=4)
+profile.add("anxiety", "choice", "担心迁移成本过高", intensity=3)
+print(profile.summary())
+print(profile.diagnose())
+
+# 创新机会发现
+finder = InnovationFinder()
+finder.add_signal("compensating_behavior", "用户用Excel手动追踪订单状态",
+                  potential_job="实时掌握订单进度")
+finder.add_opportunity("自动订单追踪", "提供实时订单状态推送", feasibility=4, impact=5)
+print(finder.render_markdown())
+```
+
+## 知识库搜索
+
+```python
+from jtbd import load_knowledge, search_knowledge
+
+# 加载指定主题
+content = load_knowledge("forces")
+
+# 搜索关键词
+results = search_knowledge("焦虑")
+for topic, paragraphs in results.items():
+    print(f"[{topic}] 找到 {len(paragraphs)} 个相关段落")
+```
+
+## 文件结构
+
+```
+├── SKILL.md                    # Skill 定义文件
+├── README.md                   # 项目说明
+├── pyproject.toml              # 构建配置
+├── requirements.txt            # 依赖声明
+├── jtbd/                       # Python 包
+│   ├── __init__.py             # API 入口与导出
+│   ├── config.py               # 全局配置与常量
+│   ├── utils.py                # 知识库加载与文本工具
+│   ├── templates.py            # 模板定义（访谈、报告、分析）
+│   ├── analyzer.py             # JTBD 分析引擎
+│   ├── interview.py            # 访谈框架生成器
+│   ├── forces.py               # 进步力量分析
+│   └── innovation.py           # 创新机会发现
+├── 01-theory-foundation.md     # 理论基础
+├── 02-principles.md            # 核心原则
+├── 03-forces-of-progress.md    # 进步力量模型
+├── 04-system-of-progress.md    # 进步系统
+├── 05-research-methods.md      # 信息采集方法
+├── 06-analysis-framework.md    # 信息整理框架
+├── 07-innovation-guide.md      # 创新指南
+├── 08-business-decisions.md    # 业务决策
+├── 09-case-studies.md          # 案例精华
+├── 10-two-models.md            # 两种JTBD模型对比
+└── 11-quick-reference.md       # 速查手册
+```
+
+## 依赖
+
+纯 Python 标准库实现，无外部依赖，兼容 Python 3.8+。

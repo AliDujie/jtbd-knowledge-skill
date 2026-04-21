@@ -377,6 +377,43 @@ analyzer.add_statement(
 - **[CONTRIBUTING.md](./CONTRIBUTING.md)** — 贡献指南
 - **[CHANGELOG.md](./CHANGELOG.md)** — 版本更新日志
 - **[Knowledge Base](./)** — 11 篇完整 JTBD 知识库文档
+- **[SKILL.md](./SKILL.md)** — 完整技能定义和 API 文档
+
+## 👥 社区与支持 (Community & Support)
+
+- **问题反馈**: 在 GitHub Issues 中报告问题或提出建议
+- **贡献代码**: 阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解如何贡献
+- **更新通知**: Star 仓库获取最新更新通知
+
+## 📖 JTBD 速查卡片 (JTBD Quick Reference Card)
+
+## 📖 JTBD 速查卡片 (JTBD Quick Reference Card)
+
+### JTBD 陈述模板
+
+```
+Help me [做什么/完成什么任务]
+So that [达到什么目的/获得什么进步]
+Context: [使用场景和约束条件]
+```
+
+### 四力分析框架
+
+| 力量类型 | 关键问题 | 访谈提示 |
+|----------|---------|----------|
+| **推力 (Push)** | 用户对现状有什么不满？ | "之前用什么？有什么让你困扰的？" |
+| **拉力 (Pull)** | 新方案有什么吸引力？ | "什么吸引你尝试？为什么选这个？" |
+| **焦虑 (Anxiety)** | 用户担心什么？ | "有什么让你犹豫的？担心什么？" |
+| **惯性 (Inertia)** | 为什么没早点改变？ | "为什么一直用旧的？什么让你留下？" |
+
+### 创新信号类型
+
+- **Compensating Behavior** — 用户自己拼凑解决方案
+- **Workaround** — 绕过产品限制的变通方法
+- **Unmet Need** — 明确表达但未满足的需求
+- **Emotional Trigger** — 强烈情绪反应的点
+
+---
 
 ## 📝 更新日志 (Changelog)
 
