@@ -387,8 +387,6 @@ analyzer.add_statement(
 
 ## 📖 JTBD 速查卡片 (JTBD Quick Reference Card)
 
-## 📖 JTBD 速查卡片 (JTBD Quick Reference Card)
-
 ### JTBD 陈述模板
 
 ```
@@ -414,6 +412,14 @@ Context: [使用场景和约束条件]
 - **Emotional Trigger** — 强烈情绪反应的点
 
 ---
+
+## 📚 相关资源 (Additional Resources)
+
+- **[INSTALL.md](./INSTALL.md)** — 详细安装指南和配置说明
+- **[CONTRIBUTING.md](./CONTRIBUTING.md)** — 贡献指南
+- **[CHANGELOG.md](./CHANGELOG.md)** — 版本更新日志
+- **[Knowledge Base](./)** — 11 篇完整 JTBD 知识库文档
+- **[SKILL.md](./SKILL.md)** — 完整技能定义和 API 文档
 
 ## 📝 更新日志 (Changelog)
 
