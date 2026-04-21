@@ -13,6 +13,15 @@
 
 ## ⚡ 5 分钟快速开始 (Quick Start)
 
+### ✅ 快速开始检查清单 (Getting Started Checklist)
+
+- [ ] **安装技能** — 复制 `skills/jtbd-knowledge-skill` 到你的技能目录
+- [ ] **导入模块** — `from jtbd import JTBDAnalyzer, InterviewBuilder, ForcesProfile`
+- [ ] **创建 JTBD 描述** — 使用 `JTBDAnalyzer` 定义用户任务
+- [ ] **生成访谈框架** — 使用 `InterviewBuilder` 创建访谈指南
+- [ ] **四力分析** — 使用 `ForcesProfile` 分析用户决策力量
+- [ ] **探索知识库** — 阅读 11 篇 JTBD 理论文档
+
 ### 步骤 1: 安装 (Installation)
 
 ```bash
