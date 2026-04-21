@@ -249,6 +249,19 @@ print(finder.render_markdown())
 - **[Quantitative UX Research](../quantitative-ux-research/)** — 量化验证 JTBD 假设
 - **[Storytelling with Data](../storytelling-with-data/)** — 将 JTBD 研究发现呈现给利益相关者
 
+## 🌟 为什么选择 AliDujie 技能生态系统？(Why Choose AliDujie Skill Ecosystem?)
+
+本技能是 **AliDujie 技能生态系统** 的重要组成部分。使用完整生态系统可获得：
+
+- ✅ **完整覆盖** — 从用户研究到产品设计到数据呈现，全流程工具支持
+- ✅ **无缝集成** — 所有技能使用一致的 API 设计和数据格式
+- ✅ **最佳实践** — 基于经典理论和实战经验，避免常见陷阱
+- ✅ **持续更新** — 活跃维护，定期添加新功能和改进
+- ✅ **零依赖** — 纯 Python 标准库，开箱即用，无需复杂安装
+- ✅ **双语支持** — 完整中英文文档，支持国际化团队协作
+
+👉 **探索更多技能**: [通用设计方法](../universal-design-methods/) | [价值主张设计](../value-proposition-design/) | [量化 UX 研究](../quantitative-ux-research/) | [人物角色](../web-persona-skill/) | [数据叙事](../storytelling-with-data/)
+
 ## 📁 文件结构 (File Structure)
 
 ```
@@ -357,6 +370,13 @@ analyzer.add_statement(
 - 与技术团队讨论实现难度
 - 参考类似功能的实现成本
 - 使用 MVP 方式验证可行性
+
+## 📚 相关资源 (Additional Resources)
+
+- **[INSTALL.md](./INSTALL.md)** — 详细安装指南和配置说明
+- **[CONTRIBUTING.md](./CONTRIBUTING.md)** — 贡献指南
+- **[CHANGELOG.md](./CHANGELOG.md)** — 版本更新日志
+- **[Knowledge Base](./)** — 11 篇完整 JTBD 知识库文档
 
 ## 📝 更新日志 (Changelog)
 
