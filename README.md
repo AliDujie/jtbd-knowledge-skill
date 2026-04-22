@@ -1,5 +1,9 @@
 # JTBD Knowledge Skill (Jobs to be Done 知识技能)
 
+[![License: Internal](https://img.shields.io/badge/license-Internal-blue)](./LICENSE)
+[![Python: 3.8+](https://img.shields.io/badge/python-3.8+-green.svg)](https://www.python.org/downloads/)
+[![Skill Ecosystem](https://img.shields.io/badge/AliDujie-Skill%20Ecosystem-orange)](https://github.com/AliDujie/skills)
+
 基于 Alan Klement《When Coffee and Kale Compete》(第二版) 的完整 JTBD 理论工具包。
 
 ## 🎯 为什么使用这个技能？(Why Use This Skill?)
