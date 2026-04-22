@@ -303,6 +303,123 @@ def test_jtbd_statement():
     print("✅ test_jtbd_statement passed")
 
 
+def test_jtbd_skill_facade():
+    """测试 JTBDSkill 门面类的初始化和基本属性"""
+    skill = JTBDSkill("测试产品")
+
+    # 验证所有子模块属性存在
+    assert hasattr(skill, 'analyzer')
+    assert hasattr(skill, 'priority_analyzer')
+    assert hasattr(skill, 'competition_analyzer')
+    assert hasattr(skill, 'innovation_finder')
+    assert hasattr(skill, 'product')
+    assert hasattr(skill, 'config')
+
+    # 验证门面方法存在
+    assert hasattr(skill, 'generate_interview')
+    assert hasattr(skill, 'generate_survey')
+    assert hasattr(skill, 'score_opportunity')
+    assert hasattr(skill, 'add_job_to_matrix')
+    assert hasattr(skill, 'render_priority_matrix')
+    assert hasattr(skill, 'add_competitor')
+    assert hasattr(skill, 'render_competition')
+    assert hasattr(skill, 'generate_marketing_copy')
+    assert hasattr(skill, 'generate_growth_strategy')
+    assert hasattr(skill, 'create_jtbd_statement')
+    assert hasattr(skill, 'add_force')
+    assert hasattr(skill, 'generate_analysis_report')
+    assert hasattr(skill, 'search_knowledge')
+    assert hasattr(skill, 'analyze')
+
+    # 验证 CEO 决策方法存在
+    assert hasattr(skill, 'generate_market_size_estimate')
+    assert hasattr(skill, 'generate_priority_scoring')
+    assert hasattr(skill, 'generate_commercialization_feasibility')
+
+    # 验证子模块类型
+    assert isinstance(skill.analyzer, JTBDAnalyzer)
+    assert isinstance(skill.priority_analyzer, PriorityAnalyzer)
+    assert isinstance(skill.competition_analyzer, CompetitionAnalyzer)
+    assert isinstance(skill.innovation_finder, InnovationFinder)
+
+    print("✅ test_jtbd_skill_facade passed")
+
+
+def test_empty_data_handling():
+    """测试各模块在没有数据时的行为是否安全（不崩溃）"""
+    skill = JTBDSkill("空数据测试")
+
+    # CEO 方法在无数据时不应崩溃
+    market = skill.generate_market_size_estimate()
+    assert isinstance(market, str)
+    assert len(market) > 0
+
+    priority = skill.generate_priority_scoring()
+    assert isinstance(priority, str)
+    assert len(priority) > 0
+
+    feasibility = skill.generate_commercialization_feasibility()
+    assert isinstance(feasibility, str)
+    assert len(feasibility) > 0
+
+    # 空的分析报告不应崩溃
+    report = skill.generate_analysis_report()
+    assert isinstance(report, str)
+
+    # 空的优先级矩阵
+    matrix_md = skill.render_priority_matrix()
+    assert isinstance(matrix_md, str)
+
+    # 空的竞争分析
+    comp_md = skill.render_competition()
+    assert isinstance(comp_md, str)
+
+    # 私有辅助方法在空数据时不应崩溃
+    assert isinstance(skill._estimate_tam([]), str)
+    assert isinstance(skill._estimate_sam([]), str)
+    assert isinstance(skill._estimate_som([]), str)
+    assert isinstance(skill._generate_validation_plan(), str)
+    assert isinstance(skill._calculate_opportunity_scores([]), str)
+    assert isinstance(skill._generate_resource_allocation([]), str)
+    assert isinstance(skill._generate_validation_timeline([]), str)
+    assert isinstance(skill._assess_willingness_to_pay([]), str)
+    assert isinstance(skill._analyze_roi([]), str)
+    assert isinstance(skill._make_go_no_go_decision([]), str)
+    assert isinstance(skill._generate_recommendations({}), str)
+    assert isinstance(skill._generate_p0_analysis({}), str)
+
+    print("✅ test_empty_data_handling passed")
+
+
+def test_jtbd_skill_analyze():
+    """测试 analyze() 门面方法的基本功能"""
+    skill = JTBDSkill("分析测试产品")
+    skill.analyzer.set_overview("测试分析")
+    skill.analyzer.add_statement("Help me", "快速找住处", "专注工作")
+    skill.analyzer.add_force("push", "出差频繁", intensity=4)
+    skill.analyzer.add_force("pull", "一键推荐", intensity=3)
+
+    # 不包含 CEO 分析
+    report_basic = skill.analyze(include_ceo_analysis=False)
+    assert isinstance(report_basic, str)
+    assert "分析测试产品" in report_basic
+    assert "Help me" in report_basic
+    assert "CEO" not in report_basic
+
+    # 包含 CEO 分析
+    report_full = skill.analyze(include_ceo_analysis=True)
+    assert isinstance(report_full, str)
+    assert "CEO 决策视角" in report_full
+    assert "市场规模估算" in report_full
+    assert "优先级评分" in report_full
+    assert "商业化可行性" in report_full
+
+    # 完整报告应比基本报告长
+    assert len(report_full) > len(report_basic)
+
+    print("✅ test_jtbd_skill_analyze passed")
+
+
 if __name__ == "__main__":
     tests = [
         test_interview_generator,
@@ -316,6 +433,9 @@ if __name__ == "__main__":
         test_marketing_copywriter,
         test_growth_strategy,
         test_jtbd_statement,
+        test_jtbd_skill_facade,
+        test_empty_data_handling,
+        test_jtbd_skill_analyze,
     ]
 
     passed = 0
@@ -331,6 +451,6 @@ if __name__ == "__main__":
     print(f"\n{'='*50}")
     print(f"测试结果: {passed} passed, {failed} failed, {len(tests)} total")
     if failed == 0:
-        print("🎉 全部 11 个测试通过！")
+        print("🎉 全部 {0} 个测试通过！".format(len(tests)))
     else:
         print(f"⚠️ {failed} 个测试失败")

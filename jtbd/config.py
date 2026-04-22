@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 from typing import Dict, List
 
 
-KNOWLEDGE_BASE_DIR = Path(__file__).parent.parent
+KNOWLEDGE_BASE_DIR = Path(__file__).parent.parent / "references"
 
 KNOWLEDGE_FILES: Dict[str, str] = {
     "theory": "01-theory-foundation.md",

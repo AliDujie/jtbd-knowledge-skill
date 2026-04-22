@@ -123,3 +123,10 @@
 **Bob Moesta的空巢老人住宅：** 客户说想要小餐厅和大客房，但实际上无法放弃承载家庭记忆的大餐桌。反其道而行（缩小客房、扩大餐厅）后销售增长23%。客户的陈述偏好不可靠。
 
 **Tesla vs Tata Nano：** 两者都理解拥有汽车的推力，但只有Tesla理解拉力的作用。Tesla先创造高端车型建立拉力，Nano试图用低价和最少功能取胜但失败了。
+
+## 相关文档
+
+- [03-forces-of-progress.md](03-forces-of-progress.md) — 每个案例都是四力模型的具体表现：Tesla vs Nano 展示拉力的决定性作用，YourGrocer 展示外部推力和使用惯性的博弈，Clarity 展示选择焦虑如何驱走首次客户。理解四力模型是读懂案例底层逻辑的前提
+- [07-innovation-guide.md](07-innovation-guide.md) — 案例中的创新实践在该文档中被系统化为方法论：Omer 的补偿行为观察法、Ash 的互补产品策略、Justin 的产品组合设计，以及 chotuKool 失败案例揭示的常见创新陷阱
+- [08-business-decisions.md](08-business-decisions.md) — 案例中的商业决策在该文档中被提炼为可复用的策略框架：Clarity 的预算角度定价法、YourGrocer 用客户原话做营销、Morgan 通过自动化邮件对抗使用惯性来减少流失
+- [05-research-methods.md](05-research-methods.md) — 案例中的研究过程在该文档中有方法论总结：Morgan 让客户展示手机短信、Omer 从宽到窄的调查筛选法、Justin 从已有数据中挖掘挣扎模式、Ash 的流失客户访谈

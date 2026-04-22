@@ -96,3 +96,9 @@ iPhone本身不够，App Store的引入才让iPhone真正起飞。iPhone和App S
 
 ### 5.5 通过拆分产品来聚焦不同的进步系统
 Black+Decker专注于帮助房主进行小规模家庭维护，DeWalt专注于帮助专业建筑承包商拥有成功的职业。当一个产品试图同时解决太多Job时，它无法很好地解决任何一个Job。
+
+## 相关文档
+
+- [03-forces-of-progress.md](03-forces-of-progress.md) — 四力模型描述了进步系统上半球（客户需求端）的动力机制：推力和拉力如何生成"新我"的渴望，焦虑和惯性如何阻碍客户在系统中前进
+- [07-innovation-guide.md](07-innovation-guide.md) — 本文的"在进步系统上前后寻找产品机会"和"螺旋上升结构"在该文档中被发展为系统化的创新方法，包括"问接下来是什么"、开发互补产品、以及将产品组合设计为系统
+- [08-business-decisions.md](08-business-decisions.md) — 进步系统的持续性（客户实现进步后解锁新渴望）直接支撑了增长策略：通过产品系统增长、解锁新渴望来增长，以及 Weber、DeWalt 等品牌的产品组合战略

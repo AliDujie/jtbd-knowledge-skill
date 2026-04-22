@@ -143,3 +143,9 @@
 - "方法可能有一百万种，但原则很少。掌握原则的人能成功选择自己的方法。" — Harrington Emerson
 - "不满意的客户不会抱怨，他只是切换。" — W. Edwards Deming
 - "一些问题持续存在，是因为它们根本不值得解决。" — Des Traynor
+
+## 相关文档
+
+- [03-forces-of-progress.md](03-forces-of-progress.md) — 本速查表中"进步力量速查"部分的详细理论和实操指南：四种力量如何相互作用、每种力量的细分类型（选择焦虑 vs 使用焦虑、选择惯性 vs 使用惯性），以及 Tesla、Tata Nano 等案例的完整分析
+- [05-research-methods.md](05-research-methods.md) — 本速查表中"访谈问题速查清单"的完整方法论：如何找到正确的受访者、访谈核心技巧（问做过什么而非想要什么）、数据收集的六种渠道，以及团队共同研究的价值
+- [06-analysis-framework.md](06-analysis-framework.md) — 本速查表中"JTBD描述模板"和"实操清单"的深入阐述：JTBD 描述的两部分结构和测试标准、竞争分析框架的三步法、"更多关于/更少关于"分析法的完整使用方式

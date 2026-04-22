@@ -21,6 +21,8 @@ from .utils import load_knowledge, load_all_knowledge, search_knowledge
 from .templates import (
     INTERVIEW_QUESTIONS, JTBD_STATEMENT_TEMPLATE,
     JTBD_STATEMENT_EXAMPLES, INNOVATION_CHECKLIST, REPORT_TEMPLATE,
+    SCENARIO_MERGE_RULES, EXAMPLE_SELECTION_CRITERIA,
+    INSIGHT_QUALITY_RULES, SECTION_INSIGHT_PROMPTS, HTML_REPORT_STYLE_RULES,
 )
 from .jtbd_analyzer import JTBDAnalyzer, JTBDAnalysis, JTBDStatement
 from .interview_generator import InterviewBuilder, InterviewGuide
@@ -425,6 +427,173 @@ class JTBDSkill:
         ])
         return "\n".join(lines)
 
+    def analyze(self, include_ceo_analysis: bool = False) -> str:
+        """综合分析报告（可选包含 CEO 决策模块）"""
+        report = self.generate_analysis_report()
+
+        if include_ceo_analysis:
+            report += "\n\n---\n\n"
+            report += "# CEO 决策视角\n\n"
+            report += self.generate_market_size_estimate()
+            report += "\n\n"
+            report += self.generate_priority_scoring()
+            report += "\n\n"
+            report += self.generate_commercialization_feasibility()
+
+        return report
+
+    def _generate_p0_analysis(self, job: Dict) -> str:
+        """P0 级 Job 深度分析"""
+        return f"""### P0 级 Job 深度分析: {job.get('description', '未知')}
+
+**核心痛点**: {job.get('struggle', '未定义')}
+**期望结果**: {job.get('desired_outcome', '未定义')}
+**机会分数**: {job.get('opportunity_score', 0)}/100
+
+**市场特征**:
+- 用户规模: {job.get('market_size', '未知')}
+- 付费意愿: {job.get('willingness_to_pay', '未知')}
+- 竞争强度: {job.get('competition_level', '未知')}
+
+**建议行动**:
+{self._generate_recommendations(job)}
+"""
+
+    def _generate_recommendations(self, job: Dict) -> str:
+        """各优先级建议生成"""
+        score = job.get('opportunity_score', 0)
+
+        if score >= 80:
+            return """- 立即启动开发，分配核心团队
+- 优先级: P0
+- 预计投入: 高
+- 预期回报: 极高"""
+        elif score >= 60:
+            return """- 列入下季度规划
+- 优先级: P1
+- 预计投入: 中
+- 预期回报: 高"""
+        elif score >= 40:
+            return """- 保持观察，收集更多数据
+- 优先级: P2
+- 预计投入: 低
+- 预期回报: 中"""
+        else:
+            return """- 暂不投入，定期评估
+- 优先级: P3
+- 预计投入: 无
+- 预期回报: 低"""
+
+    def _estimate_tam(self, jobs: List[Dict]) -> str:
+        """估算总可寻址市场"""
+        return f"基于 {len(jobs)} 个 Job 的分析，TAM 估算为：¥{len(jobs) * 1000000:,}（假设每个 Job 对应 100 万潜在用户）"
+
+    def _estimate_sam(self, jobs: List[Dict]) -> str:
+        """估算可服务市场"""
+        return f"基于产品定位，SAM 估算为 TAM 的 40%：¥{len(jobs) * 1000000 * 0.4:,.0f}"
+
+    def _estimate_som(self, jobs: List[Dict]) -> str:
+        """估算可获得市场"""
+        return f"基于当前资源，SOM 估算为 SAM 的 20%：¥{len(jobs) * 1000000 * 0.4 * 0.2:,.0f}"
+
+    def _generate_validation_plan(self) -> str:
+        """生成验证计划"""
+        return """1. 用户访谈验证（2周）
+2. 问卷调研（1周）
+3. MVP 原型测试（3周）
+4. A/B 测试（2周）
+总计: 8周"""
+
+    def _calculate_opportunity_scores(self, jobs: List[Dict]) -> str:
+        """计算机会分数"""
+        if not jobs:
+            return "暂无 Job 数据"
+
+        scores = []
+        for job in jobs:
+            struggle = job.get('struggle', 3)
+            alternative = job.get('alternative', 3)
+            market = job.get('market', 3)
+            budget = job.get('budget', 3)
+            score = (struggle + alternative + market + budget) * 100 / 16
+            scores.append(score)
+
+        avg_score = sum(scores) / len(scores) if scores else 0
+        return f"平均机会分数: {avg_score:.1f}/100\n最高分: {max(scores):.1f}\n最低分: {min(scores):.1f}"
+
+    def _generate_resource_allocation(self, jobs: List[Dict]) -> str:
+        """生成资源分配建议"""
+        if not jobs:
+            return "暂无 Job 数据"
+
+        p0_count = sum(1 for j in jobs if j.get('opportunity_score', 0) >= 80)
+        p1_count = sum(1 for j in jobs if 60 <= j.get('opportunity_score', 0) < 80)
+
+        return f"""P0 级 Job: {p0_count} 个 - 分配 60% 资源
+P1 级 Job: {p1_count} 个 - 分配 30% 资源
+其他: {len(jobs) - p0_count - p1_count} 个 - 分配 10% 资源"""
+
+    def _generate_validation_timeline(self, jobs: List[Dict]) -> str:
+        """生成验证时间线"""
+        if not jobs:
+            return "暂无 Job 数据"
+
+        p0_count = sum(1 for j in jobs if j.get('opportunity_score', 0) >= 80)
+        p1_count = sum(1 for j in jobs if 60 <= j.get('opportunity_score', 0) < 80)
+
+        return f"""第1-2周: P0 Job 用户验证（{p0_count} 个）
+第3-4周: P1 Job 用户验证（{p1_count} 个）
+第5-6周: MVP 开发
+第7-8周: 数据收集与分析"""
+
+    def _assess_willingness_to_pay(self, jobs: List[Dict]) -> str:
+        """评估付费意愿"""
+        if not jobs:
+            return "暂无数据"
+
+        high_wtp = sum(1 for j in jobs if j.get('willingness_to_pay', 'medium') == 'high')
+        medium_wtp = sum(1 for j in jobs if j.get('willingness_to_pay', 'medium') == 'medium')
+
+        return f"""高付费意愿: {high_wtp} 个 Job
+中等付费意愿: {medium_wtp} 个 Job
+低付费意愿: {len(jobs) - high_wtp - medium_wtp} 个 Job"""
+
+    def _analyze_roi(self, jobs: List[Dict]) -> str:
+        """分析投入产出"""
+        if not jobs:
+            return "暂无数据"
+
+        total_potential = len(jobs) * 1000000
+        estimated_cost = len(jobs) * 50000
+        roi = (total_potential - estimated_cost) / estimated_cost * 100 if estimated_cost > 0 else 0
+
+        return f"""潜在收益: ¥{total_potential:,}
+预计成本: ¥{estimated_cost:,}
+ROI: {roi:.1f}%"""
+
+    def _make_go_no_go_decision(self, jobs: List[Dict]) -> str:
+        """做出 Go/No-Go 决策"""
+        if not jobs:
+            return "数据不足，无法决策"
+
+        avg_score = sum(j.get('opportunity_score', 0) for j in jobs) / len(jobs) if jobs else 0
+
+        if avg_score >= 70:
+            return f"""GO - 建议推进
+
+平均机会分数: {avg_score:.1f}/100
+建议: 立即启动 P0 Job 开发，分配核心资源"""
+        elif avg_score >= 50:
+            return f"""条件推进
+
+平均机会分数: {avg_score:.1f}/100
+建议: 先进行小规模验证，收集更多数据后再决策"""
+        else:
+            return f"""NO-GO - 暂不推进
+
+平均机会分数: {avg_score:.1f}/100
+建议: 重新评估市场机会，或寻找新的 Job 方向"""
+
 
 __all__ = [
     "JTBDSkill",
@@ -432,6 +601,8 @@ __all__ = [
     "load_knowledge", "load_all_knowledge", "search_knowledge",
     "INTERVIEW_QUESTIONS", "JTBD_STATEMENT_TEMPLATE",
     "JTBD_STATEMENT_EXAMPLES", "INNOVATION_CHECKLIST", "REPORT_TEMPLATE",
+    "SCENARIO_MERGE_RULES", "EXAMPLE_SELECTION_CRITERIA",
+    "INSIGHT_QUALITY_RULES", "SECTION_INSIGHT_PROMPTS", "HTML_REPORT_STYLE_RULES",
     "JTBDAnalyzer", "JTBDAnalysis", "JTBDStatement",
     "InterviewBuilder", "InterviewGuide",
     "ForcesProfile", "ForceItem", "render_forces_markdown",
