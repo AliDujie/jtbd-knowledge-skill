@@ -186,6 +186,246 @@ class JTBDSkill:
         return search_knowledge(keyword)
 
 
+
+    # ── CEO 视角方法 (3 个) ──
+
+    def generate_market_size_estimate(self, jobs: Optional[List[Dict]] = None) -> str:
+        """
+        CEO 决策方法 1: 市场规模估算
+
+        基于 JTBD 理论，估算目标市场的 TAM/SAM/SOM，并提供验证计划。
+
+        Args:
+            jobs: 用户任务列表，每项包含 job_name, target_users, frequency 等
+
+        Returns:
+            Markdown 格式的市场规模估算报告
+
+        Example::
+
+            skill = JTBDSkill('智能健康餐订阅')
+            jobs = [{'job_name': '快速获得营养均衡的工作餐', 'target_users': '一线城市白领', 'frequency': '每周 5 次'}]
+            market_size = skill.generate_market_size_estimate(jobs)
+        """
+        default_jobs = jobs or [{'job_name': '示例任务', 'target_users': '目标用户', 'frequency': '高频'}]
+        
+        tam = len(default_jobs) * 1000000 * 50  # 简化计算
+        sam = tam * 0.3
+        som = sam * 0.1
+        
+        lines = [
+            "## 📊 市场规模估算",
+            "",
+            f"**产品**: {self.product} | **分析任务数**: {len(default_jobs)}",
+            "",
+            "### 市场层级",
+            "",
+            "| 层级 | 定义 | 估算值 | 说明 |",
+            "|------|------|--------|------|",
+            f"| TAM (总可寻址市场) | 全部潜在用户 | ¥{tam:,.0f} | 全国范围内有该 JTBD 的用户 |",
+            f"| SAM (可服务市场) | 可触达用户 | ¥{sam:,.0f} | 渠道/地理可覆盖的用户 (30%) |",
+            f"| SOM (可获得市场) | 实际可获得 | ¥{som:,.0f} | 考虑竞争后的份额 (10%) |",
+            "",
+            "### 关键假设",
+            "",
+            "| 假设 | 值 | 来源 | 置信度 |",
+            "|------|-----|--------|--------|",
+            "| 目标用户规模 | 5000 万 | 行业报告 | 中 |",
+            "| 年均消费 | ¥1000 | 竞品分析 | 中 |",
+            "| 渗透率 (SAM/TAM) | 30% | 渠道能力 | 低 |",
+            "| 市场份额 (SOM/SAM) | 10% | 竞争格局 | 低 |",
+            "",
+            "### 验证计划",
+            "",
+            "| 阶段 | 行动 | 样本量 | 时间 | 成功标准 |",
+            "|------|------|--------|------|----------|",
+            "| 定性验证 | 用户访谈 | 20 人 | 2 周 | 确认 JTBD 存在 |",
+            "| 定量验证 | 问卷调查 | 500 人 | 2 周 | 需求强度≥7/10 |",
+            "| MVP 测试 | 预售/等待名单 | 1000 人 | 4 周 | 转化率≥5% |",
+            "| 小规模上线 | 单城市试点 | 1 万用户 | 8 周 | 留存率≥40% |",
+            "",
+            "### CEO 决策建议",
+            "",
+            "1. **市场进入**: TAM 足够大 (>¥10 亿)，建议进入",
+            "2. **资源投入**: 聚焦 SAM 的前 30%，快速验证 SOM 假设",
+            "3. **关键风险**: 渗透率和市场份额假设需 MVP 验证",
+            "4. **下一步**: 启动定性验证（2 周用户访谈）",
+            "",
+        ]
+        return "\n".join(lines)
+
+    def generate_priority_scoring(self, jobs: Optional[List[Dict]] = None) -> str:
+        """
+        CEO 决策方法 2: 优先级评分
+
+        为多个 JTBD 机会计算优先级分数，提供资源分配建议和验证时间线。
+
+        Args:
+            jobs: 任务列表，每项包含 job_name, importance, satisfaction_gap 等
+
+        Returns:
+            Markdown 格式的优先级评分报告
+
+        Example::
+
+            skill = JTBDSkill('智能健康餐订阅')
+            jobs = [
+                {'job_name': '快速获得营养餐', 'importance': 9, 'satisfaction_gap': 7},
+                {'job_name': '控制饮食热量', 'importance': 8, 'satisfaction_gap': 5},
+            ]
+            priority = skill.generate_priority_scoring(jobs)
+        """
+        default_jobs = jobs or [
+            {'job_name': '任务 A', 'importance': 8, 'satisfaction_gap': 6, 'confidence': 0.7},
+            {'job_name': '任务 B', 'importance': 7, 'satisfaction_gap': 5, 'confidence': 0.8},
+            {'job_name': '任务 C', 'importance': 9, 'satisfaction_gap': 8, 'confidence': 0.6},
+        ]
+        
+        # 计算机会分
+        for job in default_jobs:
+            imp = job.get('importance', 5)
+            gap = job.get('satisfaction_gap', 5)
+            conf = job.get('confidence', 0.5)
+            job['opportunity_score'] = (imp + gap - 10) * conf * 10
+        
+        sorted_jobs = sorted(default_jobs, key=lambda x: x.get('opportunity_score', 0), reverse=True)
+        
+        lines = [
+            "## 📋 优先级评分",
+            "",
+            f"**产品**: {self.product} | **评估任务数**: {len(default_jobs)}",
+            "",
+            "### 机会分数计算",
+            "",
+            "| 任务 | 重要性 (1-10) | 满意度差距 (1-10) | 置信度 | 机会分 | 优先级 |",
+            "|------|-------------|-----------------|--------|--------|--------|",
+        ]
+        
+        for i, job in enumerate(sorted_jobs, 1):
+            score = job.get('opportunity_score', 0)
+            priority = "P0" if i == 1 else "P1" if i == 2 else "P2"
+            lines.append(f"| {job['job_name']} | {job.get('importance', '-')} | {job.get('satisfaction_gap', '-')} | {job.get('confidence', '-'):.1f} | {score:.1f} | {priority} |")
+        
+        lines.extend([
+            "",
+            "### 资源分配建议",
+            "",
+            "| 优先级 | 任务 | 资源占比 | 团队规模 | 时间窗口 |",
+            "|--------|------|----------|----------|----------|",
+        ])
+        
+        resources = [(50, "3-4 人", "4-6 周"), (30, "2-3 人", "3-4 周"), (20, "1-2 人", "2-3 周")]
+        for i, job in enumerate(sorted_jobs[:3]):
+            res, team, time = resources[i] if i < len(resources) else (10, "1 人", "1-2 周")
+            lines.append(f"| P{i} | {job['job_name']} | {res}% | {team} | {time} |")
+        
+        lines.extend([
+            "",
+            "### 验证时间线",
+            "",
+            "| 周次 | P0 任务 | P1 任务 | P2 任务 | 里程碑 |",
+            "|------|--------|--------|--------|--------|",
+            "| W1-2 | 用户访谈 (20 人) | - | - | 需求确认 |",
+            "| W3-4 | MVP 设计 | 用户访谈 (10 人) | - | 方案确定 |",
+            "| W5-8 | MVP 开发 + 测试 | MVP 设计 | 用户访谈 (5 人) | P0 上线 |",
+            "| W9-12 | 数据分析 + 迭代 | MVP 开发 | MVP 设计 | P1 上线 |",
+            "",
+            "### CEO 决策建议",
+            "",
+            "1. **资源聚焦**: 50% 资源投入 P0 任务，确保快速验证",
+            "2. **决策节点**: W4 审查 P0 进展，W8 决定是否继续 P1",
+            "3. **止损机制**: P0 机会分<5 或验证失败，立即转向",
+            "",
+        ])
+        return "\n".join(lines)
+
+    def generate_commercialization_feasibility(self, jobs: Optional[List[Dict]] = None) -> str:
+        """
+        CEO 决策方法 3: 商业化可行性
+
+        评估 JTBD 机会的付费意愿、投入产出比，并提供 Go/No-Go 决策建议。
+
+        Args:
+            jobs: 任务列表，每项包含 job_name, wtp_estimate, dev_cost 等
+
+        Returns:
+            Markdown 格式的商业化可行性报告
+
+        Example::
+
+            skill = JTBDSkill('智能健康餐订阅')
+            jobs = [
+                {'job_name': '快速获得营养餐', 'wtp_estimate': 50, 'dev_cost': 500000},
+            ]
+            feasibility = skill.generate_commercialization_feasibility(jobs)
+        """
+        default_jobs = jobs or [
+            {'job_name': '任务 A', 'wtp_estimate': 50, 'dev_cost': 500000, 'annual_users': 5000},
+        ]
+        
+        lines = [
+            "## 💰 商业化可行性",
+            "",
+            f"**产品**: {self.product} | **评估任务数**: {len(default_jobs)}",
+            "",
+            "### 付费意愿评估",
+            "",
+            "| 任务 | 预估 WTP | 价格敏感度 | 支付频率 | 验证方法 |",
+            "|------|---------|-----------|----------|----------|",
+        ]
+        
+        for job in default_jobs:
+            wtp = job.get('wtp_estimate', 0)
+            sensitivity = "低" if wtp > 100 else "中" if wtp > 50 else "高"
+            lines.append(f"| {job['job_name']} | ¥{wtp} | {sensitivity} | 月度 | 支付意愿调查 + 预售测试 |")
+        
+        lines.extend([
+            "",
+            "### 投入产出分析",
+            "",
+            "| 任务 | 开发成本 | 年用户数 | 年收入 | ROI | 回收期 |",
+            "|------|---------|----------|--------|-----|--------|",
+        ])
+        
+        for job in default_jobs:
+            cost = job.get('dev_cost', 0)
+            users = job.get('annual_users', 0)
+            wtp = job.get('wtp_estimate', 0) * 12  # 年费
+            revenue = users * wtp
+            roi = ((revenue - cost) / cost * 100) if cost > 0 else 0
+            payback = cost / (revenue / 12) if revenue > 0 else 999
+            lines.append(f"| {job['job_name']} | ¥{cost:,.0f} | {users:,.0f} | ¥{revenue:,.0f} | {roi:.0f}% | {payback:.1f}月 |")
+        
+        # 计算总计
+        total_cost = sum(j.get('dev_cost', 0) for j in default_jobs)
+        total_revenue = sum(j.get('annual_users', 0) * j.get('wtp_estimate', 0) * 12 for j in default_jobs)
+        total_roi = ((total_revenue - total_cost) / total_cost * 100) if total_cost > 0 else 0
+        
+        lines.extend([
+            "",
+            f"**总计**: 开发成本 ¥{total_cost:,.0f} | 年收入 ¥{total_revenue:,.0f} | ROI {total_roi:.0f}%",
+            "",
+            "### Go/No-Go 决策",
+            "",
+            "| 标准 | 要求 | 实际 | 状态 |",
+            "|------|------|------|------|",
+            f"| 市场规模 | SOM ≥ ¥1 亿 | ¥{total_revenue:,.0f} | {'✅' if total_revenue >= 100000000 else '⚠️'} |",
+            f"| ROI | ≥50% | {total_roi:.0f}% | {'✅' if total_roi >= 50 else '⚠️'} |",
+            f"| 回收期 | ≤18 月 | {total_cost/(total_revenue/12) if total_revenue > 0 else 999:.1f}月 | {'✅' if (total_cost/(total_revenue/12) <= 18 if total_revenue > 0 else False) else '⚠️'} |",
+            f"| 战略匹配 | 高 | 中 | 🟡 |",
+            "",
+            "### CEO 决策建议",
+            "",
+            f"**决策**: {'✅ Go' if total_roi >= 50 and total_revenue >= 100000000 else '⚠️ Conditional Go' if total_roi >= 30 else '❌ No-Go'}",
+            "",
+            "1. **Go 条件**: ROI≥50% + SOM≥¥1 亿 + 回收期≤18 月",
+            "2. **风险缓解**: 分阶段投入，W4 审查 MVP 进展",
+            "3. **关键假设验证**: 付费意愿、用户获取成本、留存率",
+            "",
+        ])
+        return "\n".join(lines)
+
+
 __all__ = [
     "JTBDSkill",
     "AnalysisConfig", "FORCE_TYPES", "FORCE_LABELS", "KNOWLEDGE_FILES",
