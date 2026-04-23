@@ -49,7 +49,7 @@ def test_interview_generator():
 def test_survey_generator():
     builder = SurveyBuilder("旅行预订体验调研", "screening")
     builder.set_target("过去3个月使用过在线旅行预订的用户")
-    builder.set_product("飞猪旅行")
+    builder.set_product("旅行预订平台")
     builder.set_struggles(["找酒店耗时", "价格不透明", "评价不可信"])
     builder.set_alternatives(["携程", "美团", "自己搜索"])
     survey = builder.build()
@@ -65,7 +65,7 @@ def test_survey_generator():
     assert "找酒店耗时" in md
 
     builder2 = SurveyBuilder("验证问卷", "validation")
-    builder2.set_product("飞猪旅行")
+    builder2.set_product("旅行预订平台")
     builder2.set_hypotheses(["快速找到合适住处", "省钱省时间"])
     builder2.set_struggles(["比价耗时", "信息不对称"])
     survey2 = builder2.build()
@@ -212,21 +212,21 @@ def test_priority_matrix():
 
 
 def test_competition_analyzer():
-    analyzer = CompetitionAnalyzer("飞猪旅行")
+    analyzer = CompetitionAnalyzer("旅行预订平台")
     analyzer.add_competitor("携程", "direct", strengths=["酒店资源丰富", "品牌知名度高"], weaknesses=["界面复杂", "价格不透明"])
     analyzer.add_competitor("美团", "indirect", strengths=["本地生活入口"], weaknesses=["旅行专业度不足"])
     analyzer.add_competitor("自己搜索", "non_consumption", strengths=["完全自由"], weaknesses=["极其耗时"])
 
     assert len(analyzer.analysis.competitors) == 3
 
-    analyzer.add_switch("携程", "飞猪旅行", user_count=15, reason="价格更透明")
+    analyzer.add_switch("携程", "旅行预订平台", user_count=15, reason="价格更透明")
     assert len(analyzer.analysis.switch_evidence) == 1
 
     analyzer.auto_insights()
     assert len(analyzer.analysis.insights) > 0
 
     md = analyzer.render_markdown()
-    assert "飞猪旅行" in md
+    assert "旅行预订平台" in md
     assert "携程" in md
     assert "直接竞品" in md
 
@@ -235,7 +235,7 @@ def test_competition_analyzer():
 
 def test_marketing_copywriter():
     writer = MarketingCopywriter()
-    writer.set_brief("飞猪旅行", "快速找到合适住处", "每次出差花30分钟比价", "专注工作不为住宿烦恼", "landing_page")
+    writer.set_brief("旅行预订平台", "快速找到合适住处", "每次出差花30分钟比价", "专注工作不为住宿烦恼", "landing_page")
     writer.add_anxiety("担心酒店照片与实际不符")
     writer.add_inertia("已经习惯用携程")
 
@@ -252,14 +252,14 @@ def test_marketing_copywriter():
         assert len(draft.body) > 0
 
     md = MarketingCopywriter.render_markdown(plan)
-    assert "飞猪旅行" in md
+    assert "旅行预订平台" in md
     assert "比价" in md or "出差" in md
 
     print("✅ test_marketing_copywriter passed")
 
 
 def test_growth_strategy():
-    builder = GrowthStrategyBuilder("飞猪旅行")
+    builder = GrowthStrategyBuilder("旅行预订平台")
     builder.set_target_job("帮我快速找到合适的住处")
     builder.add_growth_opportunity("upstream", "出行前攻略服务", "AI行程规划", priority=4)
     builder.add_growth_opportunity("downstream", "入住后当地体验", "景点门票推荐", priority=3)
@@ -274,7 +274,7 @@ def test_growth_strategy():
     assert plan.churn_segments[0].strategy != ""
 
     md = GrowthStrategyBuilder.render_markdown(plan)
-    assert "飞猪旅行" in md
+    assert "旅行预订平台" in md
     assert "上游机会" in md
     assert "首周未完成预订" in md
 

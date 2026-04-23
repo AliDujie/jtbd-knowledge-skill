@@ -74,7 +74,7 @@ class GrowthStrategyBuilder:
 
     用法示例::
 
-        builder = GrowthStrategyBuilder("飞猪旅行")
+        builder = GrowthStrategyBuilder("旅行预订平台")
         builder.set_target_job("出差时快速找到合适住处")
         builder.add_growth_opportunity("upstream", "出差前的行程规划", "行程助手")
         builder.add_churn_segment("no_progress", "新用户首周未完成预订", 200)

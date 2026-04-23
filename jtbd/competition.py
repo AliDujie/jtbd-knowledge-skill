@@ -75,11 +75,11 @@ class CompetitionAnalyzer:
 
     用法示例::
 
-        analyzer = CompetitionAnalyzer("飞猪旅行")
+        analyzer = CompetitionAnalyzer("旅行预订平台")
         analyzer.set_target_job("在出差时快速找到合适的住处")
         analyzer.add_competitor("携程", "direct", strengths=["酒店数量多"], weaknesses=["界面复杂"])
         analyzer.add_competitor("朋友推荐", "non_consumption", strengths=["信任度高"], weaknesses=["选择有限"])
-        analyzer.add_switch("携程", "飞猪旅行", 15, "界面更简洁，价格更透明")
+        analyzer.add_switch("携程", "旅行预订平台", 15, "界面更简洁，价格更透明")
         analyzer.set_force_comparison("携程", push_advantage="携程界面复杂导致用户流失",
                                        pull_advantage="更简洁的搜索体验",
                                        anxiety_disadvantage="新平台酒店数量是否够多",

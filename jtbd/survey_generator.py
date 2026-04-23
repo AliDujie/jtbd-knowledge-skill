@@ -63,7 +63,7 @@ class SurveyBuilder:
 
         builder = SurveyBuilder("旅行预订体验调研", "screening")
         builder.set_target("过去3个月使用过在线旅行预订的用户")
-        builder.set_product("飞猪旅行")
+        builder.set_product("旅行预订平台")
         builder.set_struggles(["找酒店耗时", "价格不透明", "评价不可信"])
         survey = builder.build()
         print(builder.render_markdown(survey))

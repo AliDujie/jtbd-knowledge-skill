@@ -6,7 +6,7 @@
 快速开始::
 
     from jtbd import JTBDSkill
-    skill = JTBDSkill("飞猪旅行")
+    skill = JTBDSkill("旅行预订平台")
     # 8大能力一站式调用
     guide = skill.generate_interview("用户访谈", ["competition", "push"])
     survey = skill.generate_survey("体验调研", "screening", struggles=["找酒店耗时"])
@@ -42,7 +42,7 @@ class JTBDSkill:
 
     用法::
 
-        skill = JTBDSkill("飞猪旅行")
+        skill = JTBDSkill("旅行预订平台")
 
         # 能力1: 访谈提纲
         guide = skill.generate_interview("用户访谈", ["competition", "push", "anxiety"])

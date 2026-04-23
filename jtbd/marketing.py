@@ -82,7 +82,7 @@ class MarketingCopywriter:
 
         writer = MarketingCopywriter()
         writer.set_brief(
-            product="飞猪旅行",
+            product="旅行预订平台",
             target_job="出差时快速找到合适住处",
             struggle="每次出差都要花30分钟比价找酒店",
             desired_outcome="专注工作而不是为住宿烦恼",
