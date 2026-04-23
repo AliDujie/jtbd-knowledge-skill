@@ -5,7 +5,7 @@ description: >
   提供 9 项可执行能力（访谈提纲、问卷设计、机会评分、优先级矩阵、竞争分析、营销文案、
   增长策略、JTBD 描述生成、场景库深度分析报告）和 11 篇方法论知识库。
   附带完整 Python API（JTBDAnalyzer / InterviewBuilder / ForcesProfile / InnovationFinder），
-  支持四力量化分析、创新信号识别与结构化报告输出。
+  支持四力量化分析、创新信号识别与结构化报告输出，以及CEO决策视角的市场规模估算、优先级评分与商业化可行性分析。
 ---
 
 # JTBD (Jobs to Be Done) 执行技能
@@ -34,6 +34,10 @@ JTBD 是消费者将现有生活状况转变为更理想状态的过程。客户
 | JTBD 描述、Job 描述、整理发现 | 能力八：JTBD 描述生成与验证 |
 | 场景库、场景分析、场景合并、JTBD 分析报告 | 能力九：场景库数据分析与报告 |
 | 产品创新、新功能、新产品 | 综合运用三+四+五 |
+| 市场规模、TAM/SAM/SOM、市场估算 | CEO: 市场规模估算 |
+| 优先级评分、资源分配、投入优先 | CEO: 优先级评分与资源分配 |
+| 商业化、付费意愿、ROI、Go/No-Go | CEO: 商业化可行性分析 |
+| 完整分析 + CEO 决策 | 综合运用 + CEO 决策视角（`analyze(include_ceo_analysis=True)`） |
 
 ## 执行能力概览
 
@@ -55,6 +59,26 @@ JTBD 是消费者将现有生活状况转变为更理想状态的过程。客户
 
 **能力九：场景库数据分析与报告** — 最复杂的执行能力。读取场景库 Excel，经过数据解析→场景语义合并→二级主题四力分析→报告生成→部署交付 5 个阶段，输出 8 模块 HTML 交互报告。场景分层遵循四原则（不过于抽象、粒度对齐业务动作、灵活层级深度、100%覆盖零遗漏）。详见 `references/06-analysis-framework.md`。
 
+## CEO 决策视角
+
+在 JTBD 分析完成后，自动附加商业决策支持分析：
+
+**CEO 方法一：市场规模估算** — 基于 JTBD 分析结果估算 TAM/SAM/SOM，输出关键假设和分阶段验证计划（定性→定量→MVP→试点）。
+
+**API:** `skill.generate_market_size_estimate(jobs)` — jobs 可选，默认使用分析器中已有数据。
+
+**CEO 方法二：优先级评分** — 综合重要性、满意度差距、置信度计算机会分，输出资源分配建议和验证时间线。
+
+**API:** `skill.generate_priority_scoring(jobs)`
+
+**CEO 方法三：商业化可行性** — 评估付费意愿(WTP)、投入产出比(ROI)、回收期，输出 Go/No-Go 决策建议。
+
+**API:** `skill.generate_commercialization_feasibility(jobs)`
+
+**一键生成**: `skill.analyze(include_ceo_analysis=True)` — 在标准分析报告后自动附加全部 CEO 决策模块。
+
+**默认行为**: 当用户要求全面分析、深度分析，或涉及商业决策场景时，应自动设置 `include_ceo_analysis=True`。
+
 ## Python 工具包
 
 位于 `jtbd/` 目录，纯标准库实现，无外部依赖。
@@ -65,6 +89,7 @@ JTBD 是消费者将现有生活状况转变为更理想状态的过程。客户
 | `interview.py` | `InterviewBuilder` | 按维度生成定制化访谈问题列表 |
 | `forces.py` | `ForcesProfile` | 推力/拉力/焦虑/惯性结构化分析与诊断 |
 | `innovation.py` | `InnovationFinder` | 创新信号识别、机会评估、检查清单 |
+| `__init__.py` | `JTBDSkill` | CEO 市场规模 / 优先级评分 / 商业化可行性 / 一键分析 |
 | `config.py` | `AnalysisConfig` | 运行时配置：分析维度、输出格式等 |
 | `utils.py` | `load_knowledge`, `search_knowledge` | 知识库加载与关键词搜索 |
 | `templates.py` | 模板常量 | 访谈问题、报告模板、分析框架、场景合并规则 |
@@ -114,7 +139,8 @@ result = skill.analyze(
     product="在线旅行预订平台",
     target_user="商务出差人群",
     pain_points=["找酒店太耗时", "价格不透明"],
-    competitors=["携程", "美团"]
+    competitors=["携程", "美团"],
+    include_ceo_analysis=True  # 自动附加 CEO 决策分析
 )
 ```
 
@@ -135,3 +161,15 @@ result = skill.analyze(
 | `09-case-studies.md` | 案例精华 | 经典 JTBD 案例分析 |
 | `10-two-models.md` | 两种模型对比 | Klement vs Moesta-Ulwick 流派差异 |
 | `11-quick-reference.md` | 速查手册 | 全部概念速查与公式汇总 |
+
+### AI Agent 调用规则
+
+| # | 规则 | 说明 |
+|---|------|------|
+| 1 | **统一入口** | 优先通过 `JTBDSkill` Facade 调用，亦可直接使用 JTBDAnalyzer 等子类 |
+| 2 | **返回值** | 所有方法返回 Markdown 字符串，可直接展示 |
+| 3 | **触发映射** | 根据用户意图选择对应能力（参见触发条件表） |
+| 4 | **四力优先** | 任何分析先进行四力（推力/拉力/焦虑/惯性）分析 |
+| 5 | **知识优先** | 理论问题先调用 `search_knowledge()` 查询 |
+| 6 | **CEO 决策默认附加** | 全面分析或涉及商业决策时，自动使用 `include_ceo_analysis=True` |
+| 7 | **完整交付** | 每个任务产出完整可用的分析/报告/建议 |
