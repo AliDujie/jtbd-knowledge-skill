@@ -78,8 +78,100 @@ python3 -m pytest jtbd/tests/test_all.py -v
 python3 -c "from jtbd.tests.test_all import run_all_tests; run_all_tests()"
 ```
 
+## 实际案例
+
+### 案例 1：出行平台 JTBD 分析
+
+```python
+from jtbd import JTBDAnalyzer
+
+analyzer = JTBDAnalyzer("出行预订平台")
+analyzer.add_statement(
+    context="出差时",
+    motivation="快速找到合适的住宿",
+    expected_outcome="专注工作不为住宿烦恼"
+)
+analyzer.add_force("push", "每次找酒店花15分钟对比", intensity=4)
+analyzer.add_force("pull", "竞品有一键预订功能", intensity=5)
+analyzer.add_force("anxiety", "担心迁移到新平台的学习成本", intensity=3)
+
+report = analyzer.generate_report()
+print(report)
+# 机会分数: 8.2/10 → 高优先级改进方向
+```
+
+### 案例 2：访谈提纲生成
+
+```python
+from jtbd import InterviewBuilder
+
+builder = InterviewBuilder("商务用户住宿体验访谈")
+builder.include_dimensions(["competition", "push", "pull", "anxiety"])
+questions = builder.build()
+print(InterviewBuilder.render_markdown(questions))
+# 输出结构化访谈提纲，覆盖 4 个维度共 12 个问题
+```
+
+### 案例 3：四力诊断与增长策略
+
+```python
+from jtbd import ForcesProfile, InnovationFinder
+
+profile = ForcesProfile()
+profile.add("push", "external", "市场竞争加剧，用户流失", intensity=4)
+profile.add("pull", "external", "竞品推出 AI 推荐功能", intensity=5)
+profile.add("anxiety", "choice", "担心迁移成本", intensity=3)
+profile.add("habit", "internal", "用户已习惯现有流程", intensity=4)
+
+diagnosis = profile.diagnose()
+print(f"净推动力: {diagnosis.net_force:.2f}")
+# 净推动力 < 0 → 需要增强 pull 或减少 anxiety
+```
+
+## 故障排除
+
+| 问题 | 原因 | 解决方案 |
+|------|------|----------|
+| JTBD 陈述过于模糊 | 缺少情境要素 | 检查三要素：情境(Context)+动机(Motivation)+期望结果 |
+| 机会分数计算异常 | 重要度/满意度评分范围不一致 | 确保使用 1-5 量表，检查异常值 |
+| 四力分析结果不均衡 | 只关注单一力量 | 同时评估 push/pull/anxiety/habit 四力 |
+| 访谈问题缺乏深度 | 维度覆盖不足 | 使用 include_dimensions 覆盖全部 4 个维度 |
+
+## 扩展阅读
+
+| 书籍 | 作者 | 关联能力 |
+|------|------|----------|
+| 《When Coffee and Kale Compete》 | Alan Klement | 全书方法论基础 |
+| 《Competing Against Luck》 | Clayton Christensen | JTBD 理论起源 |
+| 《Jobs to Be Done Playbook》 | Jim Kalbach | 实操指南与模板 |
+| 《Demand-Side Sales 101》 | Bob Moesta | 销售视角的 JTBD |
+
+## 技能生态导航
+
+与其他 AliDujie 技能协同使用，构建完整用户体验研究体系：
+
+| 关联技能 | 协同场景 | 工作流示例 |
+|----------|----------|------------|
+| [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | JTBD 洞察验证 | JTBD 发现需求 → UDM 研究方法验证 |
+| [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | JTBD 结果可视化 | JTBD 分析 → SWD 图表呈现给利益相关方 |
+| [Quantitative UX Research](https://github.com/AliDujie/quantitative-ux-research) | 定量验证机会分数 | JTBD 机会评分 → QuantUX 统计检验 |
+| [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | JTBD → 价值主张映射 | JTBD 发现 → VPD 画布填充 |
+| [Web Persona](https://github.com/AliDujie/web-persona-skill) | JTBD 驱动角色细分 | JTBD 任务聚类 → Persona 角色定义 |
+
+## 版本历史
+
+| 版本 | 日期 | 变更 |
+|------|------|------|
+| v1.5 | 2026-04-23 | 添加实际案例、故障排除、扩展阅读、技能生态导航 |
+| v1.4 | 2026-04-23 | 添加技能生态导航表、Last Updated 徽章 |
+| v1.3 | 2026-04-22 | 初始版本 |
+
 ## 许可
 
 基于《When Coffee and Kale Compete》(2nd Edition) by Alan Klement。
 
 v2.0.0
+
+---
+
+*Last Updated: 2026-04-23 | AliDujie Skill Ecosystem*
