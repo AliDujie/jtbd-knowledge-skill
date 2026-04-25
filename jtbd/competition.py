@@ -2,12 +2,18 @@
 
 对应 SKILL.md 执行能力五：JTBD 竞争分析。
 识别真正的竞争对手、验证竞争关系、进行四力对比。
+
+v3.0 新增:
+- Outcome-Based竞争评估 (按Desired Outcome对比竞品满意度)
+- 颠覆诊断 (Disruption Diagnostic)
+- 竞争力三要素 (Right to Win)
+- Jobs视角竞争边界重定义
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, List
+from typing import Dict, List, Optional
 
-from .config import FORCE_TYPES, FORCE_LABELS
+from .config import FORCE_LABELS  # noqa: F401 - available for external import
 
 
 COMPETITOR_CATEGORIES = ("direct", "indirect", "non_consumption")
@@ -22,6 +28,14 @@ CATEGORY_DESCRIPTIONS: Dict[str, str] = {
     "direct": "功能相似的产品",
     "indirect": "不同品类但解决同一Job的产品",
     "non_consumption": "用户自己的临时解决办法、忍受现状",
+}
+
+RIGHT_TO_WIN_FACTORS = ("capability_fit", "flexibility", "market_perception")
+
+RIGHT_TO_WIN_LABELS: Dict[str, str] = {
+    "capability_fit": "能力匹配度 — 满足核心Outcome的技术/资源能力",
+    "flexibility": "灵活性 — 快速响应需求变化的组织能力",
+    "market_perception": "市场认知 — 用户心智中的品牌定位和信任度",
 }
 
 
@@ -45,6 +59,30 @@ class ForceComparison:
 
 
 @dataclass
+class OutcomeComparison:
+    """基于Desired Outcome的竞品对比"""
+    outcome_description: str
+    our_satisfaction: int = 5
+    competitor_name: str = ""
+    competitor_satisfaction: int = 5
+
+    @property
+    def gap(self) -> int:
+        return self.our_satisfaction - self.competitor_satisfaction
+
+
+@dataclass
+class DisruptionDiagnostic:
+    """颠覆诊断"""
+    disruptor_name: str
+    disruptor_advantages: List[str] = field(default_factory=list)
+    our_advantages: List[str] = field(default_factory=list)
+    adoption_barriers: List[str] = field(default_factory=list)
+    threat_level: str = "medium"
+    response_strategy: str = ""
+
+
+@dataclass
 class Competitor:
     """竞争者"""
     name: str
@@ -52,7 +90,7 @@ class Competitor:
     description: str = ""
     strengths: List[str] = field(default_factory=list)
     weaknesses: List[str] = field(default_factory=list)
-    force_comparison: ForceComparison = None
+    force_comparison: Optional[ForceComparison] = None
 
     def __post_init__(self):
         if self.force_comparison is None:
@@ -66,6 +104,9 @@ class CompetitiveAnalysis:
     target_job: str = ""
     competitors: List[Competitor] = field(default_factory=list)
     switch_evidence: List[SwitchEvidence] = field(default_factory=list)
+    outcome_comparisons: List[OutcomeComparison] = field(default_factory=list)
+    disruption_diagnostics: List[DisruptionDiagnostic] = field(default_factory=list)
+    right_to_win: Dict[str, int] = field(default_factory=dict)
     insights: List[str] = field(default_factory=list)
     strategies: List[str] = field(default_factory=list)
 
@@ -79,11 +120,20 @@ class CompetitionAnalyzer:
         analyzer.set_target_job("在出差时快速找到合适的住处")
         analyzer.add_competitor("携程", "direct", strengths=["酒店数量多"], weaknesses=["界面复杂"])
         analyzer.add_competitor("朋友推荐", "non_consumption", strengths=["信任度高"], weaknesses=["选择有限"])
-        analyzer.add_switch("携程", "旅行预订平台", 15, "界面更简洁，价格更透明")
-        analyzer.set_force_comparison("携程", push_advantage="携程界面复杂导致用户流失",
-                                       pull_advantage="更简洁的搜索体验",
-                                       anxiety_disadvantage="新平台酒店数量是否够多",
-                                       inertia_disadvantage="用户已有携程会员积分")
+
+        # Outcome-Based竞争评估
+        analyzer.add_outcome_comparison("快速找到酒店", our_sat=7, competitor="携程", comp_sat=5)
+        analyzer.add_outcome_comparison("价格透明度", our_sat=6, competitor="携程", comp_sat=4)
+
+        # 颠覆诊断
+        analyzer.add_disruption("AI行程助手",
+            disruptor_advantages=["自然语言交互", "个性化推荐"],
+            our_advantages=["交易闭环", "售后保障"],
+            adoption_barriers=["信任度低", "复杂行程处理差"])
+
+        # 竞争力三要素
+        analyzer.set_right_to_win(capability_fit=4, flexibility=3, market_perception=4)
+
         print(analyzer.render_markdown())
     """
 
@@ -95,8 +145,8 @@ class CompetitionAnalyzer:
 
     def add_competitor(self, name: str, category: str = "direct",
                        description: str = "",
-                       strengths: List[str] = None,
-                       weaknesses: List[str] = None) -> Competitor:
+                       strengths: Optional[List[str]] = None,
+                       weaknesses: Optional[List[str]] = None) -> Competitor:
         if category not in COMPETITOR_CATEGORIES:
             raise ValueError(f"未知类别: {category}，可选: {COMPETITOR_CATEGORIES}")
         comp = Competitor(
@@ -131,6 +181,54 @@ class CompetitionAnalyzer:
                 )
                 return
         raise ValueError(f"未找到竞争者: {competitor_name}")
+
+    def add_outcome_comparison(self, outcome: str, our_sat: int,
+                               competitor: str, comp_sat: int) -> OutcomeComparison:
+        if not 1 <= our_sat <= 10:
+            raise ValueError(f"我方满意度 {our_sat} 超出范围 1-10")
+        if not 1 <= comp_sat <= 10:
+            raise ValueError(f"竞品满意度 {comp_sat} 超出范围 1-10")
+        comparison = OutcomeComparison(
+            outcome_description=outcome,
+            our_satisfaction=our_sat,
+            competitor_name=competitor,
+            competitor_satisfaction=comp_sat,
+        )
+        self.analysis.outcome_comparisons.append(comparison)
+        return comparison
+
+    def add_disruption(self, disruptor_name: str,
+                       disruptor_advantages: Optional[List[str]] = None,
+                       our_advantages: Optional[List[str]] = None,
+                       adoption_barriers: Optional[List[str]] = None,
+                       threat_level: str = "medium",
+                       response_strategy: str = "") -> DisruptionDiagnostic:
+        if threat_level not in ("low", "medium", "high", "critical"):
+            raise ValueError(f"未知威胁等级: {threat_level}，可选: low/medium/high/critical")
+        diag = DisruptionDiagnostic(
+            disruptor_name=disruptor_name,
+            disruptor_advantages=disruptor_advantages or [],
+            our_advantages=our_advantages or [],
+            adoption_barriers=adoption_barriers or [],
+            threat_level=threat_level,
+            response_strategy=response_strategy,
+        )
+        self.analysis.disruption_diagnostics.append(diag)
+        return diag
+
+    def set_right_to_win(self, capability_fit: int = 3,
+                         flexibility: int = 3,
+                         market_perception: int = 3) -> None:
+        for name, val in [("capability_fit", capability_fit),
+                          ("flexibility", flexibility),
+                          ("market_perception", market_perception)]:
+            if not 1 <= val <= 5:
+                raise ValueError(f"{name} 分数 {val} 超出范围 1-5")
+        self.analysis.right_to_win = {
+            "capability_fit": capability_fit,
+            "flexibility": flexibility,
+            "market_perception": market_perception,
+        }
 
     def add_insight(self, insight: str) -> None:
         self.analysis.insights.append(insight)
@@ -168,6 +266,27 @@ class CompetitionAnalyzer:
             if outbound:
                 total_out = sum(e.user_count for e in outbound)
                 insights.append(f"有 {total_out} 位用户从 {a.product_name} 切换到其他方案，需要关注流失原因。")
+
+        if a.outcome_comparisons:
+            advantages = [oc for oc in a.outcome_comparisons if oc.gap > 0]
+            disadvantages = [oc for oc in a.outcome_comparisons if oc.gap < 0]
+            if advantages:
+                insights.append(
+                    f"在 {len(advantages)} 个Outcome上领先竞品，"
+                    f"最大优势: 「{max(advantages, key=lambda x: x.gap).outcome_description}」。"
+                )
+            if disadvantages:
+                insights.append(
+                    f"在 {len(disadvantages)} 个Outcome上落后竞品，"
+                    f"最大劣势: 「{min(disadvantages, key=lambda x: x.gap).outcome_description}」，"
+                    "需优先改善。"
+                )
+
+        if a.disruption_diagnostics:
+            critical = [d for d in a.disruption_diagnostics if d.threat_level == "critical"]
+            if critical:
+                names = [d.disruptor_name for d in critical]
+                insights.append(f"发现 {len(critical)} 个严重颠覆威胁: {', '.join(names)}，需立即制定应对策略。")
 
         self.analysis.insights.extend(insights)
         return insights
@@ -211,6 +330,59 @@ class CompetitionAnalyzer:
                         lines.append(f"- 惯性劣势: {fc.inertia_disadvantage}")
                 lines.append("")
 
+        if a.outcome_comparisons:
+            lines.append("## Outcome-Based 竞争对比\n")
+            lines.append("| Outcome | 我方满意度 | 竞品 | 竞品满意度 | 差距 | 判断 |")
+            lines.append("|---------|-----------|------|-----------|------|------|")
+            for oc in sorted(a.outcome_comparisons, key=lambda x: x.gap):
+                indicator = "领先" if oc.gap > 0 else ("持平" if oc.gap == 0 else "落后")
+                lines.append(
+                    f"| {oc.outcome_description} | {oc.our_satisfaction}/10 "
+                    f"| {oc.competitor_name} | {oc.competitor_satisfaction}/10 "
+                    f"| {oc.gap:+d} | {indicator} |"
+                )
+            lines.append("")
+
+        if a.disruption_diagnostics:
+            threat_icons = {"low": "🟢", "medium": "🟡", "high": "🟠", "critical": "🔴"}
+            lines.append("## 颠覆诊断\n")
+            for diag in a.disruption_diagnostics:
+                icon = threat_icons.get(diag.threat_level, "🟡")
+                lines.append(f"### {icon} {diag.disruptor_name} (威胁等级: {diag.threat_level})\n")
+                if diag.disruptor_advantages:
+                    lines.append("**颠覆者优势:**")
+                    for adv in diag.disruptor_advantages:
+                        lines.append(f"- {adv}")
+                if diag.our_advantages:
+                    lines.append("**我方优势:**")
+                    for adv in diag.our_advantages:
+                        lines.append(f"- {adv}")
+                if diag.adoption_barriers:
+                    lines.append("**颠覆者采用障碍:**")
+                    for bar in diag.adoption_barriers:
+                        lines.append(f"- {bar}")
+                if diag.response_strategy:
+                    lines.append(f"\n**应对策略:** {diag.response_strategy}")
+                lines.append("")
+
+        if a.right_to_win:
+            lines.append("## 竞争力三要素 (Right to Win)\n")
+            total = 0
+            for factor in RIGHT_TO_WIN_FACTORS:
+                score = a.right_to_win.get(factor, 0)
+                total += score
+                label = RIGHT_TO_WIN_LABELS.get(factor, factor)
+                bar = "█" * score + "░" * (5 - score)
+                lines.append(f"- **{label}:** {bar} {score}/5")
+            lines.append(f"\n**综合竞争力:** {total}/15")
+            if total >= 12:
+                lines.append("*评估: 竞争地位强势，可进攻性扩张*")
+            elif total >= 8:
+                lines.append("*评估: 竞争地位中等，需重点补齐短板*")
+            else:
+                lines.append("*评估: 竞争地位弱势，需寻找差异化方向*")
+            lines.append("")
+
         if a.switch_evidence:
             lines.append("## 切换证据\n")
             for e in a.switch_evidence:
@@ -243,6 +415,24 @@ class CompetitionAnalyzer:
                  "strengths": c.strengths, "weaknesses": c.weaknesses}
                 for c in a.competitors
             ],
+            "outcome_comparisons": [
+                {"outcome": oc.outcome_description,
+                 "our_satisfaction": oc.our_satisfaction,
+                 "competitor": oc.competitor_name,
+                 "competitor_satisfaction": oc.competitor_satisfaction,
+                 "gap": oc.gap}
+                for oc in a.outcome_comparisons
+            ],
+            "disruption_diagnostics": [
+                {"disruptor": d.disruptor_name,
+                 "threat_level": d.threat_level,
+                 "disruptor_advantages": d.disruptor_advantages,
+                 "our_advantages": d.our_advantages,
+                 "adoption_barriers": d.adoption_barriers,
+                 "response_strategy": d.response_strategy}
+                for d in a.disruption_diagnostics
+            ],
+            "right_to_win": a.right_to_win,
             "switch_evidence": [
                 {"from": e.from_product, "to": e.to_product,
                  "count": e.user_count, "reason": e.switch_reason}

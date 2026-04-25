@@ -45,6 +45,54 @@ DIMENSION_LABELS: Dict[str, str] = {
     "anxiety": "焦虑识别",
     "inertia": "惯性识别",
     "validation": "需求验证",
+    "job_map": "Job Map阶段探索",
+    "job_drivers": "ABC驱动因素探索",
+    "success_criteria": "成功标准探索",
+    "obstacles": "障碍识别",
+}
+
+ALL_INTERVIEW_DIMENSIONS = (
+    "competition", "push", "pull", "anxiety", "inertia",
+    "validation", "job_map", "job_drivers", "success_criteria", "obstacles",
+)
+
+EXTENDED_QUESTIONS: Dict[str, List[str]] = {
+    "job_map": [
+        "在开始这个任务之前，你需要做哪些准备工作？",
+        "你是如何确定要做什么/怎么做的？（Define阶段）",
+        "你从哪里获取完成任务需要的信息？（Locate阶段）",
+        "执行过程中最容易出问题的环节是什么？（Execute阶段）",
+        "你怎么知道事情是否按预期进行？（Monitor阶段）",
+    ],
+    "job_drivers": [
+        "你的社交圈或公司文化如何影响你在这方面的选择？（Attitudes）",
+        "你的职业角色或家庭情况如何影响这个需求？（Background）",
+        "什么具体事件或情境促使你需要完成这个任务？（Circumstances）",
+        "这三种因素（社会期望、个人背景、具体情境）哪个影响最大？",
+        "有没有什么外部变化让这个需求变得更紧迫？",
+    ],
+    "success_criteria": [
+        "你怎么定义'做好了'？什么标准？",
+        "如果有一个理想的解决方案，它的效果应该是什么样的？",
+        "你目前的方案在多大程度上满足了这些标准？",
+        "哪些标准是'必须满足'的，哪些是'锦上添花'的？",
+        "你愿意为完美满足这些标准付出多少额外成本？",
+    ],
+    "obstacles": [
+        "在尝试新方案时，什么因素让你犹豫不决？",
+        "你在使用当前方案时遇到过哪些困难？",
+        "如果要推荐新方案给同事，你觉得他们可能会有什么顾虑？",
+        "在采用新方案的过程中，谁还参与了决策？",
+        "学习使用新方案的过程中，最大的障碍是什么？",
+    ],
+}
+
+INTERVIEW_TYPES = ("switch", "odi", "churn")
+
+INTERVIEW_TYPE_LABELS: Dict[str, str] = {
+    "switch": "Switch访谈 — 聚焦客户转换行为的四力分析",
+    "odi": "ODI访谈 — 聚焦Job Map各阶段的需求挖掘",
+    "churn": "流失访谈 — 聚焦客户离开原因和未满足需求",
 }
 
 DEFAULT_TIPS = [
@@ -84,11 +132,25 @@ class InterviewBuilder:
         self._context = context
         return self
 
+    def set_interview_type(self, interview_type: str) -> "InterviewBuilder":
+        if interview_type not in INTERVIEW_TYPES:
+            raise ValueError(
+                f"未知访谈类型: {interview_type}，可选: {INTERVIEW_TYPES}"
+            )
+        self._interview_type = interview_type
+        if interview_type == "switch":
+            self._dimensions = ["competition", "push", "pull", "anxiety", "inertia"]
+        elif interview_type == "odi":
+            self._dimensions = ["job_map", "success_criteria", "job_drivers"]
+        elif interview_type == "churn":
+            self._dimensions = ["competition", "push", "obstacles", "validation"]
+        return self
+
     def include_dimensions(self, dimensions: List[str]) -> "InterviewBuilder":
         for d in dimensions:
-            if d not in INTERVIEW_DIMENSIONS and d != "inertia":
+            if d not in ALL_INTERVIEW_DIMENSIONS:
                 raise ValueError(
-                    f"未知维度: {d}，可选: {', '.join(INTERVIEW_DIMENSIONS)}, inertia"
+                    f"未知维度: {d}，可选: {', '.join(ALL_INTERVIEW_DIMENSIONS)}"
                 )
         self._dimensions = dimensions
         return self
@@ -120,6 +182,8 @@ class InterviewBuilder:
 
         for dim in self._dimensions:
             template_qs = INTERVIEW_QUESTIONS.get(dim, [])
+            if not template_qs:
+                template_qs = EXTENDED_QUESTIONS.get(dim, [])
             max_q = self.config.max_questions_per_dimension
             for q_text in template_qs[:max_q]:
                 questions.append(

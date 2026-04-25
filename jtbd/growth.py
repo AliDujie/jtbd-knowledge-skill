@@ -1,10 +1,15 @@
 """JTBD 增长与留存策略模块
 
 对应 SKILL.md 执行能力七：JTBD 增长与留存策略。
+
+v3.0 新增:
+- 五种ODI增长策略矩阵 (Differentiated/Dominant/Disruptive/Discrete/Sustaining)
+- 七种产品策略行动 (Borrow/Accelerate/Partner/Acquire/NewFeatures/NewSubsystems/Ultimate)
+- 策略选择引导 (基于Opportunity Landscape自动推荐)
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 CHURN_TYPES = ("job_done", "better_alternative", "no_progress")
@@ -27,6 +32,59 @@ LEVER_LABELS: Dict[str, str] = {
     "upstream": "上游机会 — 客户在使用我们之前需要什么",
     "downstream": "下游机会 — 客户实现进步后面临什么新挑战",
     "lateral": "横向机会 — 同一客户还有什么其他 Job",
+}
+
+ODI_GROWTH_STRATEGIES = (
+    "differentiated", "dominant", "disruptive", "discrete", "sustaining",
+)
+
+ODI_STRATEGY_LABELS: Dict[str, str] = {
+    "differentiated": "差异化策略 (Differentiated)",
+    "dominant": "主导策略 (Dominant)",
+    "disruptive": "颠覆式策略 (Disruptive)",
+    "discrete": "细分策略 (Discrete)",
+    "sustaining": "维持策略 (Sustaining)",
+}
+
+ODI_STRATEGY_DESCRIPTIONS: Dict[str, str] = {
+    "differentiated": "更好+更贵 — 专注满足underserved需求，为高端客户提供卓越解决方案",
+    "dominant": "更好+更便宜 — 同时满足更多需求且降低成本，实现市场主导",
+    "disruptive": "更差+更便宜 — 满足overserved客户的基本需求，以低价切入",
+    "discrete": "针对特定细分场景的独特需求组合，避免正面竞争",
+    "sustaining": "渐进改善现有产品，保持竞争力，追随市场领导者",
+}
+
+ODI_STRATEGY_CONDITIONS: Dict[str, str] = {
+    "differentiated": "存在≥3个高underserved需求(机会分≥12)，且目标客户群有付费能力",
+    "dominant": "同时存在underserved和overserved需求，有技术优势可以兼得",
+    "disruptive": "大量overserved需求(机会分<8)，市场存在价格敏感型细分客户",
+    "discrete": "不同客户群有截然不同的需求优先级组合",
+    "sustaining": "市场相对成熟，需求满足程度整体均衡(机会分8-12)",
+}
+
+PRODUCT_STRATEGY_ACTIONS = (
+    "borrow", "accelerate", "partner", "acquire",
+    "new_features", "new_subsystems", "ultimate_solution",
+)
+
+PRODUCT_ACTION_LABELS: Dict[str, str] = {
+    "borrow": "借用特性 (Borrow)",
+    "accelerate": "加速管线 (Accelerate)",
+    "partner": "合作/授权 (Partner)",
+    "acquire": "收购 (Acquire)",
+    "new_features": "新增特性 (New Features)",
+    "new_subsystems": "新增子系统 (New Subsystems)",
+    "ultimate_solution": "终极解决方案 (Ultimate Solution)",
+}
+
+PRODUCT_ACTION_DESCRIPTIONS: Dict[str, str] = {
+    "borrow": "从竞品或相邻领域借用已验证的特性，快速补齐短板",
+    "accelerate": "加速内部已在研发的功能管线，提前发布",
+    "partner": "与第三方合作或获得授权，整合互补能力",
+    "acquire": "收购拥有关键能力的公司或团队",
+    "new_features": "基于underserved需求开发全新功能",
+    "new_subsystems": "开发独立子系统来满足一组相关的未满足需求",
+    "ultimate_solution": "重新设计产品架构，打造一站式解决方案",
 }
 
 
@@ -59,6 +117,19 @@ class KeyHabit:
 
 
 @dataclass
+class ODIStrategyChoice:
+    """ODI增长策略选择"""
+    strategy: str
+    rationale: str = ""
+    target_outcomes: List[str] = field(default_factory=list)
+    product_actions: List[str] = field(default_factory=list)
+
+    @property
+    def strategy_label(self) -> str:
+        return ODI_STRATEGY_LABELS.get(self.strategy, self.strategy)
+
+
+@dataclass
 class GrowthPlan:
     product_name: str
     target_job: str = ""
@@ -67,6 +138,7 @@ class GrowthPlan:
     key_habits: List[KeyHabit] = field(default_factory=list)
     flywheel_steps: List[str] = field(default_factory=list)
     action_items: List[str] = field(default_factory=list)
+    odi_strategy: Optional[ODIStrategyChoice] = None
 
 
 class GrowthStrategyBuilder:
@@ -80,6 +152,15 @@ class GrowthStrategyBuilder:
         builder.add_churn_segment("no_progress", "新用户首周未完成预订", 200)
         builder.add_key_habit("首周完成至少1次预订", best_pct=85, churned_pct=20, timeframe="首7天")
         builder.set_flywheel(["客户出差需求", "搜索住处", "快速预订", "满意体验", "下次复用", "推荐同事"])
+
+        # v3.0新增: ODI增长策略
+        builder.set_odi_strategy(
+            strategy="differentiated",
+            rationale="存在5个高underserved需求，商旅客户有高付费能力",
+            target_outcomes=["快速匹配差标酒店", "确认酒店实景"],
+            product_actions=["new_features", "partner"],
+        )
+
         plan = builder.build()
         print(builder.render_markdown(plan))
     """
@@ -92,6 +173,7 @@ class GrowthStrategyBuilder:
         self._habits: List[KeyHabit] = []
         self._flywheel: List[str] = []
         self._actions: List[str] = []
+        self._odi_strategy: Optional[ODIStrategyChoice] = None
 
     def set_target_job(self, job: str) -> "GrowthStrategyBuilder":
         self._job = job
@@ -133,12 +215,29 @@ class GrowthStrategyBuilder:
         self._actions.append(action)
         return self
 
+    def set_odi_strategy(self, strategy: str, rationale: str = "",
+                         target_outcomes: Optional[List[str]] = None,
+                         product_actions: Optional[List[str]] = None) -> "GrowthStrategyBuilder":
+        if strategy not in ODI_GROWTH_STRATEGIES:
+            raise ValueError(f"未知策略: {strategy}，可选: {ODI_GROWTH_STRATEGIES}")
+        if product_actions:
+            for action in product_actions:
+                if action not in PRODUCT_STRATEGY_ACTIONS:
+                    raise ValueError(f"未知产品行动: {action}，可选: {PRODUCT_STRATEGY_ACTIONS}")
+        self._odi_strategy = ODIStrategyChoice(
+            strategy=strategy,
+            rationale=rationale,
+            target_outcomes=target_outcomes or [],
+            product_actions=product_actions or [],
+        )
+        return self
+
     def build(self) -> GrowthPlan:
         return GrowthPlan(
             product_name=self._product, target_job=self._job,
             growth_opportunities=self._opportunities, churn_segments=self._churn,
             key_habits=self._habits, flywheel_steps=self._flywheel,
-            action_items=self._actions,
+            action_items=self._actions, odi_strategy=self._odi_strategy,
         )
 
     @staticmethod
@@ -146,6 +245,41 @@ class GrowthStrategyBuilder:
         lines = [f"# 增长与留存策略 — {plan.product_name}\n"]
         if plan.target_job:
             lines.append(f"**目标 Job:** {plan.target_job}\n")
+
+        if plan.odi_strategy:
+            s = plan.odi_strategy
+            lines.append("## ODI增长策略\n")
+            lines.append(f"**选定策略:** {s.strategy_label}\n")
+            desc = ODI_STRATEGY_DESCRIPTIONS.get(s.strategy, "")
+            if desc:
+                lines.append(f"*{desc}*\n")
+            if s.rationale:
+                lines.append(f"**选择理由:** {s.rationale}\n")
+            cond = ODI_STRATEGY_CONDITIONS.get(s.strategy, "")
+            if cond:
+                lines.append(f"**适用条件:** {cond}\n")
+            if s.target_outcomes:
+                lines.append("**目标Outcome:**")
+                for o in s.target_outcomes:
+                    lines.append(f"- {o}")
+                lines.append("")
+            if s.product_actions:
+                lines.append("**产品策略行动:**")
+                for action in s.product_actions:
+                    label = PRODUCT_ACTION_LABELS.get(action, action)
+                    desc = PRODUCT_ACTION_DESCRIPTIONS.get(action, "")
+                    lines.append(f"- **{label}:** {desc}")
+                lines.append("")
+
+            lines.append("### 五种策略参考矩阵\n")
+            lines.append("| 策略 | 定位 | 适用条件 |")
+            lines.append("|------|------|---------|")
+            for strat in ODI_GROWTH_STRATEGIES:
+                label = ODI_STRATEGY_LABELS[strat]
+                cond = ODI_STRATEGY_CONDITIONS[strat]
+                marker = " ← 当前" if strat == s.strategy else ""
+                lines.append(f"| {label}{marker} | {ODI_STRATEGY_DESCRIPTIONS[strat].split('—')[0].strip()} | {cond} |")
+            lines.append("")
 
         if plan.flywheel_steps:
             lines.append("## 增长飞轮\n")
@@ -191,7 +325,7 @@ class GrowthStrategyBuilder:
 
     @staticmethod
     def render_json(plan: GrowthPlan) -> Dict:
-        return {
+        result: Dict = {
             "product": plan.product_name, "target_job": plan.target_job,
             "flywheel": plan.flywheel_steps,
             "growth_opportunities": [
@@ -211,3 +345,13 @@ class GrowthStrategyBuilder:
             ],
             "actions": plan.action_items,
         }
+        if plan.odi_strategy:
+            s = plan.odi_strategy
+            result["odi_strategy"] = {
+                "strategy": s.strategy,
+                "label": s.strategy_label,
+                "rationale": s.rationale,
+                "target_outcomes": s.target_outcomes,
+                "product_actions": s.product_actions,
+            }
+        return result

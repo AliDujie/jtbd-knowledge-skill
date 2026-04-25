@@ -1,6 +1,11 @@
 """JTBD Skill 配置模块
 
 定义知识库路径、分析维度、默认参数等全局配置。
+
+v3.0 新增:
+- 新知识库文件映射 (odi, atlas, playbook_tools, glossary)
+- INTERVIEW_DIMENSIONS 包含完整10个维度（含inertia）
+- Job Map / Outcome / Atlas / Obstacle 相关常量引用说明
 """
 
 from pathlib import Path
@@ -22,6 +27,10 @@ KNOWLEDGE_FILES: Dict[str, str] = {
     "cases": "09-case-studies.md",
     "models": "10-two-models.md",
     "reference": "11-quick-reference.md",
+    "odi": "12-odi-methodology.md",
+    "atlas": "13-jobs-atlas.md",
+    "playbook_tools": "14-playbook-tools.md",
+    "glossary": "15-glossary.md",
 }
 
 FORCE_TYPES = ("push", "pull", "anxiety", "inertia")
@@ -59,7 +68,13 @@ INTERVIEW_DIMENSIONS = (
     "push",
     "pull",
     "anxiety",
+    "inertia",
     "validation",
+)
+
+ALL_INTERVIEW_DIMENSIONS = (
+    "competition", "push", "pull", "anxiety", "inertia",
+    "validation", "job_map", "job_drivers", "success_criteria", "obstacles",
 )
 
 JTBD_STATEMENT_VERBS = (
@@ -69,6 +84,13 @@ JTBD_STATEMENT_VERBS = (
     "free me",
     "equip me",
     "make the",
+)
+
+JTBD_STATEMENT_FORMATS = (
+    "klement",
+    "outcome",
+    "job_story",
+    "traditional",
 )
 
 INNOVATION_SIGNALS = (

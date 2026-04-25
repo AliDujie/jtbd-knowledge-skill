@@ -2,10 +2,14 @@
 
 对应 SKILL.md 执行能力六：生成 JTBD 营销文案。
 基于四力模型生成不同角度的文案方案。
+
+v3.0 新增:
+- VPC价值主张陈述模板 (Value Proposition Canvas + JTBD)
+- Outcome-Based价值主张 (从Desired Outcome直接生成文案方向)
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 COPY_PURPOSES = ("ad", "landing_page", "social_media", "email")
@@ -17,12 +21,13 @@ PURPOSE_LABELS: Dict[str, str] = {
     "email": "邮件",
 }
 
-COPY_ANGLES = ("push_driven", "pull_driven", "anxiety_elimination")
+COPY_ANGLES = ("push_driven", "pull_driven", "anxiety_elimination", "vpc_outcome")
 
 ANGLE_LABELS: Dict[str, str] = {
     "push_driven": "推力驱动（痛点共鸣）",
     "pull_driven": "拉力驱动（愿景吸引）",
     "anxiety_elimination": "焦虑消除（降低门槛）",
+    "vpc_outcome": "Outcome驱动（价值主张）",
 }
 
 HEADLINE_FORMULAS: Dict[str, str] = {
@@ -30,7 +35,21 @@ HEADLINE_FORMULAS: Dict[str, str] = {
     "progress_vision": "{desired_outcome}，从{product}开始",
     "contrast": "从{old_state}到{new_state}",
     "question": "如果{desired_outcome}只需要{simple_action}呢？",
+    "outcome_focused": "让{outcome_metric}提升{improvement_pct}%",
 }
+
+VPC_TEMPLATE = (
+    "For {executor} who are dissatisfied with {current_approach}, "
+    "our {product} provides {value_proposition} "
+    "so they can {desired_outcome}."
+)
+
+VPC_TEMPLATE_ZH = (
+    "针对{executor}，"
+    "他们对{current_approach}感到不满，"
+    "{product}提供{value_proposition}，"
+    "让他们能够{desired_outcome}。"
+)
 
 
 @dataclass
@@ -44,6 +63,10 @@ class CopyBrief:
     key_inertias: List[str] = field(default_factory=list)
     tone: str = "专业但亲切"
     purpose: str = "landing_page"
+    executor: str = ""
+    current_approach: str = ""
+    value_proposition: str = ""
+    key_outcomes: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -63,6 +86,8 @@ class CopyPlan:
     """完整文案方案"""
     brief: CopyBrief
     drafts: List[CopyDraft] = field(default_factory=list)
+    vpc_statement: str = ""
+    vpc_statement_zh: str = ""
     principles: List[str] = field(default_factory=list)
 
 
@@ -72,6 +97,8 @@ COPY_PRINCIPLES = [
     "直接攻击焦虑（降低采用门槛）",
     "直接攻击惯性（给出切换的理由和路径）",
     "不要描述功能列表，描述生活如何变好",
+    "从Desired Outcome出发构建价值主张，而非从功能特性出发",
+    "用Outcome语言替代Feature语言: '减少50%搜索时间'优于'智能搜索引擎'",
 ]
 
 
@@ -90,12 +117,22 @@ class MarketingCopywriter:
         )
         writer.add_anxiety("不确定平台上的酒店评价是否真实")
         writer.add_inertia("已经习惯用携程了")
+
+        # 新增: VPC价值主张
+        writer.set_vpc(
+            executor="频繁出差的商旅人士",
+            current_approach="在携程上逐个比价筛选",
+            value_proposition="一键匹配公司差标的智能推荐",
+        )
+        writer.add_outcome("找到符合公司标准的酒店")
+        writer.add_outcome("确认酒店照片与实际一致")
+
         plan = writer.generate()
         print(writer.render_markdown(plan))
     """
 
     def __init__(self) -> None:
-        self._brief: CopyBrief = None
+        self._brief: Optional[CopyBrief] = None
         self._anxieties: List[str] = []
         self._inertias: List[str] = []
 
@@ -111,12 +148,27 @@ class MarketingCopywriter:
         )
         return self
 
+    def set_vpc(self, executor: str, current_approach: str,
+                value_proposition: str) -> "MarketingCopywriter":
+        if not self._brief:
+            raise ValueError("请先调用 set_brief 设置文案简报")
+        self._brief.executor = executor
+        self._brief.current_approach = current_approach
+        self._brief.value_proposition = value_proposition
+        return self
+
     def add_anxiety(self, anxiety: str) -> "MarketingCopywriter":
         self._anxieties.append(anxiety)
         return self
 
     def add_inertia(self, inertia: str) -> "MarketingCopywriter":
         self._inertias.append(inertia)
+        return self
+
+    def add_outcome(self, outcome: str) -> "MarketingCopywriter":
+        if not self._brief:
+            raise ValueError("请先调用 set_brief 设置文案简报")
+        self._brief.key_outcomes.append(outcome)
         return self
 
     def generate(self) -> CopyPlan:
@@ -131,7 +183,7 @@ class MarketingCopywriter:
         drafts.append(CopyDraft(
             angle="push_driven",
             headline=f"还在为{b.struggle}烦恼？",
-            subheadline=f"你不是一个人。每天有数万人面临同样的困扰。",
+            subheadline="你不是一个人。每天有数万人面临同样的困扰。",
             body=(
                 f"我们理解{b.struggle}带来的挫败感。"
                 f"这不仅浪费时间，更让你无法专注于真正重要的事。\n\n"
@@ -153,7 +205,7 @@ class MarketingCopywriter:
             ),
             anxiety_response=self._format_anxiety_response(b),
             inertia_response=self._format_inertia_response(b),
-            cta=f"开始你的改变",
+            cta="开始你的改变",
         ))
 
         drafts.append(CopyDraft(
@@ -166,7 +218,45 @@ class MarketingCopywriter:
             cta=f"无风险试用{b.product}",
         ))
 
-        return CopyPlan(brief=b, drafts=drafts, principles=COPY_PRINCIPLES)
+        if b.key_outcomes:
+            outcome_list = "\n".join(f"- {o}" for o in b.key_outcomes)
+            drafts.append(CopyDraft(
+                angle="vpc_outcome",
+                headline=f"{b.product} — 让每个结果都可衡量",
+                subheadline=f"针对{b.executor or '你'}的精准解决方案" if b.executor else "精准解决你的核心需求",
+                body=(
+                    f"我们聚焦的不是功能堆砌，而是你真正关心的结果：\n\n"
+                    f"{outcome_list}\n\n"
+                    f"每一项，都是我们的承诺。"
+                ),
+                anxiety_response=self._format_anxiety_response(b),
+                inertia_response=self._format_inertia_response(b),
+                cta=f"了解{b.product}如何实现",
+            ))
+
+        vpc_en = ""
+        vpc_zh = ""
+        if b.executor and b.current_approach and b.value_proposition:
+            vpc_en = VPC_TEMPLATE.format(
+                executor=b.executor,
+                current_approach=b.current_approach,
+                product=b.product,
+                value_proposition=b.value_proposition,
+                desired_outcome=b.desired_outcome,
+            )
+            vpc_zh = VPC_TEMPLATE_ZH.format(
+                executor=b.executor,
+                current_approach=b.current_approach,
+                product=b.product,
+                value_proposition=b.value_proposition,
+                desired_outcome=b.desired_outcome,
+            )
+
+        return CopyPlan(
+            brief=b, drafts=drafts,
+            vpc_statement=vpc_en, vpc_statement_zh=vpc_zh,
+            principles=COPY_PRINCIPLES,
+        )
 
     def _format_anxiety_response(self, brief: CopyBrief) -> str:
         if not brief.key_anxieties:
@@ -180,7 +270,7 @@ class MarketingCopywriter:
         if not brief.key_inertias:
             return ""
         lines = ["切换很简单："]
-        for idx, iner in enumerate(brief.key_inertias, 1):
+        for iner in brief.key_inertias:
             lines.append(f"- 关于\"{iner}\"：[具体的过渡方案]")
         return "\n".join(lines)
 
@@ -190,7 +280,7 @@ class MarketingCopywriter:
         lines = [f"我们知道尝试新产品需要勇气。以下是用户最常见的顾虑：\n"]
         for a in brief.key_anxieties:
             lines.append(f"**\"{a}\"**")
-            lines.append(f"→ [针对性解决方案和证据]\n")
+            lines.append("→ [针对性解决方案和证据]\n")
         lines.append(f"{brief.product}提供无风险试用，让你安心体验。")
         return "\n".join(lines)
 
@@ -202,7 +292,15 @@ class MarketingCopywriter:
         lines.append(f"**核心挣扎:** {b.struggle}")
         lines.append(f"**期望进步:** {b.desired_outcome}")
         lines.append(f"**文案用途:** {PURPOSE_LABELS.get(b.purpose, b.purpose)}")
-        lines.append(f"**语调:** {b.tone}\n")
+        lines.append(f"**语调:** {b.tone}")
+        if b.executor:
+            lines.append(f"**目标执行者:** {b.executor}")
+        lines.append("")
+
+        if plan.vpc_statement:
+            lines.append("## 价值主张陈述 (VPC)\n")
+            lines.append(f"**English:** {plan.vpc_statement}\n")
+            lines.append(f"**中文:** {plan.vpc_statement_zh}\n")
 
         for i, draft in enumerate(plan.drafts, 1):
             angle_label = ANGLE_LABELS.get(draft.angle, draft.angle)
@@ -232,6 +330,10 @@ class MarketingCopywriter:
             "struggle": b.struggle,
             "desired_outcome": b.desired_outcome,
             "purpose": b.purpose,
+            "executor": b.executor,
+            "vpc_statement": plan.vpc_statement,
+            "vpc_statement_zh": plan.vpc_statement_zh,
+            "key_outcomes": b.key_outcomes,
             "drafts": [
                 {"angle": d.angle, "headline": d.headline,
                  "subheadline": d.subheadline, "body": d.body, "cta": d.cta}

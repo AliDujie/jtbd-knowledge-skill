@@ -1,75 +1,172 @@
-"""JTBD (Jobs to Be Done) Python Toolkit
+"""JTBD (Jobs to Be Done) Python Toolkit v3.0
 
-基于 Alan Klement《When Coffee and Kale Compete》的 JTBD 理论工具包。
-覆盖 SKILL.md 全部 8 大执行能力。
+融合三大JTBD学派的完整工具包:
+- Klement 学派: 进步力量、切换访谈、情感分析
+- Ulwick ODI 学派: Opportunity Algorithm、Desired Outcome、Universal Job Map
+- Wunker Jobs Atlas 学派: 七维度分析、障碍诊断、ABC Job Drivers
+- Kalbach 整合学派: Job Stories、VPC整合、多格式描述
+
+覆盖 SKILL.md 全部执行能力:
+1. 访谈提纲生成（含Switch/ODI/Churn三种类型）
+2. 调查问卷生成（含ODI Outcome配对量表）
+3. 机会评分（四维模型 + ODI Opportunity Algorithm）
+4. 优先级矩阵与策略建议
+5. 竞争分析（含Outcome对比 + 颠覆诊断）
+6. 营销文案（含VPC价值主张）
+7. 增长策略（含ODI五策略矩阵）
+8. JTBD描述（Klement/Outcome/Job Story/Traditional四格式）
+9. Universal Job Map 构建
+10. Desired Outcome Statement 管理
+11. Job Stories 生成（四种变体）
+12. 采用障碍诊断
+13. Jobs Atlas 七维度构建
 
 快速开始::
 
     from jtbd import JTBDSkill
     skill = JTBDSkill("旅行预订平台")
-    # 8大能力一站式调用
+
+    # 基础能力
     guide = skill.generate_interview("用户访谈", ["competition", "push"])
     survey = skill.generate_survey("体验调研", "screening", struggles=["找酒店耗时"])
-    score = skill.score_opportunity("快速找住处", struggle=4, alternative=3, market=4, budget=4)
+
+    # ODI 能力
+    score = skill.score_odi("快速找住处", importance=8, satisfaction=3)
+    job_map = skill.create_job_map("预订商务出行酒店")
+    outcomes = skill.create_outcome_statements("预订商务出行酒店")
+
+    # Atlas 能力
+    atlas = skill.create_jobs_atlas("预订商务出行酒店")
+    obstacles = skill.diagnose_obstacles("旅行预订平台")
+
+    # 分析报告
     report = skill.generate_analysis_report()
 """
 
-__version__ = "2.0.0"
+__version__ = "3.0.0"
 
-from .config import AnalysisConfig, FORCE_TYPES, FORCE_LABELS, KNOWLEDGE_FILES
+from .config import (
+    AnalysisConfig, FORCE_TYPES, FORCE_LABELS, KNOWLEDGE_FILES,
+    INTERVIEW_DIMENSIONS, ALL_INTERVIEW_DIMENSIONS,
+    JTBD_STATEMENT_FORMATS,
+)
 from .utils import load_knowledge, load_all_knowledge, search_knowledge
 from .templates import (
     INTERVIEW_QUESTIONS, JTBD_STATEMENT_TEMPLATE,
     JTBD_STATEMENT_EXAMPLES, INNOVATION_CHECKLIST, REPORT_TEMPLATE,
     SCENARIO_MERGE_RULES, EXAMPLE_SELECTION_CRITERIA,
     INSIGHT_QUALITY_RULES, SECTION_INSIGHT_PROMPTS, HTML_REPORT_STYLE_RULES,
+    OUTCOME_STATEMENT_TEMPLATE, OUTCOME_STATEMENT_EXAMPLES,
+    JOB_STORY_TEMPLATES, JOB_STORY_EXAMPLES,
+    OBSTACLE_CHECKLIST,
 )
-from .jtbd_analyzer import JTBDAnalyzer, JTBDAnalysis, JTBDStatement
-from .interview_generator import InterviewBuilder, InterviewGuide
+from .jtbd_analyzer import (
+    JTBDAnalyzer, JTBDAnalysis, JTBDStatement,
+    STATEMENT_FORMATS, STATEMENT_FORMAT_LABELS,
+)
+from .interview_generator import (
+    InterviewBuilder, InterviewGuide,
+    ALL_INTERVIEW_DIMENSIONS as INTERVIEW_ALL_DIMS,
+    INTERVIEW_TYPES, EXTENDED_QUESTIONS,
+)
 from .forces import ForcesProfile, ForceItem, render_forces_markdown
 from .innovation import InnovationFinder, InnovationSignal, InnovationOpportunity
-from .survey_generator import SurveyBuilder, Survey
-from .priority_calculator import PriorityAnalyzer, JobScore, PriorityMatrix
-from .competition import CompetitionAnalyzer, CompetitiveAnalysis, Competitor
-from .marketing import MarketingCopywriter, CopyPlan, CopyBrief
-from .growth import GrowthStrategyBuilder, GrowthPlan
+from .survey_generator import SurveyBuilder, Survey, ODI_SAMPLE_SIZE_GUIDANCE
+from .priority_calculator import (
+    PriorityAnalyzer, JobScore, PriorityMatrix,
+    ODI_INTERPRETATION, ODI_STRATEGIES,
+)
+from .competition import (
+    CompetitionAnalyzer, CompetitiveAnalysis, Competitor,
+    OutcomeComparison, DisruptionDiagnostic,
+)
+from .marketing import (
+    MarketingCopywriter, CopyPlan, CopyBrief,
+    VPC_TEMPLATE, VPC_TEMPLATE_ZH,
+)
+from .growth import (
+    GrowthStrategyBuilder, GrowthPlan,
+    ODIStrategyChoice, ODI_GROWTH_STRATEGIES, PRODUCT_STRATEGY_ACTIONS,
+)
+from .job_map import JobMapBuilder, JobMap, JobMapStage, StageNeed, JOB_MAP_STAGES
+from .outcome_statement import (
+    OutcomeBuilder, OutcomeSet, DesiredOutcome,
+    OUTCOME_DIRECTIONS, NEED_TYPES,
+)
+from .job_stories import JobStoryBuilder, JobStorySet, JobStory
+from .obstacles import (
+    ObstacleAnalyzer, ObstacleDiagnosis, ObstacleItem,
+    ADOPTION_OBSTACLES, USAGE_OBSTACLES,
+)
+from .jobs_atlas import JobsAtlasBuilder, JobsAtlas, ATLAS_DIMENSIONS
 
 from typing import Dict, List, Optional
 
 
 class JTBDSkill:
-    """JTBD 统一入口类 — 封装全部 8 大执行能力
+    """JTBD 统一入口类 — 封装全部执行能力
 
     用法::
 
         skill = JTBDSkill("旅行预订平台")
 
-        # 能力1: 访谈提纲
+        # 能力1: 访谈提纲（支持Switch/ODI/Churn三种类型）
         guide = skill.generate_interview("用户访谈", ["competition", "push", "anxiety"])
+        odi_guide = skill.generate_interview("ODI访谈", interview_type="odi")
 
-        # 能力2: 调查问卷
+        # 能力2: 调查问卷（支持ODI配对量表）
         survey = skill.generate_survey("体验调研", "screening", struggles=["找酒店耗时"])
+        odi_survey = skill.generate_survey("ODI量表", "odi_outcome")
 
-        # 能力3: 机会分数
+        # 能力3: 机会评分（四维模型 + ODI双轨）
         score = skill.score_opportunity("快速找住处", struggle=4, alternative=3, market=4, budget=4)
+        odi = skill.score_odi("快速找住处", importance=8, satisfaction=3)
 
         # 能力4: 优先级矩阵
         skill.add_job_to_matrix("快速找住处", struggle=4, alternative=3, market=4, budget=4)
-        skill.add_job_to_matrix("比价省钱", struggle=3, alternative=4, market=3, budget=3)
         matrix = skill.render_priority_matrix()
 
-        # 能力5: 竞争分析
+        # 能力5: 竞争分析（含Outcome对比 + 颠覆诊断）
         skill.add_competitor("携程", "direct", strengths=["酒店多"], weaknesses=["界面复杂"])
         competition = skill.render_competition()
 
-        # 能力6: 营销文案
+        # 能力6: 营销文案（含VPC价值主张）
         copy = skill.generate_marketing_copy(struggle="花30分钟比价", desired_outcome="专注工作")
 
-        # 能力7: 增长策略
+        # 能力7: 增长策略（含ODI五策略矩阵）
         growth = skill.generate_growth_strategy(churn_segments=[("no_progress", "首周未预订", 200)])
 
-        # 能力8: JTBD描述
+        # 能力8: JTBD描述（四种格式）
         stmt = skill.create_jtbd_statement("Help me", "快速找住处", "专注工作")
+        outcome = skill.create_outcome_statement(
+            direction="minimize", metric="the time",
+            obj="finding a suitable hotel", clarifier="when traveling for business"
+        )
+
+        # 能力9: Universal Job Map
+        jm = skill.create_job_map("预订商务出行酒店")
+        jm.add_need("define", "确定出差日期和目的地", importance=9, satisfaction=7)
+        job_map = jm.build()
+
+        # 能力10: Desired Outcome 管理
+        ob = skill.create_outcome_statements("预订商务出行酒店")
+        ob.add("minimize", "the time", "finding a suitable hotel", "when traveling for business")
+        outcome_set = ob.build()
+
+        # 能力11: Job Stories（四种变体）
+        js = skill.create_job_stories("预订商务出行酒店")
+        js.add("出差需要住酒店", "快速找到合适的住处", "专注工作而不是为住宿烦恼")
+        stories = js.build()
+
+        # 能力12: 障碍诊断
+        diag = skill.diagnose_obstacles("旅行预订平台")
+        diag.add_obstacle("adoption", "lack_of_knowledge", severity=4)
+        diagnosis = diag.build()
+
+        # 能力13: Jobs Atlas
+        atlas = skill.create_jobs_atlas("预订商务出行酒店")
+        atlas.add_job("快速找到合适的住处")
+        atlas_result = atlas.build()
     """
 
     def __init__(self, product_name: str, config: Optional[AnalysisConfig] = None):
@@ -82,10 +179,13 @@ class JTBDSkill:
 
     def generate_interview(self, title: str,
                            dimensions: Optional[List[str]] = None,
-                           context: str = "") -> str:
+                           context: str = "",
+                           interview_type: str = "") -> str:
         builder = InterviewBuilder(title, self.config)
         if context:
             builder.set_context(context)
+        if interview_type:
+            builder.set_interview_type(interview_type)
         if dimensions:
             builder.include_dimensions(dimensions)
         guide = builder.build()
@@ -94,7 +194,9 @@ class JTBDSkill:
     def generate_survey(self, title: str, survey_type: str,
                         struggles: Optional[List[str]] = None,
                         alternatives: Optional[List[str]] = None,
-                        hypotheses: Optional[List[str]] = None) -> str:
+                        hypotheses: Optional[List[str]] = None,
+                        outcomes: Optional[List[str]] = None,
+                        jobs: Optional[List[str]] = None) -> str:
         builder = SurveyBuilder(title, survey_type)
         builder.set_product(self.product)
         if struggles:
@@ -103,6 +205,10 @@ class JTBDSkill:
             builder.set_alternatives(alternatives)
         if hypotheses:
             builder.set_hypotheses(hypotheses)
+        if outcomes:
+            builder.set_outcomes(outcomes)
+        if jobs:
+            builder.set_jobs(jobs)
         survey = builder.build()
         return SurveyBuilder.render_markdown(survey)
 
@@ -116,10 +222,24 @@ class JTBDSkill:
         self.priority_analyzer.score_job(job, "budget", budget)
         return {"score": job.opportunity_score, "level": job.level, "action": job.action}
 
+    def score_odi(self, job_desc: str, importance: int = 5,
+                  satisfaction: int = 5) -> Dict:
+        job = self.priority_analyzer.add_job(job_desc)
+        self.priority_analyzer.score_odi(job, importance, satisfaction)
+        strategy = self.priority_analyzer.suggest_strategy(job)
+        return {
+            "importance": importance,
+            "satisfaction": satisfaction,
+            "odi_score": job.odi_opportunity,
+            "odi_level": job.odi_level,
+            "suggested_strategy": strategy,
+        }
+
     def add_job_to_matrix(self, job_desc: str, struggle: int = 3,
                           alternative: int = 3, market: int = 3, budget: int = 3,
                           push: int = 0, pull: int = 0,
-                          anxiety: int = 0, inertia: int = 0) -> JobScore:
+                          anxiety: int = 0, inertia: int = 0,
+                          importance: int = 0, satisfaction: int = 0) -> JobScore:
         job = self.priority_analyzer.add_job(job_desc)
         self.priority_analyzer.score_job(job, "struggle", struggle)
         self.priority_analyzer.score_job(job, "alternative", alternative)
@@ -127,6 +247,8 @@ class JTBDSkill:
         self.priority_analyzer.score_job(job, "budget", budget)
         if any([push, pull, anxiety, inertia]):
             self.priority_analyzer.score_forces(job, push, pull, anxiety, inertia)
+        if importance > 0 and satisfaction > 0:
+            self.priority_analyzer.score_odi(job, importance, satisfaction)
         return job
 
     def render_priority_matrix(self) -> str:
@@ -138,6 +260,23 @@ class JTBDSkill:
         self.competition_analyzer.add_competitor(
             name, category, strengths=strengths or [], weaknesses=weaknesses or [])
 
+    def add_outcome_comparison(self, outcome_desc: str, our_satisfaction: int,
+                               competitor_name: str, their_satisfaction: int) -> None:
+        self.competition_analyzer.add_outcome_comparison(
+            outcome_desc, our_satisfaction, competitor_name, their_satisfaction)
+
+    def add_disruption(self, disruptor_name: str,
+                       disruptor_advantages: Optional[List[str]] = None,
+                       our_advantages: Optional[List[str]] = None,
+                       adoption_barriers: Optional[List[str]] = None,
+                       threat_level: str = "medium") -> None:
+        self.competition_analyzer.add_disruption(
+            disruptor_name,
+            disruptor_advantages=disruptor_advantages,
+            our_advantages=our_advantages,
+            adoption_barriers=adoption_barriers,
+            threat_level=threat_level)
+
     def render_competition(self) -> str:
         self.competition_analyzer.auto_insights()
         return self.competition_analyzer.render_markdown()
@@ -145,10 +284,19 @@ class JTBDSkill:
     def generate_marketing_copy(self, struggle: str, desired_outcome: str,
                                 purpose: str = "landing_page",
                                 anxieties: Optional[List[str]] = None,
-                                inertias: Optional[List[str]] = None) -> str:
+                                inertias: Optional[List[str]] = None,
+                                executor: str = "",
+                                current_approach: str = "",
+                                value_proposition: str = "") -> str:
         writer = MarketingCopywriter()
         writer.set_brief(self.product, f"{self.product}的核心Job",
                          struggle, desired_outcome, purpose)
+        if executor or current_approach or value_proposition:
+            writer.set_vpc(
+                executor=executor or "目标用户",
+                current_approach=current_approach or "现有方案",
+                value_proposition=value_proposition or f"{self.product}的差异化价值",
+            )
         for a in (anxieties or []):
             writer.add_anxiety(a)
         for i in (inertias or []):
@@ -159,10 +307,14 @@ class JTBDSkill:
     def generate_growth_strategy(self, target_job: str = "",
                                  growth_opps: Optional[List[tuple]] = None,
                                  churn_segments: Optional[List[tuple]] = None,
-                                 key_habits: Optional[List[tuple]] = None) -> str:
+                                 key_habits: Optional[List[tuple]] = None,
+                                 odi_strategy: str = "",
+                                 odi_rationale: str = "") -> str:
         builder = GrowthStrategyBuilder(self.product)
         if target_job:
             builder.set_target_job(target_job)
+        if odi_strategy:
+            builder.set_odi_strategy(odi_strategy, odi_rationale)
         for opp in (growth_opps or []):
             builder.add_growth_opportunity(*opp)
         for seg in (churn_segments or []):
@@ -173,9 +325,52 @@ class JTBDSkill:
         return GrowthStrategyBuilder.render_markdown(plan)
 
     def create_jtbd_statement(self, verb: str, struggle: str,
-                              desired_outcome: str) -> str:
-        stmt = self.analyzer.add_statement(verb, struggle, desired_outcome)
+                              desired_outcome: str,
+                              statement_format: str = "klement") -> str:
+        if statement_format == "klement":
+            stmt = self.analyzer.add_statement(verb, struggle, desired_outcome)
+            return stmt.render()
+        elif statement_format == "outcome":
+            stmt = self.analyzer.add_outcome_statement(
+                direction=verb, metric=struggle,
+                object_of_control=desired_outcome, clarifier="")
+            return stmt.render()
+        elif statement_format == "job_story":
+            stmt = self.analyzer.add_job_story(
+                situation=verb, want=struggle,
+                outcome=desired_outcome)
+            return stmt.render()
+        else:
+            stmt = self.analyzer.add_traditional_statement(
+                role=verb, want=struggle, outcome=desired_outcome)
+            return stmt.render()
+
+    def create_outcome_statement(self, direction: str, metric: str,
+                                 object_of_control: str,
+                                 clarifier: str = "") -> str:
+        stmt = self.analyzer.add_outcome_statement(
+            direction=direction, metric=metric,
+            object_of_control=object_of_control, clarifier=clarifier)
         return stmt.render()
+
+    def create_job_map(self, job_statement: str,
+                       executor: str = "") -> JobMapBuilder:
+        builder = JobMapBuilder(job_statement)
+        if executor:
+            builder.set_executor(executor)
+        return builder
+
+    def create_outcome_statements(self, job_statement: str) -> OutcomeBuilder:
+        return OutcomeBuilder(job_statement)
+
+    def create_job_stories(self, job_statement: str) -> JobStoryBuilder:
+        return JobStoryBuilder(job_statement)
+
+    def diagnose_obstacles(self, product_name: str = "") -> ObstacleAnalyzer:
+        return ObstacleAnalyzer(product_name or self.product)
+
+    def create_jobs_atlas(self, job_statement: str) -> JobsAtlasBuilder:
+        return JobsAtlasBuilder(job_statement)
 
     def add_force(self, force_type: str, description: str,
                   intensity: int = 3, evidence: str = "") -> None:
@@ -187,248 +382,77 @@ class JTBDSkill:
     def search_knowledge(self, keyword: str) -> Dict[str, List[str]]:
         return search_knowledge(keyword)
 
-
-
-    # ── CEO 视角方法 (3 个) ──
-
     def generate_market_size_estimate(self, jobs: Optional[List[Dict]] = None) -> str:
-        """
-        CEO 决策方法 1: 市场规模估算
+        if not jobs:
+            jobs = []
 
-        基于 JTBD 理论，估算目标市场的 TAM/SAM/SOM，并提供验证计划。
+        tam_estimate = self._estimate_tam(jobs)
+        sam_estimate = self._estimate_sam(jobs)
+        som_estimate = self._estimate_som(jobs)
+        validation_plan = self._generate_validation_plan()
 
-        Args:
-            jobs: 用户任务列表，每项包含 job_name, target_users, frequency 等
+        report = f"""## 市场规模估算
 
-        Returns:
-            Markdown 格式的市场规模估算报告
+> 注意: 以下估算基于Job数据的相对强度推导，仅供内部讨论参考，
+> 需通过市场调研、行业报告和用户验证进一步校准。
 
-        Example::
+### 总可寻址市场（TAM）
+{tam_estimate}
 
-            skill = JTBDSkill('智能健康餐订阅')
-            jobs = [{'job_name': '快速获得营养均衡的工作餐', 'target_users': '一线城市白领', 'frequency': '每周 5 次'}]
-            market_size = skill.generate_market_size_estimate(jobs)
-        """
-        default_jobs = jobs or [{'job_name': '示例任务', 'target_users': '目标用户', 'frequency': '高频'}]
-        
-        tam = len(default_jobs) * 1000000 * 50  # 简化计算
-        sam = tam * 0.3
-        som = sam * 0.1
-        
-        lines = [
-            "## 📊 市场规模估算",
-            "",
-            f"**产品**: {self.product} | **分析任务数**: {len(default_jobs)}",
-            "",
-            "### 市场层级",
-            "",
-            "| 层级 | 定义 | 估算值 | 说明 |",
-            "|------|------|--------|------|",
-            f"| TAM (总可寻址市场) | 全部潜在用户 | ¥{tam:,.0f} | 全国范围内有该 JTBD 的用户 |",
-            f"| SAM (可服务市场) | 可触达用户 | ¥{sam:,.0f} | 渠道/地理可覆盖的用户 (30%) |",
-            f"| SOM (可获得市场) | 实际可获得 | ¥{som:,.0f} | 考虑竞争后的份额 (10%) |",
-            "",
-            "### 关键假设",
-            "",
-            "| 假设 | 值 | 来源 | 置信度 |",
-            "|------|-----|--------|--------|",
-            "| 目标用户规模 | 5000 万 | 行业报告 | 中 |",
-            "| 年均消费 | ¥1000 | 竞品分析 | 中 |",
-            "| 渗透率 (SAM/TAM) | 30% | 渠道能力 | 低 |",
-            "| 市场份额 (SOM/SAM) | 10% | 竞争格局 | 低 |",
-            "",
-            "### 验证计划",
-            "",
-            "| 阶段 | 行动 | 样本量 | 时间 | 成功标准 |",
-            "|------|------|--------|------|----------|",
-            "| 定性验证 | 用户访谈 | 20 人 | 2 周 | 确认 JTBD 存在 |",
-            "| 定量验证 | 问卷调查 | 500 人 | 2 周 | 需求强度≥7/10 |",
-            "| MVP 测试 | 预售/等待名单 | 1000 人 | 4 周 | 转化率≥5% |",
-            "| 小规模上线 | 单城市试点 | 1 万用户 | 8 周 | 留存率≥40% |",
-            "",
-            "### CEO 决策建议",
-            "",
-            "1. **市场进入**: TAM 足够大 (>¥10 亿)，建议进入",
-            "2. **资源投入**: 聚焦 SAM 的前 30%，快速验证 SOM 假设",
-            "3. **关键风险**: 渗透率和市场份额假设需 MVP 验证",
-            "4. **下一步**: 启动定性验证（2 周用户访谈）",
-            "",
-        ]
-        return "\n".join(lines)
+### 可服务市场（SAM）
+{sam_estimate}
+
+### 可获得市场（SOM）
+{som_estimate}
+
+### 验证计划
+{validation_plan}
+"""
+        return report
 
     def generate_priority_scoring(self, jobs: Optional[List[Dict]] = None) -> str:
-        """
-        CEO 决策方法 2: 优先级评分
+        if not jobs:
+            jobs = []
 
-        为多个 JTBD 机会计算优先级分数，提供资源分配建议和验证时间线。
+        opportunity_scores = self._calculate_opportunity_scores(jobs)
+        resource_allocation = self._generate_resource_allocation(jobs)
+        validation_timeline = self._generate_validation_timeline(jobs)
 
-        Args:
-            jobs: 任务列表，每项包含 job_name, importance, satisfaction_gap 等
+        report = f"""## 优先级评分
 
-        Returns:
-            Markdown 格式的优先级评分报告
+### 机会分数
+{opportunity_scores}
 
-        Example::
+### 资源分配建议
+{resource_allocation}
 
-            skill = JTBDSkill('智能健康餐订阅')
-            jobs = [
-                {'job_name': '快速获得营养餐', 'importance': 9, 'satisfaction_gap': 7},
-                {'job_name': '控制饮食热量', 'importance': 8, 'satisfaction_gap': 5},
-            ]
-            priority = skill.generate_priority_scoring(jobs)
-        """
-        default_jobs = jobs or [
-            {'job_name': '任务 A', 'importance': 8, 'satisfaction_gap': 6, 'confidence': 0.7},
-            {'job_name': '任务 B', 'importance': 7, 'satisfaction_gap': 5, 'confidence': 0.8},
-            {'job_name': '任务 C', 'importance': 9, 'satisfaction_gap': 8, 'confidence': 0.6},
-        ]
-        
-        # 计算机会分
-        for job in default_jobs:
-            imp = job.get('importance', 5)
-            gap = job.get('satisfaction_gap', 5)
-            conf = job.get('confidence', 0.5)
-            job['opportunity_score'] = (imp + gap - 10) * conf * 10
-        
-        sorted_jobs = sorted(default_jobs, key=lambda x: x.get('opportunity_score', 0), reverse=True)
-        
-        lines = [
-            "## 📋 优先级评分",
-            "",
-            f"**产品**: {self.product} | **评估任务数**: {len(default_jobs)}",
-            "",
-            "### 机会分数计算",
-            "",
-            "| 任务 | 重要性 (1-10) | 满意度差距 (1-10) | 置信度 | 机会分 | 优先级 |",
-            "|------|-------------|-----------------|--------|--------|--------|",
-        ]
-        
-        for i, job in enumerate(sorted_jobs, 1):
-            score = job.get('opportunity_score', 0)
-            priority = "P0" if i == 1 else "P1" if i == 2 else "P2"
-            lines.append(f"| {job['job_name']} | {job.get('importance', '-')} | {job.get('satisfaction_gap', '-')} | {job.get('confidence', '-'):.1f} | {score:.1f} | {priority} |")
-        
-        lines.extend([
-            "",
-            "### 资源分配建议",
-            "",
-            "| 优先级 | 任务 | 资源占比 | 团队规模 | 时间窗口 |",
-            "|--------|------|----------|----------|----------|",
-        ])
-        
-        resources = [(50, "3-4 人", "4-6 周"), (30, "2-3 人", "3-4 周"), (20, "1-2 人", "2-3 周")]
-        for i, job in enumerate(sorted_jobs[:3]):
-            res, team, time = resources[i] if i < len(resources) else (10, "1 人", "1-2 周")
-            lines.append(f"| P{i} | {job['job_name']} | {res}% | {team} | {time} |")
-        
-        lines.extend([
-            "",
-            "### 验证时间线",
-            "",
-            "| 周次 | P0 任务 | P1 任务 | P2 任务 | 里程碑 |",
-            "|------|--------|--------|--------|--------|",
-            "| W1-2 | 用户访谈 (20 人) | - | - | 需求确认 |",
-            "| W3-4 | MVP 设计 | 用户访谈 (10 人) | - | 方案确定 |",
-            "| W5-8 | MVP 开发 + 测试 | MVP 设计 | 用户访谈 (5 人) | P0 上线 |",
-            "| W9-12 | 数据分析 + 迭代 | MVP 开发 | MVP 设计 | P1 上线 |",
-            "",
-            "### CEO 决策建议",
-            "",
-            "1. **资源聚焦**: 50% 资源投入 P0 任务，确保快速验证",
-            "2. **决策节点**: W4 审查 P0 进展，W8 决定是否继续 P1",
-            "3. **止损机制**: P0 机会分<5 或验证失败，立即转向",
-            "",
-        ])
-        return "\n".join(lines)
+### 验证时间线
+{validation_timeline}
+"""
+        return report
 
     def generate_commercialization_feasibility(self, jobs: Optional[List[Dict]] = None) -> str:
-        """
-        CEO 决策方法 3: 商业化可行性
+        if not jobs:
+            jobs = []
 
-        评估 JTBD 机会的付费意愿、投入产出比，并提供 Go/No-Go 决策建议。
+        willingness_to_pay = self._assess_willingness_to_pay(jobs)
+        roi_analysis = self._analyze_roi(jobs)
+        go_no_go_decision = self._make_go_no_go_decision(jobs)
 
-        Args:
-            jobs: 任务列表，每项包含 job_name, wtp_estimate, dev_cost 等
+        report = f"""## 商业化可行性
 
-        Returns:
-            Markdown 格式的商业化可行性报告
+### 付费意愿评估
+{willingness_to_pay}
 
-        Example::
+### 投入产出分析
+{roi_analysis}
 
-            skill = JTBDSkill('智能健康餐订阅')
-            jobs = [
-                {'job_name': '快速获得营养餐', 'wtp_estimate': 50, 'dev_cost': 500000},
-            ]
-            feasibility = skill.generate_commercialization_feasibility(jobs)
-        """
-        default_jobs = jobs or [
-            {'job_name': '任务 A', 'wtp_estimate': 50, 'dev_cost': 500000, 'annual_users': 5000},
-        ]
-        
-        lines = [
-            "## 💰 商业化可行性",
-            "",
-            f"**产品**: {self.product} | **评估任务数**: {len(default_jobs)}",
-            "",
-            "### 付费意愿评估",
-            "",
-            "| 任务 | 预估 WTP | 价格敏感度 | 支付频率 | 验证方法 |",
-            "|------|---------|-----------|----------|----------|",
-        ]
-        
-        for job in default_jobs:
-            wtp = job.get('wtp_estimate', 0)
-            sensitivity = "低" if wtp > 100 else "中" if wtp > 50 else "高"
-            lines.append(f"| {job['job_name']} | ¥{wtp} | {sensitivity} | 月度 | 支付意愿调查 + 预售测试 |")
-        
-        lines.extend([
-            "",
-            "### 投入产出分析",
-            "",
-            "| 任务 | 开发成本 | 年用户数 | 年收入 | ROI | 回收期 |",
-            "|------|---------|----------|--------|-----|--------|",
-        ])
-        
-        for job in default_jobs:
-            cost = job.get('dev_cost', 0)
-            users = job.get('annual_users', 0)
-            wtp = job.get('wtp_estimate', 0) * 12  # 年费
-            revenue = users * wtp
-            roi = ((revenue - cost) / cost * 100) if cost > 0 else 0
-            payback = cost / (revenue / 12) if revenue > 0 else 999
-            lines.append(f"| {job['job_name']} | ¥{cost:,.0f} | {users:,.0f} | ¥{revenue:,.0f} | {roi:.0f}% | {payback:.1f}月 |")
-        
-        # 计算总计
-        total_cost = sum(j.get('dev_cost', 0) for j in default_jobs)
-        total_revenue = sum(j.get('annual_users', 0) * j.get('wtp_estimate', 0) * 12 for j in default_jobs)
-        total_roi = ((total_revenue - total_cost) / total_cost * 100) if total_cost > 0 else 0
-        
-        lines.extend([
-            "",
-            f"**总计**: 开发成本 ¥{total_cost:,.0f} | 年收入 ¥{total_revenue:,.0f} | ROI {total_roi:.0f}%",
-            "",
-            "### Go/No-Go 决策",
-            "",
-            "| 标准 | 要求 | 实际 | 状态 |",
-            "|------|------|------|------|",
-            f"| 市场规模 | SOM ≥ ¥1 亿 | ¥{total_revenue:,.0f} | {'✅' if total_revenue >= 100000000 else '⚠️'} |",
-            f"| ROI | ≥50% | {total_roi:.0f}% | {'✅' if total_roi >= 50 else '⚠️'} |",
-            f"| 回收期 | ≤18 月 | {total_cost/(total_revenue/12) if total_revenue > 0 else 999:.1f}月 | {'✅' if (total_cost/(total_revenue/12) <= 18 if total_revenue > 0 else False) else '⚠️'} |",
-            f"| 战略匹配 | 高 | 中 | 🟡 |",
-            "",
-            "### CEO 决策建议",
-            "",
-            f"**决策**: {'✅ Go' if total_roi >= 50 and total_revenue >= 100000000 else '⚠️ Conditional Go' if total_roi >= 30 else '❌ No-Go'}",
-            "",
-            "1. **Go 条件**: ROI≥50% + SOM≥¥1 亿 + 回收期≤18 月",
-            "2. **风险缓解**: 分阶段投入，W4 审查 MVP 进展",
-            "3. **关键假设验证**: 付费意愿、用户获取成本、留存率",
-            "",
-        ])
-        return "\n".join(lines)
+### Go/No-Go 决策
+{go_no_go_decision}
+"""
+        return report
 
     def analyze(self, include_ceo_analysis: bool = False) -> str:
-        """综合分析报告（可选包含 CEO 决策模块）"""
         report = self.generate_analysis_report()
 
         if include_ceo_analysis:
@@ -443,7 +467,6 @@ class JTBDSkill:
         return report
 
     def _generate_p0_analysis(self, job: Dict) -> str:
-        """P0 级 Job 深度分析"""
         return f"""### P0 级 Job 深度分析: {job.get('description', '未知')}
 
 **核心痛点**: {job.get('struggle', '未定义')}
@@ -451,16 +474,15 @@ class JTBDSkill:
 **机会分数**: {job.get('opportunity_score', 0)}/100
 
 **市场特征**:
-- 用户规模: {job.get('market_size', '未知')}
-- 付费意愿: {job.get('willingness_to_pay', '未知')}
-- 竞争强度: {job.get('competition_level', '未知')}
+- 用户规模: {job.get('market_size', '待验证')}
+- 付费意愿: {job.get('willingness_to_pay', '待验证')}
+- 竞争强度: {job.get('competition_level', '待验证')}
 
 **建议行动**:
 {self._generate_recommendations(job)}
 """
 
     def _generate_recommendations(self, job: Dict) -> str:
-        """各优先级建议生成"""
         score = job.get('opportunity_score', 0)
 
         if score >= 80:
@@ -485,27 +507,53 @@ class JTBDSkill:
 - 预期回报: 低"""
 
     def _estimate_tam(self, jobs: List[Dict]) -> str:
-        """估算总可寻址市场"""
-        return f"基于 {len(jobs)} 个 Job 的分析，TAM 估算为：¥{len(jobs) * 1000000:,}（假设每个 Job 对应 100 万潜在用户）"
+        if not jobs:
+            return "暂无Job数据，请先添加Job并评分后再进行市场估算。"
+
+        high_struggle_count = sum(1 for j in jobs if j.get('struggle', 0) >= 4)
+        avg_struggle = sum(j.get('struggle', 3) for j in jobs) / len(jobs) if jobs else 0
+        market_signal = "强" if avg_struggle >= 3.5 else "中" if avg_struggle >= 2.5 else "弱"
+
+        return f"""基于 {len(jobs)} 个Job的痛点强度分析:
+- 高痛点Job(≥4分): {high_struggle_count} 个
+- 平均痛点强度: {avg_struggle:.1f}/5
+- 市场信号: {market_signal}
+- TAM估算需结合行业报告验证，建议参考: 目标用户群体规模 × 年均消费频次 × 单次价值"""
 
     def _estimate_sam(self, jobs: List[Dict]) -> str:
-        """估算可服务市场"""
-        return f"基于产品定位，SAM 估算为 TAM 的 40%：¥{len(jobs) * 1000000 * 0.4:,.0f}"
+        if not jobs:
+            return "暂无Job数据。"
+
+        serviceable_count = sum(1 for j in jobs if j.get('market', 0) >= 3)
+        ratio = serviceable_count / len(jobs) * 100 if jobs else 0
+
+        return f"""基于产品能力与市场匹配度:
+- 可服务Job占比: {serviceable_count}/{len(jobs)} ({ratio:.0f}%)
+- SAM = TAM × 产品覆盖率（需根据产品定位具体计算）
+- 建议: 聚焦高痛点+高市场评分的交叉Job"""
 
     def _estimate_som(self, jobs: List[Dict]) -> str:
-        """估算可获得市场"""
-        return f"基于当前资源，SOM 估算为 SAM 的 20%：¥{len(jobs) * 1000000 * 0.4 * 0.2:,.0f}"
+        if not jobs:
+            return "暂无Job数据。"
+
+        high_score_count = sum(
+            1 for j in jobs
+            if j.get('opportunity_score', 0) >= 60
+        )
+
+        return f"""基于当前竞争力和资源:
+- 高机会Job(≥60分): {high_score_count} 个
+- SOM = SAM × 预期市场份额（需根据竞争分析确定）
+- 首年建议: 聚焦{min(high_score_count, 3)}个P0级Job，快速验证PMF"""
 
     def _generate_validation_plan(self) -> str:
-        """生成验证计划"""
-        return """1. 用户访谈验证（2周）
-2. 问卷调研（1周）
-3. MVP 原型测试（3周）
-4. A/B 测试（2周）
-总计: 8周"""
+        return """1. 第1-2周: 用户访谈验证Job真实性（n≥15）
+2. 第3周: ODI问卷量化重要性-满意度（n≥150）
+3. 第4-6周: MVP原型测试核心Job（n≥30）
+4. 第7-8周: A/B测试关键体验指标
+总计: 8周 | 每阶段设置明确的Go/No-Go标准"""
 
     def _calculate_opportunity_scores(self, jobs: List[Dict]) -> str:
-        """计算机会分数"""
         if not jobs:
             return "暂无 Job 数据"
 
@@ -522,7 +570,6 @@ class JTBDSkill:
         return f"平均机会分数: {avg_score:.1f}/100\n最高分: {max(scores):.1f}\n最低分: {min(scores):.1f}"
 
     def _generate_resource_allocation(self, jobs: List[Dict]) -> str:
-        """生成资源分配建议"""
         if not jobs:
             return "暂无 Job 数据"
 
@@ -534,7 +581,6 @@ P1 级 Job: {p1_count} 个 - 分配 30% 资源
 其他: {len(jobs) - p0_count - p1_count} 个 - 分配 10% 资源"""
 
     def _generate_validation_timeline(self, jobs: List[Dict]) -> str:
-        """生成验证时间线"""
         if not jobs:
             return "暂无 Job 数据"
 
@@ -547,7 +593,6 @@ P1 级 Job: {p1_count} 个 - 分配 30% 资源
 第7-8周: 数据收集与分析"""
 
     def _assess_willingness_to_pay(self, jobs: List[Dict]) -> str:
-        """评估付费意愿"""
         if not jobs:
             return "暂无数据"
 
@@ -556,40 +601,42 @@ P1 级 Job: {p1_count} 个 - 分配 30% 资源
 
         return f"""高付费意愿: {high_wtp} 个 Job
 中等付费意愿: {medium_wtp} 个 Job
-低付费意愿: {len(jobs) - high_wtp - medium_wtp} 个 Job"""
+低付费意愿: {len(jobs) - high_wtp - medium_wtp} 个 Job
+
+付费意愿评估建议: 通过Van Westendorp价格敏感度测试或Gabor-Granger定价分析进一步验证"""
 
     def _analyze_roi(self, jobs: List[Dict]) -> str:
-        """分析投入产出"""
         if not jobs:
             return "暂无数据"
 
-        total_potential = len(jobs) * 1000000
-        estimated_cost = len(jobs) * 50000
-        roi = (total_potential - estimated_cost) / estimated_cost * 100 if estimated_cost > 0 else 0
+        avg_struggle = sum(j.get('struggle', 3) for j in jobs) / len(jobs)
+        avg_market = sum(j.get('market', 3) for j in jobs) / len(jobs)
+        roi_signal = "高" if avg_struggle >= 4 and avg_market >= 4 else "中" if avg_struggle >= 3 else "低"
 
-        return f"""潜在收益: ¥{total_potential:,}
-预计成本: ¥{estimated_cost:,}
-ROI: {roi:.1f}%"""
+        return f"""ROI信号强度: {roi_signal}
+- 平均痛点强度: {avg_struggle:.1f}/5（痛点越强 → 付费意愿越高）
+- 平均市场评分: {avg_market:.1f}/5（市场越大 → 收益天花板越高）
+- 建议: 具体ROI需结合定价策略、获客成本(CAC)、客户生命周期价值(LTV)计算
+- 初步判断: {"值得投入，预期正向ROI" if roi_signal != "低" else "需谨慎评估，建议先小规模验证"}"""
 
     def _make_go_no_go_decision(self, jobs: List[Dict]) -> str:
-        """做出 Go/No-Go 决策"""
         if not jobs:
             return "数据不足，无法决策"
 
         avg_score = sum(j.get('opportunity_score', 0) for j in jobs) / len(jobs) if jobs else 0
 
         if avg_score >= 70:
-            return f"""GO - 建议推进
+            return f"""✅ **GO - 建议推进**
 
 平均机会分数: {avg_score:.1f}/100
 建议: 立即启动 P0 Job 开发，分配核心资源"""
         elif avg_score >= 50:
-            return f"""条件推进
+            return f"""⚠️ **条件推进**
 
 平均机会分数: {avg_score:.1f}/100
 建议: 先进行小规模验证，收集更多数据后再决策"""
         else:
-            return f"""NO-GO - 暂不推进
+            return f"""❌ **NO-GO - 暂不推进**
 
 平均机会分数: {avg_score:.1f}/100
 建议: 重新评估市场机会，或寻找新的 Job 方向"""
@@ -597,19 +644,34 @@ ROI: {roi:.1f}%"""
 
 __all__ = [
     "JTBDSkill",
+    "__version__",
     "AnalysisConfig", "FORCE_TYPES", "FORCE_LABELS", "KNOWLEDGE_FILES",
+    "INTERVIEW_DIMENSIONS", "ALL_INTERVIEW_DIMENSIONS", "JTBD_STATEMENT_FORMATS",
     "load_knowledge", "load_all_knowledge", "search_knowledge",
     "INTERVIEW_QUESTIONS", "JTBD_STATEMENT_TEMPLATE",
     "JTBD_STATEMENT_EXAMPLES", "INNOVATION_CHECKLIST", "REPORT_TEMPLATE",
-    "SCENARIO_MERGE_RULES", "EXAMPLE_SELECTION_CRITERIA",
-    "INSIGHT_QUALITY_RULES", "SECTION_INSIGHT_PROMPTS", "HTML_REPORT_STYLE_RULES",
+    "OUTCOME_STATEMENT_TEMPLATE", "OUTCOME_STATEMENT_EXAMPLES",
+    "JOB_STORY_TEMPLATES", "JOB_STORY_EXAMPLES", "OBSTACLE_CHECKLIST",
     "JTBDAnalyzer", "JTBDAnalysis", "JTBDStatement",
+    "STATEMENT_FORMATS", "STATEMENT_FORMAT_LABELS",
     "InterviewBuilder", "InterviewGuide",
+    "INTERVIEW_TYPES", "EXTENDED_QUESTIONS",
     "ForcesProfile", "ForceItem", "render_forces_markdown",
     "InnovationFinder", "InnovationSignal", "InnovationOpportunity",
-    "SurveyBuilder", "Survey",
+    "SurveyBuilder", "Survey", "ODI_SAMPLE_SIZE_GUIDANCE",
     "PriorityAnalyzer", "JobScore", "PriorityMatrix",
+    "ODI_INTERPRETATION", "ODI_STRATEGIES",
     "CompetitionAnalyzer", "CompetitiveAnalysis", "Competitor",
+    "OutcomeComparison", "DisruptionDiagnostic",
     "MarketingCopywriter", "CopyPlan", "CopyBrief",
+    "VPC_TEMPLATE", "VPC_TEMPLATE_ZH",
     "GrowthStrategyBuilder", "GrowthPlan",
+    "ODIStrategyChoice", "ODI_GROWTH_STRATEGIES", "PRODUCT_STRATEGY_ACTIONS",
+    "JobMapBuilder", "JobMap", "JobMapStage", "StageNeed", "JOB_MAP_STAGES",
+    "OutcomeBuilder", "OutcomeSet", "DesiredOutcome",
+    "OUTCOME_DIRECTIONS", "NEED_TYPES",
+    "JobStoryBuilder", "JobStorySet", "JobStory",
+    "ObstacleAnalyzer", "ObstacleDiagnosis", "ObstacleItem",
+    "ADOPTION_OBSTACLES", "USAGE_OBSTACLES",
+    "JobsAtlasBuilder", "JobsAtlas", "ATLAS_DIMENSIONS",
 ]
