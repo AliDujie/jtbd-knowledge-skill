@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--04--25-brightgreen.svg)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--04--26-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 9 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
@@ -358,6 +358,7 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| v1.8 | 2026-04-26 | 更新 Last Updated 日期，维护技能生态一致性 |
 | v1.7 | 2026-04-25 | 统一技能生态格式，更新交叉引用 |
 | v1.6 | 2026-04-23 | 添加 badges、技能生态系统 ASCII 图、双语支持、Why Use This Skill?、Quick Start、最佳实践、作者信息 |
 | v1.5 | 2026-04-23 | 添加实际案例、故障排除、扩展阅读、技能生态导航 |
@@ -366,4 +367,4 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 
 ---
 
-*Last Updated: 2026-04-25 | AliDujie Skill Ecosystem*
+*Last Updated: 2026-04-26 | AliDujie Skill Ecosystem*
