@@ -1,7 +1,11 @@
 """JTBD 分析引擎
 
-提供完整的 JTBD 分析流程，包括 JTBD 描述生成、进步系统分析、
+提供完整的 JTBD 分析流程，包括多格式 JTBD 描述生成、进步系统分析、
 竞争格局梳理和综合报告输出。
+
+v3.0 新增:
+- 多格式JTBD描述支持: Klement格式、Desired Outcome Statement、Job Story、传统格式
+- statement_format字段区分不同描述格式
 """
 
 from dataclasses import dataclass, field
@@ -11,12 +15,9 @@ from .config import (
     AnalysisConfig,
     FORCE_LABELS,
     FORCE_CATEGORIES,
-    PROGRESS_SYSTEM_LABELS,
     JTBD_STATEMENT_VERBS,
 )
 from .templates import (
-    JTBD_STATEMENT_TEMPLATE,
-    JTBD_STATEMENT_EXAMPLES,
     COMPETITIVE_ANALYSIS_TEMPLATE,
     INNOVATION_CHECKLIST,
     REPORT_TEMPLATE,
@@ -24,24 +25,85 @@ from .templates import (
 from .utils import load_knowledge, search_knowledge
 
 
+STATEMENT_FORMATS = ("klement", "outcome", "job_story", "traditional")
+
+STATEMENT_FORMAT_LABELS: Dict[str, str] = {
+    "klement": "Klement格式 — [动作短语] + [挣扎]，这样我就能 + [期望]",
+    "outcome": "Desired Outcome — [Direction] + [Metric] + [Object] + [Clarifier]",
+    "job_story": "Job Story — When [情境], I want to [动机], so I can [期望结果]",
+    "traditional": "传统格式 — As a [角色], I want to [动作], so that [结果]",
+}
+
+
 @dataclass
 class JTBDStatement:
-    """一条 JTBD 描述"""
+    """一条 JTBD 描述（支持多格式）"""
 
     verb: str
     struggle: str
     desired_outcome: str
+    statement_format: str = "klement"
+    situation: str = ""
+    role: str = ""
+    direction: str = ""
+    metric: str = ""
+    object_of_control: str = ""
+    clarifier: str = ""
 
     def render(self) -> str:
+        if self.statement_format == "outcome" and self.direction:
+            parts = [self.direction.capitalize(), self.metric, self.object_of_control]
+            if self.clarifier:
+                parts.append(self.clarifier)
+            return " ".join(p for p in parts if p)
+
+        if self.statement_format == "job_story" and self.situation:
+            return f"When {self.situation}, I want to {self.struggle}, so I can {self.desired_outcome}"
+
+        if self.statement_format == "traditional" and self.role:
+            return f"As a {self.role}, I want to {self.struggle}, so that {self.desired_outcome}"
+
+        return f"{self.verb} {self.struggle}，这样我就能 {self.desired_outcome}"
+
+    def render_zh(self) -> str:
+        if self.statement_format == "outcome" and self.direction:
+            dir_zh = {"minimize": "最小化", "maximize": "最大化",
+                      "increase": "增加", "reduce": "减少"}.get(self.direction.lower(), self.direction)
+            obj = self.object_of_control or self.struggle
+            return f"{dir_zh} {obj}"
+
+        if self.statement_format == "job_story" and self.situation:
+            return f"当{self.situation}时，我想要{self.struggle}，这样我就能{self.desired_outcome}"
+
+        if self.statement_format == "traditional" and self.role:
+            return f"作为{self.role}，我想要{self.struggle}，从而{self.desired_outcome}"
+
         return f"{self.verb} {self.struggle}，这样我就能 {self.desired_outcome}"
 
     def validate(self) -> List[str]:
         issues: List[str] = []
-        if self.verb.lower() not in [v.lower() for v in JTBD_STATEMENT_VERBS]:
-            issues.append(
-                f"动作短语 '{self.verb}' 不在推荐列表中，"
-                f"建议使用: {', '.join(JTBD_STATEMENT_VERBS)}"
-            )
+
+        if self.statement_format == "klement":
+            if self.verb.lower() not in [v.lower() for v in JTBD_STATEMENT_VERBS]:
+                issues.append(
+                    f"动作短语 '{self.verb}' 不在推荐列表中，"
+                    f"建议使用: {', '.join(JTBD_STATEMENT_VERBS)}"
+                )
+
+        if self.statement_format == "outcome":
+            if not self.direction:
+                issues.append("Desired Outcome格式需要指定direction (minimize/maximize/increase/reduce)")
+            if not self.object_of_control:
+                issues.append("Desired Outcome格式需要指定object_of_control")
+
+        if self.statement_format == "job_story":
+            if not self.situation:
+                issues.append("Job Story格式需要指定situation (When...)")
+
+        if self.statement_format == "traditional":
+            if not self.role:
+                issues.append("传统格式需要指定role (As a...)")
+
         if len(self.struggle) < 5:
             issues.append("挣扎描述过于简短，建议更具体地描述客户面临的困境")
         if len(self.desired_outcome) < 5:
@@ -110,6 +172,9 @@ class JTBDAnalysis:
             "net_demand": gen_score - red_score,
         }
 
+    def get_statements_by_format(self, fmt: str) -> List[JTBDStatement]:
+        return [s for s in self.statements if s.statement_format == fmt]
+
 
 class JTBDAnalyzer:
     """JTBD 分析器
@@ -119,9 +184,30 @@ class JTBDAnalyzer:
     用法示例::
 
         analyzer = JTBDAnalyzer("旅行预订平台")
+
+        # Klement格式 (默认)
         analyzer.add_statement("Help me", "在出差时快速找到合适的住处", "专注于工作而不是为住宿烦恼")
+
+        # Desired Outcome Statement格式
+        analyzer.add_outcome_statement(
+            direction="minimize", metric="the time it takes to",
+            object_of_control="find a hotel meeting company standards",
+            clarifier="when booking for business trips",
+        )
+
+        # Job Story格式
+        analyzer.add_job_story(
+            situation="出差日期确定后",
+            want="快速找到符合公司差标的酒店",
+            outcome="不浪费时间在住宿问题上",
+        )
+
+        # 传统格式
+        analyzer.add_traditional_statement(
+            role="商旅经理", want="一键预订合规酒店", outcome="提高差旅管理效率",
+        )
+
         analyzer.add_force("push", "频繁出差导致每次都要花大量时间找酒店", intensity=4)
-        analyzer.add_force("anxiety", "担心照片与实际不符", intensity=3)
         report = analyzer.generate_report()
         print(report)
     """
@@ -137,7 +223,59 @@ class JTBDAnalyzer:
     def add_statement(
         self, verb: str, struggle: str, desired_outcome: str
     ) -> JTBDStatement:
-        stmt = JTBDStatement(verb=verb, struggle=struggle, desired_outcome=desired_outcome)
+        stmt = JTBDStatement(
+            verb=verb, struggle=struggle, desired_outcome=desired_outcome,
+            statement_format="klement",
+        )
+        issues = stmt.validate()
+        if issues:
+            import warnings
+            for issue in issues:
+                warnings.warn(issue)
+        self.analysis.statements.append(stmt)
+        return stmt
+
+    def add_outcome_statement(
+        self, direction: str, metric: str = "",
+        object_of_control: str = "", clarifier: str = "",
+    ) -> JTBDStatement:
+        stmt = JTBDStatement(
+            verb="", struggle=object_of_control,
+            desired_outcome=clarifier or object_of_control,
+            statement_format="outcome",
+            direction=direction, metric=metric,
+            object_of_control=object_of_control, clarifier=clarifier,
+        )
+        issues = stmt.validate()
+        if issues:
+            import warnings
+            for issue in issues:
+                warnings.warn(issue)
+        self.analysis.statements.append(stmt)
+        return stmt
+
+    def add_job_story(
+        self, situation: str, want: str, outcome: str,
+    ) -> JTBDStatement:
+        stmt = JTBDStatement(
+            verb="", struggle=want, desired_outcome=outcome,
+            statement_format="job_story", situation=situation,
+        )
+        issues = stmt.validate()
+        if issues:
+            import warnings
+            for issue in issues:
+                warnings.warn(issue)
+        self.analysis.statements.append(stmt)
+        return stmt
+
+    def add_traditional_statement(
+        self, role: str, want: str, outcome: str,
+    ) -> JTBDStatement:
+        stmt = JTBDStatement(
+            verb="", struggle=want, desired_outcome=outcome,
+            statement_format="traditional", role=role,
+        )
         issues = stmt.validate()
         if issues:
             import warnings
@@ -209,7 +347,13 @@ class JTBDAnalyzer:
 
         jtbd_lines = []
         for i, stmt in enumerate(a.statements, 1):
-            jtbd_lines.append(f"{i}. {stmt.render()}")
+            fmt_label = STATEMENT_FORMAT_LABELS.get(stmt.statement_format, "")
+            format_tag = f" [{fmt_label.split('—')[0].strip()}]" if stmt.statement_format != "klement" else ""
+            jtbd_lines.append(f"{i}. {stmt.render()}{format_tag}")
+            if stmt.statement_format != "klement":
+                zh = stmt.render_zh()
+                if zh != stmt.render():
+                    jtbd_lines.append(f"   中文: {zh}")
         jtbd_text = "\n".join(jtbd_lines) if jtbd_lines else "（尚未定义）"
 
         def _render_force(force_type: str) -> str:
@@ -262,7 +406,19 @@ class JTBDAnalyzer:
             "project_name": a.project_name,
             "overview": a.overview,
             "statements": [
-                {"verb": s.verb, "struggle": s.struggle, "desired_outcome": s.desired_outcome}
+                {
+                    "verb": s.verb, "struggle": s.struggle,
+                    "desired_outcome": s.desired_outcome,
+                    "format": s.statement_format,
+                    "rendered": s.render(),
+                    "rendered_zh": s.render_zh(),
+                    "situation": s.situation,
+                    "role": s.role,
+                    "direction": s.direction,
+                    "metric": s.metric,
+                    "object_of_control": s.object_of_control,
+                    "clarifier": s.clarifier,
+                }
                 for s in a.statements
             ],
             "forces": [

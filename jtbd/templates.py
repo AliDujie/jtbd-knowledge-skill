@@ -1,6 +1,13 @@
 """JTBD Skill 模板定义模块
 
 提供 JTBD 描述、访谈问题、分析报告等标准模板。
+
+v3.0 新增:
+- 多格式JTBD描述模板 (Outcome Statement, Job Story, 传统格式)
+- ODI相关模板 (Desired Outcome Statement模板, ODI Survey模板)
+- Jobs Atlas引导模板
+- Job Stories变体模板
+- Obstacles检查清单模板
 """
 
 from typing import Dict, List
@@ -17,6 +24,31 @@ JTBD_STATEMENT_EXAMPLES = [
     "Take away 学习新工具的挫败感，这样我就能 快速上手并完成工作",
     "Equip me 与客户沟通的信心，这样我就能 更好地理解和满足他们的需求",
 ]
+
+OUTCOME_STATEMENT_TEMPLATE = (
+    "[Direction] + [Performance Metric] + [Object of Control] + [Contextual Clarifier]"
+)
+
+OUTCOME_STATEMENT_EXAMPLES = [
+    "Minimize the time it takes to find a suitable hotel when traveling for business",
+    "Minimize the likelihood of booking a hotel that doesn't match its photos",
+    "Maximize the accuracy of budget estimation when planning corporate travel",
+    "Reduce the effort required to compare prices across multiple platforms",
+]
+
+JOB_STORY_TEMPLATES: Dict[str, str] = {
+    "intercom": "When {situation}, I want to {motivation}, so I can {expected_outcome}.",
+    "kalbach": "When {situation}, I want to {motivation}, so I can {expected_outcome}. (With {emotional_context})",
+    "hill": "When I {situation}, I want to {motivation}, so I can {expected_outcome}.",
+    "troeth": "Given that {context}, when {situation}, I want to {motivation}, so I can {expected_outcome}.",
+}
+
+JOB_STORY_EXAMPLES: Dict[str, str] = {
+    "intercom": "When I'm booking a hotel for a business trip, I want to quickly compare prices, so I can find the best deal without wasting time.",
+    "kalbach": "When I arrive at a hotel for business, I want the room to match its photos, so I can feel confident about my booking. (With the anxiety of unfamiliar environments)",
+    "hill": "When I need to submit a travel expense report, I want automated receipt matching, so I can complete the process in under 5 minutes.",
+    "troeth": "Given that I travel for work monthly, when I need to book accommodation, I want my company's travel policy pre-applied, so I can book compliant hotels without checking the policy manually.",
+}
 
 
 INTERVIEW_QUESTIONS: Dict[str, List[str]] = {
@@ -136,6 +168,9 @@ INNOVATION_CHECKLIST = [
     "是否在消除权衡而非优化权衡？",
     "是否避免了过度工程化？",
     "是否考虑了互补产品而非瑞士军刀式产品？",
+    "是否使用Job Map分解了完整任务流程？",
+    "是否用Desired Outcome Statement量化了客户期望？",
+    "是否识别了采用障碍和使用障碍？",
 ]
 
 
@@ -155,6 +190,24 @@ COMPETITIVE_ANALYSIS_TEMPLATE = {
         "description": "客户选择什么都不做的情况",
         "fields": ["客户为什么选择不行动", "这种不行动的代价是什么"],
     },
+}
+
+
+OBSTACLE_CHECKLIST = {
+    "adoption": [
+        "客户是否了解我们的解决方案？（缺乏知识）",
+        "采用方案是否需要改变客户的核心行为？（行为改变障碍）",
+        "决策过程中是否涉及多个决策者？（多决策者障碍）",
+        "切换成本（金钱/时间/精力）是否过高？（高成本障碍）",
+        "客户是否担心失败的后果？（高风险障碍）",
+        "客户是否对这个品类不熟悉？（不熟悉类别障碍）",
+    ],
+    "usage": [
+        "使用方案是否需要特殊基础设施？（有限基础设施）",
+        "日常使用中是否存在反复出现的痛点？（使用痛点）",
+        "方案是否'酷'但并没有更好地完成Job？（酷但没更好）",
+        "方案是否未针对客户的实际使用场景优化？（未定向）",
+    ],
 }
 
 

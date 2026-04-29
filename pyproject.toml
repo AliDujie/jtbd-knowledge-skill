@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jtbd-knowledge-skill"
-version = "2.0.0"
-description = "JTBD (Jobs to Be Done) 理论工具包 - 基于《When Coffee and Kale Compete》"
+version = "3.0.0"
+description = "JTBD (Jobs to Be Done) v3.0 完整工具集 - 融合 Klement/Ulwick ODI/Wunker Atlas/Kalbach 四大学派"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}

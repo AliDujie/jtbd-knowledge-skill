@@ -1,10 +1,15 @@
 """JTBD 优先级矩阵与机会分数模块
 
 对应 SKILL.md 执行能力三+四：计算机会分数、输出优先级矩阵。
+
+支持两种评估模型:
+1. 轻量级四维模型 (原有): struggle×30% + alternative×25% + market×25% + budget×20%
+2. 标准ODI Opportunity Algorithm: Opportunity = Importance + max(Importance - Satisfaction, 0)
+   - 范围: 0-20, ≥12为underserved, <8为overserved
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 from .config import FORCE_TYPES, FORCE_LABELS
 
@@ -29,6 +34,14 @@ SCORE_INTERPRETATION = [
     (3.0, 3.9, "中等机会", "值得进一步验证"),
     (2.0, 2.9, "低机会", "需要更多证据或换方向"),
     (1.0, 1.9, "不建议", "挣扎不够强或市场太小"),
+]
+
+ODI_INTERPRETATION = [
+    (15.0, 20.0, "极度未满足", "最高优先级创新机会，立即行动"),
+    (12.0, 14.9, "未满足", "强机会，优先投入资源"),
+    (10.0, 11.9, "轻度未满足", "值得进一步验证的机会"),
+    (8.0, 9.9, "基本满足", "维持现状即可"),
+    (0.0, 7.9, "过度满足", "可简化以降低成本（颠覆式机会）"),
 ]
 
 SCORING_RUBRICS: Dict[str, Dict[int, str]] = {
@@ -62,6 +75,14 @@ SCORING_RUBRICS: Dict[str, Dict[int, str]] = {
     },
 }
 
+ODI_STRATEGIES: Dict[str, str] = {
+    "differentiated": "差异化策略 — 更好+更贵，专注underserved需求",
+    "dominant": "主导策略 — 更好+更便宜，同时满足更多需求且降低成本",
+    "disruptive": "颠覆式策略 — 更差+更便宜，满足overserved客户的基本需求",
+    "discrete": "细分策略 — 针对特定场景的独特需求组合",
+    "sustaining": "维持策略 — 渐进改善，保持竞争力",
+}
+
 
 @dataclass
 class JobScore:
@@ -71,6 +92,8 @@ class JobScore:
     scores: Dict[str, int] = field(default_factory=dict)
     score_reasons: Dict[str, str] = field(default_factory=dict)
     force_scores: Dict[str, int] = field(default_factory=dict)
+    odi_importance: int = 0
+    odi_satisfaction: int = 0
 
     @property
     def opportunity_score(self) -> float:
@@ -80,6 +103,12 @@ class JobScore:
         for dim, weight in DIMENSION_WEIGHTS.items():
             total += self.scores.get(dim, 0) * weight
         return round(total, 2)
+
+    @property
+    def odi_opportunity(self) -> float:
+        if not self.odi_importance:
+            return 0.0
+        return self.odi_importance + max(self.odi_importance - self.odi_satisfaction, 0)
 
     @property
     def net_force(self) -> float:
@@ -98,9 +127,25 @@ class JobScore:
         return "未评估"
 
     @property
+    def odi_level(self) -> str:
+        s = self.odi_opportunity
+        for low, high, label, _ in ODI_INTERPRETATION:
+            if low <= s <= high:
+                return label
+        return "未评估"
+
+    @property
     def action(self) -> str:
         s = self.opportunity_score
         for low, high, _, act in SCORE_INTERPRETATION:
+            if low <= s <= high:
+                return act
+        return "需要评估"
+
+    @property
+    def odi_action(self) -> str:
+        s = self.odi_opportunity
+        for low, high, _, act in ODI_INTERPRETATION:
             if low <= s <= high:
                 return act
         return "需要评估"
@@ -114,22 +159,43 @@ class PriorityMatrix:
     def ranked(self) -> List[JobScore]:
         return sorted(self.jobs, key=lambda j: j.opportunity_score, reverse=True)
 
+    def ranked_odi(self) -> List[JobScore]:
+        return sorted(self.jobs, key=lambda j: j.odi_opportunity, reverse=True)
+
     def top_n(self, n: int = 3) -> List[JobScore]:
         return self.ranked()[:n]
+
+    def get_underserved(self, threshold: float = 12.0) -> List[JobScore]:
+        return [j for j in self.jobs if j.odi_opportunity >= threshold]
+
+    def get_overserved(self, threshold: float = 8.0) -> List[JobScore]:
+        return [j for j in self.jobs if 0 < j.odi_opportunity < threshold]
 
 
 class PriorityAnalyzer:
     """优先级分析器
 
+    支持两种评估模型:
+    1. 轻量级四维模型 (score_job): 1-5分, 加权平均
+    2. ODI Opportunity Algorithm (score_odi): 1-10分, Importance + max(I-S, 0)
+
     用法示例::
 
         analyzer = PriorityAnalyzer()
         job = analyzer.add_job("在出差时快速找到合适住处")
+
+        # 轻量级评估
         analyzer.score_job(job, "struggle", 4, "用户平均花30分钟比价")
         analyzer.score_job(job, "alternative", 3, "携程可用但体验一般")
         analyzer.score_job(job, "market", 4, "商旅市场规模大")
         analyzer.score_job(job, "budget", 4, "企业有差旅预算")
+
+        # ODI评估
+        analyzer.score_odi(job, importance=9, satisfaction=3)
+
+        # 四力分析
         analyzer.score_forces(job, push=4, pull=3, anxiety=2, inertia=2)
+
         print(analyzer.render_markdown())
     """
 
@@ -150,6 +216,14 @@ class PriorityAnalyzer:
         if reason:
             job.score_reasons[dimension] = reason
 
+    def score_odi(self, job: JobScore, importance: int, satisfaction: int) -> None:
+        if not 1 <= importance <= 10:
+            raise ValueError(f"重要性 {importance} 超出范围 1-10")
+        if not 1 <= satisfaction <= 10:
+            raise ValueError(f"满意度 {satisfaction} 超出范围 1-10")
+        job.odi_importance = importance
+        job.odi_satisfaction = satisfaction
+
     def score_forces(self, job: JobScore, push: int = 0, pull: int = 0,
                      anxiety: int = 0, inertia: int = 0) -> None:
         for name, val in [("push", push), ("pull", pull), ("anxiety", anxiety), ("inertia", inertia)]:
@@ -161,10 +235,47 @@ class PriorityAnalyzer:
     def get_rubric(self, dimension: str) -> Dict[int, str]:
         return SCORING_RUBRICS.get(dimension, {})
 
+    def suggest_strategy(self, job: JobScore) -> str:
+        opp = job.odi_opportunity
+        if opp >= 12:
+            return ODI_STRATEGIES["differentiated"]
+        elif opp >= 10:
+            return ODI_STRATEGIES["sustaining"]
+        elif opp < 8 and job.odi_importance <= 5:
+            return ODI_STRATEGIES["disruptive"]
+        return ODI_STRATEGIES["discrete"]
+
     def render_markdown(self) -> str:
         ranked = self.matrix.ranked()
+        has_odi = any(j.odi_importance > 0 for j in self.matrix.jobs)
         lines = ["# JTBD 优先级矩阵\n"]
 
+        if has_odi:
+            lines.append("## ODI Opportunity Landscape\n")
+            odi_ranked = self.matrix.ranked_odi()
+            lines.append("| 排名 | Job描述 | 重要性 | 满意度 | 机会分(ODI) | 级别 | 建议 |")
+            lines.append("|------|---------|--------|--------|-------------|------|------|")
+            for i, job in enumerate(odi_ranked, 1):
+                if job.odi_importance > 0:
+                    lines.append(
+                        f"| {i} | {job.job_description} "
+                        f"| {job.odi_importance}/10 | {job.odi_satisfaction}/10 "
+                        f"| {job.odi_opportunity:.1f}/20 | {job.odi_level} | {job.odi_action} |"
+                    )
+            lines.append("")
+
+            underserved = self.matrix.get_underserved()
+            if underserved:
+                lines.append(f"**Underserved需求 ({len(underserved)}个):** "
+                             + "、".join(j.job_description for j in underserved))
+                lines.append("")
+            overserved = self.matrix.get_overserved()
+            if overserved:
+                lines.append(f"**Overserved需求 ({len(overserved)}个):** "
+                             + "、".join(j.job_description for j in overserved))
+                lines.append("")
+
+        lines.append("## 轻量级评估矩阵\n")
         lines.append("| 排名 | Job描述 | 机会分数 | 净推动力 | 建议行动 |")
         lines.append("|------|---------|---------|---------|---------|")
         for i, job in enumerate(ranked, 1):
@@ -176,10 +287,14 @@ class PriorityAnalyzer:
             lines.append(f"## 第{i}名: {job.job_description}\n")
             if job.jtbd_statement:
                 lines.append(f"**JTBD 描述:** {job.jtbd_statement}\n")
-            lines.append(f"**机会分数:** {job.opportunity_score} ({job.level})\n")
+            lines.append(f"**机会分数:** {job.opportunity_score} ({job.level})")
+            if job.odi_importance > 0:
+                lines.append(f"**ODI机会分:** {job.odi_opportunity:.1f}/20 ({job.odi_level})")
+                lines.append(f"**建议策略:** {self.suggest_strategy(job)}")
+            lines.append("")
 
             if job.scores:
-                lines.append("**维度评分:**")
+                lines.append("**维度评分（轻量级）:**")
                 for dim in OPPORTUNITY_DIMENSIONS:
                     if dim in job.scores:
                         label = DIMENSION_LABELS[dim]
@@ -211,11 +326,24 @@ class PriorityAnalyzer:
                     "opportunity_score": j.opportunity_score,
                     "level": j.level,
                     "action": j.action,
+                    "odi_importance": j.odi_importance,
+                    "odi_satisfaction": j.odi_satisfaction,
+                    "odi_opportunity": j.odi_opportunity,
+                    "odi_level": j.odi_level,
+                    "odi_action": j.odi_action,
                     "scores": j.scores,
                     "score_reasons": j.score_reasons,
                     "force_scores": j.force_scores,
                     "net_force": j.net_force,
                 }
                 for j in self.matrix.ranked()
-            ]
+            ],
+            "underserved": [
+                {"description": j.job_description, "odi_opportunity": j.odi_opportunity}
+                for j in self.matrix.get_underserved()
+            ],
+            "overserved": [
+                {"description": j.job_description, "odi_opportunity": j.odi_opportunity}
+                for j in self.matrix.get_overserved()
+            ],
         }
