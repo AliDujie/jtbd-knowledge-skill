@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--04--26-brightgreen.svg)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--04--29-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 9 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
@@ -216,7 +216,7 @@ jtbd-knowledge-skill/
 - **JTBD + Persona** → 用 JTBD 任务聚类定义人物角色
 - **JTBD + SWD** → 将 JTBD 洞察可视化呈现给利益相关者
 
-👉 **探索完整生态系统**: [通用设计方法](../universal-design-methods/) | [人物角色](../web-persona-skill/) | [量化 UX 研究](../quantitative-ux-research/) | [价值主张设计](../value-proposition-design/) | [数据叙事](../storytelling-with-data/)
+👉 **探索完整生态系统**: [通用设计方法](https://github.com/AliDujie/universal-design-methods) | [人物角色](https://github.com/AliDujie/web-persona-skill) | [量化 UX 研究](https://github.com/AliDujie/Quantitative-UX-Research) | [价值主张设计](https://github.com/AliDujie/value-proposition-design) | [数据叙事](https://github.com/AliDujie/storytelling-with-data)
 
 ### 🛠️ 故障排查 (Troubleshooting)
 
@@ -306,11 +306,11 @@ print(f"Net Force: {diagnosis.net_force:.2f}")
 
 This skill is part of the **AliDujie UX Research Skills Ecosystem**:
 
-- **[Universal-Design-Methods](../universal-design-methods/)** — 100 design research methods
-- **[Web-Persona-Skill](../web-persona-skill/)** — Persona creation
-- **[Quantitative-UX-Research](../quantitative-ux-research/)** — Quantitative research, HEART framework
-- **[Value-Proposition-Design](../value-proposition-design/)** — Value proposition canvas
-- **[Storytelling-with-Data](../storytelling-with-data/)** — Data storytelling
+- **[Universal-Design-Methods](https://github.com/AliDujie/universal-design-methods)** — 100 design research methods
+- **[Web-Persona-Skill](https://github.com/AliDujie/web-persona-skill)** — Persona creation
+- **[Quantitative-UX-Research](https://github.com/AliDujie/Quantitative-UX-Research)** — Quantitative research, HEART framework
+- **[Value-Proposition-Design](https://github.com/AliDujie/value-proposition-design)** — Value proposition canvas
+- **[Storytelling-with-Data](https://github.com/AliDujie/storytelling-with-data)** — Data storytelling
 
 ### 🌟 Why Choose AliDujie Skill Ecosystem?
 
@@ -323,7 +323,7 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 - ✅ **Zero Dependencies** — Pure Python standard library, ready to use out of the box
 - ✅ **Bilingual Support** — Complete CN/EN documentation for international team collaboration
 
-👉 **Explore More Skills**: [Universal Design Methods](../universal-design-methods/) | [Web Persona](../web-persona-skill/) | [Quantitative UX Research](../quantitative-ux-research/) | [Value Proposition Design](../value-proposition-design/) | [Storytelling with Data](../storytelling-with-data/)
+👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
 
 ### 📦 Dependencies
 
@@ -358,7 +358,24 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
-| v1.8 | 2026-04-26 | 更新 Last Updated 日期，维护技能生态一致性 |
+### 🏷️ GitHub Topics (Recommended)
+
+```
+jobs-to-be-done jtbd user-research python-toolkit
+opportunity-scoring forces-of-progress innovation openclaw-skill
+jtbd-knowledge-skill alicloud
+```
+
+### 📦 Dependencies
+
+- Python >= 3.8
+- **No external dependencies** (pure standard library)
+- Cross-platform: macOS / Linux / Windows
+
+---
+
+## 📜 许可 (License)
+| v2.0 | 2026-04-29 | 统一交叉引用为 GitHub 绝对链接，添加 GitHub Topics，更新 Last Updated 日期 |
 | v1.7 | 2026-04-25 | 统一技能生态格式，更新交叉引用 |
 | v1.6 | 2026-04-23 | 添加 badges、技能生态系统 ASCII 图、双语支持、Why Use This Skill?、Quick Start、最佳实践、作者信息 |
 | v1.5 | 2026-04-23 | 添加实际案例、故障排除、扩展阅读、技能生态导航 |
@@ -367,4 +384,4 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 
 ---
 
-*Last Updated: 2026-04-26 | AliDujie Skill Ecosystem*
+*Last Updated: 2026-04-29 | AliDujie Skill Ecosystem*
