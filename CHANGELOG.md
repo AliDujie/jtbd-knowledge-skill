@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- English documentation: Core Capabilities tables, Practical Examples, Who Is This For, Troubleshooting, Best Practices, User Reviews, Extended Reading, and About sections
+
 ## [1.8.0] - 2026-04-26
 
 ### Changed
