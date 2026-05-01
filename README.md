@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Version](https://img.shields.io/badge/version-3.0.0-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--01-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 9 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -26,6 +27,34 @@
 ---
 
 ## 中文说明
+
+### 🎯 Features at a Glance / 功能一览
+
+| 功能 | 说明 |
+|------|------|
+| 9 大执行能力 | 访谈提纲、调查问卷、机会分数、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述验证、场景库深度分析 |
+| 进步力量模型 | Push / Pull / Anxiety / Habit 四力分析，理解用户"为什么换" |
+| 机会分数计算 | 重要性 × 满意度差距，科学优先级排序 |
+| 访谈提纲生成 | 4 维度结构化问题（竞争/推/拉/焦虑） |
+| 营销文案生成 | 基于 JTBD 洞察的 messaging 自动生成 |
+| 双语支持 | 完整中英文文档和代码示例 |
+
+### 👥 适合谁？(Who Is This For?)
+
+| 角色 | 使用场景 |
+|------|----------|
+| **产品经理** | 理解用户为什么切换产品，发现未满足的需求 |
+| **UX 研究员** | 结构化 JTBD 访谈，挖掘用户背后的"工作" |
+| **营销团队** | 基于 JTBD 洞察生成精准营销文案和定位 |
+| **创业者** | 识别市场空白，找到创新机会 |
+| **AI Agent** | 作为工具调用，自动化 JTBD 分析流程 |
+
+### 🏷️ GitHub Topics（推荐）
+
+```
+jobs-to-be-done jtbd user-research opportunity-scoring
+forces-of-progress python-toolkit openclaw-skill alicloud
+```
 
 ### 🌟 为什么使用这个技能？(Why Use This Skill?)
 
@@ -289,6 +318,27 @@ jtbd-knowledge-skill/
 - **Bilingual Support** — Complete CN/EN documentation for international teams
 - **Plug-and-Play** — Intuitive API, rich code examples, produce JTBD reports immediately
 
+### 🎯 Features at a Glance
+
+| Feature | Description |
+|---------|-------------|
+| 9 Core Capabilities | Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis |
+| Forces of Progress | Push / Pull / Anxiety / Habit analysis — understand why users switch |
+| Opportunity Scoring | Importance × Satisfaction gap for scientific prioritization |
+| Interview Generation | 4-dimension structured questions (competition / push / pull / anxiety) |
+| Marketing Copy | Auto-generate JTBD-based messaging |
+| Bilingual Support | Complete CN/EN documentation and code examples |
+
+### 👥 Who Is This For?
+
+| Role | Use Case |
+|------|----------|
+| **Product Managers** | Understand why users switch, discover unmet needs |
+| **UX Researchers** | Structured JTBD interviews, uncover the real "job" |
+| **Marketing Teams** | JTBD-based messaging and positioning |
+| **Startup Founders** | Identify market gaps and innovation opportunities |
+| **AI Agents** | Zero-dependency Python package for automated JTBD workflows |
+
 ### 🚀 Quick Start
 
 ```python
@@ -429,6 +479,23 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 
 👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
 
+### 🛠️ Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Opportunity score too low | Check if job statements are specific enough — vague jobs produce vague scores |
+| Forces do not add up | Ensure all 4 forces are represented; missing a force skews the analysis |
+| Interview questions feel generic | Use the 4-dimension structure to ensure comprehensive coverage |
+| Competitive analysis unclear | Frame competitors as "alternative solutions to the same job" not just similar products |
+
+### 🤝 Best Practices
+
+1. **Focus on the job, not the product** — Users "hire" products to get jobs done
+2. **Capture all 4 forces** — Push, Pull, Anxiety, and Habit must all be measured
+3. **Interview recent switchers** — People who recently changed solutions have the richest insights
+4. **Use opportunity scores for prioritization** — High importance + low satisfaction = best opportunity
+5. **Validate JTBD statements** — Check the three elements: context, motivation, expected outcome
+
 ### 📦 Dependencies
 
 - Python >= 3.8
@@ -436,6 +503,29 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 - Cross-platform: macOS / Linux / Windows
 
 ---
+
+## Run Tests / 运行测试
+
+```bash
+cd /path/to/jtbd-knowledge-skill
+python3 jtbd/tests/test_all.py
+# 或使用 pytest
+python3 -m pytest jtbd/tests/test_all.py -v
+```
+
+## 🤝 参与贡献 (Contributing)
+
+欢迎贡献！请查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解贡献指南。
+
+- 🐛 **报告 Bug**: 提交 [Issue](https://github.com/AliDujie/jtbd-knowledge-skill/issues)
+- 💡 **功能建议**: 提交 [Feature Request](https://github.com/AliDujie/jtbd-knowledge-skill/issues/new?template=feature_request.md)
+- 📝 **改进文档**: PR 欢迎，特别是参考文档和代码示例
+
+## 🆘 获取帮助 (Getting Help)
+
+- 📖 查看 [故障排查](#故障排查-troubleshooting) 部分
+- 📚 阅读 [references/](references/) 目录下的 11 篇方法论文档
+- 💬 在 [Issues](https://github.com/AliDujie/jtbd-knowledge-skill/issues) 中提问
 
 ## 📖 扩展阅读
 
