@@ -1,5 +1,17 @@
 # Changelog
 
+## [R22] - 2026-05-01
+
+### Added
+- Created INSTALL.md with installation guide for all 3 installation options
+- Added INSTALL.md reference to project structure section
+
+### Fixed
+- Updated Last Updated badge from 2026-04-30 to 2026-05-01
+
+### Maintenance
+- Routine README maintenance: verified code examples, cross-references, and bilingual consistency
+
 ## [R21] - 2026-05-01
 
 ### Fixed
