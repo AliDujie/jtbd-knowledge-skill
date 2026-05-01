@@ -1,5 +1,14 @@
 # Changelog
 
+## [R23] - 2026-05-01
+
+### Added
+- Added "When to Use This Skill?" decision guide table for quick skill selection
+- Improved cross-references with contextual tips for paired usage with other skills
+
+### Maintenance
+- Routine README maintenance: verified code examples, cross-references, and bilingual consistency
+
 ## [R22] - 2026-05-01
 
 ### Added
