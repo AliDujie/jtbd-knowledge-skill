@@ -454,20 +454,6 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 | v1.4 | 2026-04-23 | 添加技能生态导航表、Last Updated 徽章 |
 | v1.3 | 2026-04-22 | 初始版本 |
 
-### 🏷️ GitHub Topics (Recommended)
-
-```
-jobs-to-be-done jtbd user-research python-toolkit
-opportunity-scoring forces-of-progress innovation openclaw-skill
-jtbd-knowledge-skill alicloud
-```
-
-### 📦 Dependencies
-
-- Python >= 3.8
-- **No external dependencies** (pure standard library)
-- Cross-platform: macOS / Linux / Windows
-
 ---
 
-*Last Updated: 2026-05-01 | AliDujie Skill Ecosystem | v2.2*
+*Last Updated: 2026-05-01 | AliDujie Skill Ecosystem | v2.3*

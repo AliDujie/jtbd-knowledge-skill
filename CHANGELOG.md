@@ -1,5 +1,13 @@
 # Changelog
 
+## [R21] - 2026-05-01
+
+### Fixed
+- Removed duplicate GitHub Topics and Dependencies sections at end of README (already present in English section)
+
+### Maintenance
+- Routine README maintenance: verified code examples, cross-references, and bilingual consistency
+
 ## [R20] - 2026-05-01
 
 ### Maintenance
