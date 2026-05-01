@@ -1,5 +1,6 @@
 ---
 name: jtbd-knowledge-skill
+version: "3.0.0"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派——Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合——
@@ -330,3 +331,29 @@ results = search_knowledge("焦虑")
 | 7 | **CEO 决策默认附加** | 全面分析或涉及商业决策时，自动使用 `include_ceo_analysis=True` |
 | 8 | **完整交付** | 每个任务产出完整可用的分析/报告/建议，不留半成品 |
 | 9 | **格式灵活** | 能力八支持四种描述格式，根据上下文选择最合适的格式 |
+
+## 与其他 Skill 协作
+
+JTBD 可与生态系统中其他技能组合使用，形成完整的用户洞察到产品决策工作流：
+
+| 协作场景 | 协作 Skill | 工作流 |
+|---------|-----------|--------|
+| JTBD 发现验证 | Universal Design Methods | JTBD 假设 → UDM 访谈/观察验证 → JTBD 机会评分 |
+| JTBD 定量验证 | Quantitative UX Research | JTBD 机会分数 → QuantUX A/B 测试验证 → SWD 呈现 |
+| JTBD 到价值主张 | Value Proposition Design | JTBD Jobs → VPD 画布填充 → VPD 实验验证 |
+| JTBD 到人物角色 | Web Persona | JTBD 任务聚类 → Persona 角色定义 → Persona 验证 |
+| JTBD 结果汇报 | Storytelling with Data | JTBD 洞察 → SWD 上下文分析 → SWD 数据故事构建 |
+
+**协作示例（JTBD → VPD）**：
+```python
+# Step 1: JTBD 发现核心 Job
+jtbd = JTBDSkill("旅行预订")
+opportunity = jtbd.score_opportunity("快速找到合适住处", struggle=4, alternative=3, market=4, budget=4)
+# Step 2: VPD 填充价值主张画布
+from vpd import VPDSkill
+vpd = VPDSkill("旅行预订平台", "商务差旅人士")
+vpd.analyze_canvas(
+    jobs=[{"description": "快速找到合适住处", "category": "functional", "importance": 5}],
+    pains=[{"description": "选择过多难以决策", "severity": "critical"}]
+)
+```

@@ -563,4 +563,4 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-01 | AliDujie Skill Ecosystem | v2.3*
+*Last Updated: 2026-05-01 | AliDujie Skill Ecosystem | v3.0.0*
