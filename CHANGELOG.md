@@ -1,5 +1,14 @@
 # Changelog
 
+## [R24] - 2026-05-02
+
+### Added
+- Added Code style (ruff) badge to README header
+
+### Changed
+- Version bump to v3.1.0
+- Routine README maintenance: verified completeness and cross-references
+
 ## [R23] - 2026-05-01
 
 ### Added

@@ -2,7 +2,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-3.0.0-green.svg)](CHANGELOG.md)
+[![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Version](https://img.shields.io/badge/version-3.1.0-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--01-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 9 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -410,18 +411,6 @@ builder.include_dimensions(["competition", "push", "pull", "anxiety", "habit"])
 print(InterviewBuilder.render_markdown(builder.build()))
 ```
 
-### 👥 Who Is This For?
-
-| Role | How This Skill Helps |
-|------|---------------------|
-| **Product Managers** | Understand why users switch between products |
-| **UX Researchers** | Structured JTBD interviews and analysis |
-| **Marketing Teams** | JTBD-based messaging and positioning |
-| **Startup Founders** | Identify unmet jobs and growth opportunities |
-| **AI Agents** | Zero-dependency Python package for automated JTBD analysis |
-
-### 🛠️ Troubleshooting
-
 | Issue | Solution |
 |-------|----------|
 | Opportunity score too low | Check if job statements are specific enough — vague jobs produce vague scores |
@@ -478,24 +467,6 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 - ✅ **Bilingual Support** — Complete CN/EN documentation for international team collaboration
 
 👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
-
-### 🛠️ Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Opportunity score too low | Check if job statements are specific enough — vague jobs produce vague scores |
-| Forces do not add up | Ensure all 4 forces are represented; missing a force skews the analysis |
-| Interview questions feel generic | Use the 4-dimension structure to ensure comprehensive coverage |
-| Competitive analysis unclear | Frame competitors as "alternative solutions to the same job" not just similar products |
-
-### 🤝 Best Practices
-
-1. **Focus on the job, not the product** — Users "hire" products to get jobs done
-2. **Capture all 4 forces** — Push, Pull, Anxiety, and Habit must all be measured
-3. **Interview recent switchers** — People who recently changed solutions have the richest insights
-4. **Use opportunity scores for prioritization** — High importance + low satisfaction = best opportunity
-5. **Validate JTBD statements** — Check the three elements: context, motivation, expected outcome
-
 ### 📦 Dependencies
 
 - Python >= 3.8
@@ -503,6 +474,56 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 - Cross-platform: macOS / Linux / Windows
 
 ---
+
+## 🔗 技能生态工作流 (Skill Ecosystem Workflow)
+
+JTBD 是 **AliDujie UX 研究技能生态系统** 的需求洞察核心。以下是与其他技能配合使用的典型工作流：
+
+### 🧭 快速决策指南 (Quick Decision Guide)
+
+| 你的问题 | 推荐技能 |
+|----------|----------|
+| "我想理解用户为什么这样做" | → **JTBD Knowledge** (本技能) — 挖掘用户背后的"工作" |
+| "我不知道该研究什么" | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — 方法推荐帮你找到方向 |
+| "我需要验证一个假设" | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — A/B 测试和样本量计算 |
+| "我需要知道用户是谁" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — 创建具体的人物角色 |
+| "我的产品价值够不够？" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — 契合度诊断 |
+| "我怎么把研究结果讲清楚？" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — 数据叙事和图表改造 |
+
+### 工作流 1: JTBD → 价值主张验证
+
+```
+JTBD (机会分数) → VPD (画布填充) → QuantUX (A/B 验证)
+```
+
+**场景**: 产品-市场契合验证
+1. 用 JTBD 访谈发现用户核心"工作"和机会分数
+2. 用 VPD 将 Jobs 映射到价值主张画布
+3. 用 QuantUX 设计实验验证价值假设
+
+### 工作流 2: JTBD → 人物角色定义
+
+```
+JTBD (任务聚类) → Persona (角色细分) → SWD (汇报呈现)
+```
+
+**场景**: 用户细分与定位
+1. 用 JTBD 四力分析识别用户切换动机
+2. 用 Persona 基于 JTBD 任务聚类创建角色
+3. 用 SWD 将角色故事可视化呈现给团队
+
+### 工作流 3: 增长策略
+
+```
+JTBD (流失分析) → QuantUX (数据验证) → VPD (策略调整)
+```
+
+**场景**: 用户留存提升
+1. 用 JTBD Churn 访谈识别流失原因
+2. 用 QuantUX 日志分析验证行为模式
+3. 用 VPD 竞争战略评估差异化机会
+
+> 💡 **提示**: JTBD 的进步力量模型（Push/Pull/Anxiety/Habit）是理解用户切换行为的核心框架。
 
 ## Run Tests / 运行测试
 
@@ -563,4 +584,4 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-01 | AliDujie Skill Ecosystem | v3.0.0*
+*Last Updated: 2026-05-01 | AliDujie Skill Ecosystem | v3.1.0*
