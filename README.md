@@ -479,6 +479,58 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 
 ---
 
+## 🔗 Skill Ecosystem Workflow
+
+JTBD is the needs-insight core of the **AliDujie UX Research Skills Ecosystem**. Here are typical workflows combining it with other skills:
+
+### 🧭 Quick Decision Guide
+
+| Your Question | Recommended Skill |
+|---------------|------------------|
+| "I want to understand why users do this" | → **JTBD Knowledge** (this skill) — Uncover the underlying "jobs" |
+| "I don't know what research to do" | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — Method recommendation |
+| "I need to validate a hypothesis" | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — A/B testing & sample size |
+| "I need to know who my users are" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — Create concrete personas |
+| "Is my product value strong enough?" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — Fit diagnosis |
+| "How do I present research results clearly?" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — Data storytelling |
+
+### Workflow 1: JTBD → Value Proposition Validation
+
+```
+JTBD (job discovery) → VPD (value design) → QuantUX (quantitative validation)
+```
+
+**Scenario**: New product direction validation
+1. Use JTBD to discover core user "jobs" and calculate opportunity scores
+2. Use VPD to map findings to value proposition canvas and design experiments
+3. Use QuantUX to design A/B tests for quantitative validation
+
+### Workflow 2: JTBD → User Understanding → Design
+
+```
+UDM (interviews) → JTBD (job analysis) → Persona (persona creation)
+```
+
+**Scenario**: User research-driven design
+1. Use UDM contextual interviews to collect user behavior data
+2. Use JTBD four-forces analysis to identify switching triggers
+3. Use Persona to create evidence-based user segments
+
+### Workflow 3: Competitive Analysis → Strategy
+
+```
+JTBD (competitive analysis) → VPD (competitive strategy) → SWD (strategy presentation)
+```
+
+**Scenario**: Market positioning analysis
+1. Use JTBD to analyze competitive alternatives and switching barriers
+2. Use VPD competitive strategy canvas to identify differentiation
+3. Use SWD to create executive-ready competitive analysis presentations
+
+> 💡 **Tip**: JTBD pairs naturally with UDM — use UDM interview methods to uncover user "jobs," then use JTBD frameworks for structured analysis.
+
+---
+
 ## 🔗 技能生态工作流 (Skill Ecosystem Workflow)
 
 JTBD 是 **AliDujie UX 研究技能生态系统** 的需求洞察核心。以下是与其他技能配合使用的典型工作流：
