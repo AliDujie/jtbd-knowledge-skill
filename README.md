@@ -4,7 +4,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Version](https://img.shields.io/badge/version-3.1.0-green.svg)](CHANGELOG.md)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--01-brightgreen.svg)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--02-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 9 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
@@ -22,6 +22,7 @@
 | 需要创建人物角色、用户细分、设计指导 | → [Web Persona](https://github.com/AliDujie/web-persona-skill) |
 | 需要价值主张画布、实验验证、优先级排序 | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) |
 | 需要将研究结果转化为数据叙事、图表呈现 | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) |
+| 需要商业分析框架、结构化思维、战略决策 | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) |
 
 > 💡 **提示**: JTBD 与 UDM 配合使用，用 UDM 访谈方法挖掘用户"工作"，用 JTBD 框架结构化分析。
 
@@ -262,7 +263,7 @@ jtbd-knowledge-skill/
 - **JTBD + Persona** → 用 JTBD 任务聚类定义人物角色
 - **JTBD + SWD** → 将 JTBD 洞察可视化呈现给利益相关者
 
-👉 **探索完整生态系统**: [通用设计方法](https://github.com/AliDujie/universal-design-methods) | [人物角色](https://github.com/AliDujie/web-persona-skill) | [量化 UX 研究](https://github.com/AliDujie/Quantitative-UX-Research) | [价值主张设计](https://github.com/AliDujie/value-proposition-design) | [数据叙事](https://github.com/AliDujie/storytelling-with-data)
+👉 **探索完整生态系统**: [通用设计方法](https://github.com/AliDujie/universal-design-methods) | [人物角色](https://github.com/AliDujie/web-persona-skill) | [量化 UX 研究](https://github.com/AliDujie/Quantitative-UX-Research) | [价值主张设计](https://github.com/AliDujie/value-proposition-design) | [数据叙事](https://github.com/AliDujie/storytelling-with-data) | [结构化思维](https://github.com/AliDujie/Structured-Thinking-Model)
 
 ### 🛠️ 故障排查 (Troubleshooting)
 
@@ -313,7 +314,7 @@ jtbd-knowledge-skill/
 ### 🌟 Why Use This Skill?
 
 - **Classic Methodology** — Based on Alan Klement's "When Coffee and Kale Compete" and Clayton Christensen's JTBD theory, adopted by 500+ global enterprises
-- **9 Core Capabilities** — Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis
+- **12 Core Capabilities** — Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis, CEO decision support
 - **Forces of Progress Model** — Push / Pull / Anxiety / Habit analysis, understanding "why users switch" not "what they like"
 - **Practical Toolkit** — Pure Python standard library, zero dependencies, 5-minute setup
 - **Bilingual Support** — Complete CN/EN documentation for international teams
@@ -323,7 +324,7 @@ jtbd-knowledge-skill/
 
 | Feature | Description |
 |---------|-------------|
-| 9 Core Capabilities | Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis |
+| 12 Core Capabilities | Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis, CEO decision support |
 | Forces of Progress | Push / Pull / Anxiety / Habit analysis — understand why users switch |
 | Opportunity Scoring | Importance × Satisfaction gap for scientific prioritization |
 | Interview Generation | 4-dimension structured questions (competition / push / pull / anxiety) |
@@ -369,7 +370,7 @@ diagnosis = profile.diagnose()
 print(f"Net Force: {diagnosis.net_force:.2f}")
 ```
 
-### 💡 9 Core Capabilities
+### 💡 12 Core Capabilities
 
 | # | Capability | Module | Description |
 |---|------------|--------|-------------|
@@ -382,6 +383,9 @@ print(f"Net Force: {diagnosis.net_force:.2f}")
 | 7 | **Growth and Retention Strategy** | `innovation.py` | Four-forces-driven growth strategies |
 | 8 | **JTBD Description Validation** | `analyzer.py` | Three-element completeness check |
 | 9 | **Scenario Library Deep Analysis** | `analyzer.py` | Scenario-driven deep insights |
+| 10 | **CEO: Market Size Estimate** | `ceo.py` | TAM/SAM/SOM estimation from job data |
+| 11 | **CEO: Priority Scoring** | `ceo.py` | Composite opportunity scoring with P0/P1/P2 ranking |
+| 12 | **CEO: Commercialization Feasibility** | `ceo.py` | WTP, ROI, payback period, Go/No-Go recommendations |
 
 ### 🔧 Practical Examples
 
@@ -466,7 +470,7 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 - ✅ **Zero Dependencies** — Pure Python standard library, ready to use out of the box
 - ✅ **Bilingual Support** — Complete CN/EN documentation for international team collaboration
 
-👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
+👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | [Structured Thinking](https://github.com/AliDujie/Structured-Thinking-Model)
 ### 📦 Dependencies
 
 - Python >= 3.8
@@ -573,7 +577,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
-| v2.3 | 2026-05-01 | 添加 "When to Use This Skill?" 决策指南，更新维护 |
+| v3.1.1 | 2026-05-02 | 修复 SKILL.md 版本号不一致 (v3.0.0→v3.1.0)，补充 CEO 能力到英文能力表，添加 Structured-Thinking-Model 交叉引用 |
 | v2.2 | 2026-04-30 | 更新维护，清理格式 |
 | v2.0 | 2026-04-29 | 统一交叉引用为 GitHub 绝对链接，添加 GitHub Topics，更新 Last Updated 日期 |
 | v1.7 | 2026-04-25 | 统一技能生态格式，更新交叉引用 |
@@ -584,4 +588,4 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-01 | AliDujie Skill Ecosystem | v3.1.0*
+*Last Updated: 2026-05-02 | AliDujie Skill Ecosystem | v3.1.1*
