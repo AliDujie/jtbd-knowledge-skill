@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.2-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--02-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 9 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -635,6 +635,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| v3.1.2 | 2026-05-02 | 仓库维护：优化 12 大核心能力表与 Features at a Glance 一致性，增强技能生态工作流描述，统一交叉引用格式 |
 | v3.1.1 | 2026-05-02 | 修复 SKILL.md 版本号不一致 (v3.0.0→v3.1.0)，补充 CEO 能力到英文能力表，添加 Structured-Thinking-Model 交叉引用 |
 | v2.2 | 2026-04-30 | 更新维护，清理格式 |
 | v2.0 | 2026-04-29 | 统一交叉引用为 GitHub 绝对链接，添加 GitHub Topics，更新 Last Updated 日期 |
@@ -646,4 +647,4 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-02 | AliDujie Skill Ecosystem | v3.1.1*
+*Last Updated: 2026-05-02 | AliDujie Skill Ecosystem | v3.1.2*
