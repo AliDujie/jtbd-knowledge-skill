@@ -34,7 +34,7 @@
 
 | 功能 | 说明 |
 |------|------|
-| 9 大执行能力 | 访谈提纲、调查问卷、机会分数、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述验证、场景库深度分析 |
+| 12 大执行能力 | 访谈提纲、调查问卷、机会分数、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述验证、场景库深度分析、CEO 决策支持 |
 | 进步力量模型 | Push / Pull / Anxiety / Habit 四力分析，理解用户"为什么换" |
 | 机会分数计算 | 重要性 × 满意度差距，科学优先级排序 |
 | 访谈提纲生成 | 4 维度结构化问题（竞争/推/拉/焦虑） |
@@ -122,7 +122,7 @@ result = skill.analyze(
 print(result)  # 完整 JTBD 分析报告
 ```
 
-### 💡 9 大核心能力
+### 💡 12 大核心能力
 
 | # | 能力 | 模块 | 功能 |
 |---|------|------|------|
@@ -135,6 +135,9 @@ print(result)  # 完整 JTBD 分析报告
 | 7 | **增长与留存策略** | `innovation.py` | 四力驱动的增长策略 |
 | 8 | **JTBD 描述验证** | `analyzer.py` | 三要素完整性检查 |
 | 9 | **场景库深度分析** | `analyzer.py` | 场景驱动的深度洞察 |
+| 10 | **CEO: 市场规模估算** | `ceo.py` | TAM/SAM/SOM 估算 |
+| 11 | **CEO: 优先级评分** | `ceo.py` | 综合机会评分 + P0/P1/P2 分级 |
+| 12 | **CEO: 商业化可行性** | `ceo.py` | 支付意愿、ROI、回收期、Go/No-Go 建议 |
 
 ### 🔧 实用示例
 
@@ -415,6 +418,8 @@ builder.include_dimensions(["competition", "push", "pull", "anxiety", "habit"])
 print(InterviewBuilder.render_markdown(builder.build()))
 ```
 
+### 🛠️ Troubleshooting
+
 | Issue | Solution |
 |-------|----------|
 | Opportunity score too low | Check if job statements are specific enough — vague jobs produce vague scores |
@@ -471,6 +476,7 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 - ✅ **Bilingual Support** — Complete CN/EN documentation for international team collaboration
 
 👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | [Structured Thinking](https://github.com/AliDujie/Structured-Thinking-Model)
+
 ### 📦 Dependencies
 
 - Python >= 3.8
