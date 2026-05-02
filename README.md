@@ -396,7 +396,11 @@ cp -r jtbd-knowledge-skill /your/agent/skills/
 ```python
 import sys
 sys.path.insert(0, "/path/to/jtbd-knowledge-skill")
-from jtbd import JTBDAnalyzer, InterviewBuilder, ForcesProfile
+from jtbd import JTBDAnalyzer, InterviewBuilder, ForcesProfile, InnovationFinder
+
+# One-liner entry point (recommended)
+from jtbd import JTBDSkill
+skill = JTBDSkill("Travel Booking Platform")
 
 # JTBD Analysis + Opportunity Score
 analyzer = JTBDAnalyzer("Travel Booking")
@@ -409,6 +413,19 @@ report = analyzer.generate_report()
 builder = InterviewBuilder("Business User Interview")
 builder.include_dimensions(["competition", "push", "pull", "anxiety"])
 print(InterviewBuilder.render_markdown(builder.build()))
+
+# Forces Diagnosis
+profile = ForcesProfile()
+profile.add("push", "external", "Market competition intensifying", intensity=4)
+profile.add("pull", "external", "Competitor launches AI recommendation", intensity=5)
+profile.add("anxiety", "choice", "Worried about migration cost", intensity=3)
+profile.add("habit", "internal", "Users accustomed to existing flow", intensity=4)
+diagnosis = profile.diagnose()
+print(f"Net Force: {diagnosis.net_force:.2f}")
+
+# One-liner full analysis with CEO decision support
+result = skill.analyze(include_ceo_analysis=True)
+# Outputs: Full JTBD report + TAM/SAM/SOM + Priority scoring + Go/No-Go
 
 # Forces Diagnosis
 profile = ForcesProfile()
