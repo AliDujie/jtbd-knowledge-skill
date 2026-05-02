@@ -3,10 +3,10 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.2-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.3-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--02-brightgreen.svg)
 
-> 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 9 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
+> 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 12 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
 [English](#english) | [中文](#中文说明)
 
@@ -342,6 +342,17 @@ jtbd-knowledge-skill/
 - **Bilingual Support** — Complete CN/EN documentation for international teams
 - **Plug-and-Play** — Intuitive API, rich code examples, produce JTBD reports immediately
 
+### 🧭 Quick Decision Guide
+
+| Your Question | Recommended Skill |
+|---------------|------------------|
+| "I want to understand why users do this" | → **JTBD Knowledge** (this skill) — Uncover the underlying "jobs" |
+| "I don't know what research to do" | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — Method recommendation |
+| "I need to validate a hypothesis" | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — A/B testing & sample size |
+| "I need to know who my users are" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — Create concrete personas |
+| "Is my product value strong enough?" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — Fit diagnosis |
+| "How do I present research results clearly?" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — Data storytelling |
+
 ### 🎯 Features at a Glance
 
 | Feature | Description |
@@ -534,6 +545,7 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 
 | Version | Date | Changes |
 |---------|------|--------|
+| v3.1.3 | 2026-05-02 | Added English Quick Decision Guide table to improve cross-skill discoverability |
 | v3.1.2 | 2026-05-02 | Repo maintenance: expanded English Features at a Glance, added GitHub Topics and changelog to English section |
 | v3.1.1 | 2026-05-02 | Fixed SKILL.md version mismatch, added CEO capabilities to English table |
 | v3.0 | 2026-05-01 | Major update: added JTBD 4-dimension analysis, opportunity scoring, competitive analysis |
@@ -690,6 +702,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| v3.1.3 | 2026-05-02 | 仓库维护：为英文版添加 Quick Decision Guide 导航表，增强技能间交叉引用 |
 | v3.1.2 | 2026-05-02 | 仓库维护：优化 12 大核心能力表与 Features at a Glance 一致性，增强技能生态工作流描述，统一交叉引用格式 |
 | v3.1.1 | 2026-05-02 | 修复 SKILL.md 版本号不一致 (v3.0.0→v3.1.0)，补充 CEO 能力到英文能力表，添加 Structured-Thinking-Model 交叉引用 |
 | v2.2 | 2026-04-30 | 更新维护，清理格式 |
@@ -702,4 +715,4 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-02 | AliDujie Skill Ecosystem | v3.1.2*
+*Last Updated: 2026-05-02 | AliDujie Skill Ecosystem | v3.1.3*
