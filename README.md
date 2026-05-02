@@ -120,24 +120,43 @@ result = skill.analyze(
     forces={"push": 4, "pull": 5, "anxiety": 3, "habit": 4}
 )
 print(result)  # 完整 JTBD 分析报告
+
+# ===== 场景 5: 高级功能 — Job Map / Atlas / Obstacles =====
+# Universal Job Map (Ulwick 八阶段)
+jm = skill.create_job_map("预订商务出行酒店")
+jm.add_need("define", "确定出差日期和目的地", importance=9, satisfaction=7)
+jm.add_need("locate", "搜索符合预算的酒店", importance=8, satisfaction=4)
+print(jm.render_markdown())  # 高机会阶段自动标出
+
+# Jobs Atlas (Wunker 七维度)
+atlas = skill.create_jobs_atlas("旅行预订平台")
+atlas.set_core_job("出差时快速找到合适的住处")
+atlas.add_driver("circumstances", "紧急出差，时间紧迫", influence_level=4)
+print(atlas.render_markdown())  # 七维度全景图
+
+# 障碍诊断
+diag = skill.diagnose_obstacles("旅行预订平台")
+diag.add_obstacle("lack_of_knowledge", "用户不知道平台存在", severity=4)
+diag.add_obstacle("behavior_change", "习惯使用老平台", severity=3)
+print(diag.render_markdown())  # 严重度评分 + 消除策略
 ```
 
 ### 💡 12 大核心能力
 
 | # | 能力 | 模块 | 功能 |
 |---|------|------|------|
-| 1 | **访谈提纲生成** | `interview.py` | 4 维度（竞争/推/拉/焦虑）结构化问题 |
-| 2 | **调查问卷设计** | `interview.py` | JTBD 导向的问卷模板 |
-| 3 | **机会分数计算** | `analyzer.py` | 重要性×满意度差距，优先级排序 |
-| 4 | **优先级矩阵** | `analyzer.py` | 机会分数矩阵可视化 |
-| 5 | **竞争分析** | `analyzer.py` | JTBD 视角的竞品对比 |
-| 6 | **营销文案生成** | `innovation.py` | 基于 JTBD 的 messaging |
-| 7 | **增长与留存策略** | `innovation.py` | 四力驱动的增长策略 |
-| 8 | **JTBD 描述验证** | `analyzer.py` | 三要素完整性检查 |
-| 9 | **场景库深度分析** | `analyzer.py` | 场景驱动的深度洞察 |
-| 10 | **CEO: 市场规模估算** | `ceo.py` | TAM/SAM/SOM 估算 |
-| 11 | **CEO: 优先级评分** | `ceo.py` | 综合机会评分 + P0/P1/P2 分级 |
-| 12 | **CEO: 商业化可行性** | `ceo.py` | 支付意愿、ROI、回收期、Go/No-Go 建议 |
+| 1 | **访谈提纲生成** | `interview.py` | Switch/ODI/Churn 三种访谈，4 维度结构化问题 |
+| 2 | **调查问卷设计** | `survey.py` | 筛选型/验证型/竞争型/ODI Outcome 量表/Job 评分 |
+| 3 | **机会分数计算** | `priority_calculator.py` | 四维模型 + ODI Opportunity Algorithm |
+| 4 | **优先级矩阵** | `priority_calculator.py` | 机会分数矩阵可视化 + 行动建议 |
+| 5 | **竞争分析** | `competition.py` | 直接/间接/非消费方案 + Outcome 对比 + 颠覆诊断 |
+| 6 | **营销文案生成** | `marketing.py` | 挣扎共鸣→进步愿景→消除焦虑→克服惯性→行动号召 |
+| 7 | **增长与留存策略** | `growth.py` | 上/下/横向增长 + ODI 五策略矩阵 + 7 种产品策略 |
+| 8 | **JTBD 描述生成** | `jtbd_analyzer.py` | Klement/Outcome/Job Story/Traditional 四种格式 |
+| 9 | **Universal Job Map** | `job_map.py` | Ulwick 八阶段 Job Map，自动识别高机会阶段 |
+| 10 | **Jobs Atlas** | `jobs_atlas.py` | Wunker 七维度全景图 + ABC Drivers |
+| 11 | **障碍诊断** | `obstacles.py` | 采用障碍 + 使用障碍，严重度评分 + 消除策略 |
+| 12 | **CEO 决策支持** | `ceo.py` | 市场规模 + 优先级评分 + 商业化可行性 |
 
 ### 🔧 实用示例
 
@@ -410,12 +429,33 @@ profile.add("pull", "external", "New tools promise 3x productivity", intensity=4
 profile.add("anxiety", "choice", "Risk of disrupting team dynamics", intensity=3)
 profile.add("habit", "internal", "Established processes are comfortable", intensity=4)
 diagnosis = profile.diagnose()
-print(f"Net Force: {diagnosis.net_force:.2f} ({Switch if diagnosis.net_force > 0 else Stay})")
+print(f"Net Force: {diagnosis.net_force:.2f}")
 
 # Example 3: Interview guide for JTBD research
 builder = InterviewBuilder("Enterprise Software Switch Study")
 builder.include_dimensions(["competition", "push", "pull", "anxiety", "habit"])
 print(InterviewBuilder.render_markdown(builder.build()))
+
+# Example 4: Universal Job Map (Ulwick 8-stage)
+from jtbd import JTBDSkill
+skill = JTBDSkill("Project Management")
+jm = skill.create_job_map("Organize team tasks")
+jm.add_need("define", "Clarify project scope and goals", importance=9, satisfaction=5)
+jm.add_need("locate", "Find the right templates", importance=7, satisfaction=3)
+print(jm.render_markdown())  # High-opportunity stages highlighted
+
+# Example 5: Jobs Atlas + Obstacle diagnosis
+atlas = skill.create_jobs_atlas("Project Management")
+atlas.set_core_job("Keep team aligned and productive")
+print(atlas.render_markdown())  # 7-dimension panorama
+
+diag = skill.diagnose_obstacles("Project Management")
+diag.add_obstacle("lack_of_knowledge", "Users unaware of key features", severity=4)
+print(diag.render_markdown())  # Severity + elimination strategy
+
+# Example 6: One-click full analysis with CEO decision support
+result = skill.analyze(include_ceo_analysis=True)
+# Outputs: Full JTBD report + TAM/SAM/SOM + Priority scoring + Go/No-Go
 ```
 
 ### 🛠️ Troubleshooting
