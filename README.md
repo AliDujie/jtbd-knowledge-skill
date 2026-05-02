@@ -6,7 +6,7 @@
 [![Version](https://img.shields.io/badge/version-3.1.3-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--02-brightgreen.svg)
 
-> 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 12 项可执行能力和 11 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
+> 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
 [English](#english) | [中文](#中文说明)
 
@@ -34,7 +34,7 @@
 
 | 功能 | 说明 |
 |------|------|
-| 12 大执行能力 | 访谈提纲、调查问卷、机会分数、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述验证、场景库深度分析、CEO 决策支持 |
+| 13 大执行能力 | 访谈提纲、调查问卷、机会分数、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述、Job Map、Outcome、Job Stories、障碍诊断、Jobs Atlas |
 | 进步力量模型 | Push / Pull / Anxiety / Habit 四力分析，理解用户"为什么换" |
 | 机会分数计算 | 重要性 × 满意度差距，科学优先级排序 |
 | 访谈提纲生成 | 4 维度结构化问题（竞争/推/拉/焦虑） |
@@ -141,7 +141,7 @@ diag.add_obstacle("behavior_change", "习惯使用老平台", severity=3)
 print(diag.render_markdown())  # 严重度评分 + 消除策略
 ```
 
-### 💡 12 大核心能力
+### 💡 13 大核心能力
 
 | # | 能力 | 模块 | 功能 |
 |---|------|------|------|
@@ -336,7 +336,7 @@ jtbd-knowledge-skill/
 ### 🌟 Why Use This Skill?
 
 - **Classic Methodology** — Based on Alan Klement's "When Coffee and Kale Compete" and Clayton Christensen's JTBD theory, adopted by 500+ global enterprises
-- **12 Core Capabilities** — Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis, CEO decision support
+- **13 Core Capabilities** — Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD descriptions, Job Map, Outcome statements, Job Stories, obstacle diagnosis, Jobs Atlas
 - **Forces of Progress Model** — Push / Pull / Anxiety / Habit analysis, understanding "why users switch" not "what they like"
 - **Practical Toolkit** — Pure Python standard library, zero dependencies, 5-minute setup
 - **Bilingual Support** — Complete CN/EN documentation for international teams
@@ -357,7 +357,7 @@ jtbd-knowledge-skill/
 
 | Feature | Description |
 |---------|-------------|
-| 12 Core Capabilities | Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis, CEO decision support |
+| 13 Core Capabilities | Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD descriptions, Job Map, Outcome, Job Stories, obstacle diagnosis, Jobs Atlas |
 | Forces of Progress | Push / Pull / Anxiety / Habit analysis — understand "why users switch" not "what they like" |
 | Opportunity Scoring | Importance × Satisfaction gap with ODI Opportunity Algorithm |
 | Universal Job Map | Ulwick 8-stage Job Map, auto-identifies high-opportunity stages |
@@ -408,7 +408,7 @@ diagnosis = profile.diagnose()
 print(f"Net Force: {diagnosis.net_force:.2f}")
 ```
 
-### 💡 12 Core Capabilities
+### 💡 13 Core Capabilities
 
 | # | Capability | Module | Description |
 |---|------------|--------|-------------|
