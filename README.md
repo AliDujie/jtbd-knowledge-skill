@@ -347,10 +347,15 @@ jtbd-knowledge-skill/
 | Feature | Description |
 |---------|-------------|
 | 12 Core Capabilities | Interview guides, surveys, opportunity scoring, priority matrices, competitive analysis, marketing copy, growth strategies, JTBD validation, scenario analysis, CEO decision support |
-| Forces of Progress | Push / Pull / Anxiety / Habit analysis — understand why users switch |
-| Opportunity Scoring | Importance × Satisfaction gap for scientific prioritization |
-| Interview Generation | 4-dimension structured questions (competition / push / pull / anxiety) |
-| Marketing Copy | Auto-generate JTBD-based messaging |
+| Forces of Progress | Push / Pull / Anxiety / Habit analysis — understand "why users switch" not "what they like" |
+| Opportunity Scoring | Importance × Satisfaction gap with ODI Opportunity Algorithm |
+| Universal Job Map | Ulwick 8-stage Job Map, auto-identifies high-opportunity stages |
+| Jobs Atlas | Wunker 7-dimension panorama + ABC Drivers |
+| Obstacle Diagnosis | Adoption + usage barriers, severity scoring + elimination strategies |
+| Marketing Copy | Struggle resonance → progress vision → eliminate anxiety → overcome inertia → CTA |
+| Interview Generation | 3 types (Switch/ODI/Churn), 4-dimension structured questions |
+| Growth Strategy | Up/down/lateral growth + ODI 5-strategy matrix + 7 product strategies |
+| CEO Decision Support | TAM/SAM/SOM estimation + priority scoring + commercialization feasibility |
 | Bilingual Support | Complete CN/EN documentation and code examples |
 
 ### 👥 Who Is This For?
@@ -503,6 +508,7 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**:
 - **[Quantitative-UX-Research](https://github.com/AliDujie/Quantitative-UX-Research)** — Quantitative research, HEART framework
 - **[Value-Proposition-Design](https://github.com/AliDujie/value-proposition-design)** — Value proposition canvas
 - **[Storytelling-with-Data](https://github.com/AliDujie/storytelling-with-data)** — Data storytelling
+- **[Structured-Thinking-Model](https://github.com/AliDujie/Structured-Thinking-Model)** — 70+ business analysis frameworks
 
 ### 🌟 Why Choose AliDujie Skill Ecosystem?
 
@@ -517,11 +523,20 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 
 👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | [Structured Thinking](https://github.com/AliDujie/Structured-Thinking-Model)
 
-### 📦 Dependencies
+### 🏷️ GitHub Topics (Recommended)
 
-- Python >= 3.8
-- **No external dependencies** (pure standard library)
-- Cross-platform: macOS / Linux / Windows
+```
+jobs-to-be-done jtbd user-research opportunity-scoring
+forces-of-progress python-toolkit openclaw-skill alicloud
+```
+
+### 📋 Changelog
+
+| Version | Date | Changes |
+|---------|------|--------|
+| v3.1.2 | 2026-05-02 | Repo maintenance: expanded English Features at a Glance, added GitHub Topics and changelog to English section |
+| v3.1.1 | 2026-05-02 | Fixed SKILL.md version mismatch, added CEO capabilities to English table |
+| v3.0 | 2026-05-01 | Major update: added JTBD 4-dimension analysis, opportunity scoring, competitive analysis |
 
 ---
 
