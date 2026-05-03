@@ -1,5 +1,11 @@
 # Changelog
 
+## [R27] - 2026-05-03
+
+### Changed
+- Improved Quick Start scenario 4-7 code comment readability
+- Aligned SKILL.md version with README.md (v3.1.7)
+
 ## [R26] - 2026-05-03
 
 ### Fixed
