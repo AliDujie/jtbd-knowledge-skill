@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.4-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.5-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--03-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -564,6 +564,7 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 ### 📋 Changelog
 
 | Version | Date | Changes |
+| v3.1.5 | 2026-05-03 | Repo maintenance: added English version history table at README end, added classifiers and project.urls to pyproject.toml |
 |---------|------|--------|
 | v3.1.4 | 2026-05-03 | Repo maintenance: cross-ecosystem consistency review, verified cross-references and version alignment |
 | v3.1.3 | 2026-05-02 | Added English Quick Decision Guide table to improve cross-skill discoverability |
@@ -722,6 +723,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
+| v3.1.5 | 2026-05-03 | 仓库维护：添加英文版版本历史表，统一 pyproject.toml 元数据 |
 |------|------|------|
 | v3.1.4 | 2026-05-03 | 仓库维护：跨技能一致性审查，验证交叉引用和版本对齐 |
 | v3.1.3 | 2026-05-02 | 仓库维护：为英文版添加 Quick Decision Guide 导航表，增强技能间交叉引用 |
@@ -737,4 +739,22 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-03 | AliDujie Skill Ecosystem | v3.1.4*
+## 📋 Version History (English)
+
+| Version | Date | Changes |
+|---------|------|--------|
+| v3.1.5 | 2026-05-03 | Repo maintenance: added English version history table at README end, added classifiers and project.urls to pyproject.toml |
+| v3.1.4 | 2026-05-03 | Repo maintenance: cross-ecosystem consistency review, verified cross-references and version alignment |
+| v3.1.3 | 2026-05-02 | Added English Quick Decision Guide table to improve cross-skill discoverability |
+| v3.1.2 | 2026-05-02 | Expanded English Features at a Glance, added GitHub Topics and changelog to English section |
+| v3.1.1 | 2026-05-02 | Fixed SKILL.md version mismatch, added CEO capabilities to English table |
+| v3.0 | 2026-05-01 | Major update: added JTBD 4-dimension analysis, opportunity scoring, competitive analysis |
+| v2.2 | 2026-04-30 | Maintenance and formatting cleanup |
+| v2.0 | 2026-04-29 | Unified cross-references to GitHub absolute links, added GitHub Topics |
+| v1.7 | 2026-04-25 | Unified skill ecosystem format, updated cross-references |
+| v1.6 | 2026-04-23 | Added badges, ASCII diagram, bilingual support, Why Use This Skill?, Quick Start, best practices |
+| v1.3 | 2026-04-22 | Initial release |
+
+---
+
+*Last Updated: 2026-05-03 | AliDujie Skill Ecosystem | v3.1.5*
