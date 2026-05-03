@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.12-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.13-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--04-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -764,8 +764,8 @@ Phase 4: 呈现与决策
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
-| v3.1.12 | 2026-05-04 | 仓库维护：修复版本历史排序（v3.1.8→v3.1.10→v3.1.12 顺序校正），统一 SKILL.md 与 README.md 版本引用 |
-| v3.1.12 | 2026-05-04 | 仓库维护：添加完整端到端工作流章节（展示从用户洞察到增长策略的 6 技能协作流程） |
+| v3.1.13 | 2026-05-04 | 仓库维护：修复 SKILL.md 版本不一致 (3.1.11→3.1.13)，合并重复 v3.1.12 条目，对齐所有版本引用
+| v3.1.12 | 2026-05-04 | 仓库维护：修复版本历史排序（v3.1.8→v3.1.10 顺序校正）+ 添加端到端工作流章节 |
 | v3.1.10 | 2026-05-03 | 仓库维护：添加 Pro Tips 专业提示章节（中英双语），增强 JTBD 实操指导 |
 | v3.1.9 | 2026-05-03 | 仓库维护：修复英文版版本历史表格格式（删除错误分隔符行），SKILL.md 版本对齐，增强 JTBD 四力分析示例 |
 | v3.1.8 | 2026-05-03 | 仓库维护：修复版本历史表格格式（删除错误分隔符行），统一 SKILL.md 与 README.md 版本引用 |
@@ -798,8 +798,8 @@ Phase 4: 呈现与决策
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
-| v3.1.12 | 2026-05-04 | Repo maintenance: fixed changelog ordering (v3.1.8→v3.1.10→v3.1.12 sequence corrected), aligned SKILL.md version with README.md
-| v3.1.12 | 2026-05-04 | Repo maintenance: added end-to-end workflow section showing 6-skill collaboration from user insight to growth strategy
+| v3.1.13 | 2026-05-04 | Repo maintenance: fixed SKILL.md version mismatch (3.1.11→3.1.13), merged duplicate v3.1.12 entries, aligned all version references
+| v3.1.12 | 2026-05-04 | Repo maintenance: fixed changelog ordering + added end-to-end workflow section
 | v3.1.10 | 2026-05-03 | Repo maintenance: added Pro Tips section (CN/EN) for JTBD practical guidance
 | v3.1.9 | 2026-05-03 | Repo maintenance: fixed English changelog table formatting, aligned SKILL.md version, enhanced Forces of Progress examples
 | v3.1.8 | 2026-05-03 | Repo maintenance: fixed changelog table formatting, aligned SKILL.md version with README.md
@@ -817,4 +817,4 @@ Phase 4: 呈现与决策
 
 ---
 
-*Last Updated: 2026-05-04 | AliDujie Skill Ecosystem | v3.1.12*
+*Last Updated: 2026-05-04 | AliDujie Skill Ecosystem | v3.1.13*
