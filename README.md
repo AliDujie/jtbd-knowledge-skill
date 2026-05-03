@@ -3,8 +3,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.10-green.svg)](CHANGELOG.md)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--03-brightgreen.svg)
+[![Version](https://img.shields.io/badge/version-3.1.11-green.svg)](CHANGELOG.md)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--04-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
@@ -720,6 +720,37 @@ python3 -m pytest jtbd/tests/test_all.py -v
 - **Emp ID**: 27768
 - **Nickname**: 渡劫
 
+### 🚀 完整端到端工作流：从用户洞察到增长策略 (End-to-End Workflow)
+
+以下是一个真实场景中，6 个技能如何协作完成从用户洞察到增长策略的完整工作流：
+
+**场景**: 旅行预订平台需要理解用户为什么转向竞品并制定增长策略
+
+```
+Phase 1: JTBD 洞察挖掘 (本技能)
+  → build_interview: 生成 JTBD 4 维度访谈提纲 (竞争/推/拉/焦虑)
+  → analyze_job: 用户核心"工作"=快速规划完整行程
+  → forces_profile: Push(竞品更好用:4) + Pull(朋友推荐:5) > Anxiety(数据迁移:3) + Habit(旧平台:2)
+  → opportunity_score: "行程规划" 重要性 9.2, 满意度 4.1 → 机会分数 46.8
+
+Phase 2: 方法执行
+  UDM: 基于 JTBD 洞察设计 contextual inquiry 访谈 (15 用户)
+  QuantUX: A/B 测试新行程规划功能 vs 旧版
+
+Phase 3: 验证与设计
+  Persona: 创建 "商务旅行者" vs "休闲规划者" 两个核心角色
+  VPD: 将 JTBD 发现的"工作"映射到价值主张画布
+
+Phase 4: 呈现与决策
+  SWD: 将 JTBD 洞察和验证结果转化为增长策略汇报
+```
+
+> 💡 **JTBD 是工作流的洞察引擎**: JTBD 发现"为什么" → UDM/QuantUX 验证"有多少" → VPD 设计"怎么做"
+
+👉 **尝试完整工作流**: [UDM](https://github.com/AliDujie/universal-design-methods) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [Persona](https://github.com/AliDujie/web-persona-skill) · [VPD](https://github.com/AliDujie/value-proposition-design) · [SWD](https://github.com/AliDujie/storytelling-with-data)
+
+---
+
 ### 💡 Pro Tips / 专业提示
 
 - **聚焦"工作"而非产品** — 用户"雇佣"产品来完成工作，不要混淆
@@ -733,6 +764,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
+| v3.1.11 | 2026-05-04 | 仓库维护：添加完整端到端工作流章节（展示从用户洞察到增长策略的 6 技能协作流程） |
 | v3.1.8 | 2026-05-03 | 仓库维护：修复版本历史表格格式（删除错误分隔符行），统一 SKILL.md 与 README.md 版本引用
 | v3.1.10 | 2026-05-03 | 仓库维护：添加 Pro Tips 专业提示章节（中英双语），增强 JTBD 实操指导 |
 | v3.1.9 | 2026-05-03 | 仓库维护：修复英文版版本历史表格格式（删除错误分隔符行），SKILL.md 版本对齐，增强 JTBD 四力分析示例 |
@@ -765,6 +797,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
+| v3.1.11 | 2026-05-04 | Repo maintenance: added end-to-end workflow section showing 6-skill collaboration from user insight to growth strategy
 | v3.1.8 | 2026-05-03 | Repo maintenance: fixed changelog table formatting, aligned SKILL.md version with README.md
 | v3.1.10 | 2026-05-03 | Repo maintenance: added Pro Tips section (CN/EN) for JTBD practical guidance |
 | v3.1.9 | 2026-05-03 | Repo maintenance: fixed English changelog table formatting, aligned SKILL.md version, enhanced Forces of Progress examples |
@@ -782,4 +815,4 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-03 | AliDujie Skill Ecosystem | v3.1.10*
+*Last Updated: 2026-05-04 | AliDujie Skill Ecosystem | v3.1.11*
