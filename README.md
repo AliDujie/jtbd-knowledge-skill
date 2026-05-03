@@ -760,7 +760,6 @@ Phase 4: 呈现与决策
 - **JTBD + UDM 是黄金组合** — 用 UDM 方法挖掘用户"工作"，用 JTBD 结构化分析
 - **从情境入手** — 好的 JTBD 陈述必须包含：情境 + 动机 + 期望结果
 
-
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
@@ -794,7 +793,6 @@ Phase 4: 呈现与决策
 - **JTBD + UDM is the golden combo** — Use UDM methods to uncover user "jobs," JTBD for structured analysis
 - **Start with Context** — Good JTBD statements must include: context + motivation + expected outcome
 
-
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
@@ -814,6 +812,14 @@ Phase 4: 呈现与决策
 | v1.7 | 2026-04-25 | Unified skill ecosystem format, updated cross-references |
 | v1.6 | 2026-04-23 | Added badges, ASCII diagram, bilingual support, Why Use This Skill?, Quick Start, best practices |
 | v1.3 | 2026-04-22 | Initial release |
+
+---
+
+### 👨‍💻 Credits
+
+Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), integrating four JTBD schools: Klement (Forces of Progress), Ulwick (ODI), Wunker (Jobs Atlas), and Kalbach (Job Stories).
+
+**Applicable to:** Product Managers, UX Researchers, Marketers, Entrepreneurs
 
 ---
 
