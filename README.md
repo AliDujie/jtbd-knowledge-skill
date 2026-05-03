@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.9-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.10-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--03-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -720,10 +720,21 @@ python3 -m pytest jtbd/tests/test_all.py -v
 - **Emp ID**: 27768
 - **Nickname**: 渡劫
 
+### 💡 Pro Tips / 专业提示
+
+- **聚焦"工作"而非产品** — 用户"雇佣"产品来完成工作，不要混淆
+- **访谈最近的切换者** — 刚切换解决方案的用户有最丰富的洞察
+- **四力必须平衡** — Push + Pull > Anxiety + Habit 是变革的临界点
+- **机会分数 > 7.0 优先投入** — 高重要性 + 低满意度 = 最佳机会
+- **JTBD + UDM 是黄金组合** — 用 UDM 方法挖掘用户"工作"，用 JTBD 结构化分析
+- **从情境入手** — 好的 JTBD 陈述必须包含：情境 + 动机 + 期望结果
+
+
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
 | v3.1.8 | 2026-05-03 | 仓库维护：修复版本历史表格格式（删除错误分隔符行），统一 SKILL.md 与 README.md 版本引用
+| v3.1.10 | 2026-05-03 | 仓库维护：添加 Pro Tips 专业提示章节（中英双语），增强 JTBD 实操指导 |
 | v3.1.9 | 2026-05-03 | 仓库维护：修复英文版版本历史表格格式（删除错误分隔符行），SKILL.md 版本对齐，增强 JTBD 四力分析示例 |
 | v3.1.7 | 2026-05-03 | 仓库维护：优化 Quick Start 场景 4-7 代码注释可读性，统一 SKILL.md 与 README.md 版本引用 |
 | v3.1.5 | 2026-05-03 | 仓库维护：添加英文版版本历史表，统一 pyproject.toml 元数据 |
@@ -741,10 +752,21 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
+### 💡 Pro Tips
+
+- **Focus on the Job, Not the Product** — Users "hire" products to get jobs done
+- **Interview Recent Switchers** — People who recently changed solutions have the richest insights
+- **Balance All 4 Forces** — Push + Pull > Anxiety + Habit is the change threshold
+- **Opportunity Score > 7.0 to prioritize** — High importance + low satisfaction = best opportunity
+- **JTBD + UDM is the golden combo** — Use UDM methods to uncover user "jobs," JTBD for structured analysis
+- **Start with Context** — Good JTBD statements must include: context + motivation + expected outcome
+
+
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
 | v3.1.8 | 2026-05-03 | Repo maintenance: fixed changelog table formatting, aligned SKILL.md version with README.md
+| v3.1.10 | 2026-05-03 | Repo maintenance: added Pro Tips section (CN/EN) for JTBD practical guidance |
 | v3.1.9 | 2026-05-03 | Repo maintenance: fixed English changelog table formatting, aligned SKILL.md version, enhanced Forces of Progress examples |
 | v3.1.5 | 2026-05-03 | Repo maintenance: added English version history table at README end, added classifiers and project.urls to pyproject.toml |
 | v3.1.4 | 2026-05-03 | Repo maintenance: cross-ecosystem consistency review, verified cross-references and version alignment |
@@ -760,4 +782,4 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ---
 
-*Last Updated: 2026-05-03 | AliDujie Skill Ecosystem | v3.1.9*
+*Last Updated: 2026-05-03 | AliDujie Skill Ecosystem | v3.1.10*
