@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.13-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.14-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--04-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -317,6 +317,20 @@ jtbd-knowledge-skill/
 
 **关键洞察:** 变革 = Push + Pull > Anxiety + Habit
 
+### ❓ 常见问题 (FAQ)
+
+**Q: JTBD 和用户画像 (Persona) 有什么区别？**
+A: Persona 描述"谁"是用户（目标、行为、态度），JTBD 解释用户"为什么"做某事（要完成什么"工作"）。两者互补：Persona 帮你理解用户是谁，JTBD 帮你理解他们要完成什么。配合 Persona 技能使用效果最佳。
+
+**Q: 机会分数怎么解读？**
+A: 机会分数 = 重要性 + (重要性 - 满意度)。> 7.0 表示高重要性 + 低满意度的最佳机会；< 5.0 说明现有方案已经很好了。
+
+**Q: JTBD 访谈和普通用户访谈有什么区别？**
+A: JTBD 访谈聚焦"切换时刻"——用户为什么放弃旧方案选择新方案。问题围绕四力（Push/Pull/Anxiety/Habit）展开，而非一般满意度调查。
+
+**Q: 可以用 JTBD 做竞争分析吗？**
+A: 可以。JTBD 的竞争分析不是比较功能列表，而是分析竞品分别满足了哪些"工作"，以及各自的机会分数。用 `analyze_competition()` 方法。
+
 ### 📚 关于《When Coffee and Kale Compete》
 
 - **书名**: When Coffee and Kale Compete: The Art of Winning Customers in the Age of Endless Disruption (2nd Edition)
@@ -510,6 +524,20 @@ result = skill.analyze(include_ceo_analysis=True)
 3. **Interview recent switchers** — People who recently changed solutions have the richest insights
 4. **Use opportunity scores for prioritization** — High importance + low satisfaction = best opportunity
 5. **Validate JTBD statements** — Check the three elements: context, motivation, expected outcome
+
+### ❓ FAQ
+
+**Q: What's the difference between JTBD and User Personas?**
+A: Personas describe "who" the users are (goals, behaviors, attitudes); JTBD explains "why" they do things (what "job" they're hiring a product to do). They're complementary: Personas help you understand who users are, JTBD helps you understand what they're trying to accomplish. Use with the Persona skill for best results.
+
+**Q: How do I interpret opportunity scores?**
+A: Opportunity Score = Importance + (Importance - Satisfaction). > 7.0 means high importance + low satisfaction = best opportunity; < 5.0 means existing solutions are already adequate.
+
+**Q: How are JTBD interviews different from regular user interviews?**
+A: JTBD interviews focus on "switching moments" — why users abandoned old solutions for new ones. Questions revolve around the Four Forces (Push/Pull/Anxiety/Habit), not general satisfaction.
+
+**Q: Can JTBD do competitive analysis?**
+A: Yes. Unlike feature comparison, JTBD competitive analysis maps which "jobs" each competitor serves and their respective opportunity scores. Use the `analyze_competition()` method.
 
 ### 🌟 User Reviews
 
@@ -763,7 +791,7 @@ Phase 4: 呈现与决策
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
-| v3.1.13 | 2026-05-04 | 仓库维护：修复 SKILL.md 版本不一致 (3.1.11→3.1.13)，合并重复 v3.1.12 条目，对齐所有版本引用
+| v3.1.14 | 2026-05-04 | 仓库维护：修复 SKILL.md 版本不一致 (3.1.11→3.1.13)，合并重复 v3.1.12 条目，对齐所有版本引用
 | v3.1.12 | 2026-05-04 | 仓库维护：修复版本历史排序（v3.1.8→v3.1.10 顺序校正）+ 添加端到端工作流章节 |
 | v3.1.10 | 2026-05-03 | 仓库维护：添加 Pro Tips 专业提示章节（中英双语），增强 JTBD 实操指导 |
 | v3.1.9 | 2026-05-03 | 仓库维护：修复英文版版本历史表格格式（删除错误分隔符行），SKILL.md 版本对齐，增强 JTBD 四力分析示例 |
@@ -796,7 +824,7 @@ Phase 4: 呈现与决策
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
-| v3.1.13 | 2026-05-04 | Repo maintenance: fixed SKILL.md version mismatch (3.1.11→3.1.13), merged duplicate v3.1.12 entries, aligned all version references, added Credits section |
+| v3.1.14 | 2026-05-04 | Repo maintenance: fixed SKILL.md version mismatch (3.1.11→3.1.13), merged duplicate v3.1.12 entries, aligned all version references, added Credits section |
 | v3.1.12 | 2026-05-04 | Repo maintenance: fixed changelog ordering + added end-to-end workflow section |
 | v3.1.10 | 2026-05-03 | Repo maintenance: added Pro Tips section (CN/EN) for JTBD practical guidance |
 | v3.1.9 | 2026-05-03 | Repo maintenance: fixed English changelog table formatting, aligned SKILL.md version, enhanced Forces of Progress examples |
@@ -824,4 +852,4 @@ Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), i
 
 ---
 
-*Last Updated: 2026-05-04 | AliDujie Skill Ecosystem | v3.1.13*
+*Last Updated: 2026-05-04 | AliDujie Skill Ecosystem | v3.1.14*
