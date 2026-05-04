@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.1.18 - 2026-05-05
+
+- Added Structured Thinking Model (🧠) to ecosystem ASCII diagrams (CN and EN sections)
+- Verified cross-references consistency across all related skills tables
+- Updated version numbers, badges, and Last Updated dates
+
 ## v3.1.17 - 2026-05-04
 
 - Fixed changelog table `| |` formatting bug in README.md (both CN and EN sections)

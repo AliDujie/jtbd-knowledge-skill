@@ -3,8 +3,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.17-green.svg)](CHANGELOG.md)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--04-brightgreen.svg)
+[![Version](https://img.shields.io/badge/version-3.1.18-green.svg)](CHANGELOG.md)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--05-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
@@ -288,6 +288,9 @@ jtbd-knowledge-skill/
 │              ↑                          ↑                   │
 │              │                    👤 Web Persona             │
 │              └────────────────────  (人物角色)               │
+│                                         ↓                   │
+│                                    🧠 Structured Thinking   │
+│                                    Model (结构化思维)        │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -622,6 +625,9 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**:
 │              ↑                          ↑                   │
 │              │                    👤 Web Persona             │
 │              └────────────────────  (personas)               │
+│                                         ↓                   │
+│                                    🧠 Structured Thinking   │
+│                                    Model                     │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -863,6 +869,7 @@ Phase 4: 呈现与决策
 
 | 版本 | 日期 | 变更 |
 | v3.1.17 | 2026-05-04 | 仓库维护：修复版本历史表格 `| |` 格式错误，补充英文目录中端到端工作流链接
+| v3.1.18 | 2026-05-05 | Repo maintenance: added Structured Thinking Model to ecosystem diagrams (CN+EN), verified cross-references consistency |
 | v3.1.16 | 2026-05-04 | 仓库维护：添加英文目录(Table of Contents)和5分钟快速开始检查清单；增强英文版 Features at a Glance 表格，添加 JTBD 与生态其他技能协作示例
 | v3.1.14 | 2026-05-04 | 仓库维护：修复 SKILL.md 版本不一致 (3.1.11→3.1.13)，合并重复 v3.1.12 条目，对齐所有版本引用
 | v3.1.12 | 2026-05-04 | 仓库维护：修复版本历史排序（v3.1.8→v3.1.10 顺序校正）+ 添加端到端工作流章节 |
@@ -928,4 +935,5 @@ Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), i
 
 ---
 
-*Last Updated: 2026-05-04 | AliDujie Skill Ecosystem | v3.1.17*
+*Last Updated: 2026-05-05 | AliDujie Skill Ecosystem | v3.1.17*
+| v3.1.18 | 2026-05-05 | Repo maintenance: added Structured Thinking Model to ecosystem diagrams, verified cross-references |
