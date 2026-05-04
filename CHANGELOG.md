@@ -1,5 +1,16 @@
 # Changelog
 
+## v3.1.17 - 2026-05-04
+
+- Fixed changelog table `| |` formatting bug in README.md (both CN and EN sections)
+- Added end-to-end workflow entry to English Table of Contents
+- Aligned all version references across README.md, SKILL.md, and pyproject.toml
+
+## v3.1.16 - 2026-05-04
+
+- Added English TOC and 5-min Quick Start Checklist
+- Enhanced English Features at a Glance table, added cross-skill collaboration examples
+
 ## v3.1.15 - 2026-05-04
 
 - Enhanced English Features at a Glance table
