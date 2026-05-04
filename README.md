@@ -8,6 +8,17 @@
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
+### ✅ 5 分钟快速开始检查清单
+
+- [ ] **安装** — `cp -r jtbd-knowledge-skill /your/agent/skills/`
+- [ ] **导入** — `from jtbd import JTBDSkill`
+- [ ] **初始化** — `skill = JTBDSkill("你的产品")`
+- [ ] **JTBD 分析** — `skill.analyze(product="产品名", jobs=[...], forces={...})`
+- [ ] **访谈提纲** — `builder = InterviewBuilder("用户访谈"); builder.build()`
+- [ ] **机会分数** — `analyzer = JTBDAnalyzer("产品"); analyzer.generate_report()`
+- [ ] **四力诊断** — `profile = ForcesProfile(); profile.diagnose()`
+- [ ] **Job Map** — `skill.create_job_map("核心工作")`
+
 [English](#english) | [中文](#中文说明)
 
 ---
@@ -349,6 +360,23 @@ A: 可以。JTBD 的竞争分析不是比较功能列表，而是分析竞品分
 ---
 
 ## English
+
+### 📑 Table of Contents
+
+- [Why Use This Skill?](#-why-use-this-skill)
+- [Quick Decision Guide](#-quick-decision-guide)
+- [Features at a Glance](#-features-at-a-glance)
+- [Quick Start](#-quick-start)
+- [13 Core Capabilities](#-13-core-capabilities)
+- [Practical Examples](#-practical-examples)
+- [Who Is This For?](#-who-is-this-for)
+- [Troubleshooting](#-troubleshooting)
+- [Best Practices](#-best-practices)
+- [FAQ](#-faq)
+- [User Reviews](#-user-reviews)
+- [Extended Reading](#-extended-reading)
+- [Related Skills](#-related-skills-1)
+- [Version History](#-version-history-english)
 
 ### 🌟 Why Use This Skill?
 
