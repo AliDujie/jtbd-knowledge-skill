@@ -156,9 +156,10 @@ print(diag.render_markdown())  # 严重度评分 + 消除策略
 | 7 | **增长与留存策略** | `growth.py` | 上/下/横向增长 + ODI 五策略矩阵 + 7 种产品策略 |
 | 8 | **JTBD 描述生成** | `jtbd_analyzer.py` | Klement/Outcome/Job Story/Traditional 四种格式 |
 | 9 | **Universal Job Map** | `job_map.py` | Ulwick 八阶段 Job Map，自动识别高机会阶段 |
-| 10 | **Jobs Atlas** | `jobs_atlas.py` | Wunker 七维度全景图 + ABC Drivers |
-| 11 | **障碍诊断** | `obstacles.py` | 采用障碍 + 使用障碍，严重度评分 + 消除策略 |
-| 12 | **CEO 决策支持** | `ceo.py` | 市场规模 + 优先级评分 + 商业化可行性 |
+| 10 | **Outcome Statement** | `outcome_statement.py` | Desired Outcome Statement 管理，自动生成优先级排序 |
+| 11 | **Jobs Atlas** | `jobs_atlas.py` | Wunker 七维度全景图 + ABC Drivers |
+| 12 | **障碍诊断** | `obstacles.py` | 采用障碍 + 使用障碍，严重度评分 + 消除策略 |
+| 13 | **CEO 决策支持** | `ceo.py` | 市场规模 + 优先级评分 + 商业化可行性 |
 
 ### 🔧 实用示例
 
@@ -440,6 +441,21 @@ print(f"Net Force: {diagnosis.net_force:.2f}")
 # One-liner full analysis with CEO decision support
 result = skill.analyze(include_ceo_analysis=True)
 # Outputs: Full JTBD report + TAM/SAM/SOM + Priority scoring + Go/No-Go
+
+# ===== Scenario 4: Universal Job Map (Ulwick 8-stage) =====
+jm = skill.create_job_map("Booking a business hotel")
+jm.add_need("define", "Set travel dates and destination", importance=9, satisfaction=7)
+jm.add_need("locate", "Search hotels within budget", importance=8, satisfaction=4)
+print(jm.render_markdown())  # High-opportunity stages auto-highlighted
+
+# ===== Scenario 5: Jobs Atlas + Obstacle Diagnosis =====
+atlas = skill.create_jobs_atlas("Travel booking platform")
+atlas.set_core_job("Quickly find suitable accommodation for business trips")
+print(atlas.render_markdown())  # 7-dimension panorama
+
+diag = skill.diagnose_obstacles("Travel booking platform")
+diag.add_obstacle("lack_of_knowledge", "Users unaware the platform exists", severity=4)
+print(diag.render_markdown())  # Severity scoring + elimination strategies
 ```
 
 ### 💡 13 Core Capabilities
@@ -451,13 +467,14 @@ result = skill.analyze(include_ceo_analysis=True)
 | 3 | **Opportunity Scoring** | `analyzer.py` | Importance × satisfaction gap, priority ranking |
 | 4 | **Priority Matrix** | `analyzer.py` | Opportunity score matrix visualization |
 | 5 | **Competitive Analysis** | `analyzer.py` | JTBD perspective competitor comparison |
-| 6 | **Marketing Copy Generation** | `innovation.py` | JTBD-based messaging |
-| 7 | **Growth and Retention Strategy** | `innovation.py` | Four-forces-driven growth strategies |
-| 8 | **JTBD Description Validation** | `analyzer.py` | Three-element completeness check |
-| 9 | **Scenario Library Deep Analysis** | `analyzer.py` | Scenario-driven deep insights |
-| 10 | **CEO: Market Size Estimate** | `ceo.py` | TAM/SAM/SOM estimation from job data |
-| 11 | **CEO: Priority Scoring** | `ceo.py` | Composite opportunity scoring with P0/P1/P2 ranking |
-| 12 | **CEO: Commercialization Feasibility** | `ceo.py` | WTP, ROI, payback period, Go/No-Go recommendations |
+| 6 | **Marketing Copy Generation** | `marketing.py` | Struggle resonance → progress vision → eliminate anxiety → overcome inertia → CTA |
+| 7 | **Growth and Retention Strategy** | `growth.py` | Up/down/lateral growth + ODI 5-strategy matrix + 7 product strategies |
+| 8 | **JTBD Description Generation** | `jtbd_analyzer.py` | Klement/Outcome/Job Story/Traditional — four formats |
+| 9 | **Universal Job Map** | `job_map.py` | Ulwick 8-stage Job Map, auto-identifies high-opportunity stages |
+| 10 | **Desired Outcome Statements** | `outcome_statement.py` | Outcome statement management with auto-priority ranking |
+| 11 | **Jobs Atlas** | `jobs_atlas.py` | Wunker 7-dimension panorama + ABC Drivers |
+| 12 | **Obstacle Diagnosis** | `obstacles.py` | Adoption + usage barriers, severity scoring + elimination strategies |
+| 13 | **CEO Decision Support** | `ceo.py` | TAM/SAM/SOM estimation + priority scoring + commercialization feasibility |
 
 ### 🔧 Practical Examples
 
@@ -561,6 +578,31 @@ This skill is based on the Jobs-to-be-Done (JTBD) theory popularized by Clayton 
 ### 🔗 Related Skills
 
 This skill is part of the **AliDujie UX Research Skills Ecosystem**:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│           AliDujie Skill Ecosystem                          │
+├─────────────────────────────────────────────────────────────┤
+│   📊 Quantitative UX Research ←───→ 📖 Universal Design     │
+│    (quantitative)   triangulation       Methods             │
+│              ↑                          ↓                   │
+│              │                    🎯 JTBD Knowledge          │
+│              │                    (this skill)               │
+│   📈 Storytelling with Data ←───→ 💎 Value Proposition      │
+│    (data narrative) presentation         Design              │
+│              ↑                          ↑                   │
+│              │                    👤 Web Persona             │
+│              └────────────────────  (personas)               │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Integration patterns:**
+
+- **JTBD + UDM** → Validate JTBD-discovered needs with UDM research methods
+- **JTBD + QuantUX** → Quantitatively validate JTBD opportunity scores and market size
+- **JTBD + VPD** → Map JTBD-discovered "jobs" to the value proposition canvas
+- **JTBD + Persona** → Define personas based on JTBD task clustering
+- **JTBD + SWD** → Visualize JTBD insights for stakeholder presentations
 
 - **[Universal-Design-Methods](https://github.com/AliDujie/universal-design-methods)** — 100 design research methods
 - **[Web-Persona-Skill](https://github.com/AliDujie/web-persona-skill)** — Persona creation
