@@ -796,12 +796,13 @@ Phase 4: 呈现与决策
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
-| v3.1.13 | 2026-05-04 | Repo maintenance: fixed SKILL.md version mismatch (3.1.11→3.1.13), merged duplicate v3.1.12 entries, aligned all version references
-| v3.1.12 | 2026-05-04 | Repo maintenance: fixed changelog ordering + added end-to-end workflow section
-| v3.1.10 | 2026-05-03 | Repo maintenance: added Pro Tips section (CN/EN) for JTBD practical guidance
-| v3.1.9 | 2026-05-03 | Repo maintenance: fixed English changelog table formatting, aligned SKILL.md version, enhanced Forces of Progress examples
-| v3.1.8 | 2026-05-03 | Repo maintenance: fixed changelog table formatting, aligned SKILL.md version with README.md
-| v3.1.5 | 2026-05-03 | Repo maintenance: added English version history table at README end, added classifiers and project.urls to pyproject.toml |
+| v3.1.13 | 2026-05-04 | Repo maintenance: fixed SKILL.md version mismatch (3.1.11→3.1.13), merged duplicate v3.1.12 entries, aligned all version references, added Credits section |
+| v3.1.12 | 2026-05-04 | Repo maintenance: fixed changelog ordering + added end-to-end workflow section |
+| v3.1.10 | 2026-05-03 | Repo maintenance: added Pro Tips section (CN/EN) for JTBD practical guidance |
+| v3.1.9 | 2026-05-03 | Repo maintenance: fixed English changelog table formatting, aligned SKILL.md version, enhanced Forces of Progress examples |
+| v3.1.8 | 2026-05-03 | Repo maintenance: fixed changelog table formatting, aligned SKILL.md version with README.md |
+| v3.1.7 | 2026-05-03 | Repo maintenance: improved Quick Start scenario 4-7 code comment readability, aligned SKILL.md version |
+| v3.1.5 | 2026-05-03 | Repo maintenance: added English version history table, added classifiers and project.urls to pyproject.toml |
 | v3.1.4 | 2026-05-03 | Repo maintenance: cross-ecosystem consistency review, verified cross-references and version alignment |
 | v3.1.3 | 2026-05-02 | Added English Quick Decision Guide table to improve cross-skill discoverability |
 | v3.1.2 | 2026-05-02 | Expanded English Features at a Glance, added GitHub Topics and changelog to English section |
