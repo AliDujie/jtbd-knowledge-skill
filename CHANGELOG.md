@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.1.15 - 2026-05-04
+
+- Enhanced English Features at a Glance table
+- Added cross-skill collaboration examples to README
+- Aligned SKILL.md frontmatter version with README and pyproject.toml
+
 ## v3.1.14 - 2026-05-04
 
 - Added FAQ sections (CN/EN) to README for improved discoverability
