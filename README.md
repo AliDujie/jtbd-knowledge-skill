@@ -72,7 +72,7 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 ### 🌟 为什么使用这个技能？(Why Use This Skill?)
 
 - **经典方法论** — 基于 Alan Klement《When Coffee and Kale Compete》和 Clayton Christensen 的 JTBD 理论，全球 500+ 企业采用的需求洞察框架
-- **9 大执行能力** — 访谈提纲、调查问卷、机会分数、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述验证、场景库深度分析
+- **13 大执行能力** — 访谈提纲、调查问卷、机会分数、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述验证、Job Map、Outcome 挖掘、Job Stories、障碍诊断、Jobs Atlas
 - **进步力量模型** — Push / Pull / Anxiety / Habit 四力分析，理解用户"为什么换"而非"喜欢什么"
 - **实战工具包** — 纯 Python 标准库实现，无外部依赖，5 分钟上手
 - **双语支持** — 完整中英文文档，适合国际化团队
@@ -868,8 +868,8 @@ Phase 4: 呈现与决策
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
-| v3.1.17 | 2026-05-04 | 仓库维护：修复版本历史表格 `| |` 格式错误，补充英文目录中端到端工作流链接
 | v3.1.18 | 2026-05-05 | Repo maintenance: added Structured Thinking Model to ecosystem diagrams (CN+EN), verified cross-references consistency |
+| v3.1.17 | 2026-05-04 | 仓库维护：修复版本历史表格 `| |` 格式错误，补充英文目录中端到端工作流链接
 | v3.1.16 | 2026-05-04 | 仓库维护：添加英文目录(Table of Contents)和5分钟快速开始检查清单；增强英文版 Features at a Glance 表格，添加 JTBD 与生态其他技能协作示例
 | v3.1.14 | 2026-05-04 | 仓库维护：修复 SKILL.md 版本不一致 (3.1.11→3.1.13)，合并重复 v3.1.12 条目，对齐所有版本引用
 | v3.1.12 | 2026-05-04 | 仓库维护：修复版本历史排序（v3.1.8→v3.1.10 顺序校正）+ 添加端到端工作流章节 |
