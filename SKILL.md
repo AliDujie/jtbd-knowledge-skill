@@ -344,7 +344,6 @@ JTBD 可与生态系统中其他技能组合使用，形成完整的用户洞察
 | JTBD 到人物角色 | [Web Persona](https://github.com/AliDujie/web-persona-skill) | JTBD 任务聚类 → Persona 角色定义 → Persona 验证 |
 | JTBD 结果汇报 | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | JTBD 洞察 → SWD 上下文分析 → SWD 数据故事构建 |
 | JTBD 结构化分析 | [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | STM PESTEL/五力 → JTBD 市场机会评估 → STM 决策建议 |
-| JTBD 定量验证 | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD 机会分数 → QuantUX A/B 测试 → SWD 呈现 |
 
 **协作示例（JTBD → VPD）**：
 ```python

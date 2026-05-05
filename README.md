@@ -546,7 +546,7 @@ print(InterviewBuilder.render_markdown(guide))
 | "Is my product value strong enough?" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — Fit diagnosis |
 | "How do I present research results clearly?" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — Data storytelling |
 
-### 🔧 Practical Examples
+### 🔧 Practical Examples — JTBD Statement & Interview Guide
 
 ```python
 # Example 1: Food delivery platform user research
@@ -591,7 +591,7 @@ guide = builder.build()
 | **Marketing Teams** | Understand buying motivations to craft compelling positioning |
 | **AI Agents** | Zero-dependency Python package for automated JTBD analysis workflows |
 
-### 🔧 Practical Examples
+### 🔧 Practical Examples — Innovation Discovery
 
 ```python
 from jtbd import JTBDAnalyzer, InterviewBuilder, ForcesProfile, InnovationFinder
@@ -756,6 +756,16 @@ innovation four-forces python-toolkit openclaw-skill alicloud
 | v1.1 | 2026-04-23 | Added Python API, knowledge base search |
 | v1.0 | 2026-04-23 | Initial release, 4 core capabilities |
 
+### 📚 About This Skill
+
+Based on *When Coffee and Kale Compete* by Alan Klement (2nd Edition), the definitive guide to Jobs-to-be-Done theory. JTBD shifts the focus from "what users want" to "what progress users are trying to make" — revealing deeper motivations that drive product adoption and switching behavior.
+
+**Applicable to:** Product Managers, UX Researchers, Startup Founders, Marketing Teams, Innovation Consultants
+
+### 🤝 Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
+
 ---
 
-*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v2.2.2*
+*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v2.2.3*
