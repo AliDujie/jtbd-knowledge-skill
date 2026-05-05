@@ -1,10 +1,11 @@
 # JTBD Knowledge Skill
 
+[![Ecosystem](https://img.shields.io/badge/AliDujie-Ecosystem-7B68EE.svg)](https://github.com/AliDujie)
 [![GitHub stars](https://img.shields.io/github/stars/AliDujie/jtbd-knowledge-skill)](https://github.com/AliDujie/jtbd-knowledge-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--05-brightgreen.svg)
-[![Version](https://img.shields.io/badge/version-2.1.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.2.1-green.svg)](CHANGELOG.md)
 
 基于 Alan Klement《When Coffee and Kale Compete》（第二版）的完整 JTBD 理论工具包。
 
@@ -399,11 +400,13 @@ print(profile.diagnose())
 
 ## 📝 更新日志 (Changelog)
 
-- **v1.0** — 初始版本，4 大核心执行能力
-- **v1.1** — 添加 Python API、知识库搜索
-- **v1.2** — 增强四力分析框架、添加最佳实践
-- **v1.3** — 完善速查手册、添加生态系统集成和用户评价
+- **v2.2.1** — 英文文档增强：添加 Features at a Glance、Who Is This For、Best Practices、Extended Reading、Skill Ecosystem Workflow、Troubleshooting 章节；添加生态系统徽章
+- **v2.1.0** — 添加英文章节、FAQ、版本徽章、增强生态系统链接
 - **v1.4** — 添加技能生态系统导航、Last Updated 时间戳
+- **v1.3** — 完善速查手册、添加生态系统集成和用户评价
+- **v1.2** — 增强四力分析框架、添加最佳实践
+- **v1.1** — 添加 Python API、知识库搜索
+- **v1.0** — 初始版本，4 大核心执行能力
 
 ## 🌟 用户评价 (Testimonials)
 
@@ -501,6 +504,131 @@ builder.add_custom_questions([
 guide = builder.build()
 ```
 
+### 🎯 Features at a Glance
+
+| Feature | Description |
+|---------|-------------|
+| JTBD Statement Builder | Create structured job statements with verb + struggle + desired outcome |
+| Four Forces Analysis | Push/Pull/Anxiety/Inertia framework with intensity scoring |
+| Interview Generator | Dimension-based interview question generation |
+| Innovation Discovery | Signal identification, opportunity scoring, action checklists |
+| 11 Knowledge Docs | Theory, principles, research methods, case studies, quick reference |
+| Zero Dependencies | Pure Python standard library, 5-minute setup |
+
+### 👥 Who Is This For?
+
+| Role | Use Case |
+|------|----------|
+| **Product Managers** | Discover underlying user motivations, not just surface feature requests |
+| **UX Researchers** | Structure interviews and analysis around the "jobs" users hire products for |
+| **Startup Founders** | Validate that your product solves a real "job" before building |
+| **Marketing Teams** | Understand buying motivations to craft compelling positioning |
+| **AI Agents** | Zero-dependency Python package for automated JTBD analysis workflows |
+
+### 🔧 Practical Examples
+
+```python
+from jtbd import JTBDAnalyzer, InterviewBuilder, ForcesProfile, InnovationFinder
+
+# Example 1: E-commerce platform — understand why users switch platforms
+analyzer = JTBDAnalyzer("E-commerce Platform")
+analyzer.add_statement("Find the right product at the best price",
+    "when comparing options before a big purchase",
+    "feel confident I'm making the smartest choice")
+analyzer.add_force("push", "Current platform lacks price history tracking", intensity=4)
+analyzer.add_force("pull", "Competitor shows price trends and alerts", intensity=5)
+analyzer.add_force("anxiety", "Worried new platform has fewer sellers", intensity=3)
+analyzer.add_force("inertia", "Already have purchase history and reviews on current platform", intensity=4)
+print(analyzer.generate_report())
+
+# Example 2: Innovation opportunity discovery
+finder = InnovationFinder()
+finder.add_signal("compensating_behavior",
+    "Users export data to Excel to track their spending",
+    potential_job="Understand and control personal finances")
+finder.add_opportunity("Auto Spending Insights",
+    "Automatically categorize and visualize spending patterns",
+    feasibility=4, impact=5)
+print(finder.render_markdown())
+```
+
+### 🛠️ Troubleshooting
+
+#### Problem 1: JTBD statement is too broad
+
+**Symptoms**: Statement describes a feature or demographic, not a job.
+
+**Solution**:
+```python
+# ❌ Too broad — focuses on a feature
+analyzer.add_statement("Use the dashboard", "managers", "see data")
+
+# ✅ Specific — focuses on progress in a situation
+analyzer.add_statement("Quickly understand team workload",
+    "when planning next sprint",
+    "assign tasks without overloading anyone")
+```
+
+#### Problem 2: Four Forces analysis feels shallow
+
+**Solution**: Use specific evidence and intensity scores (1-5).
+```python
+analyzer.add_force("push", "Current status quo",
+    "It takes me 30 minutes every Monday just to figure out who's working on what",
+    intensity=5, evidence="Direct quote from 4 out of 6 interviewed users")
+```
+
+### 💡 Best Practices
+
+#### JTBD Statement Template
+
+```
+Help me [specific user]
+when [specific situation/context]
+do [observable action]
+so I can [measurable progress/outcome]
+```
+
+#### JTBD Interview Techniques
+
+1. **Start with the timeline**: "Tell me about the first time you encountered this problem..."
+2. **Focus on specific moments**: Avoid hypotheticals — ask about actual behaviors
+3. **Explore alternatives**: "What other solutions did you consider?"
+4. **Understand decision criteria**: "What ultimately made you choose this approach?"
+
+#### Common Mistakes
+
+- ❌ Focus on product features → ✅ Focus on user progress
+- ❌ Ask "what feature do you want" → ✅ Ask "when would you need..."
+- ❌ Assume rational users → ✅ Explore emotional and social factors
+
+### 📖 Extended Reading
+
+- **"When Coffee and Kale Compete"** by Alan Klement — The foundational JTBD book this skill is based on
+- **"Competing Against Luck"** by Clayton Christensen — The origin of JTBD theory
+- **[Universal Design Methods](https://github.com/AliDujie/universal-design-methods)** — 100 research methods to discover user needs before JTBD analysis
+- **[Value Proposition Design](https://github.com/AliDujie/value-proposition-design)** — Map JTBD insights to value proposition canvas
+- **[Web Persona](https://github.com/AliDujie/web-persona-skill)** — Enrich persona goals with JTBD motivations
+
+### 🌐 Skill Ecosystem Workflow
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│           AliDujie Skill Ecosystem — JTBD Workflow          │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│   📖 Universal Design Methods ──→ 🎯 JTBD Knowledge ──┐    │
+│         (Discover needs)       (Understand why)       │    │
+│                                                        ↓    │
+│   👤 Web Persona ←───→ 💎 Value Proposition ←───→ 📊 QUX │
+│         (Who are they)    (Design value)   (Validate)    │
+│                                                        ↑    │
+│   📈 Storytelling with Data ←──────────────────────────┘    │
+│         (Present findings)                                  │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
 ### ❓ FAQ
 
 **Q: How is JTBD different from traditional user needs analysis?**
@@ -533,6 +661,7 @@ A: Use the template: "Help me [specific user] when [specific situation] do [obse
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v2.2.1 | 2026-05-05 | Added English Features at a Glance, Who Is This For, Best Practices, Extended Reading, Skill Ecosystem Workflow, Troubleshooting sections; added ecosystem badge |
 | v2.1.0 | 2026-05-05 | Added English section, FAQ, version badge, enhanced ecosystem links, updated Last Updated timestamp |
 | v1.4 | 2026-04-23 | Added skill ecosystem navigation, Last Updated timestamp |
 | v1.3 | 2026-04-23 | Enhanced quick reference, added ecosystem integration and testimonials |
@@ -542,4 +671,4 @@ A: Use the template: "Help me [specific user] when [specific situation] do [obse
 
 ---
 
-*Last Updated: 2026-05-05 | AliDujie Skill Ecosystem | v2.1.0*
+*Last Updated: 2026-05-05 | AliDujie Skill Ecosystem | v2.2.1*
