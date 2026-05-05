@@ -4,8 +4,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/AliDujie/jtbd-knowledge-skill)](https://github.com/AliDujie/jtbd-knowledge-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--05-brightgreen.svg)
-[![Version](https://img.shields.io/badge/version-2.2.1-green.svg)](CHANGELOG.md)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--06-brightgreen.svg)
+[![Version](https://img.shields.io/badge/version-2.2.2-green.svg)](CHANGELOG.md)
 
 基于 Alan Klement《When Coffee and Kale Compete》（第二版）的完整 JTBD 理论工具包。
 
@@ -400,6 +400,7 @@ print(profile.diagnose())
 
 ## 📝 更新日志 (Changelog)
 
+- **v2.2.2** — 修复 SKILL.md 和 pyproject.toml 版本不一致 (v3.1.19/v2.1.0→v2.2.2)，对齐所有版本引用；添加 Quantitative UX Research 协作引用
 - **v2.2.1** — 英文文档增强：添加 Features at a Glance、Who Is This For、Best Practices、Extended Reading、Skill Ecosystem Workflow、Troubleshooting 章节；添加生态系统徽章
 - **v2.1.0** — 添加英文章节、FAQ、版本徽章、增强生态系统链接
 - **v1.4** — 添加技能生态系统导航、Last Updated 时间戳
@@ -681,6 +682,7 @@ innovation four-forces python-toolkit openclaw-skill alicloud
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v2.2.2 | 2026-05-06 | Fixed SKILL.md and pyproject.toml version mismatch (v3.1.19/v2.1.0→v2.2.2), aligned all version references; added Quantitative UX Research collaboration reference |
 | v2.2.1 | 2026-05-05 | Added English Features at a Glance, Who Is This For, Best Practices, Extended Reading, Skill Ecosystem Workflow, Troubleshooting sections; added ecosystem badge |
 | v2.1.0 | 2026-05-05 | Added English section, FAQ, version badge, enhanced ecosystem links, updated Last Updated timestamp |
 | v1.4 | 2026-04-23 | Added skill ecosystem navigation, Last Updated timestamp |
@@ -691,4 +693,4 @@ innovation four-forces python-toolkit openclaw-skill alicloud
 
 ---
 
-*Last Updated: 2026-05-05 | AliDujie Skill Ecosystem | v2.2.1*
+*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v2.2.2*
