@@ -1,6 +1,20 @@
 # Changelog
 
-## v3.1.18 - 2026-05-05
+## v2.2.2 - 2026-05-06
+
+- Fixed critical version mismatch: SKILL.md (v3.1.19) and pyproject.toml (v2.1.0) aligned to v2.2.2
+- Added Quantitative UX Research to skill collaboration table
+- Updated version references across all files
+
+## v2.2.1 - 2026-05-05
+
+- Added English Features at a Glance, Who Is This For, Best Practices sections
+
+## v2.2.0 - 2026-05-05
+
+- Added English section, FAQ, version badge, enhanced ecosystem links
+
+## v2.1.0 - 2026-05-05
 
 - Added Structured Thinking Model (🧠) to ecosystem ASCII diagrams (CN and EN sections)
 - Verified cross-references consistency across all related skills tables
