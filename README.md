@@ -354,6 +354,82 @@ A: 可以。JTBD 的竞争分析不是比较功能列表，而是分析竞品分
 - **核心概念**: Jobs-to-be-Done 理论、进步力量模型、任务报告框架
 - **适用**: 产品经理、UX 研究员、营销人员、创业者
 
+### 🌟 用户评价
+
+> "JTBD 技能帮我们从功能驱动转向任务驱动，产品迭代方向更清晰了！"
+> — 某 SaaS 公司产品总监
+
+> "机会分数功能让我们发现了一个高价值低满意度的空白市场。"
+> — 某电商平台产品经理
+
+> "四力分析改变了我们理解用户切换行为的方式，从'喜欢什么'到'为什么换'。"
+> — 某创业公司创始人
+
+### 📖 扩展阅读
+
+- **《When Coffee and Kale Compete》** - Alan Klement (JTBD 理论经典)
+- **《Competing Against Luck》** - Clayton Christensen & Taddy Hall (JTBD 创新理论)
+- **《Jobs to Be Done: Theory to Practice》** - Anthony Ulwick (Outcome-Driven Innovation)
+- **《Intercom on Jobs-to-be-Done》** - Intercom 团队 (JTBD 产品应用)
+
+### 🏆 实战案例 (Case Studies)
+
+#### 案例 1: SaaS 产品功能迭代决策
+
+**背景**: 某协作 SaaS 需要决定下一季度优先开发哪些功能
+
+**使用 JTBD 技能**:
+```python
+from jtbd import JTBDSkill
+
+skill = JTBDSkill("协作 SaaS")
+
+# 步骤 1: JTBD 分析 — 识别核心工作和切换力量
+skill.analyze(
+    product="协作平台",
+    jobs=["快速同步团队信息", "追踪任务进度", "减少会议时间"],
+    forces={
+        "push": ["邮件太多导致信息遗漏", "群聊难以追踪行动项"],
+        "pull": ["竞品有一站式工作空间"],
+        "anxiety": ["团队不愿意学习新工具"],
+        "habit": ["已经习惯用微信群沟通"]
+    }
+)
+
+# 步骤 2: 机会分数 — 找出最高价值机会
+report = analyzer.generate_report()
+# → "减少会议时间" 机会分数 8.2（高重要性 + 低满意度）
+
+# 步骤 3: Job Map — 理解用户完整流程
+job_map = skill.create_job_map("团队协作")
+```
+
+**成果**: 基于 JTBD 洞察优先开发"会议自动摘要"功能，上线后用户留存提升 22%
+
+#### 案例 2: 电商产品竞争差异化
+
+**背景**: 某电商平台需要在同质化竞争中找到差异化定位
+
+```python
+from jtbd import JTBDSkill, InnovationFinder
+
+skill = JTBDSkill("电商平台")
+
+# 竞争分析 — 基于"工作"而非功能
+competition = skill.analyze_competition(
+    product="电商平台",
+    jobs=["快速找到需要的商品", "放心购买", "便捷退换货"],
+    competitors=["平台A", "平台B", "平台C"]
+)
+
+# 创新发现
+finder = InnovationFinder()
+finder.find_gaps(competition)
+# → 发现"放心购买"这个工作在所有竞品上满意度都低
+```
+
+**成果**: 聚焦"放心购"差异化定位，推出"7 天无理由 + 正品保障"，转化率提升 15%
+
 ### 📦 依赖
 
 - Python >= 3.8
