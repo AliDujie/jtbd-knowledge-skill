@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--06-brightgreen.svg)
-[![Version](https://img.shields.io/badge/version-2.2.2-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.2.3-green.svg)](CHANGELOG.md)
 
 基于 Alan Klement《When Coffee and Kale Compete》（第二版）的完整 JTBD 理论工具包。
 
@@ -420,8 +420,73 @@ print(profile.diagnose())
 > "访谈提纲生成功能节省了数天准备时间，每次访谈都能挖到深度洞察。"  
 > — 某互联网用研专家
 
-## 📜 许可
+### 🚀 完整端到端工作流：从洞察到决策 (End-to-End Workflow)
 
+以下是一个真实场景中，6 个技能如何协作完成从需求洞察到产品决策的完整工作流：
+
+**场景**: SaaS 产品需要理解用户为什么流失并提出改进方案
+
+```
+Phase 1: 需求洞察 (JTBD — 本技能)
+  → generate_interview("Switch访谈", ["competition", "push", "anxiety"])
+  → add_force("push", "现有工具学习成本太高", intensity=5)
+  → score_opportunity("简化 onboarding", struggle=5, alternative=2, market=4, budget=4)
+
+Phase 2: 定性验证
+  UDM: 用 UDM 访谈方法验证 JTBD 假设
+  Persona: 基于 JTBD 动机创建角色文档
+
+Phase 3: 定量验证
+  QuantUX: A/B 测试简化 onboarding 方案，计算样本量
+  VPD: 将 JTBD 发现映射到价值主张画布
+
+Phase 4: 呈现与决策
+  SWD: 将 JTBD 洞察转化为高管级数据叙事
+  CEO 视角: JTBD 市场规模估算 + 优先级评分 + 商业化可行性
+```
+
+> 💡 **JTBD 是工作流的起点**: 先理解用户真正的"工作"，再用其他技能验证和呈现
+
+👉 **尝试完整工作流**: [UDM](https://github.com/AliDujie/universal-design-methods) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [Persona](https://github.com/AliDujie/web-persona-skill) · [VPD](https://github.com/AliDujie/value-proposition-design) · [SWD](https://github.com/AliDujie/storytelling-with-data)
+
+---
+
+### 💡 Pro Tips / 专业提示
+
+- **从 Switch 访谈开始** — 了解用户为什么"雇佣"和"解雇"产品，比问"你想要什么"更有价值
+- **四力净推动力 > 0 才行动** — (推力+拉力) > (焦虑+惯性) 时才值得投入
+- **JTBD 陈述要具体** — 避免"用户想要更快"，使用"在 3 分钟内完成酒店比价"
+- **JTBD + UDM 是黄金组合** — JTBD 发现动机，UDM 用合适方法验证
+- **机会分数 > 35 优先投入** — 挣扎强度×替代不满×市场规模×预算可获取性
+- **CEO 视角不可省略** — JTBD 分析后务必做市场规模估算和商业化可行性评估
+
+---
+
+### 🌟 为什么选择 AliDujie 技能生态系统？
+
+本技能是 **AliDujie UX 研究技能生态系统** 的需求洞察层，与其他技能无缝协作：
+
+| 技能 | 角色 | 协作方式 |
+|------|------|----------|
+| [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | 方法核心 | JTBD 发现动机 → UDM 方法验证 |
+| [Web Persona](https://github.com/AliDujie/web-persona-skill) | 用户角色 | JTBD 动机 → Persona 角色目标定义 |
+| [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | 定量验证 | JTBD 机会分数 → QuantUX A/B 测试验证 |
+| [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | 价值设计 | JTBD Jobs → VPD 价值主张画布映射 |
+| [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | 数据叙事 | JTBD 洞察 → SWD 高管级呈现 |
+
+**使用完整生态系统的优势：**
+
+- ✅ **全流程覆盖** — 从发现需求 → 角色创建 → 研究验证 → 价值设计 → 数据呈现
+- ✅ **一致 API 设计** — 所有技能使用统一的 Skill("产品名") 入口
+- ✅ **零外部依赖** — 纯 Python 标准库实现，开箱即用
+- ✅ **双语支持** — 完整中英文文档，适合国际化团队
+- ✅ **积极维护** — 定期更新新功能和改进文档
+
+👉 **探索完整生态系统**: [UDM](https://github.com/AliDujie/universal-design-methods) · [Persona](https://github.com/AliDujie/web-persona-skill) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [VPD](https://github.com/AliDujie/value-proposition-design) · [SWD](https://github.com/AliDujie/storytelling-with-data)
+
+---
+
+## 📜 许可
 MIT License — 本 Skill 仅供内部学习和研究使用。
 
 ---
