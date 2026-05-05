@@ -651,6 +651,26 @@ A: Use the template: "Help me [specific user] when [specific situation] do [obse
 
 > "The interview guide generator saved days of preparation. Every interview session uncovers deep insights." — **UX Research Lead, Internet Company**
 
+### 🌟 Why Choose AliDujie Skill Ecosystem?
+
+This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the complete ecosystem provides:
+
+- ✅ **Complete Coverage** — From user research to product design to data presentation, full-process tool support
+- ✅ **Seamless Integration** — All skills use consistent API design and data formats
+- ✅ **Best Practices** — Based on classic theories and practical experience, avoid common pitfalls
+- ✅ **Active Maintenance** — Regularly updated with new features and improvements
+- ✅ **Zero Dependencies** — Pure Python standard library, ready to use out of the box
+- ✅ **Bilingual Support** — Complete CN/EN documentation for international team collaboration
+
+👉 **Explore More Skills**: [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | [Web Persona](https://github.com/AliDujie/web-persona-skill) | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | [Structured Thinking](https://github.com/AliDujie/Structured-Thinking-Model)
+
+### 🏷️ GitHub Topics (Recommended)
+
+```
+jobs-to-be-done jtbd user-research product-management
+innovation four-forces python-toolkit openclaw-skill alicloud
+```
+
 ### 📦 Dependencies
 
 - Python >= 3.8
