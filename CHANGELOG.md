@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.23 - 2026-05-06
+
+- Repo maintenance: fixed English changelog table missing markdown separator, added Contributing link to footer, enhanced cross-skill collaboration examples with practical Python code snippets, aligned all version references
+
 ## v3.1.21 - 2026-05-06
 
 - Repo maintenance: fixed README footer version mismatch (footer was 2 versions behind badge), aligned all version references across README/SKILL.md/pyproject.toml/CHANGELOG, verified ecosystem cross-references and bilingual consistency
