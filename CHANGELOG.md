@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.21 - 2026-05-06
+
+- Repo maintenance: fixed README footer version mismatch (footer was 2 versions behind badge), aligned all version references across README/SKILL.md/pyproject.toml/CHANGELOG, verified ecosystem cross-references and bilingual consistency
+
 ## v3.1.20 - 2026-05-06
 
 - Repo maintenance: added Structured Thinking Model to EN Quick Decision Guide; verified ecosystem cross-reference consistency; version alignment across all files
