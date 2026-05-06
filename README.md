@@ -800,7 +800,7 @@ job-stories opportunity-scoring
 
 | Version | Date | Changes |
 |---------|------|---------|
-| v2.2.4 | 2026-05-06 | Added CN Quick Decision Guide, EN End-to-End Workflow section, improved bilingual consistency
+| v2.2.5 | 2026-05-06 | Repo maintenance: added Chinese "Who Is This For" table, expanded GitHub Topics, enhanced bilingual consistency
 | v2.2.2 | 2026-05-06 | Fixed SKILL.md and pyproject.toml version mismatch (v3.1.19/v2.1.0→v2.2.2), aligned all version references; added Quantitative UX Research collaboration reference |
 | v2.2.1 | 2026-05-05 | Added English Features at a Glance, Who Is This For, Best Practices, Extended Reading, Skill Ecosystem Workflow, Troubleshooting sections; added ecosystem badge |
 | v2.1.0 | 2026-05-05 | Added English section, FAQ, version badge, enhanced ecosystem links, updated Last Updated timestamp |
