@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.25-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.26-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--07-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -1028,11 +1028,13 @@ Phase 4: 呈现与决策
 - **JTBD + UDM is the golden combo** — Use UDM methods to uncover user "jobs," JTBD for structured analysis
 - **Start with Context** — Good JTBD statements must include: context + motivation + expected outcome
 - **Competition Is Not Just Same-Category** — Map ALL solutions with Jobs Atlas, including "do nothing" as a competitive option
+- **Full Ecosystem Workflow** — JTBD sits at the heart of the AliDujie ecosystem. After Persona defines user segments, JTBD reveals the underlying "jobs" that drive switching behavior, then feeds directly into VPD for value proposition design, QuantUX for quantitative validation, and SWD for executive presentation.
 
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
 |---------|------|--------|
+| v3.1.26 | 2026-05-07 | Repo maintenance: fixed footer version mismatch, added ecosystem workflow Pro Tip, bumped to v3.1.26
 | v3.1.25 | 2026-05-07 | Repo maintenance: added English Dependencies section, verified ecosystem cross-references |
 | v3.1.24 | 2026-05-07 | Repo maintenance: added competition mapping Pro Tip, enhanced VPD-JTBD workflow example |
 | v3.1.19 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, verified version alignment across README/SKILL.md/pyproject.toml, confirmed cross-skill ecosystem links
@@ -1072,4 +1074,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-07 | AliDujie Skill Ecosystem | v3.1.24*
+*Last Updated: 2026-05-07 | AliDujie Skill Ecosystem | v3.1.26*
