@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jtbd-knowledge-skill"
-version = "2.2.3"
+version = "2.2.5"
 description = "JTBD (Jobs to Be Done) 理论工具包 - 基于《When Coffee and Kale Compete》"
 readme = "README.md"
 requires-python = ">=3.8"

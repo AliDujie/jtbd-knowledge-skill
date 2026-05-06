@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.2.6 - 2026-05-06
+
+- Repo maintenance: aligned pyproject.toml version (2.2.3→2.2.5) and SKILL.md version (2.2.4→2.2.5) with README badge; verified ecosystem cross-reference consistency
+
+## v2.2.5 - 2026-05-06
+
+- Updated README badge and Last Updated timestamp
+
 ## v2.2.4 - 2026-05-06
 
 - Added Chinese Quick Decision Guide table for bilingual consistency

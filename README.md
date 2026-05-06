@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--06-brightgreen.svg)
-[![Version](https://img.shields.io/badge/version-2.2.5-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.2.6-green.svg)](CHANGELOG.md)
 
 基于 Alan Klement《When Coffee and Kale Compete》（第二版）的完整 JTBD 理论工具包。
 
@@ -567,6 +567,7 @@ print(InterviewBuilder.render_markdown(guide))
 | "I need to know who my users are" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — Create concrete personas |
 | "Is my product value strong enough?" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — Fit diagnosis |
 | "How do I present research results clearly?" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — Data storytelling |
+| "I need to analyze a business problem systematically" | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) — Frameworks & strategic analysis |
 
 ### 🔧 Practical Examples — JTBD Statement & Interview Guide
 
