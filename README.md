@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.21-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.22-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--06-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -748,6 +748,7 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 | Version | Date | Changes |
 |---------|------|--------|
 | v3.1.21 | 2026-05-06 | Repo maintenance: fixed README footer version mismatch (footer was 2 versions behind badge), aligned all version references, verified ecosystem cross-references and bilingual consistency |
+| v3.1.22 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, version bump to 3.1.22, verified ecosystem cross-references and bilingual consistency |
 | v3.1.7 | 2026-05-03 | Repo maintenance: improved Quick Start scenario 4-7 code comment readability, aligned SKILL.md version with README.md |
 | v3.1.5 | 2026-05-03 | Repo maintenance: added English version history table at README end, added classifiers and project.urls to pyproject.toml |
 | v3.1.4 | 2026-05-03 | Repo maintenance: cross-ecosystem consistency review, verified cross-references and version alignment |
@@ -950,6 +951,7 @@ Phase 4: 呈现与决策
 | 版本 | 日期 | 变更 |
 |------|------|------|
 | v3.1.21 | 2026-05-06 | 仓库维护：修复 README 底部版本不一致（底部比徽章落后 2 个版本），对齐所有版本引用，验证生态交叉引用和双语一致性 |
+| v3.1.22 | 2026-05-06 | 仓库维护：更新版本至 3.1.22，验证生态交叉引用和双语一致性 |
 | v3.1.19 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, verified version alignment across README/SKILL.md/pyproject.toml, confirmed cross-skill ecosystem links
 | v3.1.18 | 2026-05-05 | Repo maintenance: added Structured Thinking Model to ecosystem diagrams (CN+EN), verified cross-references consistency |
 | v3.1.17 | 2026-05-04 | 仓库维护：修复版本历史表格 `| |` 格式错误，补充英文目录中端到端工作流链接
@@ -1020,4 +1022,4 @@ Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), i
 
 ---
 
-*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v3.1.21*
+*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v3.1.22*
