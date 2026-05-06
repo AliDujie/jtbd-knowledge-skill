@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2.4 - 2026-05-06
+
+- Added Chinese Quick Decision Guide table for bilingual consistency
+- Added English End-to-End Workflow section (SaaS churn analysis scenario)
+- Updated SKILL.md version to v2.2.4
+
 ## v2.2.2 - 2026-05-06
 
 - Fixed critical version mismatch: SKILL.md (v3.1.19) and pyproject.toml (v2.1.0) aligned to v2.2.2

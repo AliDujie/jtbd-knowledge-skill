@@ -535,6 +535,17 @@ print(InterviewBuilder.render_markdown(guide))
 | 3 | **Forces Profile** | `forces.py` | Structured Push/Pull/Anxiety/Inertia analysis with diagnostic insights |
 | 4 | **Innovation Discovery** | `innovation.py` | Innovation signal identification, opportunity scoring, action checklists |
 
+### 🧭 快速决策指南 (Quick Decision Guide)
+
+| 你的问题 | 推荐技能 |
+|----------|----------|
+| "我想知道用户为什么做这个选择" | → **JTBD Knowledge** (本技能) — 发现底层 "jobs" |
+| "我不知道该用什么研究方法" | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — 方法推荐 |
+| "我需要验证一个假设" | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — A/B 测试 & 样本量 |
+| "我需要知道我的用户是谁" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — 创建人物角色 |
+| "我的产品价值够不够强？" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — 适配诊断 |
+| "我怎么清晰呈现研究结果？" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — 数据叙事 |
+
 ### 🧭 Quick Decision Guide
 
 | Your Question | Recommended Skill |
@@ -617,6 +628,35 @@ finder.add_opportunity("Auto Spending Insights",
     feasibility=4, impact=5)
 print(finder.render_markdown())
 ```
+
+### 🚀 End-to-End Workflow: From Insight to Decision
+
+Here's how JTBD integrates with the full AliDujie ecosystem in a real-world scenario:
+
+**Scenario**: Understanding why SaaS users churn and proposing improvements
+
+```
+Phase 1: Need Insight (JTBD — this skill)
+  → generate_interview("Switch interview", ["competition", "push", "anxiety"])
+  → add_force("push", "Current tool has steep learning curve", intensity=5)
+  → score_opportunity("Simplify onboarding", struggle=5, alternative=2, market=4, budget=4)
+
+Phase 2: Qualitative Validation
+  UDM: Validate JTBD hypotheses with structured interview methods
+  Persona: Create persona documents enriched with JTBD motivations
+
+Phase 3: Quantitative Validation
+  QuantUX: A/B test the simplified onboarding, calculate sample size
+  VPD: Map JTBD findings to Value Proposition Canvas
+
+Phase 4: Presentation & Decision
+  SWD: Transform JTBD insights into executive-level data storytelling
+  CEO View: JTBD market sizing + priority scoring + monetization feasibility
+```
+
+> 💡 **JTBD is the starting point**: Understand the real "job" first, then validate and present with other skills.
+
+👉 **Try the full workflow**: [UDM](https://github.com/AliDujie/universal-design-methods) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [Persona](https://github.com/AliDujie/web-persona-skill) · [VPD](https://github.com/AliDujie/value-proposition-design) · [SWD](https://github.com/AliDujie/storytelling-with-data)
 
 ### 🛠️ Troubleshooting
 
@@ -747,6 +787,7 @@ innovation four-forces python-toolkit openclaw-skill alicloud
 
 | Version | Date | Changes |
 |---------|------|---------|
+| v2.2.4 | 2026-05-06 | Added CN Quick Decision Guide, EN End-to-End Workflow section, improved bilingual consistency
 | v2.2.2 | 2026-05-06 | Fixed SKILL.md and pyproject.toml version mismatch (v3.1.19/v2.1.0→v2.2.2), aligned all version references; added Quantitative UX Research collaboration reference |
 | v2.2.1 | 2026-05-05 | Added English Features at a Glance, Who Is This For, Best Practices, Extended Reading, Skill Ecosystem Workflow, Troubleshooting sections; added ecosystem badge |
 | v2.1.0 | 2026-05-05 | Added English section, FAQ, version badge, enhanced ecosystem links, updated Last Updated timestamp |
@@ -768,4 +809,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v2.2.3*
+*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v2.2.4*
