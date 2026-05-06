@@ -816,6 +816,40 @@ JTBD (competitive analysis) → VPD (competitive strategy) → SWD (strategy pre
 
 > 💡 **Tip**: JTBD pairs naturally with UDM — use UDM interview methods to uncover user "jobs," then use JTBD frameworks for structured analysis.
 
+### 🔄 End-to-End Workflow: All 6 Skills
+
+A complete user research-to-decision workflow using the full AliDujie ecosystem:
+
+```
+Step 1          Step 2          Step 3          Step 4          Step 5          Step 6
+┌──────┐       ┌──────┐       ┌──────┐       ┌──────┐       ┌──────┐       ┌──────┐
+│Persona│  ──►  │ JTBD │  ──►  │ UDM  │  ──►  │QuantUX│  ──►  │ VPD  │  ──►  │ SWD  │
+│ 👤   │       │ 🎯   │       │ 📖   │       │ 📊   │       │ 💎   │       │ 📈   │
+│角色定义│       │需求洞察│       │定性研究│       │定量验证│       │价值验证│       │数据汇报│
+└──────┘       └──────┘       └──────┘       └──────┘       └──────┘       └──────┘
+```
+
+**Real-World Scenario: Travel Booking Platform Redesign**
+
+1. **Persona**: Create "Business Traveler Zhang" and "Budget Traveler Li" segments from user data
+2. **JTBD**: Interview recent switchers → discover core Job is "reduce pre-trip anxiety" (Opp Score: 8.2)
+3. **UDM**: Run contextual interviews + diary studies → identify 3 key pain points in booking flow
+4. **QuantUX**: A/B test redesigned booking flow (n=5,000) → +15% conversion, p<0.01
+5. **VPD**: Update value proposition canvas → test new messaging "Book in 3 minutes, worry-free"
+6. **SWD**: Build executive presentation → context → charts → three-act story → approval for $2M budget
+
+```python
+# Full ecosystem in action
+from persona import PersonaSkill; persona = PersonaSkill("旅行平台")
+from jtbd import JTBDSkill; jtbd = JTBDSkill("旅行预订")
+from udm import UDMSkill; udm = UDMSkill("旅行预订")
+from quantux import QuantUXSkill; quantux = QuantUXSkill("旅行预订")
+from vpd import VPDSkill; vpd = VPDSkill("旅行预订", "商务人士")
+from swd import SWDSkill; swd = SWDSkill("Q1 旅行体验汇报")
+
+# Each skill feeds into the next — research-to-decision pipeline
+```
+
 ---
 
 ## 🔗 技能生态工作流 (Skill Ecosystem Workflow)

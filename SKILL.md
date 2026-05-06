@@ -13,6 +13,25 @@ description: >
 
 融合四大 JTBD 学派的完整工具集，不仅提供理论指导，更具备直接执行能力。
 
+## 🌐 AliDujie 技能生态系统
+
+JTBD 是 **需求洞察层**，在 Persona 之后、VPD 之前，负责理解用户"工作"并量化机会：
+
+```
+Persona (角色定义)
+  │
+  ▼  用户行为与目标
+┌────────────────┐
+│  JTBD 本技能    │ 🎯 需求洞察 — 理解用户"工作"、机会评分、竞争分析
+│  · 四力分析     │
+│  · 机会评分     │──────► VPD (价值主张画布填充)
+│  · Job Map     │──────► QuantUX (定量验证)
+│  · 竞争分析     │──────► SWD (研究结果汇报)
+└────────────────┘
+```
+
+**JTBD 的典型协作**：UDM 访谈方法挖掘 Jobs → JTBD 结构化分析 → VPD 画布填充 → QuantUX 验证 → SWD 汇报
+
 **四大学派融合**：Klement（进步力量、切换访谈、情感分析）→ Ulwick ODI（Opportunity Algorithm、Desired Outcome、Universal Job Map）→ Wunker Jobs Atlas（七维度分析、障碍诊断、ABC Job Drivers）→ Kalbach 整合（Job Stories、VPC 整合、多格式描述）。
 
 **进步力量模型**：推力（Push）、拉力（Pull）、焦虑（Anxiety）、惯性（Inertia）。净推动力 = (推力+拉力) - (焦虑+惯性)。
