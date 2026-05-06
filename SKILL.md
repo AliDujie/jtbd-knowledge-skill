@@ -1,6 +1,6 @@
 ---
 name: jtbd-knowledge-skill
-version: "2.2.5"
+version: "3.1.20"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派——Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合——
@@ -338,12 +338,12 @@ JTBD 可与生态系统中其他技能组合使用，形成完整的用户洞察
 
 | 协作场景 | 协作 Skill | 工作流 |
 |---------|-----------|--------|
-| JTBD 发现验证 | [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | JTBD 假设 → UDM 访谈/观察验证 → JTBD 机会评分 |
-| JTBD 定量验证 | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD 机会分数 → QuantUX A/B 测试验证 → SWD 呈现 |
-| JTBD 到价值主张 | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | JTBD Jobs → VPD 画布填充 → VPD 实验验证 |
-| JTBD 到人物角色 | [Web Persona](https://github.com/AliDujie/web-persona-skill) | JTBD 任务聚类 → Persona 角色定义 → Persona 验证 |
-| JTBD 结果汇报 | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | JTBD 洞察 → SWD 上下文分析 → SWD 数据故事构建 |
-| JTBD 结构化分析 | [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | STM PESTEL/五力 → JTBD 市场机会评估 → STM 决策建议 |
+| JTBD 发现验证 | Universal Design Methods | JTBD 假设 → UDM 访谈/观察验证 → JTBD 机会评分 |
+| JTBD 定量验证 | Quantitative UX Research | JTBD 机会分数 → QuantUX A/B 测试验证 → SWD 呈现 |
+| JTBD 到价值主张 | Value Proposition Design | JTBD Jobs → VPD 画布填充 → VPD 实验验证 |
+| JTBD 到人物角色 | Web Persona | JTBD 任务聚类 → Persona 角色定义 → Persona 验证 |
+| JTBD 结果汇报 | Storytelling with Data | JTBD 洞察 → SWD 上下文分析 → SWD 数据故事构建 |
+| JTBD 结构化分析 | Structured Thinking Model | STM PESTEL/五力 → JTBD 市场机会评估 → STM 决策建议 |
 
 **协作示例（JTBD → VPD）**：
 ```python
