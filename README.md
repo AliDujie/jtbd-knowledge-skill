@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.24-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.25-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--07-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -743,6 +743,12 @@ jobs-to-be-done jtbd user-research opportunity-scoring
 forces-of-progress python-toolkit openclaw-skill alicloud
 ```
 
+### 📦 Dependencies
+
+- Python >= 3.8
+- **No external dependencies** (pure standard library)
+- Cross-platform: macOS / Linux / Windows
+
 ### 📋 Changelog
 
 | Version | Date | Changes |
@@ -951,6 +957,7 @@ Phase 4: 呈现与决策
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| v3.1.25 | 2026-05-07 | Repo maintenance: added English Dependencies section, verified ecosystem cross-references |
 | v3.1.24 | 2026-05-07 | Repo maintenance: added competition mapping Pro Tip, enhanced VPD-JTBD workflow example |
 | v3.1.23 | 2026-05-06 | 仓库维护：更新版本至 3.1.23，验证生态交叉引用和双语一致性 |
 | v3.1.19 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, verified version alignment across README/SKILL.md/pyproject.toml, confirmed cross-skill ecosystem links
@@ -992,6 +999,7 @@ Phase 4: 呈现与决策
 
 | Version | Date | Changes |
 |---------|------|--------|
+| v3.1.25 | 2026-05-07 | Repo maintenance: added English Dependencies section, verified ecosystem cross-references |
 | v3.1.24 | 2026-05-07 | Repo maintenance: added competition mapping Pro Tip, enhanced VPD-JTBD workflow example |
 | v3.1.19 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, verified version alignment across README/SKILL.md/pyproject.toml, confirmed cross-skill ecosystem links
 | v3.1.18 | 2026-05-05 | Repo maintenance: added Structured Thinking Model to ecosystem diagrams, verified cross-references
