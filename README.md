@@ -4,8 +4,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.23-green.svg)](CHANGELOG.md)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--06-brightgreen.svg)
+[![Version](https://img.shields.io/badge/version-3.1.24-green.svg)](CHANGELOG.md)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--07-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
@@ -945,13 +945,14 @@ Phase 4: 呈现与决策
 - **机会分数 > 7.0 优先投入** — 高重要性 + 低满意度 = 最佳机会
 - **JTBD + UDM 是黄金组合** — 用 UDM 方法挖掘用户"工作"，用 JTBD 结构化分析
 - **从情境入手** — 好的 JTBD 陈述必须包含：情境 + 动机 + 期望结果
+- **竞争不只是同类产品** — 用 Jobs Atlas 映射所有解决方案，包括"不采取行动"也是竞争选项
 
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
-| v3.1.21 | 2026-05-06 | 仓库维护：修复 README 底部版本不一致（底部比徽章落后 2 个版本），对齐所有版本引用，验证生态交叉引用和双语一致性 |
-| v3.1.22 | 2026-05-06 | 仓库维护：更新版本至 3.1.22，验证生态交叉引用和双语一致性 |
+| v3.1.24 | 2026-05-07 | Repo maintenance: added competition mapping Pro Tip, enhanced VPD-JTBD workflow example |
+| v3.1.23 | 2026-05-06 | 仓库维护：更新版本至 3.1.23，验证生态交叉引用和双语一致性 |
 | v3.1.19 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, verified version alignment across README/SKILL.md/pyproject.toml, confirmed cross-skill ecosystem links
 | v3.1.18 | 2026-05-05 | Repo maintenance: added Structured Thinking Model to ecosystem diagrams (CN+EN), verified cross-references consistency |
 | v3.1.17 | 2026-05-04 | 仓库维护：修复版本历史表格 `| |` 格式错误，补充英文目录中端到端工作流链接
@@ -985,12 +986,13 @@ Phase 4: 呈现与决策
 - **Opportunity Score > 7.0 to prioritize** — High importance + low satisfaction = best opportunity
 - **JTBD + UDM is the golden combo** — Use UDM methods to uncover user "jobs," JTBD for structured analysis
 - **Start with Context** — Good JTBD statements must include: context + motivation + expected outcome
+- **Competition Is Not Just Same-Category** — Map ALL solutions with Jobs Atlas, including "do nothing" as a competitive option
 
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
 |---------|------|--------|
-| v3.1.23 | 2026-05-06 | Repo maintenance: fixed English changelog table missing separator, added Contributing link to footer, enhanced cross-skill collaboration examples with practical Python code snippets
+| v3.1.24 | 2026-05-07 | Repo maintenance: added competition mapping Pro Tip, enhanced VPD-JTBD workflow example |
 | v3.1.19 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, verified version alignment across README/SKILL.md/pyproject.toml, confirmed cross-skill ecosystem links
 | v3.1.18 | 2026-05-05 | Repo maintenance: added Structured Thinking Model to ecosystem diagrams, verified cross-references
 | v3.1.17 | 2026-05-04 | Repo maintenance: fixed changelog table `| |` formatting, added end-to-end workflow English TOC link
@@ -1028,4 +1030,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v3.1.23*
+*Last Updated: 2026-05-07 | AliDujie Skill Ecosystem | v3.1.24*

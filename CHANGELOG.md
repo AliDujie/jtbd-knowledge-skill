@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.24 - 2026-05-07
+
+- Repo maintenance: added competition mapping Pro Tip (CN+EN), enhanced VPD-JTBD workflow example
+
 ## v3.1.23 - 2026-05-06
 
 - Repo maintenance: fixed English changelog table missing markdown separator, added Contributing link to footer, enhanced cross-skill collaboration examples with practical Python code snippets, aligned all version references
