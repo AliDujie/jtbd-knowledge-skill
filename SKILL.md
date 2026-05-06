@@ -358,3 +358,38 @@ vpd.analyze_canvas(
     pains=[{"description": "选择过多难以决策", "severity": "critical"}]
 )
 ```
+
+## 最佳实践
+
+| # | 原则 | 说明 |
+|---|------|------|
+| 1 | 四力先行 | 任何分析先做 Push/Pull/Anxiety/Habit 四力分析，这是 JTBD 的基石 |
+| 2 | 关注切换而非喜好 | 用户"为什么换"比"喜欢什么"更有价值 |
+| 3 | 挣扎时刻是关键 | 聚焦用户决定切换的那个时刻，而非使用过程 |
+| 4 | 功能→情感→社会 | 完整 JTBD 分析需覆盖三层：功能性、情感性、社会性 |
+| 5 | 非消费是最大竞品 | 用户不消费往往是最大的竞争威胁 |
+| 6 | 补偿行为=创新信号 | 用户自己拼凑解决方案，就是未被满足的需求 |
+| 7 | 先定性后定量 | JTBD 访谈发现机会 → QuantUX 定量验证 → SWD 汇报 |
+
+## 参考资料
+
+| 书名 | 作者 | 关键贡献 |
+|------|------|---------|
+| **When Coffee and Kale Compete** | Alan Klement (2023) | 本 Skill 理论基础，JTBD 四大学派融合 |
+| Competing Against Luck | Clayton Christensen (2016) | JTBD 理论奠基之作 |
+| Demand-Side Sales | Bob Moesta (2021) | Switch 访谈与 Forces of Progress |
+| Jobs to Be Done | Tony Ulwick (2016) | ODI 方法论、机会算法 |
+| Job Stories | Jeff Patton | 用户故事整合框架 |
+
+### AliDujie 技能生态
+
+JTBD 是 **AliDujie UX 研究技能生态系统** 的需求洞察层，与其他 6 个技能协作：
+
+| 技能 | 定位 | 协作模式 |
+|------|------|---------|
+| [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | 方法论核心 | JTBD 假设 → UDM 访谈验证 → 机会评分 |
+| [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | 定量研究 | JTBD 机会分数 → QuantUX A/B 验证 |
+| [Web Persona](https://github.com/AliDujie/web-persona-skill) | 用户角色 | JTBD 任务聚类 → Persona 角色定义 |
+| [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | 价值验证 | JTBD Jobs → VPD 画布填充 |
+| [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | 数据叙事 | JTBD 洞察 → SWD 数据故事 |
+| [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | 战略框架 | STM PESTEL/五力 → JTBD 市场评估 |
