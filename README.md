@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--06-brightgreen.svg)
-[![Version](https://img.shields.io/badge/version-2.2.3-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.2.5-green.svg)](CHANGELOG.md)
 
 基于 Alan Klement《When Coffee and Kale Compete》（第二版）的完整 JTBD 理论工具包。
 
@@ -391,6 +391,16 @@ print(profile.diagnose())
 | **高** | P0: 立即启动 | P2: 快速验证 |
 | **低** | P1: 技术攻关 | P3: 暂不处理 |
 
+### 👥 适合谁？(Who Is This For?)
+
+| 角色 | 使用场景 |
+|------|----------|
+| **产品经理** | 发现用户深层动机，而非表面功能需求 |
+| **UX 研究员** | 围绕用户"工作"结构化访谈和分析 |
+| **创业者** | 在构建前验证产品是否解决真实"工作" |
+| **营销团队** | 理解购买动机，制定精准定位策略 |
+| **AI Agent** | 零依赖 Python 包，自动化 JTBD 分析工作流 |
+
 ## 👥 社区与支持 (Community & Support)
 
 - **问题反馈**: [GitHub Issues](https://github.com/AliDujie/jtbd-knowledge-skill/issues)
@@ -400,6 +410,7 @@ print(profile.diagnose())
 
 ## 📝 更新日志 (Changelog)
 
+- **v2.2.5** — 仓库维护：添加中文"适合谁"表格，扩展 GitHub Topics，增强双语一致性
 - **v2.2.2** — 修复 SKILL.md 和 pyproject.toml 版本不一致 (v3.1.19/v2.1.0→v2.2.2)，对齐所有版本引用；添加 Quantitative UX Research 协作引用
 - **v2.2.1** — 英文文档增强：添加 Features at a Glance、Who Is This For、Best Practices、Extended Reading、Skill Ecosystem Workflow、Troubleshooting 章节；添加生态系统徽章
 - **v2.1.0** — 添加英文章节、FAQ、版本徽章、增强生态系统链接
@@ -775,6 +786,8 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**. Using the c
 ```
 jobs-to-be-done jtbd user-research product-management
 innovation four-forces python-toolkit openclaw-skill alicloud
+switch-interview outcome-driven innovation-finder
+job-stories opportunity-scoring
 ```
 
 ### 📦 Dependencies
@@ -809,4 +822,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v2.2.4*
+*Last Updated: 2026-05-06 | AliDujie Skill Ecosystem | v2.2.5*
