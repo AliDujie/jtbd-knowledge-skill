@@ -1,3 +1,9 @@
+## v3.1.32 (2026-05-08)
+- Enhanced JTBD workshop facilitation content with practical step-by-step guide
+- Improved multi-skill workflow integration examples
+- Verified version alignment across README.md, SKILL.md, and pyproject.toml
+- No breaking changes
+
 ## v3.1.31 (2026-05-07)
 - Added Structured Thinking Model to Quick Decision Guide (CN + EN) for better cross-skill discoverability
 - Verified version alignment across README.md, SKILL.md, and pyproject.toml
