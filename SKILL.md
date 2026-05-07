@@ -1,6 +1,6 @@
 ---
 name: jtbd-knowledge-skill
-version: "3.1.29"
+version: "3.1.30"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派——Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合——
@@ -12,6 +12,19 @@ description: >
 # JTBD (Jobs to Be Done) v3.0 执行技能
 
 融合四大 JTBD 学派的完整工具集，不仅提供理论指导，更具备直接执行能力。
+
+## 🧭 快速决策：什么时候使用 JTBD？
+
+| 你的需求 | 推荐技能 |
+|---------|---------|
+| 需要理解用户"工作"、机会评分、竞争分析 | ✅ **JTBD（本技能）** |
+| 需要选择研究方法、设计访谈、执行可用性测试 | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) |
+| 需要定量验证假设、设计 A/B 测试、计算样本量 | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) |
+| 需要创建人物角色、用户细分、设计指导 | → [Web Persona](https://github.com/AliDujie/web-persona-skill) |
+| 需要价值主张画布、实验验证、优先级排序 | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) |
+| 需要将研究结果转化为数据叙事、图表呈现 | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) |
+
+> 💡 JTBD 聚焦"用户想完成什么工作"：发现 Jobs → 机会评分 → VPD 画布填充。
 
 ## 🌐 AliDujie 技能生态系统
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.30 - 2026-05-07
+
+- Repo maintenance: added "When to use JTBD" decision guide to SKILL.md, added cross-skill workflow examples to README, version bump to 3.1.30
+
 ## v3.1.28 - 2026-05-07
 
 - Repo maintenance: added references/README.md index, standardized ecosystem documentation
