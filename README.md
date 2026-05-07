@@ -1009,6 +1009,59 @@ Phase 4: 呈现与决策
 
 ---
 
+### 💻 实用集成示例 (Practical Integration Examples)
+
+#### 示例 1: JTBD + VPD — 从用户"工作"到价值主张
+
+```python
+# JTBD 发现机会 → VPD 设计价值主张
+from jtbd import JTBDSkill
+from vpd import VPDSkill
+
+jtbd = JTBDSkill("电商平台")
+opportunity = jtbd.score_opportunity("快速完成购买", struggle=4, importance=5)
+
+vpd = VPDSkill("电商平台", "时间敏感型买家")
+canvas = vpd.analyze_canvas(
+    product_name="一键结账",
+    jobs=["快速完成购买", "确认订单准确性"],
+    pains=["步骤太多", "加载慢"],
+    gains=["省时", "减少错误"]
+)
+```
+
+#### 示例 2: JTBD + QuantUX — 机会分数的量化验证
+
+```python
+# JTBD 机会评分 → QuantUX 统计验证
+from jtbd import JTBDSkill
+from quantux import QuantUXSkill
+
+jtbd = JTBDSkill("电商平台")
+matrix = jtbd.add_job_to_matrix("快速完成购买", struggle=4, importance=5)
+matrix_report = jtbd.render_priority_matrix()
+
+quantux = QuantUXSkill("电商平台")
+report = quantux.generate_report("JTBD 量化验证", include_ceo_analysis=True)
+```
+
+#### 示例 3: JTBD + SWD — 从洞察到高管叙事
+
+```python
+from jtbd import JTBDSkill
+from swd import SWDSkill
+
+jtbd = JTBDSkill("电商平台")
+forces = jtbd.add_force("push", "现有方案太慢", intensity=4)
+report = jtbd.generate_analysis_report()
+
+swd = SWDSkill("电商平台")
+ctx = swd.build_context(audience="CEO", cta="投资新方案")
+story = swd.build_story(protagonist="用户", imbalance="现有方案无法满足需求")
+```
+
+> 💡 **JTBD 是洞察引擎** — 它回答了"为什么用户会切换"，为后续所有技能提供方向。
+
 ### 💡 Pro Tips / 专业提示
 
 - **聚焦"工作"而非产品** — 用户"雇佣"产品来完成工作，不要混淆
@@ -1106,4 +1159,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-07 | AliDujie Skill Ecosystem | v3.1.26*
+*Last Updated: 2026-05-07 | AliDujie Skill Ecosystem | v3.1.27*

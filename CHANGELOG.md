@@ -1,5 +1,17 @@
 # Changelog
 
+## v3.1.27 - 2026-05-07
+
+- Repo maintenance: aligned footer version badge with SKILL.md (v3.1.26→v3.1.27), added end-to-end ecosystem integration workflow example
+
+## v3.1.26 - 2026-05-07
+
+- Repo maintenance: fixed footer version mismatch, added ecosystem workflow Pro Tip, bumped to v3.1.26
+
+## v3.1.25 - 2026-05-07
+
+- Repo maintenance: added English Dependencies section, verified ecosystem cross-references
+
 ## v3.1.24 - 2026-05-07
 
 - Repo maintenance: added competition mapping Pro Tip (CN+EN), enhanced VPD-JTBD workflow example
