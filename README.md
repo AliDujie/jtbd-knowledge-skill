@@ -1076,6 +1076,10 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 
 | 版本 | 日期 | 变更 |
 |------|------|------|
+| v3.1.29 | 2026-05-07 | 仓库维护：SKILL.md 版本号升级至 3.1.29，验证生态交叉引用一致性 |
+| v3.1.28 | 2026-05-07 | 仓库维护：版本升级至 v3.1.28，对齐 SKILL.md 和 pyproject.toml 版本号，对齐变更日志条目 |
+| v3.1.27 | 2026-05-07 | 仓库维护：修复页脚版本不一致，添加生态系统工作流 Pro Tip，版本升级至 v3.1.27 |
+| v3.1.26 | 2026-05-07 | 仓库维护：在 SKILL.md 末尾添加 AliDujie 技能生态协作表，增强跨技能一致性 |
 | v3.1.25 | 2026-05-07 | Repo maintenance: added English Dependencies section, verified ecosystem cross-references |
 | v3.1.24 | 2026-05-07 | Repo maintenance: added competition mapping Pro Tip, enhanced VPD-JTBD workflow example |
 | v3.1.23 | 2026-05-06 | 仓库维护：更新版本至 3.1.23，验证生态交叉引用和双语一致性 |
