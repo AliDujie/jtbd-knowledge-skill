@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jtbd-knowledge-skill"
-version = "3.1.28"
+version = "3.1.29"
 description = "JTBD (Jobs to Be Done) v3.0 toolkit — Klement/ Ulwick ODI/ Wunker Atlas/ Kalbach four schools integration (完整工具集 - 融合四大学派)"
 readme = "README.md"
 requires-python = ">=3.8"
