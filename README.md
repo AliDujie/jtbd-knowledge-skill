@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.26-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.27-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--07-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -333,6 +333,22 @@ jtbd-knowledge-skill/
 
 **关键洞察:** 变革 = Push + Pull > Anxiety + Habit
 
+### 💡 专业技巧
+
+- **访谈切换者，而非满意用户** — 最近切换产品（或流失）的用户最能揭示"进步力量"
+- **映射切换时刻** — Push + Pull 克服 Anxiety + Habit 的确切时刻是真正洞察所在。问"什么改变了？"
+- **用机会分数无情地排优先级** — 当利益相关者争论优先级时，JTBD 机会分数用数据而非意见来定夺
+- **写 Job Story 而非 User Story** — "当[情境]时，我想[动机]，以便[期望结果]" 捕捉了用户故事遗漏的上下文
+- **与"非消费"竞争** — 最大的竞争对手往往是现状（什么都不做、用电子表格、变通方案）。不要忽视它
+
+### ❌ 常见错误
+
+- **关注产品功能** — JTBD 关注底层工作，不是你的产品如何解决它。从问题开始，不是解决方案
+- **忽略焦虑和习惯** — Push 和 Pull 很明显，但 Anxiety 和 Habit 是采用的无声杀手。必须测量四种力量
+- **写模糊的 JTBD 陈述** — "帮助用户找东西"没用。要具体："赶火车时快速找到最近的出口"。上下文决定一切
+- **把机会分数当圣经** — 它们是优先级指南，不是判断的替代品。用它开启对话，不是结束对话
+- **混淆人口统计和工作** — 22 岁学生和 55 岁高管可能有相同的 JTBD。工作超越人口统计
+
 ### ❓ 常见问题 (FAQ)
 
 **Q: JTBD 和用户画像 (Persona) 有什么区别？**
@@ -650,6 +666,22 @@ result = skill.analyze(include_ceo_analysis=True)
 3. **Interview recent switchers** — People who recently changed solutions have the richest insights
 4. **Use opportunity scores for prioritization** — High importance + low satisfaction = best opportunity
 5. **Validate JTBD statements** — Check the three elements: context, motivation, expected outcome
+
+### 💡 Pro Tips
+
+- **Interview switchers, not satisfied users** — People who recently switched products (or churned) reveal the "forces of progress" most clearly.
+- **Map the switching moment** — The exact moment when Push + Pull overcame Anxiety + Habit is where the real insight lives. Ask "what changed?"
+- **Use the opportunity score ruthlessly** — When stakeholders argue about priorities, the JTBD opportunity score settles it with data, not opinions.
+- **Write Job Stories, not User Stories** — "When [situation], I want to [motivation], so I can [expected outcome]" captures context that user stories miss.
+- **Compete with "non-consumption"** — The biggest competitor is often the status quo (doing nothing, spreadsheets, workarounds). Don't ignore it.
+
+### ❌ Common Mistakes to Avoid
+
+- **Focusing on product features** — JTBD is about the underlying job, not how your product solves it. Start with the problem, not the solution.
+- **Ignoring anxiety and habit** — Push and Pull feel obvious, but Anxiety and Habit are the silent killers of adoption. Measure all four forces.
+- **Writing vague JTBD statements** — "Help users find stuff" is useless. Be specific: "When rushing to catch a train, quickly find the nearest exit." Context is everything.
+- **Treating opportunity scores as gospel** — They're a prioritization guide, not a substitute for judgment. Use them to start conversations, not end them.
+- **Confusing demographics with jobs** — A 22-year-old student and a 55-year-old executive might share the same JTBD. Jobs transcend demographics.
 
 ### ❓ FAQ
 
