@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.28-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.29-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--07-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -1119,6 +1119,8 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 
 | Version | Date | Changes |
 |---------|------|--------|
+| v3.1.29 | 2026-05-07 | Repo maintenance: SKILL.md version bump to 3.1.29, verified cross-skill ecosystem consistency
+| v3.1.27 | 2026-05-07 | Repo maintenance: version bump to 3.1.28, aligned SKILL.md and pyproject.toml versions
 | v3.1.26 | 2026-05-07 | Repo maintenance: fixed footer version mismatch, added ecosystem workflow Pro Tip, bumped to v3.1.26
 | v3.1.25 | 2026-05-07 | Repo maintenance: added English Dependencies section, verified ecosystem cross-references |
 | v3.1.24 | 2026-05-07 | Repo maintenance: added competition mapping Pro Tip, enhanced VPD-JTBD workflow example |
@@ -1159,4 +1161,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-07 | AliDujie Skill Ecosystem | v3.1.28*
+*Last Updated: 2026-05-07 | AliDujie Skill Ecosystem | v3.1.29*
