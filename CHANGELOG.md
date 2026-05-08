@@ -1,4 +1,8 @@
+## v3.1.33 (2026-05-08)
 ## v3.1.32 (2026-05-08)
+
+Repo maintenance: added English TOC entry for existing "End-to-End Workflow: All 6 Skills" section, enhanced cross-skill discoverability.
+
 - Enhanced JTBD workshop facilitation content with practical step-by-step guide
 - Improved multi-skill workflow integration examples
 - Verified version alignment across README.md, SKILL.md, and pyproject.toml
