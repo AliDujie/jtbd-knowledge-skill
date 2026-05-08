@@ -1,10 +1,12 @@
-# References
+# References / 参考文档
 
 本目录存放 JTBD Knowledge 技能的方法论参考文档。
 
-## 目录结构
+This directory contains methodology reference documents for the JTBD Knowledge skill.
 
-| 文件 | 内容 |
+## 目录结构 / Directory Structure
+
+| 文件 / File | 内容 / Content |
 |------|------|
 | `01-theory-foundation.md` | JTBD 理论基础（Klement 核心概念） |
 | `02-principles.md` | JTBD 实践原则 |
@@ -22,10 +24,24 @@
 | `14-playbook-tools.md` | JTBD 实践工具包 |
 | `15-glossary.md` | JTBD 术语表 |
 
-## 使用方法
+## 使用方法 / Usage
 
 这些参考文档供 AI Agent 在执行 JTBD 分析时查阅，涵盖从理论到实践的完整知识体系。
 
-## 来源
+These reference documents are consulted by the AI Agent during JTBD analysis, covering the complete knowledge system from theory to practice.
+
+## 🌐 技能生态关联 / Skill Ecosystem Connections
+
+JTBD 负责理解用户深层需求，与全链路技能协同：
+
+- **UDM → JTBD**: UDM 的访谈方法（情境访谈） → JTBD 的结构化 JTBD 访谈
+- **JTBD → QuantUX**: JTBD 的机会评分 → QuantUX 量化验证假设
+- **JTBD → VPD**: JTBD 发现的"工作" → VPD 映射到价值主张画布
+- **JTBD → Persona**: JTBD 的切换行为分析 → Persona 补充行为型角色维度
+- **JTBD → SWD**: JTBD 的分析报告 → SWD 进行高管汇报改造
+
+## 来源 / Source
 
 基于 Alan Klement《When Coffee and Kale Compete》(HarperCollins, 2023)，整合四大 JTBD 学派：Klement（进步力量）、Ulwick（ODI）、Wunker（Jobs Atlas）、Kalbach（Job Stories）。
+
+Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), integrating four JTBD schools: Klement (Forces of Progress), Ulwick (ODI), Wunker (Jobs Atlas), Kalbach (Job Stories).
