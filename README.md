@@ -1321,7 +1321,6 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 | v3.1.38 | 2026-05-09 | Repo maintenance: added English Project Structure section for bilingual parity, enhanced documentation completeness |
 | v3.1.38 | 2026-05-09 | 仓库维护：添加英文版项目结构，提升中英双语一致性，增强文档完整性 |
 | v3.1.37 | 2026-05-09 | 仓库维护：修复 SKILL.md 版本不一致，对齐 README 页脚版本引用，验证生态交叉引用一致性，改进版本历史表格排序 |
-|------|------|------|
 | v3.1.32 | 2026-05-08 | 仓库维护：增强 JTBD 工作坊引导内容，改进多技能工作流集成示例，更新 Last Updated 至 2026-05-08，版本升级至 3.1.32 |
 | v3.1.30 | 2026-05-07 | 仓库维护：在 SKILL.md 中添加"什么时候使用 JTBD"决策指南，在 README 中添加跨技能工作流示例，版本升级至 3.1.30 |
 | v3.1.31 | 2026-05-07 | 仓库维护：在快速决策指南中添加 Structured Thinking Model 引用（中英文），提升跨技能发现性，版本升级至 3.1.31 |

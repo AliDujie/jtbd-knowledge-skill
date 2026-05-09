@@ -391,6 +391,22 @@ vpd.analyze_canvas(
 )
 ```
 
+**协作示例（JTBD → SWD）**：
+```python
+# Step 1: JTBD 产出机会评分报告
+from jtbd import JTBDSkill
+jtbd = JTBDSkill("电商平台")
+report = jtbd.analyze(product="电商平台",
+    jobs=[{"context": "工作日午餐", "motivation": "快速找到好吃的", "outcome": "不纠结吃什么"}],
+    forces={"push": 4, "pull": 5, "anxiety": 3, "habit": 2})
+# Step 2: SWD 将 JTBD 发现转化为高管汇报
+from swd import SWDSkill
+swd = SWDSkill("JTBD 洞察汇报")
+ctx = swd.build_context(audience="产品委员会",
+    cta="基于 JTBD 发现调整产品优先级",
+    big_idea="用户核心 Job 是'快速完成任务'，应简化而非增加功能")
+```
+
 ## 最佳实践
 
 | # | 原则 | 说明 |
