@@ -9,6 +9,17 @@ Repo maintenance: added Chinese Quick Decision Guide, End-to-End Workflow, Integ
 - Improved CN/EN content parity
 - No breaking changes
 
+## v3.1.36 (2026-05-09)
+
+Repo maintenance: added Chinese Quick Decision Guide, End-to-End Workflow, Integration Examples, and Next Steps sections for CN/EN parity.
+
+- Added 快速决策指南 (Quick Decision Guide) to Chinese section
+- Added 完整端到端工作流 (End-to-End Workflow) to Chinese section
+- Added 实用集成示例 (Practical Integration Examples) to Chinese section
+- Added 下一步 (Next Steps) to Chinese section
+- Improved CN/EN content parity
+- No breaking changes
+
 ## v3.1.33 (2026-05-08)
 
 ## v3.1.32 (2026-05-08)
