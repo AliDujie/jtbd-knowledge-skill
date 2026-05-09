@@ -1,11 +1,10 @@
-## {ver} (2026-05-09)
+## v3.1.39 (2026-05-09)
 
-Repo maintenance: version alignment across README, SKILL.md, pyproject.toml, and CHANGELOG. Verified ecosystem cross-references.
+Repo maintenance: enhanced installation options, added "When NOT to use" sections.
 
-- Fixed SKILL.md version mismatch (aligned with README badge + pyproject.toml)
-- Fixed README footer version mismatch
-- Verified cross-skill ecosystem link consistency
-- Improved changelog table ordering
+- Added pip install option to Quick Start (CN + EN) for easier Python package usage
+- Added "When NOT to Use This Skill" section (CN + EN) with cross-references to all 5 other skills
+- Updated Last Updated timestamp to 2026-05-09
 - No breaking changes
 
 ## v3.1.36 (2026-05-09)

@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.38-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.39-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-09-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -84,8 +84,11 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 #### 步骤 1: 安装技能
 
 ```bash
-# 复制到你的 AI Agent skills 目录
+# 方式 A: 复制到你的 AI Agent skills 目录
 cp -r jtbd-knowledge-skill /your/agent/skills/
+
+# 方式 B: 作为 Python 包安装（支持 pip import）
+cd jtbd-knowledge-skill && pip install -e .
 ```
 
 > 📖 详细安装指南请查看 [INSTALL.md](INSTALL.md)
@@ -652,7 +655,11 @@ jtbd.analyze(product="产品名",
 #### Step 1: Install
 
 ```bash
+# Option A: Copy to your AI Agent skills directory
 cp -r jtbd-knowledge-skill /your/agent/skills/
+
+# Option B: Install as a Python package (enables pip import)
+cd jtbd-knowledge-skill && pip install -e .
 ```
 
 > 📖 See [INSTALL.md](INSTALL.md) for detailed installation guide
@@ -832,6 +839,14 @@ jtbd-knowledge-skill/
 - **Use the opportunity score ruthlessly** — When stakeholders argue about priorities, the JTBD opportunity score settles it with data, not opinions.
 - **Write Job Stories, not User Stories** — "When [situation], I want to [motivation], so I can [expected outcome]" captures context that user stories miss.
 - **Compete with "non-consumption"** — The biggest competitor is often the status quo (doing nothing, spreadsheets, workarounds). Don't ignore it.
+
+### ⛔ When NOT to Use This Skill
+
+- **Choosing research methods or designing interviews** — Use [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) for study design
+- **Running statistical analysis or A/B tests** — Use [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) for quantitative validation
+- **Designing value propositions or canvas analysis** — Use [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) for canvas-based analysis
+- **Creating user personas and segmentation** — Use [Web Persona](https://github.com/AliDujie/web-persona-skill) for persona creation
+- **Data visualization and presentation design** — Use [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) for chart design and narratives
 
 ### ❌ Common Mistakes to Avoid
 
@@ -1416,4 +1431,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-09 | AliDujie Skill Ecosystem | v3.1.38*
+*Last Updated: 2026-05-09 | AliDujie Skill Ecosystem | v3.1.39*
