@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.35-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.36-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-09-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -452,6 +452,130 @@ finder.find_gaps(competition)
 - Python >= 3.8
 - **无外部依赖**（纯标准库实现）
 - 兼容 macOS / Linux / Windows
+
+---
+
+
+---
+
+### 🧭 快速决策指南 (Quick Decision Guide)
+
+| 你的问题 | 推荐技能 |
+|----------|----------|
+| "想理解用户背后的「工作」" | → **JTBD Knowledge (本技能)** — 用户"工作"挖掘、机会评分 |
+| "不知道选什么研究方法" | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — 方法推荐与执行 |
+| "需要定量验证假设" | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — A/B 测试、HEART 指标、样本量计算 |
+| "需要创建用户画像" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — 人物角色创建与细分 |
+| "验证价值主张够不够强" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — 价值主张画布、实验验证 |
+| "研究结果怎么讲给高管听" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — 数据叙事与图表呈现 |
+| "需要结构化商业分析框架" | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) — PESTEL、五力模型、决策树 |
+
+---
+
+### 🔄 完整端到端工作流：从用户洞察到增长策略 (End-to-End Workflow)
+
+> JTBD 位于用户研究和产品设计的交汇处 — 将定性发现转化为可执行的增长策略。
+
+#### 阶段 1: 理解用户 (Understanding)
+1. **Universal Design Methods** → 用户访谈、观察法收集原始数据
+2. **JTBD Knowledge (本技能)** → 结构化 JTBD 访谈，挖掘"工作"和四力
+3. **Web Persona** → 基于 JTBD 发现创建精细化角色
+
+#### 阶段 2: 验证与构建 (Validation & Building)
+4. **Value Proposition Design** → 将 JTBD "工作"映射到价值主张画布
+5. **Quantitative UX Research** → 用 A/B 测试验证价值假设
+
+#### 阶段 3: 呈现与增长 (Presentation & Growth)
+6. **Storytelling with Data** → 将 JTBD 洞察转化为高管叙事
+
+```python
+# 示例：JTBD 端到端工作流
+from jtbd import JTBDSkill
+from vpd import VPDSkill
+from swd import SWDSkill
+
+# 阶段 1: JTBD 分析
+jtbd = JTBDSkill("外卖平台")
+report = jtbd.analyze(product="外卖平台",
+    jobs=[{"context": "工作日午餐", "motivation": "快速找到好吃的", "outcome": "不纠结吃什么"}],
+    forces={"push": 4, "pull": 5, "anxiety": 3, "habit": 2}
+)
+
+# 阶段 2: VPD 验证
+vpd = VPDSkill("外卖平台", "白领用户")
+vpd.analyze_canvas(product_name="外卖平台",
+    jobs=[{"job": "快速找到好吃的午餐"}],
+    pains=[{"pain": "选择焦虑"}],
+    gains=[{"gain": "省时省力"}]
+)
+
+# 阶段 3: SWD 汇报
+swd = SWDSkill("用户洞察汇报")
+swd.build_story(protagonist="CEO",
+    imbalance="用户每天花 15 分钟纠结吃什么",
+    call_to_action="投资智能推荐功能"
+)
+```
+
+---
+
+### 💻 实用集成示例 (Practical Integration Examples)
+
+#### 集成 1: UDM 访谈 → JTBD 分析
+
+```python
+from udm import UDMSkill
+from jtbd import JTBDSkill
+
+# UDM 收集数据
+udm = UDMSkill("产品名")
+guide = udm.generate_interview("用户访谈", "contextual")
+
+# JTBD 结构化分析
+jtbd = JTBDSkill("产品名")
+jtbd.analyze(product="产品名",
+    jobs=[{"context": "访谈中发现的场景", "motivation": "用户动机", "outcome": "期望结果"}],
+    forces={"push": 4, "pull": 5, "anxiety": 3, "habit": 2}
+)
+```
+
+#### 集成 2: JTBD → Web Persona 精化
+
+```python
+from jtbd import JTBDSkill
+from persona import PersonaSkill
+
+jtbd = JTBDSkill("产品名")
+report = jtbd.analyze(product="产品名")
+
+# 基于 JTBD 发现创建 Persona
+persona = PersonaSkill("产品名")
+persona.add_persona(name="效率型用户", archetype="追求快速完成任务",
+    goals=[report.get_top_jobs()], pain_points=[report.get_top_anxieties()])
+```
+
+#### 集成 3: JTBD → 营销策略
+
+```python
+from jtbd import JTBDSkill
+
+jtbd = JTBDSkill("产品名")
+jtbd.analyze(product="产品名",
+    jobs=[{"context": "出差时", "motivation": "快速找到住处", "outcome": "专注工作"}]
+)
+# JTBD 自动生成营销文案
+# 挣扎共鸣 → 进步愿景 → 消除焦虑 → 克服惯性 → 行动号召
+```
+
+---
+
+### 🚀 下一步 (Next Steps)
+
+1. **快速上手** — 复制技能到你的 skills 目录，5 分钟内完成首次调用
+2. **阅读 SKILL.md** — 了解 AI Agent 触发条件和完整 API 文档
+3. **安装 INSTALL.md** — 详细的安装和配置指南
+4. **贡献** — 查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解如何参与
+5. **探索生态** — 尝试其他 5 个技能，构建完整的用户研究工作流
 
 ---
 
