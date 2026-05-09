@@ -1,3 +1,13 @@
+## {ver} (2026-05-09)
+
+Repo maintenance: version alignment across README, SKILL.md, pyproject.toml, and CHANGELOG. Verified ecosystem cross-references.
+
+- Fixed SKILL.md version mismatch (aligned with README badge + pyproject.toml)
+- Fixed README footer version mismatch
+- Verified cross-skill ecosystem link consistency
+- Improved changelog table ordering
+- No breaking changes
+
 ## v3.1.36 (2026-05-09)
 
 Repo maintenance: added Chinese Quick Decision Guide, End-to-End Workflow, Integration Examples, and Next Steps sections for CN/EN parity.
