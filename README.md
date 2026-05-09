@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.37-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.38-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-09-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -776,6 +776,38 @@ result = skill.analyze(include_ceo_analysis=True)
 # Outputs: Full JTBD report + TAM/SAM/SOM + Priority scoring + Go/No-Go
 ```
 
+### 📁 Project Structure
+
+```
+jtbd-knowledge-skill/
+├── SKILL.md                       # Agent entry file (triggers + capabilities + API)
+├── README.md                      # This file
+├── INSTALL.md                     # Installation guide
+├── pyproject.toml                 # Python package build config
+├── jtbd/                          # Python package
+│   ├── __init__.py                # API entry & exports (incl. JTBDSkill facade)
+│   ├── analyzer.py                # JTBD analysis engine
+│   ├── interview.py               # Interview guide generator
+│   ├── forces.py                  # Forces of Progress analysis
+│   ├── innovation.py              # Innovation opportunity discovery
+│   ├── config.py                  # Runtime configuration
+│   ├── utils.py                   # Knowledge base loader & search
+│   ├── templates.py               # Template constants
+│   └── tests/test_all.py          # Test cases (14 cases)
+└── references/                    # Knowledge base (11 methodology documents)
+    ├── 01-theory-foundation.md    # Theory foundation
+    ├── 02-principles.md           # 9 core principles
+    ├── 03-forces-of-progress.md   # Forces of Progress model
+    ├── 04-system-of-progress.md   # Progress system
+    ├── 05-research-methods.md     # Information collection methods
+    ├── 06-analysis-framework.md   # Information organization framework
+    ├── 07-innovation-guide.md     # Innovation guide
+    ├── 08-business-decisions.md   # Business decisions
+    ├── 09-case-studies.md         # Case studies
+    ├── 10-two-models.md           # Klement vs Moesta-Ulwick comparison
+    └── 11-quick-reference.md      # Quick reference guide
+```
+
 ### 🛠️ Troubleshooting
 
 | Issue | Solution |
@@ -973,6 +1005,7 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 ### 📋 Changelog
 
 | Version | Date | Changes |
+| v3.1.38 | 2026-05-09 | Repo maintenance: added English Project Structure section for bilingual parity, enhanced documentation completeness |
 | v3.1.37 | 2026-05-09 | Repo maintenance: fixed SKILL.md version mismatch, aligned README footer version, verified ecosystem cross-references, improved changelog table ordering |
 |---------|------|--------|
 | v3.1.35 | 2026-05-09 | Repo maintenance: added English case studies section with practical code examples, enhanced bilingual content parity (CN/EN), added cross-skill integration code samples |
@@ -1270,6 +1303,8 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
+| v3.1.38 | 2026-05-09 | Repo maintenance: added English Project Structure section for bilingual parity, enhanced documentation completeness |
+| v3.1.38 | 2026-05-09 | 仓库维护：添加英文版项目结构，提升中英双语一致性，增强文档完整性 |
 | v3.1.37 | 2026-05-09 | 仓库维护：修复 SKILL.md 版本不一致，对齐 README 页脚版本引用，验证生态交叉引用一致性，改进版本历史表格排序 |
 |------|------|------|
 | v3.1.32 | 2026-05-08 | 仓库维护：增强 JTBD 工作坊引导内容，改进多技能工作流集成示例，更新 Last Updated 至 2026-05-08，版本升级至 3.1.32 |
@@ -1381,4 +1416,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-09 | AliDujie Skill Ecosystem | v3.1.37*
+*Last Updated: 2026-05-09 | AliDujie Skill Ecosystem | v3.1.38*
