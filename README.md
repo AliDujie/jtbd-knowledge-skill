@@ -4,8 +4,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.33-green.svg)](CHANGELOG.md)
-![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--08-brightgreen.svg)
+[![Version](https://img.shields.io/badge/version-3.1.34-green.svg)](CHANGELOG.md)
+![Last Updated](https://img.shields.io/badge/last%20updated-2026--05--09-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
@@ -787,6 +787,7 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 
 | Version | Date | Changes |
 |---------|------|--------|
+| v3.1.34 | 2026-05-09 | Repo maintenance: fixed footer version mismatch (v3.1.32→v3.1.34), enhanced cross-skill ecosystem workflow clarity, updated ecosystem links to all 5 sibling skills, aligned version across README/SKILL.md/pyproject.toml |
 | v3.1.32 | 2026-05-08 | Repo maintenance: enhanced JTBD workshop facilitation content, improved multi-skill workflow integration examples, updated Last Updated to 2026-05-08, version bump to 3.1.32 |
 | v3.1.21 | 2026-05-06 | Repo maintenance: fixed README footer version mismatch (footer was 2 versions behind badge), aligned all version references, verified ecosystem cross-references and bilingual consistency |
 | v3.1.22 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, version bump to 3.1.22, verified ecosystem cross-references and bilingual consistency |
@@ -1164,6 +1165,19 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 
 ---
 
+### 🚀 Next Steps / 下一步
+
+Ready to go deeper? Here's what to try next:
+
+1. **Explore JTBD frameworks** — Review [jtbd/forces.py](jtbd/forces.py) for Forces of Progress and opportunity scoring implementations
+2. **Ground JTBD in research** — Use [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) interviews to collect raw job statements
+3. **Quantify opportunities** — Validate JTBD opportunity scores with [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) statistical methods
+4. **Design value propositions** — Translate top JTBD opportunities into canvas format with [Value Proposition Design](https://github.com/AliDujie/value-proposition-design)
+5. **Build targeted personas** — Create personas around key jobs using [Web Persona](https://github.com/AliDujie/web-persona-skill)
+6. **Present insights** — Share JTBD findings through compelling data narratives with [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
+
+> 💡 **Pro Tip**: JTBD is the bridge between user needs and product strategy. Try: UDM (discover jobs) → JTBD (score opportunities) → VPD (design solutions) → QuantUX (validate fit)
+
 ### 👨‍💻 Credits
 
 Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), integrating four JTBD schools: Klement (Forces of Progress), Ulwick (ODI), Wunker (Jobs Atlas), and Kalbach (Job Stories).
@@ -1176,4 +1190,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-08 | AliDujie Skill Ecosystem | v3.1.32*
+*Last Updated: 2026-05-09 | AliDujie Skill Ecosystem | v3.1.34*
