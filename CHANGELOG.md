@@ -1,4 +1,5 @@
 ## v3.1.33 (2026-05-08)
+
 ## v3.1.32 (2026-05-08)
 
 Repo maintenance: added English TOC entry for existing "End-to-End Workflow: All 6 Skills" section, enhanced cross-skill discoverability.
@@ -9,6 +10,7 @@ Repo maintenance: added English TOC entry for existing "End-to-End Workflow: All
 - No breaking changes
 
 ## v3.1.31 (2026-05-07)
+
 - Added Structured Thinking Model to Quick Decision Guide (CN + EN) for better cross-skill discoverability
 - Verified version alignment across README.md, SKILL.md, and pyproject.toml
 - No breaking changes
@@ -109,7 +111,6 @@ Repo maintenance: added English TOC entry for existing "End-to-End Workflow: All
 - Added .github/ISSUE_TEMPLATE/ with bug report and feature request templates
 - Maintained cross-repo consistency and version alignment
 
-
 ## [R28] - 2026-05-04
 
 ### Fixed
@@ -179,7 +180,6 @@ Repo maintenance: added English TOC entry for existing "End-to-End Workflow: All
 ### Maintenance
 - Update Last Updated date to 2026-05-01
 - Maintain ecosystem consistency across all skills
-
 
 All notable changes to this project will be documented in this file.
 
