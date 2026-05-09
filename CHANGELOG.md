@@ -1,3 +1,18 @@
+## v3.1.41 (2026-05-10)
+
+Repo maintenance: added skill ecosystem table at top of README, added end-to-end workflow example in English section.
+
+- Added prominent "🌐 技能生态系统 (Skill Ecosystem)" table near top of README with cross-skill collaboration details
+- Added "🔄 End-to-End Ecosystem Workflow" section with 6-skill integration code example in English section
+- Updated Last Updated timestamp to 2026-05-10
+- No breaking changes
+
+## v3.1.40 (2026-05-10)
+
+Repo maintenance: enhanced README with ecosystem cross-references.
+
+- No breaking changes
+
 ## v3.1.39 (2026-05-09)
 
 Repo maintenance: enhanced installation options, added "When NOT to use" sections.

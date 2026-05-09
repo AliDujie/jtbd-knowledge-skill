@@ -4,10 +4,26 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.40-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.41-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-10-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
+
+---
+
+## 🌐 技能生态系统 (Skill Ecosystem)
+
+本技能是 AliDujie 用户研究技能生态系统的**需求洞察核心**，负责用 JTBD 框架挖掘用户深层需求。与其他技能协同使用，效果更佳：
+
+| 技能 | 角色 | 协同场景 |
+|------|------|----------|
+| [🔍 Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | 研究方法 | JTBD 访谈提纲 → UDM 方法执行 → 数据收集 |
+| [📊 Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | 定量验证 | JTBD 机会评分 → QuantUX 量化验证 → 统计确认 |
+| [📈 Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | 数据叙事 | JTBD 洞察 → SWD 数据故事 → 高管展示 |
+| [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | 价值设计 | JTBD 工作 → VPD 画布 → 产品-市场契合 |
+| [👤 Web Persona](https://github.com/AliDujie/web-persona-skill) | 用户画像 | JTBD 工作 → Persona 角色创建 → 细分策略 |
+
+---
 
 ### ✅ 5 分钟快速开始检查清单
 
@@ -782,6 +798,40 @@ print(diag.render_markdown())  # Severity + elimination strategy
 result = skill.analyze(include_ceo_analysis=True)
 # Outputs: Full JTBD report + TAM/SAM/SOM + Priority scoring + Go/No-Go
 ```
+
+### 🔄 End-to-End Ecosystem Workflow
+
+JTBD is the **opportunity bridge** of the ecosystem — connecting user needs to product strategy. Here's how it works with all 6 skills:
+
+```python
+# ===== From User Needs to Product Strategy (All 6 Skills) =====
+# Step 1: UDM discovers raw user insights → Step 2: JTBD structures them into Jobs
+# Step 3: QuantUX measures opportunity size → Step 4: VPD designs the solution
+# Step 5: Persona targets the right users → Step 6: SWD pitches to stakeholders
+
+from jtbd import JTBDSkill
+jtbd = JTBDSkill("Task Management App")
+
+# Analyze jobs and forces of progress
+result = jtbd.analyze(
+    product="TaskApp",
+    jobs=["Organize daily tasks efficiently", "Collaborate with team"],
+    forces={
+        "push": ["Current app is too complex", "Missing deadlines"],
+        "pull": ["Simpler alternative found"],
+        "anxiety": ["Will I lose my data?"],
+        "habit": ["Used current app for 3 years"]
+    }
+)
+
+# Opportunity scoring: Importance × (10 - Satisfaction)
+print(f"Opportunity Score: {result['opportunity_score']}")
+
+# Generate marketing copy based on JTBD insights
+messaging = jtbd.generate_messaging(product="TaskApp", target="Busy Professionals")
+```
+
+> 💡 **Pro Tip**: JTBD is the bridge between user needs and product strategy. Try: UDM (discover jobs) → JTBD (score opportunities) → VPD (design solutions) → QuantUX (validate fit)
 
 ### 📁 Project Structure
 
