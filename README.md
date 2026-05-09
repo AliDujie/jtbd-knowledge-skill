@@ -921,6 +921,57 @@ A: JTBD interviews focus on "switching moments" — why users abandoned old solu
 A: Yes. Unlike feature comparison, JTBD competitive analysis maps which "jobs" each competitor serves and their respective opportunity scores. Use the `analyze_competition()` method.
 
 
+### 📋 Cheat Sheet / Quick Reference Cards
+
+#### JTBD Statement Template
+
+| Format | Template |
+|--------|----------|
+| **Klement** | When [situation], I want to [motivation], so I can [expected outcome] |
+| **Outcome** | Minimize/maximize [direction of need] + [measure] + [object of control] |
+| **Job Story** | When [context], I want to [motivation], so I can [expected outcome] |
+
+#### Forces of Progress Quick Reference
+
+| Force | Direction | Strategy | Example |
+|-------|-----------|----------|---------|
+| **Push** | Away from current | Amplify pain points | "Current solution is too slow" |
+| **Pull** | Toward new solution | Strengthen attraction | "Competitor has one-click booking" |
+| **Anxiety** | Resistance to new | Reduce perceived risk | "Will I lose my data?" |
+| **Habit** | Attachment to current | Break inertia | "I've used this for 3 years" |
+
+**Key Insight:** Change happens when Push + Pull > Anxiety + Habit
+
+#### Opportunity Scoring Guide
+
+| Score | Priority | Action |
+|-------|----------|--------|
+| > 7.0 | High | Invest immediately — high importance + low satisfaction |
+| 5.0-7.0 | Medium | Consider — moderate opportunity |
+| < 5.0 | Low | Maintain — existing solutions are adequate |
+
+**Formula:** Opportunity Score = Importance + (Importance - Satisfaction)
+
+#### Interview Dimension Checklist
+
+| Dimension | Focus | Sample Question |
+|-----------|-------|----------------|
+| Competition | Current alternatives | "What do you use now?" |
+| Push | Why leave current | "What frustrated you most?" |
+| Pull | What attracts you | "What made you try the new solution?" |
+| Anxiety | What worries you | "What made you hesitate?" |
+
+#### Cross-Skill Quick Reference
+
+| Need | Skill | Key Method |
+|------|-------|------------|
+| Choose research methods | [UDM](https://github.com/AliDujie/universal-design-methods) | `recommend_methods()` |
+| Validate quantitatively | [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) | `calculate_ab_sample_size()` |
+| Understand user "jobs" | **JTBD** (this skill) | `analyze()` |
+| Create personas | [Persona](https://github.com/AliDujie/web-persona-skill) | `add_persona()` |
+| Design value prop | [VPD](https://github.com/AliDujie/value-proposition-design) | `analyze_canvas()` |
+| Present findings | [SWD](https://github.com/AliDujie/storytelling-with-data) | `build_story()` |
+
 ### 🏆 Case Studies
 
 #### Case Study 1: SaaS Product Feature Iteration Decision
@@ -1422,8 +1473,9 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 
 | Version | Date | Changes |
 |---------|------|--------|
-| v3.1.32 | 2026-05-08 | Repo maintenance: enhanced JTBD workshop facilitation content, improved multi-skill workflow integration examples, updated Last Updated to 2026-05-08, version bump to 3.1.32 |
+| v3.1.41 | 2026-05-10 | Repo maintenance: added English cheat sheet (JTBD statement template, Forces of Progress quick reference, opportunity scoring guide), updated Last Updated badge |
 | v3.1.35 | 2026-05-09 | Repo maintenance: added English case studies section with practical code examples, enhanced bilingual content parity, added cross-skill integration code samples |
+| v3.1.32 | 2026-05-08 | Repo maintenance: enhanced JTBD workshop facilitation content, improved multi-skill workflow integration examples, updated Last Updated to 2026-05-08, version bump to 3.1.32 |
 | v3.1.30 | 2026-05-07 | Repo maintenance: added "When to use JTBD" decision guide to SKILL.md, added cross-skill workflow examples to README, version bump to 3.1.30 |
 | v3.1.31 | 2026-05-07 | Repo maintenance: added Structured Thinking Model to Quick Decision Guide (CN+EN), enhanced cross-skill discoverability, version bump to 3.1.31 |
 | v3.1.29 | 2026-05-07 | Repo maintenance: SKILL.md version bump to 3.1.29, verified cross-skill ecosystem consistency
@@ -1481,4 +1533,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-10 | AliDujie Skill Ecosystem | v3.1.40*
+*Last Updated: 2026-05-10 | AliDujie Skill Ecosystem | v3.1.41*
