@@ -1429,6 +1429,7 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
+| v3.1.45 | 2026-05-11 | 仓库维护：修复页脚版本不一致（v3.1.42→v3.1.44），补齐缺失的变更日志条目（v3.1.43–v3.1.44），确保 README/徽章/CHANGELOG 三端版本对齐 |
 | v3.1.42 | 2026-05-11 | 仓库维护：增强跨技能集成示例，修复格式不一致问题，改进新手入门指南，更新 Last Updated
 | v3.1.38 | 2026-05-09 | 仓库维护：添加英文版项目结构，提升中英双语一致性，增强文档完整性 |
 | v3.1.37 | 2026-05-09 | 仓库维护：修复 SKILL.md 版本不一致，对齐 README 页脚版本引用，验证生态交叉引用一致性，改进版本历史表格排序 |
@@ -1482,6 +1483,8 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 
 | Version | Date | Changes |
 |---------|------|--------|
+| v3.1.45 | 2026-05-11 | Repo maintenance: fixed footer version mismatch (v3.1.42→v3.1.44), added missing changelog entries (v3.1.43–v3.1.44), ensured README/badge/CHANGELOG alignment |
+| v3.1.44 | 2026-05-11 | Repo maintenance: added English 5-minute Quick Start checklist, enhanced discoverability for English-speaking users, verified ecosystem cross-references |
 | v3.1.41 | 2026-05-10 | Repo maintenance: added English cheat sheet (JTBD statement template, Forces of Progress quick reference, opportunity scoring guide), updated Last Updated badge |
 | v3.1.35 | 2026-05-09 | Repo maintenance: added English case studies section with practical code examples, enhanced bilingual content parity, added cross-skill integration code samples |
 | v3.1.32 | 2026-05-08 | Repo maintenance: enhanced JTBD workshop facilitation content, improved multi-skill workflow integration examples, updated Last Updated to 2026-05-08, version bump to 3.1.32 |
@@ -1559,4 +1562,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-11 | AliDujie Skill Ecosystem | v3.1.42*
+*Last Updated: 2026-05-11 | AliDujie Skill Ecosystem | v3.1.45*
