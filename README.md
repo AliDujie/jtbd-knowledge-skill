@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.42-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.43-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-11-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -1507,6 +1507,23 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 | v1.3 | 2026-04-22 | Initial release |
 
 ---
+
+### 🗺️ Beginner Quick Reference Card
+
+> **New to JTBD? Start here.** This card covers the most common first-time use cases.
+
+| I want to… | Start with this | Quick command |
+|---|---|---|
+| Understand why users switch products | Switch Interview | `skill.generate_interview("User Switch", ["competition", "push", "pull"])` |
+| Score how big an opportunity is | Opportunity Scoring | `skill.score_opportunity("Fast checkout", struggle=4, alternative=2, market=5, budget=3)` |
+| Prioritize which jobs to tackle first | Priority Matrix | `skill.add_job_to_matrix("Quick delivery", struggle=5, alternative=2, market=5, budget=4)` |
+| Analyze the competitive landscape | Competition Analysis | `skill.add_competitor("CompetitorX", "direct", strengths=["Brand"], weaknesses=["Price"])` |
+| Generate marketing copy from jobs | Marketing Copy | `skill.generate_marketing_copy(struggle="Takes too long", desired_outcome="Save time")` |
+| Create a step-by-step job map | Job Map | `jm = skill.create_job_map("Booking"); jm.add_need("define", "Set dates", importance=9, satisfaction=5)` |
+| Diagnose adoption barriers | Obstacle Diagnosis | `diag = skill.diagnose_obstacles("App"); diag.add_obstacle("switching_cost", "Hard to migrate data", severity=4)` |
+| Get full JTBD analysis with business context | Full Analysis + CEO | `skill.analyze(include_ceo_analysis=True)` |
+
+> 💡 **Most common first step**: `skill.generate_interview()` — start with Switch interviews to understand why users hire/fire products.
 
 ### 🚀 Next Steps / 下一步
 
