@@ -666,6 +666,15 @@ jtbd.analyze(product="产品名",
 | **Startup Founders** | Identify market gaps and innovation opportunities |
 | **AI Agents** | Zero-dependency Python package for automated JTBD workflows |
 
+### ✅ 5-Minute Quick Start Checklist
+
+- [ ] **Install** — `cp -r jtbd-knowledge-skill /your/agent/skills/`
+- [ ] **Import** — `from jtbd import JTBDSkill`
+- [ ] **Initialize** — `skill = JTBDSkill("your product")`
+- [ ] **Analyze jobs** — `skill.analyze(product="product", jobs=[...], forces={...})`
+- [ ] **Interview guide** — `builder = InterviewBuilder("user interview"); builder.build()`
+- [ ] **Opportunity score** — `skill.score_opportunity("fast checkout", struggle=4, importance=5)`
+
 ### 🚀 Quick Start
 
 #### Step 1: Install
