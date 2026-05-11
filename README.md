@@ -268,8 +268,8 @@ jtbd-knowledge-skill/
 ├── pyproject.toml                 # Python 包构建配置
 ├── jtbd/                          # Python 包
 │   ├── __init__.py                # API 入口与导出（含 JTBDSkill facade）
-│   ├── analyzer.py                # JTBD 分析引擎
-│   ├── interview.py               # 访谈框架生成器
+│   ├── jtbd_analyzer.py           # JTBD 分析引擎
+│   ├── interview_generator.py     # 访谈框架生成器
 │   ├── forces.py                  # 进步力量分析
 │   ├── innovation.py              # 创新机会发现
 │   ├── config.py                  # 运行时配置
@@ -852,8 +852,8 @@ jtbd-knowledge-skill/
 ├── pyproject.toml                 # Python package build config
 ├── jtbd/                          # Python package
 │   ├── __init__.py                # API entry & exports (incl. JTBDSkill facade)
-│   ├── analyzer.py                # JTBD analysis engine
-│   ├── interview.py               # Interview guide generator
+│   ├── jtbd_analyzer.py           # JTBD analysis engine
+│   ├── interview_generator.py     # Interview guide generator
 │   ├── forces.py                  # Forces of Progress analysis
 │   ├── innovation.py              # Innovation opportunity discovery
 │   ├── config.py                  # Runtime configuration
@@ -1151,89 +1151,17 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 
 ## 🔗 Skill Ecosystem Workflow
 
-JTBD is the needs-insight core of the **AliDujie UX Research Skills Ecosystem**. Here are typical workflows combining it with other skills:
+JTBD is the needs-insight core of the **AliDujie UX Research Skills Ecosystem**. For the full Quick Decision Guide, see [above](#-quick-decision-guide-quick-decision-guide). For the complete end-to-end workflow, see [above](#-end-to-end-workflow-all-6-skills).
 
-### 🧭 Quick Decision Guide
+### Typical Cross-Skill Workflows
 
-| Your Question | Recommended Skill |
-|---------------|------------------|
-| "I want to understand why users do this" | → **JTBD Knowledge** (this skill) — Uncover the underlying "jobs" |
-| "I don't know what research to do" | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — Method recommendation |
-| "I need to validate a hypothesis" | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — A/B testing & sample size |
-| "I need to know who my users are" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — Create concrete personas |
-| "Is my product value strong enough?" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — Fit diagnosis |
-| "How do I present research results clearly?" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — Data storytelling |
-| "I need a structured framework for analysis" | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) — PESTEL, Five Forces, decision trees |
-| "I need to analyze a business problem systematically" | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) — Frameworks & strategic analysis |
-
-### Workflow 1: JTBD → Value Proposition Validation
-
-```
-JTBD (job discovery) → VPD (value design) → QuantUX (quantitative validation)
-```
-
-**Scenario**: New product direction validation
-1. Use JTBD to discover core user "jobs" and calculate opportunity scores
-2. Use VPD to map findings to value proposition canvas and design experiments
-3. Use QuantUX to design A/B tests for quantitative validation
-
-### Workflow 2: JTBD → User Understanding → Design
-
-```
-UDM (interviews) → JTBD (job analysis) → Persona (persona creation)
-```
-
-**Scenario**: User research-driven design
-1. Use UDM contextual interviews to collect user behavior data
-2. Use JTBD four-forces analysis to identify switching triggers
-3. Use Persona to create evidence-based user segments
-
-### Workflow 3: Competitive Analysis → Strategy
-
-```
-JTBD (competitive analysis) → VPD (competitive strategy) → SWD (strategy presentation)
-```
-
-**Scenario**: Market positioning analysis
-1. Use JTBD to analyze competitive alternatives and switching barriers
-2. Use VPD competitive strategy canvas to identify differentiation
-3. Use SWD to create executive-ready competitive analysis presentations
+| Workflow | Steps | Scenario |
+|----------|-------|----------|
+| **JTBD → Value Proposition** | JTBD (job discovery) → VPD (value design) → QuantUX (validation) | New product direction validation |
+| **JTBD → User Understanding** | UDM (interviews) → JTBD (job analysis) → Persona (creation) | User research-driven design |
+| **JTBD → Competitive Strategy** | JTBD (competitive analysis) → VPD (differentiation) → SWD (presentation) | Market positioning analysis |
 
 > 💡 **Tip**: JTBD pairs naturally with UDM — use UDM interview methods to uncover user "jobs," then use JTBD frameworks for structured analysis.
-
-### 🔄 End-to-End Workflow: All 6 Skills
-
-A complete user research-to-decision workflow using the full AliDujie ecosystem:
-
-```
-Step 1          Step 2          Step 3          Step 4          Step 5          Step 6
-┌──────┐       ┌──────┐       ┌──────┐       ┌──────┐       ┌──────┐       ┌──────┐
-│Persona│  ──►  │ JTBD │  ──►  │ UDM  │  ──►  │QuantUX│  ──►  │ VPD  │  ──►  │ SWD  │
-│ 👤   │       │ 🎯   │       │ 📖   │       │ 📊   │       │ 💎   │       │ 📈   │
-│角色定义│       │需求洞察│       │定性研究│       │定量验证│       │价值验证│       │数据汇报│
-└──────┘       └──────┘       └──────┘       └──────┘       └──────┘       └──────┘
-```
-
-**Real-World Scenario: Travel Booking Platform Redesign**
-
-1. **Persona**: Create "Business Traveler Zhang" and "Budget Traveler Li" segments from user data
-2. **JTBD**: Interview recent switchers → discover core Job is "reduce pre-trip anxiety" (Opp Score: 8.2)
-3. **UDM**: Run contextual interviews + diary studies → identify 3 key pain points in booking flow
-4. **QuantUX**: A/B test redesigned booking flow (n=5,000) → +15% conversion, p<0.01
-5. **VPD**: Update value proposition canvas → test new messaging "Book in 3 minutes, worry-free"
-6. **SWD**: Build executive presentation → context → charts → three-act story → approval for $2M budget
-
-```python
-# Full ecosystem in action
-from persona import PersonaSkill; persona = PersonaSkill("旅行平台")
-from jtbd import JTBDSkill; jtbd = JTBDSkill("旅行预订")
-from udm import UDMSkill; udm = UDMSkill("旅行预订")
-from quantux import QuantUXSkill; quantux = QuantUXSkill("旅行预订")
-from vpd import VPDSkill; vpd = VPDSkill("旅行预订", "商务人士")
-from swd import SWDSkill; swd = SWDSkill("Q1 旅行体验汇报")
-
-# Each skill feeds into the next — research-to-decision pipeline
-```
 
 ---
 
@@ -1429,7 +1357,9 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 ## 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
-| v3.1.45 | 2026-05-11 | 仓库维护：修复页脚版本不一致（v3.1.42→v3.1.44），补齐缺失的变更日志条目（v3.1.43–v3.1.44），确保 README/徽章/CHANGELOG 三端版本对齐 |
+| v3.1.45 | 2026-05-11 | 仓库维护：修复项目结构中 Python 模块名称与实际文件名不一致（analyzer→jtbd_analyzer, interview→interview_generator），补齐英文版本历史条目（v3.1.42–v3.1.44），增强文档一致性 |
+| v3.1.44 | 2026-05-11 | 仓库维护：增强英文版快速开始清单，提升英文用户发现性，验证生态交叉引用一致性 |
+| v3.1.43 | 2026-05-11 | 仓库维护：添加英文初学者快速参考卡，补充 ODI 双轨评分文档引用，版本升级至 3.1.43 |
 | v3.1.42 | 2026-05-11 | 仓库维护：增强跨技能集成示例，修复格式不一致问题，改进新手入门指南，更新 Last Updated
 | v3.1.38 | 2026-05-09 | 仓库维护：添加英文版项目结构，提升中英双语一致性，增强文档完整性 |
 | v3.1.37 | 2026-05-09 | 仓库维护：修复 SKILL.md 版本不一致，对齐 README 页脚版本引用，验证生态交叉引用一致性，改进版本历史表格排序 |
@@ -1483,9 +1413,15 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 
 | Version | Date | Changes |
 |---------|------|--------|
-| v3.1.45 | 2026-05-11 | Repo maintenance: fixed footer version mismatch (v3.1.42→v3.1.44), added missing changelog entries (v3.1.43–v3.1.44), ensured README/badge/CHANGELOG alignment |
+| v3.1.45 | 2026-05-11 | Repo maintenance: fixed project structure module name mismatches (analyzer→jtbd_analyzer, interview→interview_generator), aligned CN/EN changelog entries, enhanced documentation consistency |
 | v3.1.44 | 2026-05-11 | Repo maintenance: added English 5-minute Quick Start checklist, enhanced discoverability for English-speaking users, verified ecosystem cross-references |
+| v3.1.43 | 2026-05-11 | Repo maintenance: added English beginner quick reference card, updated ODI dual-track scoring docs, version bump to 3.1.43 |
+| v3.1.42 | 2026-05-11 | Repo maintenance: enhanced cross-skill integration examples, fixed formatting inconsistencies, improved beginner onboarding guide, updated Last Updated |
 | v3.1.41 | 2026-05-10 | Repo maintenance: added English cheat sheet (JTBD statement template, Forces of Progress quick reference, opportunity scoring guide), updated Last Updated badge |
+| v3.1.40 | 2026-05-10 | Repo maintenance: added English JTBD 4-force analysis example, enhanced bilingual content parity |
+| v3.1.39 | 2026-05-10 | Repo maintenance: added English FAQ section, updated troubleshooting table for English readers |
+| v3.1.38 | 2026-05-09 | Repo maintenance: added English Project Structure section, enhanced documentation completeness, bilingual parity |
+| v3.1.37 | 2026-05-09 | Repo maintenance: fixed SKILL.md version mismatch, aligned README footer version, verified ecosystem cross-references, improved changelog table ordering |
 | v3.1.35 | 2026-05-09 | Repo maintenance: added English case studies section with practical code examples, enhanced bilingual content parity, added cross-skill integration code samples |
 | v3.1.32 | 2026-05-08 | Repo maintenance: enhanced JTBD workshop facilitation content, improved multi-skill workflow integration examples, updated Last Updated to 2026-05-08, version bump to 3.1.32 |
 | v3.1.30 | 2026-05-07 | Repo maintenance: added "When to use JTBD" decision guide to SKILL.md, added cross-skill workflow examples to README, version bump to 3.1.30 |
