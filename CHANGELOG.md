@@ -2,6 +2,9 @@
 
 Repo maintenance: fixed ecosystem workflow API calls in README and SKILL.md (jtbd.analyze, persona.add_persona), updated quick start checklist and 5 code blocks.
 
+- Fixed README footer version mismatch (v3.1.46→v3.1.47) to align with SKILL.md/badge
+- Added "Next Skill to Try" column to English "Who Is This For?" table with ecosystem cross-references
+
 ## v3.1.46 (2026-05-11)
 
 Repo maintenance: fixed project structure module name mismatches (analyzer→jtbd_analyzer, interview→interview_generator), aligned CN/EN changelog entries, enhanced documentation consistency.
