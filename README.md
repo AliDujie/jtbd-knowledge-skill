@@ -654,13 +654,13 @@ jtbd.analyze(include_ceo_analysis=True)  # Analyzes pre-configured jobs data
 
 ### 👥 Who Is This For?
 
-| Role | Use Case |
-|------|----------|
-| **Product Managers** | Understand why users switch, discover unmet needs |
-| **UX Researchers** | Structured JTBD interviews, uncover the real "job" |
-| **Marketing Teams** | JTBD-based messaging and positioning |
-| **Startup Founders** | Identify market gaps and innovation opportunities |
-| **AI Agents** | Zero-dependency Python package for automated JTBD workflows |
+| Role | Use Case | Next Skill to Try |
+|------|----------|-------------------|
+| **Product Managers** | Understand why users switch, discover unmet needs | → [VPD](https://github.com/AliDujie/value-proposition-design) for value canvas |
+| **UX Researchers** | Structured JTBD interviews, uncover the real "job" | → [UDM](https://github.com/AliDujie/universal-design-methods) for interview methods |
+| **Marketing Teams** | JTBD-based messaging and positioning | → [SWD](https://github.com/AliDujie/storytelling-with-data) for presenting insights |
+| **Startup Founders** | Identify market gaps and innovation opportunities | → [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) for market sizing |
+| **AI Agents** | Zero-dependency Python package for automated JTBD workflows | → Any of the 5 companion skills for full workflow |
 
 ### ✅ 5-Minute Quick Start Checklist
 
@@ -1514,4 +1514,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-11 | AliDujie Skill Ecosystem | v3.1.46*
+*Last Updated: 2026-05-11 | AliDujie Skill Ecosystem | v3.1.47*
