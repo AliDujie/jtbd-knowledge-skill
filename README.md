@@ -613,6 +613,7 @@ jtbd.analyze(product="产品名",
 - [Best Practices](#-best-practices)
 - [FAQ](#-faq)
 - [User Reviews](#-user-reviews)
+- [Getting Help](#-getting-help)
 - [Extended Reading](#-extended-reading)
 - [Related Skills](#-related-skills-1)
 - [End-to-End Workflow: All 6 Skills](#-end-to-end-workflow-all-6-skills)
@@ -1497,6 +1498,20 @@ Ready to go deeper? Here's what to try next:
 Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), integrating four JTBD schools: Klement (Forces of Progress), Ulwick (ODI), Wunker (Jobs Atlas), and Kalbach (Job Stories).
 
 **Applicable to:** Product Managers, UX Researchers, Marketers, Entrepreneurs
+
+### 🆘 Getting Help
+
+- 📖 Check the [Troubleshooting](#-troubleshooting) section for common issues
+- 📚 Read the JTBD methodology guides in [references/](references/)
+- 💬 Open an issue on [GitHub](https://github.com/AliDujie/jtbd-knowledge-skill/issues)
+
+### 📖 Extended Reading
+
+| Book | Author | Related Capability |
+|------|--------|--------------------|
+| *When Coffee and Kale Compete* (2nd Ed) | Alan Klement | Full JTBD methodology — Forces of Progress |
+| *Competing Against Luck* | Clayton Christensen & Taddy Hall | JTBD theory and innovation |
+| *Jobs to Be Done: Theory to Practice* | Anthony Ulwick | ODI framework and opportunity scoring |
 
 ### 🤝 Contributing
 
