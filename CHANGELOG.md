@@ -1,3 +1,12 @@
+## v3.1.45 (2026-05-11)
+
+Repo maintenance: fixed project structure module name mismatches (analyzer→jtbd_analyzer, interview→interview_generator), aligned CN/EN changelog entries, enhanced documentation consistency.
+
+- Fixed Python module name references in project structure to match actual filenames (analyzer→jtbd_analyzer, interview→interview_generator)
+- Added missing v3.1.43–v3.1.45 entries to English changelog table in README
+- Aligned Chinese and English changelog entries for consistency
+- No breaking changes
+
 ## v3.1.44 (2026-05-11)
 
 Repo maintenance: added English 5-minute Quick Start checklist to improve onboarding, enhanced discoverability for English-speaking users, verified all ecosystem cross-references.

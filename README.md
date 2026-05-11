@@ -1131,14 +1131,17 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 
 | Version | Date | Changes |
 |---------|------|--------|
+| v3.1.45 | 2026-05-11 | Repo maintenance: fixed project structure module name mismatches (analyzer→jtbd_analyzer, interview→interview_generator), aligned CN/EN changelog entries, enhanced documentation consistency |
+| v3.1.44 | 2026-05-11 | Repo maintenance: added English 5-minute Quick Start checklist, enhanced discoverability for English-speaking users, verified ecosystem cross-references |
+| v3.1.43 | 2026-05-11 | Repo maintenance: added English beginner quick reference card, updated ODI dual-track scoring docs, version bump to 3.1.43 |
 | v3.1.42 | 2026-05-11 | Repo maintenance: enhanced cross-skill integration examples, fixed formatting inconsistencies, improved beginner onboarding guide, updated Last Updated |
 | v3.1.38 | 2026-05-09 | Repo maintenance: added English Project Structure section for bilingual parity, enhanced documentation completeness |
 | v3.1.37 | 2026-05-09 | Repo maintenance: fixed SKILL.md version mismatch, aligned README footer version, verified ecosystem cross-references, improved changelog table ordering |
 | v3.1.35 | 2026-05-09 | Repo maintenance: added English case studies section with practical code examples, enhanced bilingual content parity (CN/EN), added cross-skill integration code samples |
 | v3.1.34 | 2026-05-09 | Repo maintenance: fixed footer version mismatch (v3.1.32→v3.1.34), enhanced cross-skill ecosystem workflow clarity, updated ecosystem links to all 5 sibling skills, aligned version across README/SKILL.md/pyproject.toml |
 | v3.1.32 | 2026-05-08 | Repo maintenance: enhanced JTBD workshop facilitation content, improved multi-skill workflow integration examples, updated Last Updated to 2026-05-08, version bump to 3.1.32 |
-| v3.1.21 | 2026-05-06 | Repo maintenance: fixed README footer version mismatch (footer was 2 versions behind badge), aligned all version references, verified ecosystem cross-references and bilingual consistency |
 | v3.1.22 | 2026-05-06 | Repo maintenance: updated Last Updated timestamp, version bump to 3.1.22, verified ecosystem cross-references and bilingual consistency |
+| v3.1.21 | 2026-05-06 | Repo maintenance: fixed README footer version mismatch (footer was 2 versions behind badge), aligned all version references, verified ecosystem cross-references and bilingual consistency |
 | v3.1.7 | 2026-05-03 | Repo maintenance: improved Quick Start scenario 4-7 code comment readability, aligned SKILL.md version with README.md |
 | v3.1.5 | 2026-05-03 | Repo maintenance: added English version history table at README end, added classifiers and project.urls to pyproject.toml |
 | v3.1.4 | 2026-05-03 | Repo maintenance: cross-ecosystem consistency review, verified cross-references and version alignment |
@@ -1364,8 +1367,8 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 | v3.1.38 | 2026-05-09 | 仓库维护：添加英文版项目结构，提升中英双语一致性，增强文档完整性 |
 | v3.1.37 | 2026-05-09 | 仓库维护：修复 SKILL.md 版本不一致，对齐 README 页脚版本引用，验证生态交叉引用一致性，改进版本历史表格排序 |
 | v3.1.32 | 2026-05-08 | 仓库维护：增强 JTBD 工作坊引导内容，改进多技能工作流集成示例，更新 Last Updated 至 2026-05-08，版本升级至 3.1.32 |
-| v3.1.30 | 2026-05-07 | 仓库维护：在 SKILL.md 中添加"什么时候使用 JTBD"决策指南，在 README 中添加跨技能工作流示例，版本升级至 3.1.30 |
 | v3.1.31 | 2026-05-07 | 仓库维护：在快速决策指南中添加 Structured Thinking Model 引用（中英文），提升跨技能发现性，版本升级至 3.1.31 |
+| v3.1.30 | 2026-05-07 | 仓库维护：在 SKILL.md 中添加"什么时候使用 JTBD"决策指南，在 README 中添加跨技能工作流示例，版本升级至 3.1.30 |
 | v3.1.29 | 2026-05-07 | 仓库维护：SKILL.md 版本号升级至 3.1.29，验证生态交叉引用一致性 |
 | v3.1.28 | 2026-05-07 | 仓库维护：版本升级至 v3.1.28，对齐 SKILL.md 和 pyproject.toml 版本号，对齐变更日志条目 |
 | v3.1.27 | 2026-05-07 | 仓库维护：修复页脚版本不一致，添加生态系统工作流 Pro Tip，版本升级至 v3.1.27 |
@@ -1424,8 +1427,8 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 | v3.1.37 | 2026-05-09 | Repo maintenance: fixed SKILL.md version mismatch, aligned README footer version, verified ecosystem cross-references, improved changelog table ordering |
 | v3.1.35 | 2026-05-09 | Repo maintenance: added English case studies section with practical code examples, enhanced bilingual content parity, added cross-skill integration code samples |
 | v3.1.32 | 2026-05-08 | Repo maintenance: enhanced JTBD workshop facilitation content, improved multi-skill workflow integration examples, updated Last Updated to 2026-05-08, version bump to 3.1.32 |
-| v3.1.30 | 2026-05-07 | Repo maintenance: added "When to use JTBD" decision guide to SKILL.md, added cross-skill workflow examples to README, version bump to 3.1.30 |
 | v3.1.31 | 2026-05-07 | Repo maintenance: added Structured Thinking Model to Quick Decision Guide (CN+EN), enhanced cross-skill discoverability, version bump to 3.1.31 |
+| v3.1.30 | 2026-05-07 | Repo maintenance: added "When to use JTBD" decision guide to SKILL.md, added cross-skill workflow examples to README, version bump to 3.1.30 |
 | v3.1.29 | 2026-05-07 | Repo maintenance: SKILL.md version bump to 3.1.29, verified cross-skill ecosystem consistency
 | v3.1.27 | 2026-05-07 | Repo maintenance: version bump to 3.1.28, aligned SKILL.md and pyproject.toml versions
 | v3.1.26 | 2026-05-07 | Repo maintenance: fixed footer version mismatch, added ecosystem workflow Pro Tip, bumped to v3.1.26
