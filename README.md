@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.48-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.49-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-12-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -895,6 +895,24 @@ jtbd-knowledge-skill/
 - **Write Job Stories, not User Stories** — "When [situation], I want to [motivation], so I can [expected outcome]" captures context that user stories miss.
 - **Compete with "non-consumption"** — The biggest competitor is often the status quo (doing nothing, spreadsheets, workarounds). Don't ignore it.
 
+### 📋 JTBD Statement Quick Reference
+
+A well-formed JTBD statement follows this structure:
+
+```
+When [SITUATION/CONTEXT]
+I want to [MOTIVATION/ACTION]
+So I can [EXPECTED OUTCOME/VALUE]
+```
+
+| Job Type | Template | Example |
+|----------|----------|---------|
+| **Functional** | When ___ , I want to ___ , so I can ___ | "When planning a team meeting, I want to find a time everyone is free, so I can avoid scheduling conflicts" |
+| **Emotional** | When ___ , I want to feel ___ , so I can ___ | "When switching tools, I want to feel confident, so I can recommend it to my team" |
+| **Social** | When ___ , I want others to see me as ___ , so I can ___ | "When presenting data, I want others to see me as thorough, so I can build trust" |
+
+> 💡 **Quick test**: If your JTBD statement mentions a specific product or feature, it's wrong. JTBD should be solution-agnostic.
+
 ### ⛔ When NOT to Use This Skill
 
 - **Choosing research methods or designing interviews** — Use [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) for study design
@@ -1514,4 +1532,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.48*
+*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.49*

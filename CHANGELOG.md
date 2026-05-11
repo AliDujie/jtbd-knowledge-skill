@@ -1,3 +1,7 @@
+## v3.1.49 (2026-05-12)
+
+Repo maintenance: added "JTBD Statement Quick Reference" with functional/emotional/social templates in English README, enhanced JTBD statement writing guidance.
+
 ## v3.1.48 (2026-05-12)
 
 Repo maintenance: updated README footer date (2026-05-11→2026-05-12), version bump, verified ecosystem cross-references and version alignment across README/SKILL.md/pyproject.toml.
