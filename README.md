@@ -30,7 +30,7 @@
 - [ ] **安装** — `cp -r jtbd-knowledge-skill /your/agent/skills/`
 - [ ] **导入** — `from jtbd import JTBDSkill`
 - [ ] **初始化** — `skill = JTBDSkill("你的产品")`
-- [ ] **JTBD 分析** — `skill.analyze(product="产品名", jobs=[...], forces={...})`
+- [ ] **JTBD 分析** — `skill.analyze(include_ceo_analysis=True)`
 - [ ] **访谈提纲** — `builder = InterviewBuilder("用户访谈"); builder.build()`
 - [ ] **机会分数** — `analyzer = JTBDAnalyzer("产品"); analyzer.generate_report()`
 - [ ] **四力诊断** — `profile = ForcesProfile(); profile.diagnose()`
@@ -515,10 +515,7 @@ from swd import SWDSkill
 
 # 阶段 1: JTBD 分析
 jtbd = JTBDSkill("外卖平台")
-report = jtbd.analyze(product="外卖平台",
-    jobs=[{"context": "工作日午餐", "motivation": "快速找到好吃的", "outcome": "不纠结吃什么"}],
-    forces={"push": 4, "pull": 5, "anxiety": 3, "habit": 2}
-)
+report = jtbd.analyze(include_ceo_analysis=True)  # JTBD analysis with CEO decision support
 
 # 阶段 2: VPD 验证
 vpd = VPDSkill("外卖平台", "白领用户")
@@ -552,10 +549,7 @@ guide = udm.generate_interview("用户访谈", "contextual")
 
 # JTBD 结构化分析
 jtbd = JTBDSkill("产品名")
-jtbd.analyze(product="产品名",
-    jobs=[{"context": "访谈中发现的场景", "motivation": "用户动机", "outcome": "期望结果"}],
-    forces={"push": 4, "pull": 5, "anxiety": 3, "habit": 2}
-)
+jtbd.analyze(include_ceo_analysis=True)  # Analyzes pre-configured jobs data
 ```
 
 #### 集成 2: JTBD → Web Persona 精化
@@ -565,12 +559,15 @@ from jtbd import JTBDSkill
 from persona import PersonaSkill
 
 jtbd = JTBDSkill("产品名")
-report = jtbd.analyze(product="产品名")
+report = jtbd.analyze(include_ceo_analysis=True)  # JTBD analysis report
 
 # 基于 JTBD 发现创建 Persona
 persona = PersonaSkill("产品名")
-persona.add_persona(name="效率型用户", archetype="追求快速完成任务",
-    goals=[report.get_top_jobs()], pain_points=[report.get_top_anxieties()])
+persona.add_persona(
+    name="效率型用户", short_desc="追求快速完成任务", priority="primary",
+    quote="我想快速完成", goals=["省时省力"], behaviors=["高频使用"],
+    attitudes=["效率优先"], bio="追求效率的用户"
+)
 ```
 
 #### 集成 3: JTBD → 营销策略
@@ -579,9 +576,7 @@ persona.add_persona(name="效率型用户", archetype="追求快速完成任务"
 from jtbd import JTBDSkill
 
 jtbd = JTBDSkill("产品名")
-jtbd.analyze(product="产品名",
-    jobs=[{"context": "出差时", "motivation": "快速找到住处", "outcome": "专注工作"}]
-)
+jtbd.analyze(include_ceo_analysis=True)  # Analyzes pre-configured jobs data
 # JTBD 自动生成营销文案
 # 挣扎共鸣 → 进步愿景 → 消除焦虑 → 克服惯性 → 行动号召
 ```
@@ -672,7 +667,7 @@ jtbd.analyze(product="产品名",
 - [ ] **Install** — `cp -r jtbd-knowledge-skill /your/agent/skills/`
 - [ ] **Import** — `from jtbd import JTBDSkill`
 - [ ] **Initialize** — `skill = JTBDSkill("your product")`
-- [ ] **Analyze jobs** — `skill.analyze(product="product", jobs=[...], forces={...})`
+- [ ] **Analyze jobs** — `skill.analyze(include_ceo_analysis=True)`
 - [ ] **Interview guide** — `builder = InterviewBuilder("user interview"); builder.build()`
 - [ ] **Opportunity score** — `skill.score_opportunity("fast checkout", struggle=4, importance=5)`
 

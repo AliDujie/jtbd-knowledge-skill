@@ -405,9 +405,7 @@ vpd.analyze_canvas(
 # Step 1: JTBD 产出机会评分报告
 from jtbd import JTBDSkill
 jtbd = JTBDSkill("电商平台")
-report = jtbd.analyze(product="电商平台",
-    jobs=[{"context": "工作日午餐", "motivation": "快速找到好吃的", "outcome": "不纠结吃什么"}],
-    forces={"push": 4, "pull": 5, "anxiety": 3, "habit": 2})
+report = jtbd.analyze(include_ceo_analysis=True)  # Analyzes pre-configured jobs data
 # Step 2: SWD 将 JTBD 发现转化为高管汇报
 from swd import SWDSkill
 swd = SWDSkill("JTBD 洞察汇报")
