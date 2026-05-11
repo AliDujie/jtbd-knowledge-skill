@@ -49,6 +49,15 @@ Persona (角色定义)
 
 **进步力量模型**：推力（Push）、拉力（Pull）、焦虑（Anxiety）、惯性（Inertia）。净推动力 = (推力+拉力) - (焦虑+惯性)。
 
+## 🌟 为什么选择 JTBD？
+
+- **经典方法论** — 融合四大 JTBD 学派（Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories），全球 500+ 企业采用的需求洞察框架
+- **13 大执行能力** — 访谈提纲、调查问卷、机会评分、优先级矩阵、竞争分析、营销文案、增长策略、JTBD 描述、Job Map、Outcome、Job Stories、障碍诊断、Jobs Atlas
+- **进步力量模型** — Push / Pull / Anxiety / Habit 四力分析，理解用户"为什么换"而非"喜欢什么"
+- **零学习成本** — 纯 Python 标准库，无外部依赖，`from jtbd import JTBDSkill` 即可使用
+- **双语支持** — 完整中英文文档，适合国际化团队
+- **生态核心** — 与 UDM、QuantUX、Persona、VPD、SWD 等 5 个技能无缝协作，从用户洞察到商业决策
+
 ## 触发条件
 
 | 触发词 / 场景 | 激活能力 |
