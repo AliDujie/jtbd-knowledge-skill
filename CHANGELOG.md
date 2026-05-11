@@ -1,3 +1,7 @@
+## v3.1.47 (2026-05-12)
+
+Repo maintenance: fixed ecosystem workflow API calls in README and SKILL.md (jtbd.analyze, persona.add_persona), updated quick start checklist and 5 code blocks.
+
 ## v3.1.46 (2026-05-11)
 
 Repo maintenance: fixed project structure module name mismatches (analyzer→jtbd_analyzer, interview→interview_generator), aligned CN/EN changelog entries, enhanced documentation consistency.
