@@ -1,3 +1,7 @@
+## v3.1.50 (2026-05-12)
+
+Repo maintenance: fixed `__init__.py` version mismatch (3.1.45→3.1.50), verified all Python module exports are importable, confirmed ecosystem cross-references.
+
 ## v3.1.49 (2026-05-12)
 
 Repo maintenance: added "JTBD Statement Quick Reference" with functional/emotional/social templates in English README, enhanced JTBD statement writing guidance.
