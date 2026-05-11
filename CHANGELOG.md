@@ -1,4 +1,4 @@
-## v3.1.45 (2026-05-11)
+## v3.1.46 (2026-05-11)
 
 Repo maintenance: fixed project structure module name mismatches (analyzer→jtbd_analyzer, interview→interview_generator), aligned CN/EN changelog entries, enhanced documentation consistency.
 
