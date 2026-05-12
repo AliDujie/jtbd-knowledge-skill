@@ -1,6 +1,6 @@
 ---
 name: jtbd-knowledge-skill
-version: "3.1.54"
+version: "3.1.55"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派——Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合——
@@ -57,6 +57,26 @@ Persona (角色定义)
 - **零学习成本** — 纯 Python 标准库，无外部依赖，`from jtbd import JTBDSkill` 即可使用
 - **双语支持** — 完整中英文文档，适合国际化团队
 - **生态核心** — 与 UDM、QuantUX、Persona、VPD、SWD 等 5 个技能无缝协作，从用户洞察到商业决策
+
+## ⚡ 快速上手 (Quick Start)
+
+```python
+from jtbd import JTBDSkill
+
+skill = JTBDSkill("你的产品名")
+
+# 机会评分
+score = skill.score_opportunity("快速完成预订", importance=9, satisfaction=5)
+# → Opportunity Score: 8.2
+
+# 四力分析
+forces = skill.analyze_forces("用户从竞品切换到我们的产品")
+
+# 全面分析（含 CEO 决策）
+report = skill.analyze(include_ceo_analysis=True)
+```
+
+> 💡 **5 分钟上手**: `from jtbd import JTBDSkill` → 纯标准库，零依赖，开箱即用。
 
 ## 触发条件
 

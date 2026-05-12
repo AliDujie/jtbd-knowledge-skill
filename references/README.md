@@ -23,12 +23,13 @@ This directory contains methodology reference documents for the JTBD Knowledge s
 | `13-jobs-atlas.md` | Jobs Atlas 框架（Wunker） |
 | `14-playbook-tools.md` | JTBD 实践工具包 |
 | `15-glossary.md` | JTBD 术语表 |
+| `16-ecosystem-collaboration.md` | JTBD 跨技能协作指南（JTBD → UDM/QuantUX/VPD/SWD 工作流） |
 
 ## 使用方法 / Usage
 
-这些参考文档供 AI Agent 在执行 JTBD 分析时查阅，涵盖从理论到实践的完整知识体系。
+这些参考文档供 AI Agent 在执行 JTBD 分析时查阅，涵盖从理论到实践的完整知识体系。`16-ecosystem-collaboration.md` 提供 JTBD 与其他技能的端到端协作工作流。
 
-These reference documents are consulted by the AI Agent during JTBD analysis, covering the complete knowledge system from theory to practice.
+These reference documents are consulted by the AI Agent during JTBD analysis, covering the complete knowledge system from theory to practice. `16-ecosystem-collaboration.md` provides end-to-end collaboration workflows between JTBD and other skills.
 
 ## 🌐 技能生态关联 / Skill Ecosystem Connections
 
