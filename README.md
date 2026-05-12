@@ -1680,6 +1680,7 @@ This skill is part of a **7-skill UX research ecosystem** — each covers a diff
 | 📊 [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | Validation Engine | Prove qualitative hypotheses with data |
 | 💎 [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | Value Design | Bridge user needs to testable value propositions |
 | 📈 [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Presentation Layer | Turn findings into executive-ready narratives |
+| 🧠 [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | Strategic Analysis | Apply business frameworks to research insights |
 
 > 💡 **Quick Tip**: JTBD is the bridge between user needs and product strategy. Try: `UDM (discover jobs) → JTBD (score opportunities) → VPD (design solutions) → QuantUX (validate fit) → SWD (present results)`
 
