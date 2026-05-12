@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.51-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.52-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-12-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -85,6 +85,18 @@
 jobs-to-be-done jtbd user-research opportunity-scoring
 forces-of-progress python-toolkit openclaw-skill alicloud
 ```
+
+### 🌍 实战场景指南
+
+| 你的场景 | 调用方式 | 输出结果 |
+|----------|---------|----------|
+| "用户为什么转向竞品？" | `analyze(jobs=[...], pains=[...])` | 按未满足需求排序的机会分数 |
+| "结构化用户访谈" | `InterviewBuilder("用户访谈").build()` | JTBD 格式的访谈问题 |
+| "哪个功能该优先做？" | `generate_priority_matrix()` | 重要性 vs 满意度二维矩阵 |
+| "写有说服力的营销文案" | `generate_marketing_copy(target_job="...")` | 基于真实用户 Jobs 的信息 |
+| "理解用户转换动力" | `ForcesProfile().diagnose()` | 推力/拉力/焦虑/习惯分析 |
+
+> 💡 **提示**: JTBD 回答"为什么"——在 UDM 访谈后用 JTBD 框架将发现结构化为可执行的 Jobs 陈述。
 
 ### 🌟 为什么使用这个技能？(Why Use This Skill?)
 
@@ -736,6 +748,20 @@ diag = skill.diagnose_obstacles("Travel booking platform")
 diag.add_obstacle("lack_of_knowledge", "Users unaware the platform exists", severity=4)
 print(diag.render_markdown())  # Severity scoring + elimination strategies
 ```
+
+### 🌍 Real-World Scenario Guide
+
+> **Need to understand WHY users switch?** Here are common scenarios and exactly how to use this skill.
+
+| Scenario | What to Call | Expected Output |
+|----------|-------------|----------------|
+| "Why do users churn to competitors?" | `analyze(jobs=[...], pains=[...])` | Opportunity scores ranked by unmet need |
+| "Structure my user interviews" | `InterviewBuilder("用户访谈").build()` | JTBD-formatted interview questions |
+| "Which feature should we prioritize?" | `generate_priority_matrix()` | Importance vs Satisfaction 2x2 matrix |
+| "Write compelling marketing copy" | `generate_marketing_copy(target_job="...")` | Messaging based on real user Jobs |
+| "Understand switching dynamics" | `ForcesProfile().diagnose()` | Push/Pull/Anxiety/Habit analysis |
+
+**Quick Tip:** JTBD answers "why" — use it after UDM interviews to structure findings into actionable Jobs statements.
 
 ### 💡 13 Core Capabilities
 
@@ -1574,4 +1600,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.51*
+*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.52*
