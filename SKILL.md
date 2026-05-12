@@ -448,3 +448,14 @@ JTBD 是 **AliDujie UX 研究技能生态系统** 的需求洞察层，与其他
 | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | 价值验证 | JTBD Jobs → VPD 画布填充 |
 | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | 数据叙事 | JTBD 洞察 → SWD 数据故事 |
 | [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | 战略框架 | STM PESTEL/五力 → JTBD 市场评估 |
+
+### 🔗 扩展生态 (Extended Ecosystem)
+
+JTBD 需求洞察可与管理层技能结合，将用户 Jobs 转化为商业决策：
+
+| 扩展技能 | 协作场景 |
+|---------|----------|
+| [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD 市场规模估算 → CEO 投资决策 |
+| [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD 机会分数 → CPO 产品路线图调整 |
+| [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD 竞争分析 → CMO 品牌差异化定位 |
+| [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD 发现 → CEO 计划审查与 10x 机会识别 |

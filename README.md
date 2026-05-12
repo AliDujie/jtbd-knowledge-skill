@@ -1243,6 +1243,27 @@ python3 jtbd/tests/test_all.py
 python3 -m pytest jtbd/tests/test_all.py -v
 ```
 
+### 🛠️ 故障排查 (Troubleshooting)
+
+| 问题 | 原因 | 解决方案 |
+|------|------|----------|
+| 机会分数偏高 | struggle/alternative 评分过高 | 回归实际用户数据，用 JTBD 访谈获取真实挣扎强度 |
+| 四力分析结果模糊 | 未区分 Push 和 Pull | Push 是现状不满，Pull 是新方案吸引力——分开访谈 |
+| Job Map 阶段太多 | 超出 Ulwick 八阶段框架 | 合并相似阶段，控制在 8 个标准阶段内 |
+| Job Stories 不够具体 | situation 描述太泛 | 包含时间/地点/情绪三要素，如"深夜加班后想快速订餐" |
+| 竞争分析遗漏非消费 | 只关注直接竞品 | 最大的竞争往往来自"用户什么都不用" |
+
+### 🤝 最佳实践
+
+| # | 原则 | 说明 |
+|---|------|------|
+| 1 | 四力先行 | 任何分析先做 Push/Pull/Anxiety/Habit，这是 JTBD 的基石 |
+| 2 | 关注切换时刻 | 用户"为什么换"比"喜欢什么"更有价值 |
+| 3 | 非消费是最大竞品 | 用户不消费往往是最大的竞争威胁 |
+| 4 | 补偿行为 = 创新信号 | 用户自己拼凑解决方案 = 未被满足的需求 |
+| 5 | JTBD + UDM 最佳搭档 | UDM 访谈收集数据 → JTBD 框架结构化分析 |
+| 6 | 先定性后定量 | JTBD 访谈发现机会 → QuantUX 定量验证 → SWD 汇报 |
+
 ## 🤝 参与贡献 (Contributing)
 
 欢迎贡献！请查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解贡献指南。
