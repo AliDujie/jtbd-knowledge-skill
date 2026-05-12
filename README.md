@@ -4,10 +4,19 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.52-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.53-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-12-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
+
+```text
+┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐
+│ Persona │ →  │   JTBD   │ →  │ UDM │ →  │ QuantUX  │ →  │ VPD │ →  │ SWD │
+│ 角色定义 │    │ 需求洞察  │    │ 研究方法 │    │ 定量验证  │    │ 价值设计│    │ 数据叙事 │
+└─────────┘    └──────────┘    └─────┘    └──────────┘    └─────┘    └─────┘
+```
+
+**JTBD is the needs-insight core** — revealing the underlying "jobs" that drive user behavior. Use it when you need to understand "why" users switch, adopt, or abandon.
 
 ---
 
@@ -106,6 +115,8 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 - **实战工具包** — 纯 Python 标准库实现，无外部依赖，5 分钟上手
 - **双语支持** — 完整中英文文档，适合国际化团队
 - **即插即用** — API 设计直观，代码示例丰富，即刻产出 JTBD 分析报告
+- **超越用户画像** — JTBD 不是描述用户是谁，而是揭示用户在什么情境下想完成什么"工作"——这是产品创新的核心驱动力
+- **四大 JTBD 学派融合** — 整合 Klement (进步力量)、Ulwick (ODI)、Wunker (Jobs Atlas)、Kalbach (Job Stories) 四大理论体系
 
 ### ⚡ 5 分钟快速开始 (Quick Start)
 
