@@ -32,12 +32,13 @@
 | [📈 Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | 数据叙事 | JTBD 洞察 → SWD 数据故事 → 高管展示 |
 | [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | 价值设计 | JTBD 工作 → VPD 画布 → 产品-市场契合 |
 | [👤 Web Persona](https://github.com/AliDujie/web-persona-skill) | 用户画像 | JTBD 工作 → Persona 角色创建 → 细分策略 |
+| [🧠 Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | 战略分析 | JTBD 洞察 → STM 框架分析 → 竞争战略 |
 
 ---
 
 ### 🔗 Ecosystem Quick Start / 生态系统快速上手
 
-JTBD 是 6 技能工作流的**需求洞察核心**——揭示驱动用户行为的深层 "Jobs"。
+JTBD 是 7 技能工作流的**需求洞察核心**——揭示驱动用户行为的深层 "Jobs"。
 
 ```
 Persona → JTBD (← 你在这里) → UDM → QuantUX → VPD → SWD
@@ -66,6 +67,13 @@ canvas = vpd.analyze_canvas(product_name="旅行平台", jobs=["快速找到性�
 ```
 
 > 💡 **提示**: JTBD 回答 "为什么"——在 Persona 定义 "谁" 之后用 JTBD 理解 "他们想完成什么"。
+
+> 💡 **Try it now / 立即尝试**:
+> ```python
+> from jtbd import JTBDSkill
+> skill = JTBDSkill("你的产品")
+> print(skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4))  # 立即评估机会分数
+> ```
 
 ### ✅ 5 分钟快速开始检查清单
 
@@ -667,7 +675,7 @@ jtbd.analyze(include_ceo_analysis=True)  # Analyzes pre-configured jobs data
 - [Getting Help](#-getting-help)
 - [Extended Reading](#-extended-reading)
 - [Related Skills](#-related-skills-1)
-- [End-to-End Workflow: All 6 Skills](#-end-to-end-workflow-all-6-skills)
+- [End-to-End Workflow: All 7 Skills](#-end-to-end-workflow-all-6-skills)
 - [Skill Ecosystem Workflow](#-skill-ecosystem-workflow-1)
 - [Version History](#-version-history-english)
 
@@ -876,10 +884,10 @@ result = skill.analyze(include_ceo_analysis=True)
 
 ### 🔄 End-to-End Ecosystem Workflow
 
-JTBD is the **opportunity bridge** of the ecosystem — connecting user needs to product strategy. Here's how it works with all 6 skills:
+JTBD is the **opportunity bridge** of the ecosystem — connecting user needs to product strategy. Here's how it works with all 7 skills:
 
 ```python
-# ===== From User Needs to Product Strategy (All 6 Skills) =====
+# ===== From User Needs to Product Strategy (All 7 Skills) =====
 # Step 1: UDM discovers raw user insights → Step 2: JTBD structures them into Jobs
 # Step 3: QuantUX measures opportunity size → Step 4: VPD designs the solution
 # Step 5: Persona targets the right users → Step 6: SWD pitches to stakeholders
@@ -1371,7 +1379,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 
 ### 🚀 完整端到端工作流：从用户洞察到增长策略 (End-to-End Workflow)
 
-以下是一个真实场景中，6 个技能如何协作完成从用户洞察到增长策略的完整工作流：
+以下是一个真实场景中，7 个技能如何协作完成从用户洞察到增长策略的完整工作流：
 
 **场景**: 旅行预订平台需要理解用户为什么转向竞品并制定增长策略
 
@@ -1662,7 +1670,7 @@ Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), i
 
 ### 🌐 Explore the Full AliDujie UX Research Ecosystem
 
-This skill is part of a **6-skill UX research ecosystem** — each covers a different phase of the research lifecycle. Combine them for end-to-end workflows:
+This skill is part of a **7-skill UX research ecosystem** — each covers a different phase of the research lifecycle. Combine them for end-to-end workflows:
 
 | Skill | Role | When to Use |
 |-------|------|-------------|
