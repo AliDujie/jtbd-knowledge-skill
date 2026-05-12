@@ -1,3 +1,7 @@
+## v3.1.51 (2026-05-12)
+
+Repo maintenance: added "Power Workflow: JTBD Opportunity Discovery to Product Strategy" code example in English README, demonstrating JTBD → VPD end-to-end workflow.
+
 ## v3.1.50 (2026-05-12)
 
 Repo maintenance: fixed `__init__.py` version mismatch (3.1.45→3.1.50), verified all Python module exports are importable, confirmed ecosystem cross-references.

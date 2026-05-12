@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.50-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.51-green.svg)](CHANGELOG.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-12-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -1527,6 +1527,27 @@ Ready to go deeper? Here's what to try next:
 
 > 💡 **Pro Tip**: JTBD is the bridge between user needs and product strategy. Try: UDM (discover jobs) → JTBD (score opportunities) → VPD (design solutions) → QuantUX (validate fit)
 
+### ⚡ Power Workflow: JTBD Opportunity Discovery to Product Strategy
+
+```python
+from jtbd import JTBDSkill
+from vpd import VPDSkill
+
+# 1. JTBD: Define jobs and analyze opportunities
+jtbd = JTBDSkill("在线协作工具")
+jobs = [{"description": "快速完成团队协作任务", "importance": 5, "satisfaction": 2}]
+opp = jtbd.analyze(jobs=jobs, pains=[{"description": "沟通碎片化", "frequency": "daily"}])
+
+# 2. JTBD: Generate JTBD statements
+statements = jtbd.generate_statements(scenarios=[{"context": "远程工作", "job": "协调团队进度"}])
+
+# 3. VPD: Map top opportunity to value canvas
+vpd = VPDSkill("在线协作平台", "团队负责人")
+canvas = vpd.analyze_canvas(product_name="协作工具", jobs=jobs, pains=[{"description": "沟通碎片化", "severity": "critical"}])
+
+# → From raw user jobs to validated value proposition
+```
+
 ### 👨‍💻 Credits
 
 Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), integrating four JTBD schools: Klement (Forces of Progress), Ulwick (ODI), Wunker (Jobs Atlas), and Kalbach (Job Stories).
@@ -1553,4 +1574,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.50*
+*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.51*
