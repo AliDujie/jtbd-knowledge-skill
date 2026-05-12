@@ -675,7 +675,7 @@ jtbd.analyze(include_ceo_analysis=True)  # Analyzes pre-configured jobs data
 - [Getting Help](#-getting-help)
 - [Extended Reading](#-extended-reading)
 - [Related Skills](#-related-skills-1)
-- [End-to-End Workflow: All 7 Skills](#-end-to-end-workflow-all-6-skills)
+- [End-to-End Workflow: All 7 Skills](#-end-to-end-workflow-all-7-skills)
 - [Skill Ecosystem Workflow](#-skill-ecosystem-workflow-1)
 - [Version History](#-version-history-english)
 
@@ -1247,7 +1247,7 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 
 ## 🔗 Skill Ecosystem Workflow
 
-JTBD is the needs-insight core of the **AliDujie UX Research Skills Ecosystem**. For the full Quick Decision Guide, see [above](#-quick-decision-guide-quick-decision-guide). For the complete end-to-end workflow, see [above](#-end-to-end-workflow-all-6-skills).
+JTBD is the needs-insight core of the **AliDujie UX Research Skills Ecosystem**. For the full Quick Decision Guide, see [above](#-quick-decision-guide-quick-decision-guide). For the complete end-to-end workflow, see [above](#-end-to-end-workflow-all-7-skills).
 
 ### Typical Cross-Skill Workflows
 
