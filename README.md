@@ -1660,10 +1660,25 @@ Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), i
 | *Competing Against Luck* | Clayton Christensen & Taddy Hall | JTBD theory and innovation |
 | *Jobs to Be Done: Theory to Practice* | Anthony Ulwick | ODI framework and opportunity scoring |
 
+### 🌐 Explore the Full AliDujie UX Research Ecosystem
+
+This skill is part of a **6-skill UX research ecosystem** — each covers a different phase of the research lifecycle. Combine them for end-to-end workflows:
+
+| Skill | Role | When to Use |
+|-------|------|-------------|
+| 👤 [Web Persona](https://github.com/AliDujie/web-persona-skill) | Foundation | Define WHO you're designing for |
+| 🎯 [JTBD Knowledge](https://github.com/AliDujie/jtbd-knowledge-skill) | Needs Insight | Understand WHY users behave the way they do |
+| 🔍 [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | Research Methods | Choose and execute research methods |
+| 📊 [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | Validation Engine | Prove qualitative hypotheses with data |
+| 💎 [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | Value Design | Bridge user needs to testable value propositions |
+| 📈 [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Presentation Layer | Turn findings into executive-ready narratives |
+
+> 💡 **Quick Tip**: JTBD is the bridge between user needs and product strategy. Try: `UDM (discover jobs) → JTBD (score opportunities) → VPD (design solutions) → QuantUX (validate fit) → SWD (present results)`
+
 ### 🤝 Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
 
 ---
 
-*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.54*
+*Last Updated: 2026-05-13 | AliDujie Skill Ecosystem | v3.1.54*
