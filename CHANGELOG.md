@@ -1,3 +1,7 @@
+## v3.1.54 (2026-05-13)
+
+Repo maintenance: added Chinese "为什么选择 AliDujie 技能生态系统" promotional section to README, verified version alignment across all files, updated last-updated date.
+
 ## v3.1.51 (2026-05-12)
 
 Repo maintenance: added "Power Workflow: JTBD Opportunity Discovery to Product Strategy" code example in English README, demonstrating JTBD → VPD end-to-end workflow.
