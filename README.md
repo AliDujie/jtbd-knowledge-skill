@@ -5,6 +5,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Version](https://img.shields.io/badge/version-3.1.53-green.svg)](CHANGELOG.md)
+[![Install Guide](https://img.shields.io/badge/install-guide-orange.svg)](INSTALL.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-12-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
@@ -33,6 +34,38 @@
 | [👤 Web Persona](https://github.com/AliDujie/web-persona-skill) | 用户画像 | JTBD 工作 → Persona 角色创建 → 细分策略 |
 
 ---
+
+### 🔗 Ecosystem Quick Start / 生态系统快速上手
+
+JTBD 是 6 技能工作流的**需求洞察核心**——揭示驱动用户行为的深层 "Jobs"。
+
+```
+Persona → JTBD (← 你在这里) → UDM → QuantUX → VPD → SWD
+```
+
+**组合调用示例：**
+```python
+# Step 1: Persona 定义用户后 → JTBD 挖掘深层需求
+from jtbd import JTBDSkill
+jtbd = JTBDSkill("旅行平台")
+
+# 机会评分：找出未满足的 Jobs
+score = jtbd.score_opportunity("快速找到性价比酒店", struggle=4, alternative=3, market=4, budget=4)
+
+# Step 2: 四力分析——理解用户为什么切换
+jtbd.add_force("push", "现有 App 搜索太慢，每次浪费 30 分钟")
+jtbd.add_force("pull", "竞品 AI 推荐功能")
+
+# Step 3: 生成 JTBD 访谈提纲
+guide = jtbd.generate_interview("用户访谈", ["competition", "push", "anxiety"])
+
+# Step 4: 将 JTBD 发现的 Jobs 交给 VPD 做价值主张设计
+from vpd import VPDSkill
+vpd = VPDSkill("旅行平台", "商旅用户")
+canvas = vpd.analyze_canvas(product_name="旅行平台", jobs=["快速找到性价比酒店"], pains=["搜索耗时"], gains=["节省时间"])
+```
+
+> 💡 **提示**: JTBD 回答 "为什么"——在 Persona 定义 "谁" 之后用 JTBD 理解 "他们想完成什么"。
 
 ### ✅ 5 分钟快速开始检查清单
 
@@ -1611,4 +1644,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.52*
+*Last Updated: 2026-05-12 | AliDujie Skill Ecosystem | v3.1.53*
