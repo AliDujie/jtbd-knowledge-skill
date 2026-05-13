@@ -768,6 +768,58 @@ forces = skill.analyze_forces()
 
 ---
 
+## 🔗 技能生态工作流 (Skill Ecosystem Workflow)
+
+JTBD 是 **AliDujie UX 研究技能生态系统** 的需求洞察核心。以下是与其他技能配合使用的典型工作流：
+
+### 🧭 快速决策指南 (Quick Decision Guide)
+
+| 你的问题 | 推荐技能 |
+|----------|----------|
+| "我想理解用户为什么这样做" | → **JTBD Knowledge** (本技能) — 挖掘用户背后的"工作" |
+| "我不知道该研究什么" | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — 方法推荐帮你找到方向 |
+| "我需要验证一个假设" | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — A/B 测试和样本量计算 |
+| "我需要知道用户是谁" | → [Web Persona](https://github.com/AliDujie/web-persona-skill) — 创建具体的人物角色 |
+| "我的产品价值够不够？" | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — 契合度诊断 |
+| "我怎么把研究结果讲清楚？" | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — 数据叙事和图表改造 |
+
+### 工作流 1: JTBD 访谈 → 机会评分 → 产品优先级
+
+```
+JTBD (用户访谈) → JTBD (机会评分) → 产品决策
+```
+
+**场景**: 功能优先级排序
+1. 用 JTBD 生成 Switch 访谈提纲，理解用户为什么切换
+2. 用 JTBD 机会评分算法量化每个未满足需求的价值
+3. 基于 ODI 分数确定产品 Roadmap 优先级
+
+### 工作流 2: 研究 → JTBD → 价值设计
+
+```
+UDM (定性研究) → JTBD (需求洞察) → VPD (价值设计)
+```
+
+**场景**: 新产品方向探索
+1. 用 UDM 执行用户访谈和可用性测试，收集定性数据
+2. 用 JTBD 分析数据，识别核心 Jobs、Pains 和 Gains
+3. 用 VPD 将 JTBD 发现映射到价值主张画布，设计解决方案
+
+### 工作流 3: JTBD → 定量验证 → 数据叙事
+
+```
+JTBD (机会洞察) → QuantUX (定量验证) → SWD (数据叙事)
+```
+
+**场景**: 市场机会验证
+1. 用 JTBD 发现高机会 Jobs，形成假设
+2. 用 QuantUX 设计 MaxDiff 调查验证优先级，计算样本量
+3. 用 SWD 将验证结果转化为引人入胜的数据叙事
+
+> 💡 **提示**: JTBD 最适合在研究数据收集后使用——帮你从 "用户说了什么" 提炼到 "用户真正要完成什么"。
+
+---
+
 ## English
 
 ### 📑 Table of Contents
@@ -1505,6 +1557,45 @@ canvas = vpd.analyze_canvas(product_name="协作工具", jobs=jobs, pains=[{"des
 # → From raw user jobs to validated value proposition
 ```
 
+### 🔗 Skill Ecosystem Workflow
+
+JTBD is the **needs-insight core** of the AliDujie UX Research Skills Ecosystem. Typical cross-skill workflows:
+
+### Workflow 1: JTBD Interviews → Opportunity Scoring → Product Priorities
+
+```
+JTBD (User Interviews) → JTBD (Opportunity Scoring) → Product Decisions
+```
+
+**Scenario**: Feature prioritization
+1. Use JTBD to generate Switch interview guides, understanding why users switch
+2. Use JTBD opportunity scoring to quantify the value of each unmet need
+3. Use ODI scores to determine product roadmap priorities
+
+### Workflow 2: Research → JTBD → Value Design
+
+```
+UDM (Qualitative Research) → JTBD (Needs Insight) → VPD (Value Design)
+```
+
+**Scenario**: New product direction
+1. Use UDM to conduct user interviews and usability tests, collecting qualitative data
+2. Use JTBD to analyze data, identifying core Jobs, Pains, and Gains
+3. Use VPD to map JTBD findings onto a Value Proposition Canvas and design solutions
+
+### Workflow 3: JTBD → Quantitative Validation → Data Storytelling
+
+```
+JTBD (Opportunity Insight) → QuantUX (Quantitative Validation) → SWD (Data Narrative)
+```
+
+**Scenario**: Market opportunity validation
+1. Use JTBD to discover high-opportunity Jobs, forming hypotheses
+2. Use QuantUX to design MaxDiff surveys validating priorities, calculating sample size
+3. Use SWD to transform validated findings into compelling data narratives
+
+> 💡 **Tip**: JTBD works best after data collection — helping you go from "what users say" to "what they are truly trying to accomplish."
+
 ### 👨‍💻 Credits
 
 Based on *When Coffee and Kale Compete* by Alan Klement (HarperCollins, 2023), integrating four JTBD schools: Klement (Forces of Progress), Ulwick (ODI), Wunker (Jobs Atlas), and Kalbach (Job Stories).
@@ -1547,4 +1638,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-13 | AliDujie Skill Ecosystem | v3.1.56*
+*Last Updated: 2026-05-13 | AliDujie Skill Ecosystem | v3.1.57*
