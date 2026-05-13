@@ -20,6 +20,28 @@
 **JTBD is the needs-insight core** — revealing the underlying "jobs" that drive user behavior. Use it when you need to understand "why" users switch, adopt, or abandon.
 
 ---
+## 📑 目录 / Table of Contents
+
+- [中文说明](#中文说明)
+  - [🌐 技能生态系统](#-技能生态系统-skill-ecosystem)
+  - [🌟 为什么使用这个技能？](#-为什么使用这个技能why-use-this-skill)
+  - [⚡ 5 分钟快速开始](#-5-分钟快速开始-quick-start)
+  - [💡 13 大核心能力](#-13-大核心能力)
+  - [🔧 实用示例](#-实用示例)
+  - [📁 项目结构](#-项目结构)
+  - [👥 这个技能适合谁？](#-这个技能适合谁who-is-this-for)
+  - [🛠️ 疑难解答](#-疑难解答-troubleshooting)
+  - [🏆 案例研究](#-案例研究-case-studies)
+  - [🆘 获取帮助](#-获取帮助-getting-help)
+  - [🔗 相关技能](#-相关技能)
+- [English](#english)
+  - [🌟 Why Use This Skill?](#-why-use-this-skill)
+  - [🚀 Quick Start](#-quick-start)
+  - [🔗 Related Skills](#-related-skills-1)
+- [🤝 参与贡献](#-参与贡献-contributing)
+- [📜 许可](#-许可-license)
+- [🔗 技能生态工作流](#-技能生态工作流-skill-ecosystem-workflow)
+
 
 ## 🌐 技能生态系统 (Skill Ecosystem)
 
@@ -670,6 +692,79 @@ jtbd.analyze(include_ceo_analysis=True)  # Analyzes pre-configured jobs data
 3. **安装 INSTALL.md** — 详细的安装和配置指南
 4. **贡献** — 查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解如何参与
 5. **探索生态** — 尝试其他 5 个技能，构建完整的用户研究工作流
+
+### 👥 这个技能适合谁？(Who Is This For?)
+
+| 角色 | 使用场景 | 下一步尝试 |
+|------|---------|-----------|
+| **产品经理** | 理解用户为什么切换，发现未满足需求 | → [VPD](https://github.com/AliDujie/value-proposition-design) 价值画布 |
+| **UX 研究员** | 结构化 JTBD 访谈，揭示真正的"工作" | → [UDM](https://github.com/AliDujie/universal-design-methods) 访谈方法 |
+| **营销团队** | 基于 JTBD 的信息传递和定位 | → [SWD](https://github.com/AliDujie/storytelling-with-data) 呈现洞察 |
+| **创业者** | 发现市场空白和差异化机会 | → [VPD](https://github.com/AliDujie/value-proposition-design) 价值主张验证 |
+
+---
+
+### 🛠️ 疑难解答 (Troubleshooting)
+
+| 问题 | 解决方案 |
+|------|---------|
+| 机会分数太低 | 检查工作陈述是否足够具体——模糊的工作产生模糊的分数 |
+| 四力分析不均衡 | 确保 4 种力都有代表;缺失一种力会扭曲分析 |
+| 访谈问题感觉泛泛 | 使用四维结构确保全面覆盖 |
+| 竞争分析不清晰 | 将竞争对手框架化为"替代解决方案"而非仅仅是类似产品 |
+
+---
+
+### 🏆 案例研究 (Case Studies)
+
+#### 案例 1: SaaS 产品功能迭代决策
+
+**背景**: 某协作 SaaS 需要确定下一季度的功能优先级。
+
+```python
+from jtbd import JTBDSkill
+
+skill = JTBDSkill("协作 SaaS")
+
+# 步骤 1: JTBD 分析——识别核心工作和切换力
+skill.analyze(
+    product="协作平台",
+    jobs=["快速同步团队信息", "跟踪任务进度", "减少会议时间"],
+    forces={
+        "push": ["邮件太多", "信息分散在多个工具"],
+        "pull": ["竞品一体化体验更好"],
+        "anxiety": ["迁移成本和数据安全"],
+        "habit": ["团队已熟悉现有流程"]
+    }
+)
+
+# 步骤 2: 机会评分
+score = skill.score_opportunity("快速同步团队信息", struggle=4, alternative=3, market=4, budget=4)
+```
+
+#### 案例 2: 消费 App 用户留存分析
+
+**背景**: 某健康 App 用户流失率持续上升，需要理解用户为什么离开。
+
+```python
+from jtbd import JTBDSkill
+
+skill = JTBDSkill("健康 App")
+
+# 四力诊断——理解用户为什么切换
+forces = skill.analyze_forces()
+```
+
+---
+
+### 🆘 获取帮助 (Getting Help)
+
+- 📖 **详细安装指南**: [INSTALL.md](INSTALL.md)
+- 🐛 **报告问题**: [GitHub Issues](https://github.com/AliDujie/jtbd-knowledge-skill/issues)
+- 💬 **讨论与反馈**: 在项目仓库发起 Discussion
+- 📝 **贡献指南**: [CONTRIBUTING.md](CONTRIBUTING.md)
+- 🔄 **版本历史**: [CHANGELOG.md](CHANGELOG.md)
+
 
 ---
 
