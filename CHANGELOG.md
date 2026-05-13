@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v3.1.58 (2026-05-14)
+
+- Repo maintenance: added "Why Teams Choose JTBD" comparison tables (CN/EN) with specific before/after impact data, enhanced promotional content in "Why Use This Skill?" sections
+
 ## v3.1.55 (2026-05-13)
 
 - Repo maintenance: added ecosystem collaboration guide reference doc (16-ecosystem-collaboration.md), updated references README
