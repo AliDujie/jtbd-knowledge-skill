@@ -254,7 +254,7 @@ print(diag.render_markdown())  # 严重度评分 + 消除策略
 | 10 | **Outcome Statement** | `outcome_statement.py` | Desired Outcome Statement 管理，自动生成优先级排序 |
 | 11 | **Jobs Atlas** | `jobs_atlas.py` | Wunker 七维度全景图 + ABC Drivers |
 | 12 | **障碍诊断** | `obstacles.py` | 采用障碍 + 使用障碍，严重度评分 + 消除策略 |
-| 13 | **CEO 决策支持** | `ceo.py` | 市场规模 + 优先级评分 + 商业化可行性 |
+| 13 | **CEO 决策支持** | `JTBDSkill` (`__init__.py`) | 市场规模 + 优先级评分 + 商业化可行性 |
 
 ### 🔧 实用示例
 
@@ -819,11 +819,11 @@ print(diag.render_markdown())  # Severity scoring + elimination strategies
 
 | # | Capability | Module | Description |
 |---|------------|--------|-------------|
-| 1 | **Interview Guide Generation** | `interview.py` | 4-dimension structured questions (competition / push / pull / anxiety) |
-| 2 | **Survey Design** | `interview.py` | JTBD-oriented survey templates |
-| 3 | **Opportunity Scoring** | `analyzer.py` | Importance × satisfaction gap, priority ranking |
-| 4 | **Priority Matrix** | `analyzer.py` | Opportunity score matrix visualization |
-| 5 | **Competitive Analysis** | `analyzer.py` | JTBD perspective competitor comparison |
+| 1 | **Interview Guide Generation** | `interview_generator.py` | Switch/ODI/Churn 3 interview types, 4-dimension structured questions |
+| 2 | **Survey Design** | `survey_generator.py` | Screening/Validation/Competitive/ODI Outcome/Job Score survey types |
+| 3 | **Opportunity Scoring** | `priority_calculator.py` | 4-dimension model + ODI Opportunity Algorithm |
+| 4 | **Priority Matrix** | `priority_calculator.py` | Opportunity score matrix visualization + action recommendations |
+| 5 | **Competitive Analysis** | `competition.py` | Direct/indirect/non-consumption + Outcome comparison + disruption diagnosis |
 | 6 | **Marketing Copy Generation** | `marketing.py` | Struggle resonance → progress vision → eliminate anxiety → overcome inertia → CTA |
 | 7 | **Growth and Retention Strategy** | `growth.py` | Up/down/lateral growth + ODI 5-strategy matrix + 7 product strategies |
 | 8 | **JTBD Description Generation** | `jtbd_analyzer.py` | Klement/Outcome/Job Story/Traditional — four formats |
@@ -831,7 +831,7 @@ print(diag.render_markdown())  # Severity scoring + elimination strategies
 | 10 | **Desired Outcome Statements** | `outcome_statement.py` | Outcome statement management with auto-priority ranking |
 | 11 | **Jobs Atlas** | `jobs_atlas.py` | Wunker 7-dimension panorama + ABC Drivers |
 | 12 | **Obstacle Diagnosis** | `obstacles.py` | Adoption + usage barriers, severity scoring + elimination strategies |
-| 13 | **CEO Decision Support** | `ceo.py` | TAM/SAM/SOM estimation + priority scoring + commercialization feasibility |
+| 13 | **CEO Decision Support** | `JTBDSkill` (`__init__.py`) | TAM/SAM/SOM estimation + priority scoring + commercialization feasibility |
 
 ### 🔧 Practical Examples
 
@@ -928,8 +928,18 @@ jtbd-knowledge-skill/
 │   ├── __init__.py                # API entry & exports (incl. JTBDSkill facade)
 │   ├── jtbd_analyzer.py           # JTBD analysis engine
 │   ├── interview_generator.py     # Interview guide generator
+│   ├── survey_generator.py        # Survey designer
+│   ├── priority_calculator.py     # Opportunity scoring + priority matrix
+│   ├── competition.py             # Competitive analysis
+│   ├── marketing.py               # Marketing copy generation
+│   ├── growth.py                  # Growth & retention strategy
 │   ├── forces.py                  # Forces of Progress analysis
 │   ├── innovation.py              # Innovation opportunity discovery
+│   ├── job_map.py                 # Universal Job Map (Ulwick 8-stage)
+│   ├── outcome_statement.py       # Desired Outcome Statement management
+│   ├── job_stories.py             # Job Stories generation
+│   ├── obstacles.py               # Obstacle diagnosis
+│   ├── jobs_atlas.py              # Jobs Atlas (Wunker 7-dimension)
 │   ├── config.py                  # Runtime configuration
 │   ├── utils.py                   # Knowledge base loader & search
 │   ├── templates.py               # Template constants
