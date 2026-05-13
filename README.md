@@ -334,13 +334,23 @@ jtbd-knowledge-skill/
 │   ├── __init__.py                # API 入口与导出（含 JTBDSkill facade）
 │   ├── jtbd_analyzer.py           # JTBD 分析引擎
 │   ├── interview_generator.py     # 访谈框架生成器
+│   ├── survey_generator.py        # 问卷设计器
+│   ├── priority_calculator.py     # 机会评分 + 优先级矩阵
+│   ├── competition.py             # 竞争分析
+│   ├── marketing.py               # 营销文案生成
+│   ├── growth.py                  # 增长与留存策略
 │   ├── forces.py                  # 进步力量分析
 │   ├── innovation.py              # 创新机会发现
+│   ├── job_map.py                 # Universal Job Map
+│   ├── outcome_statement.py       # Desired Outcome Statement
+│   ├── job_stories.py             # Job Stories 生成
+│   ├── obstacles.py               # 障碍诊断
+│   ├── jobs_atlas.py              # Jobs Atlas 七维度
 │   ├── config.py                  # 运行时配置
 │   ├── utils.py                   # 知识库加载与搜索
 │   ├── templates.py               # 模板常量
 │   └── tests/test_all.py          # 测试用例（14 cases）
-└── references/                    # 知识库（11 篇方法论文档）
+└── references/                    # 知识库（17 篇方法论文档）
     ├── 01-theory-foundation.md    # 理论基础
     ├── 02-principles.md           # 九大原则
     ├── 03-forces-of-progress.md   # 进步力量模型
@@ -351,7 +361,13 @@ jtbd-knowledge-skill/
     ├── 08-business-decisions.md   # 业务决策
     ├── 09-case-studies.md         # 案例精华
     ├── 10-two-models.md           # Klement vs Moesta-Ulwick 对比
-    └── 11-quick-reference.md      # 速查手册
+    ├── 11-quick-reference.md      # 速查手册
+    ├── 12-odi-methodology.md      # ODI 方法论
+    ├── 13-jobs-atlas.md           # Jobs Atlas 七维度
+    ├── 14-playbook-tools.md       # 实战工具箱
+    ├── 15-glossary.md             # 术语表
+    ├── 16-ecosystem-collaboration.md  # 生态协作指南
+    └── README.md                  # 知识库索引
 ```
 
 ### 🔗 相关技能
@@ -944,7 +960,7 @@ jtbd-knowledge-skill/
 │   ├── utils.py                   # Knowledge base loader & search
 │   ├── templates.py               # Template constants
 │   └── tests/test_all.py          # Test cases (14 cases)
-└── references/                    # Knowledge base (11 methodology documents)
+└── references/                    # Knowledge base (17 methodology documents)
     ├── 01-theory-foundation.md    # Theory foundation
     ├── 02-principles.md           # 9 core principles
     ├── 03-forces-of-progress.md   # Forces of Progress model
@@ -955,7 +971,13 @@ jtbd-knowledge-skill/
     ├── 08-business-decisions.md   # Business decisions
     ├── 09-case-studies.md         # Case studies
     ├── 10-two-models.md           # Klement vs Moesta-Ulwick comparison
-    └── 11-quick-reference.md      # Quick reference guide
+    ├── 11-quick-reference.md      # Quick reference guide
+    ├── 12-odi-methodology.md      # ODI methodology
+    ├── 13-jobs-atlas.md           # Jobs Atlas 7-dimension
+    ├── 14-playbook-tools.md       # Playbook tools
+    ├── 15-glossary.md             # Glossary
+    ├── 16-ecosystem-collaboration.md  # Ecosystem collaboration guide
+    └── README.md                  # Knowledge base index
 ```
 
 ### 🛠️ Troubleshooting
@@ -1363,7 +1385,7 @@ python3 -m pytest jtbd/tests/test_all.py -v
 ## 🆘 获取帮助 (Getting Help)
 
 - 📖 查看 [故障排查](#故障排查-troubleshooting) 部分
-- 📚 阅读 [references/](references/) 目录下的 11 篇方法论文档
+- 📚 阅读 [references/](references/) 目录下的 17 篇方法论文档
 - 💬 在 [Issues](https://github.com/AliDujie/jtbd-knowledge-skill/issues) 中提问
 
 ## 📖 扩展阅读
@@ -1511,6 +1533,7 @@ story = swd.build_story(protagonist="用户", imbalance="现有方案无法满�
 | v3.1.44 | 2026-05-11 | 仓库维护：增强英文版快速开始清单，提升英文用户发现性，验证生态交叉引用一致性 |
 | v3.1.43 | 2026-05-11 | 仓库维护：添加英文初学者快速参考卡，补充 ODI 双轨评分文档引用，版本升级至 3.1.43 |
 | v3.1.42 | 2026-05-11 | 仓库维护：增强跨技能集成示例，修复格式不一致问题，改进新手入门指南，更新 Last Updated |
+| v3.1.40 | 2026-05-10 | 仓库维护：添加 JTBD 四力分析英文示例，提升中英双语一致性 |
 | v3.1.38 | 2026-05-09 | 仓库维护：添加英文版项目结构，提升中英双语一致性，增强文档完整性 |
 | v3.1.37 | 2026-05-09 | 仓库维护：修复 SKILL.md 版本不一致，对齐 README 页脚版本引用，验证生态交叉引用一致性，改进版本历史表格排序 |
 | v3.1.32 | 2026-05-08 | 仓库维护：增强 JTBD 工作坊引导内容，改进多技能工作流集成示例，更新 Last Updated 至 2026-05-08，版本升级至 3.1.32 |
