@@ -23,6 +23,7 @@ description: >
 | 需要创建人物角色、用户细分、设计指导 | → [Web Persona](https://github.com/AliDujie/web-persona-skill) |
 | 需要价值主张画布、实验验证、优先级排序 | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) |
 | 需要将研究结果转化为数据叙事、图表呈现 | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) |
+| 需要结构化商业分析框架 | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) |
 
 > 💡 JTBD 聚焦"用户想完成什么工作"：发现 Jobs → 机会评分 → VPD 画布填充。
 
@@ -40,10 +41,11 @@ Persona (角色定义)
 │  · 机会评分     │──────► VPD (价值主张画布填充)
 │  · Job Map     │──────► QuantUX (定量验证)
 │  · 竞争分析     │──────► SWD (研究结果汇报)
+│                │──────► STM (战略决策分析)
 └────────────────┘
 ```
 
-**JTBD 的典型协作**：UDM 访谈方法挖掘 Jobs → JTBD 结构化分析 → VPD 画布填充 → QuantUX 验证 → SWD 汇报
+**JTBD 的典型协作**：UDM 访谈方法挖掘 Jobs → JTBD 结构化分析 → VPD 画布填充 → QuantUX 验证 → SWD 汇报 → STM 战略决策
 
 **四大学派融合**：Klement（进步力量、切换访谈、情感分析）→ Ulwick ODI（Opportunity Algorithm、Desired Outcome、Universal Job Map）→ Wunker Jobs Atlas（七维度分析、障碍诊断、ABC Job Drivers）→ Kalbach 整合（Job Stories、VPC 整合、多格式描述）。
 

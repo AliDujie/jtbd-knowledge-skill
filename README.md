@@ -11,10 +11,10 @@
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
 ```text
-┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐
-│ Persona │ →  │   JTBD   │ →  │ UDM │ →  │ QuantUX  │ →  │ VPD │ →  │ SWD │
-│ 角色定义 │    │ 需求洞察  │    │ 研究方法 │    │ 定量验证  │    │ 价值设计│    │ 数据叙事 │
-└─────────┘    └──────────┘    └─────┘    └──────────┘    └─────┘    └─────┘
+┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐    ┌─────┐
+│ Persona │ →  │   JTBD   │ →  │ UDM │ →  │ QuantUX  │ →  │ VPD │ →  │ SWD │ →  │ STM │
+│ 角色定义 │    │ 需求洞察  │    │ 研究方法 │    │ 定量验证  │    │ 价值设计│    │ 数据叙事 │    │ 战略分析 │
+└─────────┘    └──────────┘    └─────┘    └──────────┘    └─────┘    └─────┘    └─────┘
 ```
 
 **JTBD is the needs-insight core** — revealing the underlying "jobs" that drive user behavior. Use it when you need to understand "why" users switch, adopt, or abandon.
