@@ -851,7 +851,7 @@ JTBD (机会洞察) → QuantUX (定量验证) → SWD (数据叙事)
 - [Getting Help](#-getting-help)
 - [Extended Reading](#-extended-reading)
 - [Related Skills](#-related-skills-1)
-- [End-to-End Workflow: All 7 Skills](#-end-to-end-workflow-all-7-skills)
+- [End-to-End Workflow: All 7 Skills](#-end-to-end-ecosystem-workflow)
 - [Skill Ecosystem Workflow](#-skill-ecosystem-workflow-1)
 - [Version History](#-version-history-english)
 
