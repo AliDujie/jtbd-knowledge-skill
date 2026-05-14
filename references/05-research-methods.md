@@ -116,3 +116,13 @@ Morgan（YourGrocer）的经验：三位联合创始人一起学习Customer Jobs
 - [03-forces-of-progress.md](03-forces-of-progress.md) — 本文的访谈问题设计（理解推力、拉力、焦虑的问题）直接对应四力模型的四种力量，理解四力模型是设计有效访谈的前提
 - [06-analysis-framework.md](06-analysis-framework.md) — 研究方法采集到的原始数据如何整理为结构化的 JTBD 描述、竞争模型和"更多关于/更少关于"分析，是从数据到洞察的下一步
 - [09-case-studies.md](09-case-studies.md) — 每个案例都展示了具体的研究方法应用：Morgan 让客户展示手机短信发现真实价值主张，Omer 用调查问卷从宽到窄筛选受访者，Justin 从已有博客和播客数据中挖掘挣扎模式
+
+## 🔗 跨技能协作 (Cross-Skill Collaboration)
+
+JTBD 研究方法可以与 UDM 互补使用——UDM 提供方法框架，JTBD 提供 JTBD 特有的访谈问题和分析工具：
+
+| 技能 | 协同方式 |
+|------|----------|
+| [🔍 Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | UDM 方法选择 → JTBD 访谈问题定制 |
+| [📊 Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD 机会假设 → QuantUX 量化验证规模 |
+| [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | JTBD Jobs → VPD 价值画布填充 |

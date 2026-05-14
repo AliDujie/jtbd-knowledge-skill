@@ -117,13 +117,23 @@ Anthony（Form Theatricals）为每个客户映射了导致购票的事件时间
 - **决策时刻：** 什么最终促使他们做出购买决定？
 - **使用开始：** 首次使用体验如何？
 
-## 六、持续刷新竞争格局
-
-客户认为什么是JTBD的竞争总在变化。不要假设它保持不变。你最好的做法是定期与客户交谈，持续访谈新客户。了解他们购买背后的故事。对于现有客户，了解他们是否听说过或尝试过其他解决方案。对于停止使用产品的客户，问他们为什么——是切换到了新解决方案，还是JTBD不再存在？
-
 ## 相关文档
 
 - [05-research-methods.md](05-research-methods.md) — 分析框架的输入来自研究方法采集的数据，该文档提供了完整的访谈问题设计、受访者筛选方法和数据收集渠道，是分析工作的上游环节
 - [08-business-decisions.md](08-business-decisions.md) — 分析结果（竞争模型、客户价值优先级、预算归属）直接输入商业决策：JTBD 描述指导营销语言，竞争分析指导定位策略，价值优先级指导产品路线图
 - [09-case-studies.md](09-case-studies.md) — 本文每个分析工具都有对应的案例支撑：Clarity 案例展示"更多关于/更少关于"分析法，YourGrocer 案例展示客户价值优先级如何随生活变化重排，Form Theatricals 案例展示挣扎时刻时间线映射
 - [11-quick-reference.md](11-quick-reference.md) — 本文的 JTBD 描述模板、访谈问题、分析方法被压缩为可直接使用的速查清单，适合在实际工作中随时查阅
+
+## 🔗 跨技能协作 (Cross-Skill Collaboration)
+
+JTBD 分析框架处于研究工作流的**洞察核心**——将定性发现结构化为可行动的机会：
+
+| 技能 | 协同方式 |
+|------|----------|
+| [👤 Web Persona](https://github.com/AliDujie/web-persona-skill) | Persona 角色 → JTBD 挖掘各角色的深层 Jobs |
+| [🔍 Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | UDM 访谈数据 → JTBD 四力分析和机会评分 |
+| [📊 Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD 机会评分 → QuantUX 量化验证需求规模 |
+| [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | JTBD 工作描述 → VPD 价值主张画布填充 |
+| [📈 Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | JTBD 洞察 → SWD 构建数据叙事 |
+
+> 💡 **推荐工作流**: `UDM (访谈收集) → JTBD (结构化分析) → QuantUX (量化验证) → VPD (设计解决方案)`
