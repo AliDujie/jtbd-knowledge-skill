@@ -4,11 +4,13 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.62-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.64-green.svg)](CHANGELOG.md)
 [![Install Guide](https://img.shields.io/badge/install-guide-orange.svg)](INSTALL.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-14-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
+
+> 🆕 **What's New in v3.1.64**: Cross-skill references added to innovation guide, business decisions, and case study reference docs. Full ecosystem integration with VPD canvas mapping and QuantUX validation.
 
 ```text
 ┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐    ┌─────┐
@@ -1382,6 +1384,42 @@ This skill is part of the **AliDujie UX Research Skills Ecosystem**:
 - **JTBD + Persona** → Define personas based on JTBD task clustering
 - **JTBD + SWD** → Visualize JTBD insights for stakeholder presentations
 
+#### 💡 Cross-Skill Quick Recipes
+
+```python
+# Recipe: From JTBD discovery to validated solution
+from jtbd import JTBDSkill; from vpd import VPDSkill; from quantux import QuantUXSkill
+
+jtbd = JTBDSkill("fitness app")
+
+# Step 1: Score the opportunity
+score = jtbd.score_opportunity(
+    "track my workouts without friction",
+    struggle=5, alternative=2, market=4, budget=4
+)
+# → High opportunity: users struggle, alternatives are weak
+
+# Step 2: Analyze forces of progress
+jtbd.add_force("push", "Current app requires 5 taps to log a set")
+jtbd.add_force("pull", "Apple Watch auto-detection looks promising")
+forces = jtbd.analyze_forces()
+
+# Step 3: Feed jobs into VPD for solution design
+vpd = VPDSkill("fitness app", "active adults 25-40")
+canvas = vpd.analyze_canvas(
+    product_name="Fitness App",
+    jobs=["track my workouts without friction"],
+    pains=["too many taps", "loses focus during workout"],
+    gains=["auto-detection", "one-tap logging"]
+)
+
+# Step 4: Design experiment to validate
+experiment = vpd.design_experiment(
+    hypothesis="One-tap logging increases workout completion by 20%",
+    metric="workouts completed per session"
+)
+```
+
 - **[Universal-Design-Methods](https://github.com/AliDujie/universal-design-methods)** — 100 design research methods
 - **[Web-Persona-Skill](https://github.com/AliDujie/web-persona-skill)** — Persona creation
 - **[Quantitative-UX-Research](https://github.com/AliDujie/Quantitative-UX-Research)** — Quantitative research, HEART framework
@@ -1657,4 +1695,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-14 | AliDujie Skill Ecosystem | v3.1.62*
+*Last Updated: 2026-05-15 | AliDujie Skill Ecosystem | v3.1.64*
