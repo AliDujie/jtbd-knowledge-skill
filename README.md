@@ -1447,7 +1447,11 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 ### 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
-|------|------|------|| 3.1.59 | 2026-05-14 | 仓库维护：修复版本不一致（徽章 3.1.58 vs pyproject 3.1.57），对齐 README/徽章/SKILL.md/pyproject.toml 版本，更新 Last Updated 至 2026-05-14 |
+|------|------|------|
+| 3.1.62 | 2026-05-14 | 仓库维护：修复变更日志表格格式（分隔符与数据行合并问题），标准化徽章顺序，验证生态交叉引用完整性
+| 3.1.61 | 2026-05-14 | 仓库维护：同步版本徽章/页脚到 pyproject.toml (v3.1.61)，修复 ruff target-version
+| 3.1.60 | 2026-05-14 | 仓库维护：修复 TOC 锚点链接，版本升级至 v3.1.60
+| 3.1.59 | 2026-05-14 | 仓库维护：修复版本不一致（徽章 3.1.58 vs pyproject 3.1.57），对齐 README/徽章/SKILL.md/pyproject.toml 版本，更新 Last Updated 至 2026-05-14 |
 
 | v3.1.45 | 2026-05-11 | 仓库维护：修复项目结构中 Python 模块名称与实际文件名不一致（analyzer→jtbd_analyzer, interview→interview_generator），补齐英文版本历史条目（v3.1.42–v3.1.44），增强文档一致性 |
 | v3.1.44 | 2026-05-11 | 仓库维护：增强英文版快速开始清单，提升英文用户发现性，验证生态交叉引用一致性 |
@@ -1505,7 +1509,11 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
-|---------|------|--------|| v3.1.59 | 2026-05-14 | Repo maintenance: fixed version mismatch (badge 3.1.58 vs pyproject 3.1.57), aligned README badge/SKILL.md/pyproject.toml versions, updated Last Updated to 2026-05-14 |
+|---------|------|--------|
+| v3.1.62 | 2026-05-14 | Repo maintenance: fixed changelog table formatting (merged separator + data rows), standardized badge ordering, verified ecosystem cross-reference completeness
+| v3.1.61 | 2026-05-14 | Repo maintenance: synced version badges/footers to pyproject.toml (v3.1.61), fixed ruff target-version
+| v3.1.60 | 2026-05-14 | Repo maintenance: fixed TOC anchor link, version bump to v3.1.60
+| v3.1.59 | 2026-05-14 | Repo maintenance: fixed version mismatch (badge 3.1.58 vs pyproject 3.1.57), aligned README badge/SKILL.md/pyproject.toml versions, updated Last Updated to 2026-05-14 |
 
 | v3.1.56 | 2026-05-14 | Repo maintenance: version bump, updated last_updated badge, aligned README+SKILL.md+pyproject.toml versions |
 | v3.1.46 | 2026-05-11 | Repo maintenance: verified English section completeness, confirmed all "When NOT to Use" and "Common Mistakes" sections present across ecosystem, verified cross-skill links, updated version badges |
