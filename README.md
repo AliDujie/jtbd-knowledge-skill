@@ -38,8 +38,15 @@
   - [🔗 相关技能](#-相关技能)
 - [English](#english)
   - [🌟 Why Use This Skill?](#-why-use-this-skill)
+  - [🎯 Features at a Glance](#-features-at-a-glance)
+  - [🧭 Quick Decision Guide](#-quick-decision-guide)
+  - [✅ 5-Minute Quick Start Checklist](#-5-minute-quick-start-checklist)
   - [🚀 Quick Start](#-quick-start)
+  - [💡 13 Core Capabilities](#-13-core-capabilities)
+  - [💡 Practical Examples](#-practical-examples)
+  - [👥 Who Is This For?](#-who-is-this-for)
   - [🔗 Related Skills](#-related-skills-1)
+  - [End-to-End Workflow: All 7 Skills](#-end-to-end-ecosystem-workflow)
 - [🤝 参与贡献](#-参与贡献-contributing)
 - [📜 许可](#-许可-license)
 - [🔗 技能生态工作流](#-技能生态工作流-skill-ecosystem-workflow)
@@ -834,6 +841,17 @@ JTBD (机会洞察) → QuantUX (定量验证) → SWD (数据叙事)
 > 💡 **提示**: JTBD 最适合在研究数据收集后使用——帮你从 "用户说了什么" 提炼到 "用户真正要完成什么"。
 
 ---
+
+### 🔗 探索更多技能 (Explore More Skills)
+
+本技能是 **AliDujie UX 研究技能生态系统** 的一部分，与其他 6 个技能协同工作，覆盖从用户研究到数据呈现的完整工作流：
+
+- [👤 Web Persona](https://github.com/AliDujie/web-persona-skill) — 人物角色创建（工作流起点）
+- [🔍 Universal Design Methods](https://github.com/AliDujie/universal-design-methods) — 研究方法
+- [📊 Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) — 定量验证
+- [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — 价值主张设计
+- [📈 Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — 数据叙事
+- [🧠 Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) — 战略分析框架
 
 ## English
 
