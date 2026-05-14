@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v3.1.61 (2026-05-14)
+
+- Repo maintenance: sync README version badges/footers to pyproject.toml (3.1.59→3.1.60), update changelog
+
 ## v3.1.60 (2026-05-14)
 
 - Repo maintenance: fix broken TOC anchor link (#-end-to-end-workflow-all-7-skills → #-end-to-end-ecosystem-workflow)
