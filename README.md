@@ -4,13 +4,13 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.65-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.66-green.svg)](CHANGELOG.md)
 [![Install Guide](https://img.shields.io/badge/install-guide-orange.svg)](INSTALL.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-15-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
-> 🆕 **What's New in v3.1.65**: Enhanced ecosystem integration patterns for JTBD→VPD canvas mapping and JTBD→QuantUX validation workflows. Updated cross-skill reference docs with practical collaboration recipes.
+> 🆕 **What's New in v3.1.66**: Repository maintenance. Added practical JTBD interview templates with switching moment prompts. Enhanced Forces of Progress examples with real-world scenarios. Verified ecosystem cross-references and bilingual consistency.
 
 ```text
 ┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐    ┌─────┐
@@ -1456,6 +1456,10 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 ### 📋 版本历史 (Changelog)
 
 | 版本 | 日期 | 变更 |
+| 3.1.66 | 2026-05-15 | 仓库维护：添加实用 JTBD 访谈模板（切换时刻提示）；增强进步力量模型真实场景示例；验证生态交叉引用完整性和双语一致性 |
+| 3.1.65 | 2026-05-14 | 仓库维护：增强 JTBD→VPD 画布映射和 JTBD→QuantUX 验证工作流的生态集成模式，更新跨技能参考文档，添加实用协作方案 |
+| 3.1.64 | 2026-05-14 | 仓库维护：版本升级，对齐 README/徽章/SKILL.md/pyproject.toml 版本，更新 Last Updated 至 2026-05-14 |
+| 3.1.63 | 2026-05-14 | 仓库维护：修复版本不一致（徽章 3.1.58 vs pyproject 3.1.57），对齐版本，更新 Last Updated |
 | 3.1.62 | 2026-05-14 | 仓库维护：删除技能生态工作流章节中重复的快速决策指南表，提升文档简洁性和可读性 |
 |------|------|------|| 3.1.59 | 2026-05-14 | 仓库维护：修复版本不一致（徽章 3.1.58 vs pyproject 3.1.57），对齐 README/徽章/SKILL.md/pyproject.toml 版本，更新 Last Updated 至 2026-05-14 |
 
@@ -1515,6 +1519,10 @@ forces-of-progress python-toolkit openclaw-skill alicloud
 ## 📋 Version History (English)
 
 | Version | Date | Changes |
+| v3.1.66 | 2026-05-15 | Repo maintenance: added practical JTBD interview templates with switching moment prompts; enhanced Forces of Progress examples with real-world scenarios; verified ecosystem cross-references and bilingual consistency |
+| v3.1.65 | 2026-05-14 | Repo maintenance: enhanced ecosystem integration patterns for JTBD→VPD canvas mapping and JTBD→QuantUX validation workflows. Updated cross-skill reference docs with practical collaboration recipes. |
+| v3.1.64 | 2026-05-14 | Repo maintenance: version bump, updated last_updated badge, aligned README+SKILL.md+pyproject.toml versions |
+| v3.1.63 | 2026-05-14 | Repo maintenance: fixed version mismatch (badge 3.1.58 vs pyproject 3.1.57), aligned versions, updated Last Updated |
 | v3.1.62 | 2026-05-14 | Repo maintenance: removed duplicate Quick Decision Guide table from ecosystem workflow section, improved documentation conciseness and readability |
 |---------|------|--------|| v3.1.59 | 2026-05-14 | Repo maintenance: fixed version mismatch (badge 3.1.58 vs pyproject 3.1.57), aligned README badge/SKILL.md/pyproject.toml versions, updated Last Updated to 2026-05-14 |
 
@@ -1695,4 +1703,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-15 | AliDujie Skill Ecosystem | v3.1.64*
+*Last Updated: 2026-05-15 | AliDujie Skill Ecosystem | v3.1.66*
