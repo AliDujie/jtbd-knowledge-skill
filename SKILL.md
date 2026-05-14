@@ -27,22 +27,86 @@ description: >
 
 > 💡 JTBD 聚焦"用户想完成什么工作"：发现 Jobs → 机会评分 → VPD 画布填充。
 
+### 💼 为什么团队选择 JTBD
+
+| 挑战 | 没有 JTBD | 使用 JTBD |
+|------|----------|----------|
+| 需求洞察 | "用户说他们想要 X"——表面反馈 | "用户雇用它来完成 Y"——深层洞察 |
+| 功能优先级 | 拍脑袋或 HiPPO 决策 | 机会评分 + 数据驱动排序 |
+| 竞争分析 | 功能对比清单 | 基于 Jobs 的替代方案地图 |
+| 创新方向 | 跟随竞品加功能 | 识别未满足的高机会 Jobs |
+| 营销信息 | 通用价值主张 | 基于 Switch 访谈的精准 messaging |
+
+### 🔗 Ecosystem Quick Start / 生态系统快速上手
+
+JTBD 是 7 技能工作流的**需求洞察核心**——在 Persona 定义用户后使用，挖掘深层 Jobs。
+
+```python
+# Step 1: JTBD 发现核心 Jobs
+from jtbd import JTBDSkill
+jtbd = JTBDSkill("旅行预订平台")
+opportunity = jtbd.score_opportunity("快速找到合适住处", struggle=4, alternative=3, market=4, budget=4)
+
+# Step 2: 四力分析——理解用户为什么切换
+forces = jtbd.analyze_forces("用户从竞品切换到我们的产品")
+
+# Step 3: 将 JTBD 发现的 Jobs 交给 VPD 做价值主张设计
+from vpd import VPDSkill
+vpd = VPDSkill("旅行预订平台", "商务差旅人士")
+vpd.analyze_canvas(product_name="旅行预订", jobs=[{"description": "快速找到合适住处"}], pains=[{"description": "选择过多难以决策"}])
+```
+
+> 💡 **Try it now / 立即尝试**:
+> ```python
+> from jtbd import JTBDSkill
+> skill = JTBDSkill("你的产品")
+> score = skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4)
+> ```
+
+### ✅ 5 分钟快速开始检查清单
+
+- [ ] **安装** — `cp -r jtbd-knowledge-skill /your/agent/skills/`
+- [ ] **导入** — `from jtbd import JTBDSkill`
+- [ ] **初始化** — `skill = JTBDSkill("你的产品")`
+- [ ] **机会评分** — `skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4)`
+- [ ] **四力分析** — `skill.analyze_forces("用户切换到新产品")`
+- [ ] **全面分析** — `skill.analyze(include_ceo_analysis=True)`
+- [ ] **Jobs Atlas** — `skill.create_jobs_atlas("产品名")`
+
+[English](#english) | [中文](#中文说明)
+
 ## 🌐 AliDujie 技能生态系统
 
 JTBD 是 **需求洞察层**，在 Persona 之后、VPD 之前，负责理解用户"工作"并量化机会：
 
 ```
-Persona (角色定义)
-  │
-  ▼  用户行为与目标
-┌────────────────┐
-│  JTBD 本技能    │ 🎯 需求洞察 — 理解用户"工作"、机会评分、竞争分析
-│  · 四力分析     │
-│  · 机会评分     │──────► VPD (价值主张画布填充)
-│  · Job Map     │──────► QuantUX (定量验证)
-│  · 竞争分析     │──────► SWD (研究结果汇报)
-│                │──────► STM (战略决策分析)
-└────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                    AliDujie UX Research Ecosystem            │
+│                                                             │
+│   ┌──────────────┐                                          │
+│   │   Persona    │ 👤 用户定义层 — 创建证据驱动的人物角色      │
+│   └──────┬───────┘                                          │
+│          │ 研究数据                                           │
+│   ┌──────▼───────┐    ┌──────────────┐                      │
+│   │ JTBD 本技能  │◄──►│  UDM Skill   │ 📖 方法论核心 — 100种 │
+│   └──────┬───────┘    └──────┬───────┘    设计研究方法       │
+│          │ 需求洞察           │ 定性发现                      │
+│   ┌──────▼───────┐    ┌──────▼───────┐                      │
+│   │  VPD Skill   │◄──►│  QuantUX     │ 📊 定量研究 — HEART/  │
+│   └──────┬───────┘    └──────┬───────┘    A-B/MaxDiff        │
+│          │ 价值主张           │ 定量验证                      │
+│          └──────────┬────────┘                               │
+│                     │ 研究发现                                │
+│              ┌──────▼───────┐                                │
+│              │  SWD Skill   │ 📈 数据叙事 — 数据可视化与汇报    │
+│              └──────┬───────┘                                │
+│                     │ 数据洞察                                │
+│              ┌──────▼───────┐                                │
+│              │  STM Skill   │ 🧠 战略分析 — 商业框架与决策      │
+│              └──────────────┘                                │
+│                                                             │
+│  工作流: Persona → JTBD/UDM → QuantUX → VPD → SWD → STM    │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 **JTBD 的典型协作**：UDM 访谈方法挖掘 Jobs → JTBD 结构化分析 → VPD 画布填充 → QuantUX 验证 → SWD 汇报 → STM 战略决策
