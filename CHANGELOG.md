@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v3.1.64 (2026-05-14)
+
+- Repo maintenance: add cross-skill reference sections to 07-innovation-guide.md, 08-business-decisions.md, and 09-case-studies.md, expand ecosystem collaboration coverage
+
 ## v3.1.63 (2026-05-14)
 
 - Repo maintenance: add cross-skill reference sections to key reference docs (05-research-methods.md, 06-analysis-framework.md), expand ecosystem collaboration coverage

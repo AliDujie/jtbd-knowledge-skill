@@ -115,3 +115,14 @@ Deming经常提醒企业：仅仅不断改进现有产品是不够的。"我们�
 - [04-system-of-progress.md](04-system-of-progress.md) — 本文"问接下来是什么"和"开发互补产品"等创新方法的理论基础：进步系统的螺旋上升结构解释了为什么客户实现进步后会解锁新渴望，以及为什么产品组合需要协同工作
 - [05-research-methods.md](05-research-methods.md) — 创新机会发现依赖于扎实的研究：如何从访谈中寻找"能量"、如何识别补偿行为、如何通过流失客户访谈发现产品被自身成功所害的问题
 - [09-case-studies.md](09-case-studies.md) — 每个创新方法都有对应的案例支撑：Omer 的护士网格工作表展示补偿行为中的产品设计方向，Ash 的 Lean Stack 展示互补产品策略，Justin 的 Product People Club 到 Marketing for Developers 展示产品组合作为系统
+
+## 🔗 跨技能协作 (Cross-Skill Collaboration)
+
+JTBD 创新与生态系统技能的协同：
+
+| 技能 | 协同方式 |
+|------|----------|
+| [🔍 Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | UDM 生成性研究 → 创新概念验证 |
+| [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | JTBD 创新机会 → VPD 价值主张实验 |
+| [📊 Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | 创新假设 → QuantUX A/B 测试验证 |
+| [📈 Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | 创新故事 → SWD 向利益相关者呈现 |

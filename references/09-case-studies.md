@@ -130,3 +130,14 @@
 - [07-innovation-guide.md](07-innovation-guide.md) — 案例中的创新实践在该文档中被系统化为方法论：Omer 的补偿行为观察法、Ash 的互补产品策略、Justin 的产品组合设计，以及 chotuKool 失败案例揭示的常见创新陷阱
 - [08-business-decisions.md](08-business-decisions.md) — 案例中的商业决策在该文档中被提炼为可复用的策略框架：Clarity 的预算角度定价法、YourGrocer 用客户原话做营销、Morgan 通过自动化邮件对抗使用惯性来减少流失
 - [05-research-methods.md](05-research-methods.md) — 案例中的研究过程在该文档中有方法论总结：Morgan 让客户展示手机短信、Omer 从宽到窄的调查筛选法、Justin 从已有数据中挖掘挣扎模式、Ash 的流失客户访谈
+
+## 🔗 跨技能协作 (Cross-Skill Collaboration)
+
+JTBD 案例与生态系统技能的协同：
+
+| 技能 | 协同方式 |
+|------|----------|
+| [👤 Web Persona](https://github.com/AliDujie/web-persona-skill) | JTBD 案例中的用户类型 → Persona 角色创建 |
+| [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | JTBD 案例洞察 → VPD 价值主张实验设计 |
+| [📊 Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD 案例假设 → QuantUX 定量验证 |
+| [📈 Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | JTBD 案例故事 → SWD 向团队呈现 |

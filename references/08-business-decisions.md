@@ -134,3 +134,14 @@ Twitter的3.13亿MAU可能代表了100%的市场。分析师和记者可能在�
 - [06-analysis-framework.md](06-analysis-framework.md) — 商业决策的输入来自分析框架的产出：JTBD 描述指导营销语言（"按需商业建议"），竞争模型指导定位（Clarity vs 会议 vs LinkedIn），预算归属分析指导定价
 - [09-case-studies.md](09-case-studies.md) — 本文每个策略都有案例来源：Clarity 的预算分析揭示了定价空间，YourGrocer 用客户自己的话提炼广告语，Ash 的 Lean Stack 展示了从单一产品到产品系统的增长路径
 - [04-system-of-progress.md](04-system-of-progress.md) — 增长策略（解锁新渴望、产品系统协同）基于进步系统的持续性特征，以及 Joanna Wiebe 和 Bob Moesta 的案例展示了如何通过改善系统内的相互依赖性来提升转化
+
+## 🔗 跨技能协作 (Cross-Skill Collaboration)
+
+JTBD 商业决策与生态系统技能的协同：
+
+| 技能 | 协同方式 |
+|------|----------|
+| [💎 Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | JTBD 定价洞察 → VPD 商业模式设计 |
+| [📊 Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD 竞争洞察 → QuantUX 市场份额验证 |
+| [🧠 Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | JTBD 商业决策 → STM 战略框架分析 |
+| [📈 Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | JTBD 决策数据 → SWD 高管汇报 |
