@@ -4,13 +4,13 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.67-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.68-green.svg)](CHANGELOG.md)
 [![Install Guide](https://img.shields.io/badge/install-guide-orange.svg)](INSTALL.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-15-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
-> 🆕 **What's New in v3.1.66**: Repository maintenance. Added practical JTBD interview templates with switching moment prompts. Enhanced Forces of Progress examples with real-world scenarios. Verified ecosystem cross-references and bilingual consistency.
+🆕 **What's New in v3.1.68**: Repository maintenance. Updated version alignment across all files. Enhanced ecosystem cross-reference patterns for JTBD→VPD→QuantUX workflows. Added practical JTBD interview templates with switching moment prompts. Verified all ecosystem cross-references and bilingual consistency. Repository maintenance. Added practical JTBD interview templates with switching moment prompts. Enhanced Forces of Progress examples with real-world scenarios. Verified ecosystem cross-references and bilingual consistency.
 
 ```text
 ┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐    ┌─────┐
@@ -1752,4 +1752,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-15 | AliDujie Skill Ecosystem | v3.1.66*
+*Last Updated: 2026-05-15 | AliDujie Skill Ecosystem | v3.1.68*
