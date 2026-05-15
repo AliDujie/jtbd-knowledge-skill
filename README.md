@@ -4,13 +4,13 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.68-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.69-green.svg)](CHANGELOG.md)
 [![Install Guide](https://img.shields.io/badge/install-guide-orange.svg)](INSTALL.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-15-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
-🆕 **What's New in v3.1.68**: Repository maintenance. Updated version alignment across all files. Enhanced ecosystem cross-reference patterns for JTBD→VPD→QuantUX workflows. Added practical JTBD interview templates with switching moment prompts. Verified all ecosystem cross-references and bilingual consistency. Repository maintenance. Added practical JTBD interview templates with switching moment prompts. Enhanced Forces of Progress examples with real-world scenarios. Verified ecosystem cross-references and bilingual consistency.
+🆕 **What's New in v3.1.69**: Repository maintenance. Updated version alignment across all files. Enhanced ecosystem cross-reference patterns for JTBD→VPD→QuantUX workflows. Added practical JTBD interview templates with switching moment prompts. Verified all ecosystem cross-references and bilingual consistency. Repository maintenance. Added practical JTBD interview templates with switching moment prompts. Enhanced Forces of Progress examples with real-world scenarios. Verified ecosystem cross-references and bilingual consistency.
 
 ```text
 ┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐    ┌─────┐
@@ -98,6 +98,66 @@ canvas = vpd.analyze_canvas(product_name="旅行平台", jobs=["快速找到性�
 > skill = JTBDSkill("你的产品")
 > print(skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4))  # 立即评估机会分数
 > ```
+
+
+### 🔀 Cross-Skill Recipes (跨技能配方)
+
+| Recipe | Workflow | Output |
+|--------|----------|--------|
+| **Job Discovery** | Persona → JTBD | Job stories + Opportunity scores |
+| **Competitive Analysis** | JTBD → VPD | Job-based competitor map + Value canvas |
+| **Switch Analysis** | JTBD → UDM | Four forces + Push interview guide |
+| **Growth Priorities** | JTBD → QuantUX | Opportunity scores + MaxDiff validation |
+| **Innovation Sprint** | JTBD → VPD → QuantUX | Jobs → Value prop → A/B test |
+
+#### Recipe: Full JTBD Analysis Pipeline
+
+```python
+from jtbd import JTBDSkill
+
+jtbd = JTBBDkill("旅行预订平台")
+
+# Step 1: Generate job stories from all 4 schools
+stories = jtbd.generate_job_stories()
+
+# Step 2: Score opportunities
+scores = jtbd.score_opportunity("快速找到合适住处", 
+    struggle=4, importance=5, alternative=3, satisfaction=2)
+# → Opportunity Score = Importance + (Importance - Satisfaction) = 5 + 3 = 8
+
+# Step 3: Four Forces analysis
+forces = jtbd.analyze_forces("switch_to_competitor",
+    pushes=["搜索慢", "价格不透明"],
+    pulls=["更好的推荐算法", "更低价格"],
+    anxieties=["数据安全", "学习成本"],
+    habits=["已经习惯当前平台"])
+
+# Step 4: Generate full analysis report
+report = jtbd.generate_analysis_report()
+```
+
+#### Recipe: JTBD-Driven Competitive Strategy
+
+```python
+# Analyze competitors through Jobs lens
+from jtbd import JTBDSkill
+
+jtbd = JTBDSkill("旅行预订")
+
+# Compare competitors on key Jobs
+competitors = {
+    "我们": {"speed": 3, "price": 4, "discovery": 2},
+    "携程": {"speed": 4, "price": 3, "discovery": 4},
+    "飞猪": {"speed": 4, "price": 3, "discovery": 3},
+}
+
+# Switch analysis
+switch = jtbd.analyze_switching(
+    current="我们", target="携程",
+    context="用户为什么从我们切换到竞品"
+)
+# → Returns forces analysis + switching barriers + messaging recommendations
+```
 
 ### ✅ 5 分钟快速开始检查清单
 
@@ -1752,4 +1812,4 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ---
 
-*Last Updated: 2026-05-15 | AliDujie Skill Ecosystem | v3.1.68*
+*Last Updated: 2026-05-15 | AliDujie Skill Ecosystem | v3.1.69*

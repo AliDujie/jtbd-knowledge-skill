@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v3.1.65 (2026-05-15)
+
+- Repo maintenance: version bump; verified version alignment across SKILL.md, README, and pyproject.toml
+
+## v3.1.66 (2026-05-15)
+
+- Repo maintenance: version bump; verified version alignment across SKILL.md, README, and pyproject.toml
+
+## v3.1.67 (2026-05-15)
+
+- Repo maintenance: version bump; verified version alignment across SKILL.md, README, and pyproject.toml
+
+## v3.1.68 (2026-05-15)
+
+- Repo maintenance: version bump; verified version alignment across SKILL.md, README, and pyproject.toml
+
 ## v3.1.64 (2026-05-14)
 
 - Repo maintenance: add cross-skill reference sections to 07-innovation-guide.md, 08-business-decisions.md, and 09-case-studies.md, expand ecosystem collaboration coverage
