@@ -115,10 +115,10 @@ canvas = vpd.analyze_canvas(product_name="旅行平台", jobs=["快速找到性�
 ```python
 from jtbd import JTBDSkill
 
-jtbd = JTBBDkill("旅行预订平台")
+jtbd = JTBDSkill("旅行预订平台")
 
 # Step 1: Generate job stories from all 4 schools
-stories = jtbd.generate_job_stories()
+stories = jtbd.create_job_stories("用户希望在出差时快速找到性价比高的住宿")
 
 # Step 2: Score opportunities
 scores = jtbd.score_opportunity("快速找到合适住处", 
