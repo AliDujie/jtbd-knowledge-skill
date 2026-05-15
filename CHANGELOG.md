@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.1.71 (2026-05-15)
+
+- Repo maintenance: verified all code examples smoke-test pass
+- Verified ecosystem cross-references across all 7 skills
+- Checked bilingual (CN/EN) consistency in README and SKILL.md
+
 ## v3.1.70 (2026-05-15)
 
 - Repository maintenance: aligned `pyproject.toml` version with SKILL.md (v3.1.70)
