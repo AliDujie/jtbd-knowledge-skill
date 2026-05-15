@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.1.73 (2026-05-16)
+
+- Synced Python `__version__` with SKILL.md version
+- Verified all 13 JTBD capability code examples
+- Confirmed ecosystem cross-references across all 7 skills
+- Checked bilingual (CN/EN) consistency in README and SKILL.md
+- Refreshed last-updated badges
+
 ## v3.1.71 (2026-05-15)
 
 - Repo maintenance: verified all code examples smoke-test pass
