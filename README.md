@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.75-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.76-green.svg)](CHANGELOG.md)
 [![Install Guide](https://img.shields.io/badge/install-guide-orange.svg)](INSTALL.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-16-brightgreen.svg)
 
@@ -1568,6 +1568,24 @@ experiment = vpd.design_experiment(
     hypothesis="One-tap logging increases workout completion by 20%",
     metric="workouts completed per session"
 )
+```
+
+```python
+# Recipe: Competitive positioning via JTBD
+from jtbd import JTBDSkill
+
+jtbd = JTBDSkill("meal planning app")
+
+# Map competitive landscape by job, not by product category
+jtbd.add_competitor("MyFitnessPal", job="calorie tracking", switching_cost="low")
+jtbd.add_competitor("Yuka", job="healthy food choices", switching_cost="medium")
+jtbd.add_competitor("Excel spreadsheet", job="meal planning", switching_cost="high")
+
+# Score each competitor's ability to fulfill the job
+landscape = jtbd.competitive_landscape()  # → Reveals underserved job segments
+
+# Identify innovation opportunity
+innovations = jtbd.find_innovation_gaps()  # → Jobs with high struggle + weak alternatives
 ```
 
 - **[Universal-Design-Methods](https://github.com/AliDujie/universal-design-methods)** — 100 design research methods
