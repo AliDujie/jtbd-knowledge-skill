@@ -1,6 +1,6 @@
 ---
 name: jtbd-knowledge-skill
-version: "3.1.71"
+version: "3.1.72"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派——Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合——
@@ -422,6 +422,15 @@ report = skill.analyze(include_ceo_analysis=True)
 from jtbd import search_knowledge
 results = search_knowledge("焦虑")
 ```
+
+### ⛔ 何时不使用 JTBD
+
+- **选择研究方法或设计访谈** — 使用 [Universal Design Methods](https://github.com/AliDujie/universal-design-methods)
+- **统计分析或 A/B 测试** — 使用 [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research)
+- **创建人物角色** — 使用 [Web Persona](https://github.com/AliDujie/web-persona-skill)
+- **价值主张画布分析** — 使用 [Value Proposition Design](https://github.com/AliDujie/value-proposition-design)
+- **数据可视化与叙事** — 使用 [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
+
 
 ## 知识库索引
 
