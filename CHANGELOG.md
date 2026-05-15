@@ -1,5 +1,16 @@
 # Changelog
 
+## v3.1.70 (2026-05-15)
+
+- Repository maintenance: aligned `pyproject.toml` version with SKILL.md (v3.1.70)
+- Aligned package `__version__` in `jtbd/__init__.py` with SKILL.md (v3.1.70)
+- Verified all ecosystem cross-references and bilingual consistency
+- Refreshed last-updated date
+
+## v3.1.69 (2026-05-15)
+
+- Repository maintenance: aligned `pyproject.toml` version with SKILL.md
+
 ## v3.1.68 (2026-05-15)
 
 - Repo maintenance: version bump; verified version alignment across SKILL.md, README, and pyproject.toml
