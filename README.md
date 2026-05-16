@@ -6,6 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
+![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
 
 ## 🇨🇳 中文概览
 
@@ -309,6 +310,23 @@ python -m pytest jtbd/tests/test_all.py -v
 ## 🤝 Contributing
 
 We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## ❓ FAQ / Troubleshooting
+
+**Q: Which JTBD school should I start with?**
+For most teams, Klement's Forces of Progress (Push/Pull/Anxiety/Habit) is the most accessible starting point. Use it to understand why users switch. Then layer on Ulwick's ODI for quantitative opportunity scoring.
+
+**Q: How do I interpret the opportunity score?**
+4-dimension model: struggle + alternative + market + budget (max 10). ODI algorithm: Importance × (Importance - Satisfaction) + 1 (max 30). Higher scores = bigger opportunity. Scores above 12 (ODI) or 7.5 (4D) signal priority investment areas.
+
+**Q: What's the difference between a Job Story and a User Story?**
+User stories focus on *who* ("As a [role], I want [feature]..."). Job Stories focus on *why* ("When [situation], I want to [motivation], so I can [outcome]"). Job Stories are context-rich and solution-agnostic.
+
+**Q: Can I use JTBD with existing user research?**
+Yes. The `analyze_forces()` function works well with existing interview transcripts or support tickets. Tag each data point as Push, Pull, Anxiety, or Habit to see the switching dynamics.
+
+**Q: How does JTBD fit with the other AliDujie skills?**
+JTBD sits at the "need insight" layer: [Persona](https://github.com/AliDujie/web-persona-skill) tells you *who*, JTBD tells you *what they need*, [VPD](https://github.com/AliDujie/value-proposition-design) tells you *how to deliver value*, [UDM](https://github.com/AliDujie/universal-design-methods) tells you *how to research*, [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) *validates*, and [SWD](https://github.com/AliDujie/storytelling-with-data) *communicates*.
 
 ## 📄 License
 
