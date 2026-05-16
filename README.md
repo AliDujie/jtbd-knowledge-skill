@@ -216,11 +216,8 @@ forces = jtbd.analyze_forces("Users switching from hotel chains to our platform"
 
 # 3. VPD: map Jobs to value proposition canvas
 vpd = VPDSkill("Travel Booking", "Business Travelers")
-canvas = vpd.fill_canvas(
-    jobs=[{"description": "Find hotel quickly", "score": 7.6}],
-    pains=["Time wasted comparing options", "Last-minute price surges"],
-    gains=["Saved 15 min per booking", "Predictable pricing"]
-)
+canvas = vpd.analyze_canvas(product_name="Travel Booking",
+    jobs=[{"description": "Find hotel quickly"}])
 # → Canvas: fit score 8.1/10, gap: "no real-time loyalty points display"
 
 # 4. SWD: turn findings into an executive-ready story
