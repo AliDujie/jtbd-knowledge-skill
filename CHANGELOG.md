@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.1.77 (2026-05-16)
+
+- Repo maintenance: enhanced English Features at a Glance with additional capabilities
+- Improved What's New callout formatting
+- Verified ecosystem cross-references and bilingual consistency
+- Confirmed all JTBD reference docs linked in CN+EN
+
+
 ## v3.1.73 (2026-05-16)
 
 - Synced Python `__version__` with SKILL.md version
