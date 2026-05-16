@@ -29,6 +29,29 @@ A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces 
 
 > 🏆 **Proven Impact:** Teams using JTBD systematically report **2.3× higher product-market fit scores** within the first two release cycles, because they prioritize based on *unmet Jobs* rather than competitor feature checklists. _(Source: aggregate of published case studies from Christensen Institute & Strategyn.)_
 
+## 💡 为什么选择 JTBD？
+
+> **JTBD 是整个 AliDujie UX 研究生态的需求洞察核心。** 用户不是"想要"什么功能，而是"雇用"产品来完成生活中的某个任务（Job）。JTBD 融合四大学派（Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories），13 项执行能力从访谈→问卷→评分→竞争→营销→增长→Jobs Atlas 全流程覆盖。配合 CEO 决策视角（市场规模估算、优先级评分、商业化可行性），让需求洞察直接驱动商业决策。
+>
+> *"JTBD 让我们不再问'你想要什么功能'，而是'你在什么场景下想要完成什么'——答案完全不同。"*
+
+## 🔗 Ecosystem Quick Start
+
+JTBD sits after Persona in the research pipeline — it discovers what users are trying to accomplish:
+
+```python
+# Persona (who) → JTBD (what they need) → VPD (value) → SWD (present)
+from persona import PersonaSkill
+from jtbd import JTBDSkill
+from vpd import VPDSkill
+from swd import SWDSkill
+
+p = PersonaSkill("Product")       # Define target users
+j = JTBDSkill("Product")         # Discover Jobs + score opportunities
+v = VPDSkill("Product", "users") # Map to value proposition
+s = SWDSkill("Report")           # Present to stakeholders
+```
+
 ## ⚡ Quick Start (5 Minutes)
 
 ### Install
@@ -310,6 +333,16 @@ python -m pytest jtbd/tests/test_all.py -v
 ## 🤝 Contributing
 
 We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Related Skills in the AliDujie Ecosystem
+
+| Skill | What It Does | GitHub |
+|-------|-------------|--------|
+| [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | 100 design research methods | `UDMSkill` |
+| [Web Persona](https://github.com/AliDujie/web-persona-skill) | Evidence-driven user persona creation | `PersonaSkill` |
+| [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | HEART framework, A/B testing, MaxDiff | `QuantUXSkill` |
+| [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | VPD canvas, Blue Ocean strategy | `VPDSkill` |
+| [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Data visualization & executive storytelling | `SWDSkill` |
 
 ## ❓ FAQ / Troubleshooting
 
