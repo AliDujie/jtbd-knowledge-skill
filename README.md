@@ -327,6 +327,7 @@ python -m pytest jtbd/tests/test_all.py -v
 | [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD market sizing → CEO investment decisions |
 | [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD opportunity scores → CPO roadmap adjustment |
 | [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD competitive analysis → CMO brand differentiation |
+| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD tech-related Jobs → CTO technology investment priorities |
 | [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD findings → CEO plan review & 10x opportunity |
 
 ## 🤝 Contributing
