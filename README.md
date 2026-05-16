@@ -60,6 +60,8 @@ s = SWDSkill("Report")           # Present to stakeholders
 cp -r jtbd-knowledge-skill /your/agent/skills/
 ```
 
+For detailed installation steps, configuration options, and agent integration guides, see [INSTALL.md](INSTALL.md).
+
 ### Use in Python
 
 ```python
@@ -357,6 +359,13 @@ Yes. The `analyze_forces()` function works well with existing interview transcri
 
 **Q: How does JTBD fit with the other AliDujie skills?**
 JTBD sits at the "need insight" layer: [Persona](https://github.com/AliDujie/web-persona-skill) tells you *who*, JTBD tells you *what they need*, [VPD](https://github.com/AliDujie/value-proposition-design) tells you *how to deliver value*, [UDM](https://github.com/AliDujie/universal-design-methods) tells you *how to research*, [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) *validates*, and [SWD](https://github.com/AliDujie/storytelling-with-data) *communicates*.
+
+## 📚 Resources
+
+- [INSTALL.md](INSTALL.md) — Detailed installation guide and agent integration
+- [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
+- [CHANGELOG.md](CHANGELOG.md) — Version history
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — Community guidelines
 
 ## 📄 License
 
