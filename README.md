@@ -205,16 +205,21 @@ from swd import SWDSkill
 
 # 1. Persona: define who we're designing for
 persona = PersonaSkill("Travel Booking")
-segments = persona.identify_segments()
-# → segments: ["Business Travelers", "Budget Backpackers", "Family Vacationers"]
+persona.add_persona(name="Alex", archetype="Business Traveler", priority="primary",
+    goals=["Book hotel fast"], behaviors=["Last-minute bookings"],
+    bio="Alex travels weekly for sales meetings")
+persona.add_persona(name="Sam", archetype="Budget Backpacker", priority="secondary",
+    goals=["Find cheapest option"], behaviors=["Extensive comparison"],
+    bio="Sam is a student traveling during summer break")
 
 # 2. JTBD: discover what each segment is trying to accomplish
 jtbd = JTBDSkill("Travel Booking")
-jobs = jtbd.discover_jobs(segments[0])  # focus on Business Travelers
 score = jtbd.score_opportunity("Find hotel quickly", struggle=4, alternative=3, market=4, budget=4)
 forces = jtbd.analyze_forces("Users switching from hotel chains to our platform")
 # → top Job: "Find hotel quickly" (Score: 7.6/10)
 # → Push: "Corporate booking portals are slow", Pull: "One-click rebook"
+guide = jtbd.generate_interview("Switch Interview", ["competition", "push", "anxiety"])
+atlas = jtbd.create_jobs_atlas("Travel Booking Platform")
 
 # 3. VPD: map Jobs to value proposition canvas
 vpd = VPDSkill("Travel Booking", "Business Travelers")
@@ -224,16 +229,18 @@ canvas = vpd.analyze_canvas(product_name="Travel Booking",
 
 # 4. SWD: turn findings into an executive-ready story
 swd = SWDSkill("Travel Booking Q2 Review")
-presentation = swd.create_executive_brief(
-    title="Business Traveler JTBD Analysis",
-    key_findings=[
-        f"Top underserved Job: 'Find hotel quickly' (Opportunity Score: 7.6/10)",
-        "Primary push force: corporate portal friction (avg. 4.2/5 struggle)",
-        "Value proposition gap: real-time loyalty points not surfaced"
+ctx = swd.build_context(audience="Product VP", cta="Prioritize one-click rebook in Q3")
+story = swd.build_story(
+    protagonist="Product Committee",
+    imbalance="Business travelers struggle with hotel booking; avg. 4.2/5 frustration",
+    evidence=[
+        "Top underserved Job: 'Find hotel quickly' (Opportunity Score: 7.6/10)",
+        "Primary push force: corporate portal friction",
+        "Value proposition gap: real-time loyalty points not surfaced",
     ],
-    recommendation="Prioritize one-click rebook + loyalty points widget in Q3"
+    call_to_action="Prioritize one-click rebook + loyalty points widget in Q3"
 )
-# → Slide deck + narrative ready for stakeholder review
+print(story)
 ```
 
 This pipeline flows: **Persona** (who) → **JTBD** (what they need) → **VPD** (how we deliver value) → **SWD** (how we communicate it).
