@@ -4,13 +4,13 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Version](https://img.shields.io/badge/version-3.1.77-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.78-green.svg)](CHANGELOG.md)
 [![Install Guide](https://img.shields.io/badge/install-guide-orange.svg)](INSTALL.md)
 ![Last Updated](https://img.shields.io/badge/last%20updated-2026-05-16-brightgreen.svg)
 
 > 🎯 **一句话介绍**: 基于 Alan Klement《When Coffee and Kale Compete》的 JTBD (Jobs to Be Done) 理论与实践工具集。提供 13 项可执行能力和 15 篇方法论知识库，覆盖从用户访谈到竞争分析到增长策略的完整 JTBD 工作流。
 
-🆕 **What's New in v3.1.75**: Synced Python __version__ with SKILL.md. Added JTBD competitive analysis example. Verified ecosystem cross-references and bilingual consistency across all 7 skills.
+🆕 **What's New in v3.1.78**: Added `__version__` to `__all__` export list. Fixed trailing whitespace in code examples. Verified version alignment across all config files.: Synced Python __version__ with SKILL.md. Added JTBD competitive analysis example. Verified ecosystem cross-references and bilingual consistency across all 7 skills.
 
 ```text
 ┌─────────┐    ┌──────────┐    ┌─────┐    ┌──────────┐    ┌─────┐    ┌─────┐    ┌─────┐
@@ -121,7 +121,7 @@ jtbd = JTBDSkill("旅行预订平台")
 stories = jtbd.create_job_stories("用户希望在出差时快速找到性价比高的住宿")
 
 # Step 2: Score opportunities
-scores = jtbd.score_opportunity("快速找到合适住处", 
+scores = jtbd.score_opportunity("快速找到合适住处",
     struggle=4, importance=5, alternative=3, satisfaction=2)
 # → Opportunity Score = Importance + (Importance - Satisfaction) = 5 + 3 = 8
 
