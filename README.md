@@ -35,6 +35,23 @@ A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces 
 >
 > *"JTBD 让我们不再问'你想要什么功能'，而是'你在什么场景下想要完成什么'——答案完全不同。"*
 
+## 🔗 生态快速开始
+
+JTBD 位于 Persona 之后——发现用户真正想要完成的任务：
+
+```python
+# Persona（谁）→ JTBD（需要什么）→ VPD（价值）→ SWD（呈现）
+from persona import PersonaSkill
+from jtbd import JTBDSkill
+from vpd import VPDSkill
+from swd import SWDSkill
+
+p = PersonaSkill("产品")       # 定义目标用户
+j = JTBDSkill("产品")         # 发现 Jobs + 评分机会
+v = VPDSkill("产品", "用户")  # 映射到价值主张
+s = SWDSkill("报告")          # 向利益相关者呈现
+```
+
 ## 🔗 Ecosystem Quick Start
 
 JTBD sits after Persona in the research pipeline — it discovers what users are trying to accomplish:
