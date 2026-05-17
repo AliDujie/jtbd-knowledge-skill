@@ -389,6 +389,12 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 
 ## ❓ FAQ / Troubleshooting
 
+**Q: When should I use JTBD instead of traditional user research?**
+Use JTBD when you need to understand the *progress* a user is trying to make — not just what features they want. It's especially powerful for competitive switching analysis, innovation opportunities, and messaging. Pair it with [UDM](https://github.com/AliDujie/universal-design-methods) for method selection and [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) for validation.
+
+**Q: I have too many Jobs — how do I prioritize?**
+Run `score_opportunity()` on all of them, then `render_priority_matrix()`. Focus on Jobs scoring above 7.5 (4D model) or 12 (ODI) — these are your biggest unmet needs.
+
 **Q: Which JTBD school should I start with?**
 For most teams, Klement's Forces of Progress (Push/Pull/Anxiety/Habit) is the most accessible starting point. Use it to understand why users switch. Then layer on Ulwick's ODI for quantitative opportunity scoring.
 
@@ -414,3 +420,9 @@ JTBD sits at the "need insight" layer: [Persona](https://github.com/AliDujie/web
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+**Built with ❤️ as part of the AliDujie UX Research Ecosystem**
+
+[UDM](https://github.com/AliDujie/universal-design-methods) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [VPD](https://github.com/AliDujie/value-proposition-design) · [Persona](https://github.com/AliDujie/web-persona-skill) · [SWD](https://github.com/AliDujie/storytelling-with-data)
