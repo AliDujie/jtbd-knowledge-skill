@@ -410,6 +410,9 @@ Yes. The `analyze_forces()` function works well with existing interview transcri
 **Q: How does JTBD fit with the other AliDujie skills?**
 JTBD sits at the "need insight" layer: [Persona](https://github.com/AliDujie/web-persona-skill) tells you *who*, JTBD tells you *what they need*, [VPD](https://github.com/AliDujie/value-proposition-design) tells you *how to deliver value*, [UDM](https://github.com/AliDujie/universal-design-methods) tells you *how to research*, [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) *validates*, and [SWD](https://github.com/AliDujie/storytelling-with-data) *communicates*.
 
+**Q: Can I run JTBD before doing user research?**
+Yes — JTBD's hypothesis-driven features (`score_opportunity()`, `analyze_forces()`) work well for initial structuring. But always validate hypotheses with actual [UDM](https://github.com/AliDujie/universal-design-methods) interviews or [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) surveys before making major product decisions.
+
 ## 📚 Resources
 
 - [INSTALL.md](INSTALL.md) — Detailed installation guide and agent integration
