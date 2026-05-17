@@ -510,6 +510,48 @@ ctx = swd.build_context(audience="产品委员会",
     big_idea="用户核心 Job 是'快速完成任务'，应简化而非增加功能")
 ```
 
+### 🔀 完整端到端流程：Persona → JTBD → UDM → QuantUX → VPD → SWD
+
+一个完整的从需求洞察到数据叙事的管道示例：
+
+```python
+from persona import PersonaSkill
+from jtbd import JTBDSkill
+from udm import UDMSkill
+from quantux import QuantUXSkill
+from vpd import VPDSkill
+from swd import SWDSkill
+
+# 1. Persona — 定义目标用户
+persona = PersonaSkill("旅行预订平台")
+persona.add_persona(name="商务客", archetype="效率优先", priority="primary",
+    goals=["30秒内完成酒店预订"], bio="每周出差的销售顾问")
+
+# 2. JTBD — 发现用户真正想要完成的"工作"
+jtbd = JTBDSkill("旅行预订平台")
+score = jtbd.score_opportunity("快速找到合适住处", struggle=4, alternative=3, market=4, budget=4)
+forces = jtbd.analyze_forces("用户从竞品切换到我们的产品")
+# → 高机会: 7.6/10, Push: "竞品预订流程慢"
+
+# 3. UDM — 定性研究验证
+udm = UDMSkill("旅行预订平台")
+interview = udm.generate_interview("商务用户", "contextual")
+
+# 4. QuantUX — 定量验证
+quantux = QuantUXSkill("旅行预订平台")
+n = quantux.calculate_ab_sample_size(baseline=0.35, mde=0.03)
+
+# 5. VPD — 价值主张验证
+vpd = VPDSkill("旅行预订", "商务客")
+canvas = vpd.analyze_canvas(product_name="旅行预订",
+    jobs=[{"description": "快速找到住处", "importance": 5}])
+
+# 6. SWD — 高管数据故事
+swd = SWDSkill("Q1 研究汇报")
+story = swd.build_story(protagonist="产品委员会",
+    imbalance="商务客预订体验差", call_to_action="优化一键预订")
+```
+
 ## 最佳实践
 
 | # | 原则 | 说明 |
