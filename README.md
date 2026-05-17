@@ -127,6 +127,13 @@ report = skill.analyze(include_ceo_analysis=True)
 
 **Zero dependencies** — pure Python standard library. No `pip install` needed.
 
+> 💡 **Try it now / 立即尝试**:
+> ```python
+> from jtbd import JTBDSkill
+> skill = JTBDSkill("你的产品")
+> print(skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4))
+> ```
+
 ## 📋 Real-World Use Cases
 
 ### 1. Identifying Underserved Jobs in a Travel App
