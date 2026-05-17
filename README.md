@@ -211,6 +211,17 @@ Persona → JTBD → UDM → QuantUX → VPD → SWD → STM
 - [ ] **Jobs Atlas** — `skill.create_jobs_atlas("Product")`
 - [ ] **Full analysis** — `skill.analyze(include_ceo_analysis=True)`
 
+### ⏱️ 5 分钟快速开始检查清单
+
+- [ ] **安装** — `cp -r jtbd-knowledge-skill /your/agent/skills/`
+- [ ] **导入** — `from jtbd import JTBDSkill`
+- [ ] **初始化** — `skill = JTBDSkill("你的产品")`
+- [ ] **机会评分** — `skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4)`
+- [ ] **四力分析** — `skill.analyze_forces("用户从竞品切换到我们")`
+- [ ] **访谈提纲** — `skill.generate_interview("Switch 访谈", ["competition", "push"])`
+- [ ] **Jobs Atlas** — `skill.create_jobs_atlas("产品")`
+- [ ] **完整分析** — `skill.analyze(include_ceo_analysis=True)`
+
 Cross-skill example:
 ```python
 # JTBD → VPD → QuantUX end-to-end
