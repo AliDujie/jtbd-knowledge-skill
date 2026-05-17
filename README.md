@@ -386,19 +386,6 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | VPD canvas, Blue Ocean strategy | `VPDSkill` |
 | [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | Business framework analysis | `STMSkill` |
 | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Data visualization & executive storytelling | `SWDSkill` |
-| [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | Business framework analysis | `STMSkill` |
-
-### 🔗 Extended Ecosystem
-
-JTBD need insights can be combined with management skills to turn user jobs into business decisions:
-
-| Extended Skill | Collaboration Scenario |
-|---------------|----------------------|
-| [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD market sizing → CEO investment decisions |
-| [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD opportunity scores → CPO roadmap adjustments |
-| [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD competitive analysis → CMO brand positioning |
-| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD tech-related Jobs → CTO technology investment priorities |
-| [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD findings → CEO plan review & 10x opportunity |
 
 ## ❓ FAQ / Troubleshooting
 
