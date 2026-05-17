@@ -176,6 +176,17 @@ Persona → JTBD → UDM → QuantUX → VPD → SWD → STM
 | JTBD (interview findings) | UDM (method validation) | JTBD hypotheses → UDM interview validation |
 | JTBD (insights) | SWD (data storytelling) | JTBD findings → SWD executive presentation |
 
+### ⏱️ 5-Minute Quick-Start Checklist
+
+- [ ] **Install** — `cp -r jtbd-knowledge-skill /your/agent/skills/`
+- [ ] **Import** — `from jtbd import JTBDSkill`
+- [ ] **Initialize** — `skill = JTBDSkill("Your Product")`
+- [ ] **Score opportunity** — `skill.score_opportunity("Job", struggle=4, alternative=3, market=4, budget=4)`
+- [ ] **Four forces** — `skill.analyze_forces("Users switching from competitor")`
+- [ ] **Interview guide** — `skill.generate_interview("Switch Interview", ["competition", "push"])`
+- [ ] **Jobs Atlas** — `skill.create_jobs_atlas("Product")`
+- [ ] **Full analysis** — `skill.analyze(include_ceo_analysis=True)`
+
 Cross-skill example:
 ```python
 # JTBD → VPD → QuantUX end-to-end

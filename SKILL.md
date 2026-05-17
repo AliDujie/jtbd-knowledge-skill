@@ -7,6 +7,7 @@ description: >
   提供 13 项可执行能力和 15 篇方法论知识库。附带完整 Python API（JTBDSkill 统一入口），
   覆盖访谈→问卷→评分→优先级→竞争→营销→增长→描述→Job Map→Outcome→Stories→障碍→Atlas
   全流程，以及 CEO 决策视角的市场规模估算、优先级评分与商业化可行性分析。
+![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
 ---
 
 # JTBD (Jobs to Be Done) v3.0 执行技能
