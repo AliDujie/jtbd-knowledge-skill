@@ -439,7 +439,21 @@ python -m pytest jtbd/tests/test_all.py -v
 | Demand-Side Sales | Bob Moesta (2021) | Switch interviews, Forces of Progress |
 | Jobs to Be Done | Tony Ulwick (2016) | ODI methodology, opportunity algorithm |
 
+### 🔗 扩展生态 (Extended Ecosystem)
+
+JTBD 需求洞察可与管理技能结合，将 Jobs 数据转化为商业决策：
+
+| 扩展技能 | 协作场景 |
+|---------|----------|
+| [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD 市场规模估算 → CEO 投资决策 |
+| [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD 机会评分 → CPO 产品路线图调整 |
+| [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD 竞争分析 → CMO 品牌差异化定位 |
+| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD 技术相关 Jobs → CTO 技术投资优先级 |
+| [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD 发现 → CEO 计划审查与 10 倍机会识别 |
+
 ## 🔗 Extended Ecosystem
+
+JTBD need insights can be combined with management skills to turn Jobs data into business decisions:
 
 | Extended Skill | Collaboration Scenario |
 |---------------|----------------------|
