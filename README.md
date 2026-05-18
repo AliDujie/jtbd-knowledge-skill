@@ -441,6 +441,12 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Data visualization & executive storytelling | `SWDSkill` |
 | [CTO Advisor](https://github.com/AliDujie/cto-advisor) | CTO-level tech strategy & architecture guidance | `CTOSkill` |
 
+### 💡 Pro Tips / 专业技巧
+- **Forces first**: Always start with Push/Pull/Anxiety/Habit analysis — it's the fastest way to understand switching dynamics
+- **Opportunity > satisfaction**: A low satisfaction score means nothing without high importance — focus on Jobs with Importance × (Importance − Satisfaction) > 10
+- **Non-consumption is the biggest competitor**: Don't just compare to direct rivals — analyze what users do when they *don't* use any product
+- **Cross-validate with QuantUX**: JTBD opportunity scores + QuantUX MaxDiff = dual-method priority validation
+
 ## ❓ FAQ / Troubleshooting
 
 **Q: When should I use JTBD instead of traditional user research?**
