@@ -148,6 +148,48 @@ report = skill.analyze(include_ceo_analysis=True)
 ### 4. Jobs-Based Market Sizing for Investor Pitches
 > Call `generate_market_size_estimate()` on your Jobs Atlas to derive TAM/SAM/SOM from the ground up — e.g., starting from "find last-minute accommodation near venue" and scaling through adoption layers — giving investors defensible numbers rooted in real demand.
 
+## 🤖 AI Agent Integration
+
+JTBD is a **natural fit for LLM agents** — its qualitative analysis methods (Forces of Progress, Switch Interviews, Jobs Atlas) align perfectly with conversational AI's strength in understanding context and intent:
+
+```python
+# Example: JTBD as agent tools
+from jtbd import JTBDSkill
+
+jtbd = JTBDSkill("Product")
+
+@tool
+def score_job_opportunity(job: str, struggle: int, alternative: int, market: int, budget: int):
+    """Score a Job-to-be-Done on the 4-dimension opportunity model."""
+    return jtbd.score_opportunity(job, struggle, alternative, market, budget)
+
+@tool
+def analyze_switching_forces(scenario: str):
+    """Analyze Push, Pull, Anxiety, and Habit forces for a switching scenario."""
+    return jtbd.analyze_forces(scenario)
+
+@tool
+def generate_job_story(job: str, format: str = "kalbach"):
+    """Generate a Job Story in the specified format (klement/outcome/job_story/traditional)."""
+    return jtbd.generate_job_description(job, format)
+```
+
+### Agent Workflow Pattern
+```
+User interview transcript → JTBD.analyze_forces() → Push/Pull/Anxiety/Habit mapping
+     ↓
+Identified Jobs → JTBD.score_opportunity() → Priority-ranked opportunity list
+     ↓
+Top Jobs → JTBD.create_jobs_atlas() → Full 7-dimension Jobs Atlas
+     ↓
+Atlas → VPD canvas + SWD story → Stakeholder-ready presentation
+```
+
+### Prompt Engineering Tips
+- **Transcript analysis**: Feed raw interview transcripts into `analyze_forces()` with minimal preprocessing — the skill handles the extraction
+- **Opportunity matrix**: Combine `score_opportunity()` with `render_priority_matrix()` for instant feature roadmaps
+- **Cross-skill validation**: Use JTBD output as input to [VPD](https://github.com/AliDujie/value-proposition-design) canvas and [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) MaxDiff surveys
+
 ## 🧩 13 Capabilities
 
 | # | Capability | Key Methods |
@@ -397,6 +439,7 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | VPD canvas, Blue Ocean strategy | `VPDSkill` |
 | [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | Business framework analysis | `STMSkill` |
 | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Data visualization & executive storytelling | `SWDSkill` |
+| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | CTO-level tech strategy & architecture guidance | `CTOSkill` |
 
 ## ❓ FAQ / Troubleshooting
 
