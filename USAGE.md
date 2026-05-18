@@ -2,6 +2,18 @@
 
 > JTBD 需求洞察 · 使用指南
 
+## 📐 Where JTBD Fits in the Pipeline
+
+```
+Persona (Who) → JTBD (What) → UDM (Research) → QuantUX (Validate) → VPD (Value) → SWD (Present)
+                  ↑
+            JTBD sits here
+```
+
+- **After** Persona defines who the users are
+- **Before** UDM recommends research methods and VPD maps value propositions
+- **JTBD** discovers what users are really trying to accomplish (Jobs)
+
 ## ⚡ 5-Minute Quick Start / 5分钟快速开始
 
 ```bash
