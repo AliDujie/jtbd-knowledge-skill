@@ -446,6 +446,17 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 - **Opportunity > satisfaction**: A low satisfaction score means nothing without high importance — focus on Jobs with Importance × (Importance − Satisfaction) > 10
 - **Non-consumption is the biggest competitor**: Don't just compare to direct rivals — analyze what users do when they *don't* use any product
 - **Cross-validate with QuantUX**: JTBD opportunity scores + QuantUX MaxDiff = dual-method priority validation
+- **Interview the moment, not the product**: Ask about the specific moment someone decided to switch — not what features they like about your app
+
+## 🛡️ Common Pitfalls & How to Avoid Them
+
+| Pitfall | How JTBD Helps |
+|---------|---------------|
+| "Users say they want X" — surface-level feedback | `analyze_forces()` digs into Push/Pull/Anxiety/Habit switching dynamics |
+| Feature checklists driving the roadmap | `score_opportunity()` ranks by unmet need, not competitor parity |
+| Too many Jobs to prioritize | `render_priority_matrix()` forces P0/P1/P2 discipline |
+| Generic marketing messaging | `generate_marketing_copy()` produces struggle-resonant, progress-driven copy |
+| Building features nobody will pay for | `generate_commercialization_feasibility()` gives WTP + ROI before build
 
 ## ❓ FAQ / Troubleshooting
 
