@@ -542,14 +542,6 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 - [knowledge/](knowledge/) — JTBD methodology knowledge documents
 - [references/](references/) — Interview and survey template files
 
-## ⚠️ When NOT to Use JTBD
-
-- **Choosing research methods** → Use [Universal Design Methods](https://github.com/AliDujie/universal-design-methods)
-- **Creating user personas** → Use [Web Persona](https://github.com/AliDujie/web-persona-skill)
-- **Value proposition canvas and PMF validation** → Use [Value Proposition Design](https://github.com/AliDujie/value-proposition-design)
-- **Statistical analysis / A/B testing** → Use [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research)
-- **Data visualization and storytelling** → Use [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
-
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
