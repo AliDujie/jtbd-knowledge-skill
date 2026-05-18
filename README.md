@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.1.79-blue)
+![Version](https://img.shields.io/badge/version-3.1.80-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -543,7 +543,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.79)**: Added cross-skill collaboration table linking 5 ecosystem skills, improved Pro Tips section.
+**Latest (v3.1.80)**: Added Chinese Extended Ecosystem section with CEO/CPO/CMO/CTO advisor links, improving bilingual parity.
+
+**Previous (v3.1.79)**: Added cross-skill collaboration table linking 5 ecosystem skills, improved Pro Tips section.
 
 ## 📚 Resources
 
