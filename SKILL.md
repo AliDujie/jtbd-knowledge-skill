@@ -596,4 +596,8 @@ JTBD 需求洞察可与管理层技能结合，将用户 Jobs 转化为商业决
 | [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD 市场规模估算 → CEO 投资决策 |
 | [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD 机会分数 → CPO 产品路线图调整 |
 | [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD 竞争分析 → CMO 品牌差异化定位 |
+| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD 技术相关 Jobs → CTO 技术投资优先级 |
 | [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD 发现 → CEO 计划审查与 10x 机会识别 |
+
+### 💡 Pro Tip / 专业技巧
+JTBD 是 AliDujie 生态系统的**需求洞察核心**。最强大的用法是将 JTBD 四力分析（Push/Pull/Anxiety/Habit）与 [UDM](https://github.com/AliDujie/universal-design-methods) 访谈结合使用：用 UDM 收集定性数据，用 JTBD 结构化分析，将发现交给 [VPD](https://github.com/AliDujie/value-proposition-design) 映射到画布，用 [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) 验证机会分数，最终通过 [SWD](https://github.com/AliDujie/storytelling-with-data) 向高管呈现。这套组合拳能覆盖从用户洞察到商业决策的完整链条。
