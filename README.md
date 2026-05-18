@@ -69,6 +69,17 @@ v = VPDSkill("Product", "users") # Map to value proposition
 s = SWDSkill("Report")           # Present to stakeholders
 ```
 
+
+### 🔗 Cross-Skill Collaboration / 跨技能协作
+
+| 上游产出 | 用 JTBD 做... | 下游 → |
+|----------|-------------|--------|
+| [Persona](https://github.com/AliDujie/web-persona-skill) 角色数据 | Jobs 聚类分析 | `jtbd.score_opportunity()` per persona |
+| [UDM](https://github.com/AliDujie/universal-design-methods) 访谈数据 | 四力分析 | `jtbd.analyze_forces()` from transcripts |
+| JTBD 机会评分 → | [VPD](https://github.com/AliDujie/value-proposition-design) 画布填充 | `vpd.analyze_canvas(jobs=top_jobs)` |
+| JTBD Jobs → | [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) MaxDiff 验证 | `quantux.maxdiff(opportunity_list)` |
+| JTBD 发现 → | [SWD](https://github.com/AliDujie/storytelling-with-data) 汇报 | `swd.build_story(evidence=findings)` |
+
 ## ⚡ Quick Start (5 Minutes)
 
 ### Install
