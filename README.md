@@ -495,6 +495,28 @@ JTBD sits at the "need insight" layer: [Persona](https://github.com/AliDujie/web
 **Q: Can I run JTBD before doing user research?**
 Yes — JTBD's hypothesis-driven features (`score_opportunity()`, `analyze_forces()`) work well for initial structuring. But always validate hypotheses with actual [UDM](https://github.com/AliDujie/universal-design-methods) interviews or [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) surveys before making major product decisions.
 
+## 🏗️ Advanced: Custom Configuration
+
+JTBD supports runtime configuration via the `AnalysisConfig` class:
+
+```python
+from jtbd import JTBDSkill, AnalysisConfig
+
+config = AnalysisConfig()
+config.set_output_language("en")    # Switch output language
+config.set_school_preference("klement")  # Default to Klement's framework
+
+skill = JTBDSkill("My Product", config=config)
+```
+
+See [INSTALL.md](INSTALL.md) for full configuration options and agent integration guides.
+
+## 📊 Version History
+
+See [CHANGELOG.md](CHANGELOG.md) for full release notes.
+
+**Latest (v3.1.79)**: Added cross-skill collaboration table linking 5 ecosystem skills, improved Pro Tips section.
+
 ## 📚 Resources
 
 - [INSTALL.md](INSTALL.md) — Detailed installation guide and agent integration
@@ -505,6 +527,12 @@ Yes — JTBD's hypothesis-driven features (`score_opportunity()`, `analyze_force
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+**Built with ❤️ as part of the AliDujie UX Research Ecosystem**
+
+[Persona](https://github.com/AliDujie/web-persona-skill) · **JTBD** · [UDM](https://github.com/AliDujie/universal-design-methods) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [VPD](https://github.com/AliDujie/value-proposition-design) · [SWD](https://github.com/AliDujie/storytelling-with-data) · [STM](https://github.com/AliDujie/Structured-Thinking-Model)
 
 ---
 
