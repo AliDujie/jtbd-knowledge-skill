@@ -400,6 +400,19 @@ jtbd-knowledge-skill/
 └── .github/              # CI/CD workflows & issue templates
 ```
 
+## ⚡ 30-Second Quick Start / 30秒快速开始
+
+```python
+from jtbd import JTBDSkill
+
+# One-liner: score a job opportunity
+print(JTBDSkill("Your Product").score_opportunity("Core task", struggle=4, alternative=3, market=4, budget=4))
+
+# Two-liner: four forces analysis
+jtbd = JTBDSkill("Your Product")
+forces = jtbd.analyze_forces("Users switching from competitor")
+```
+
 ## 🧪 Testing
 
 ```bash
@@ -458,6 +471,7 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 - **Non-consumption is the biggest competitor**: Don't just compare to direct rivals — analyze what users do when they *don't* use any product
 - **Cross-validate with QuantUX**: JTBD opportunity scores + QuantUX MaxDiff = dual-method priority validation
 - **Interview the moment, not the product**: Ask about the specific moment someone decided to switch — not what features they like about your app
+- **Chain with ecosystem**: [Persona](https://github.com/AliDujie/web-persona-skill) defines who → JTBD discovers what → [UDM](https://github.com/AliDujie/universal-design-methods) validates how → [VPD](https://github.com/AliDujie/value-proposition-design) maps value → [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) quantifies → [SWD](https://github.com/AliDujie/storytelling-with-data) presents
 
 ## 🛡️ Common Pitfalls & How to Avoid Them
 
@@ -533,9 +547,3 @@ MIT License — see [LICENSE](LICENSE) for details.
 **Built with ❤️ as part of the AliDujie UX Research Ecosystem**
 
 [Persona](https://github.com/AliDujie/web-persona-skill) · **JTBD** · [UDM](https://github.com/AliDujie/universal-design-methods) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [VPD](https://github.com/AliDujie/value-proposition-design) · [SWD](https://github.com/AliDujie/storytelling-with-data) · [STM](https://github.com/AliDujie/Structured-Thinking-Model)
-
----
-
-**Built with ❤️ as part of the AliDujie UX Research Ecosystem**
-
-[UDM](https://github.com/AliDujie/universal-design-methods) · [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) · [VPD](https://github.com/AliDujie/value-proposition-design) · [Persona](https://github.com/AliDujie/web-persona-skill) · [SWD](https://github.com/AliDujie/storytelling-with-data)
