@@ -144,6 +144,48 @@ python jtbd/tests/test_all.py
 | **Wunker** — Jobs Atlas | Job 的 360° 全景视角（社会、情感、财务、消费链维度） | `create_jobs_atlas()` + `generate_market_size_estimate()` | 融资路演、TAM/SAM/SOM 估算、ABC 驱动力细分、多利益相关者 Jobs |
 | **Kalbach** — Job Stories | 无解决方案偏向的需求框架、替代敏捷用户故事、迭代规划 | `create_jtbd_statement(format="job_story")` + job story 生成 | 编写可测试的 Job Stories、VPC 集成、"当……我想要……以便……"格式 |
 
+## 🔗 Related Skills in the Ecosystem / 生态系统中的相关技能
+
+JTBD doesn't work in isolation — it's the **demand insight layer** that plugs into a broader research pipeline:
+
+| Skill | Role | How It Connects with JTBD |
+|-------|------|---------------------------|
+| [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) | Methodology core | UDM interviews generate raw data → JTBD structures Jobs and scores opportunities |
+| [Web Persona](https://github.com/AliDujie/web-persona-skill) | User definition | JTBD task clusters inform Persona segment definition → Personas ground Jobs in real user profiles |
+| [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | Quantitative validation | JTBD opportunity scores → QuantUX A/B tests and MaxDiff validate priorities |
+| [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | Product-market fit | JTBD Jobs → VPD canvas filling → experiment validation |
+| [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Data storytelling | JTBD insights → SWD chart selection → executive narrative |
+
+> 💡 **Recommended chain:** Persona (define who) → JTBD (discover what Jobs) → VPD (map to canvas) → QuantUX (validate) → SWD (present to stakeholders)
+
+### Quick Cross-Skill Example / 跨技能示例
+
+```python
+from jtbd import JTBDSkill
+from vpd import VPDSkill
+from quantux import QuantUXSkill
+from swd import SWDSkill
+
+# JTBD discovers high-opportunity Jobs
+jtbd = JTBDSkill("Travel Booking")
+score = jtbd.score_opportunity("Find hotel quickly", struggle=4, alternative=3, market=4, budget=4)
+
+# VPD maps JTBD Jobs to Value Proposition Canvas
+vpd = VPDSkill("Travel Booking", "Business Travelers")
+vpd.analyze_canvas(product_name="Travel Booking",
+    jobs=[{"description": "Find hotel quickly"}])
+
+# QuantUX validates with A/B test
+quantux = QuantUXSkill("Travel Booking")
+n = quantux.calculate_ab_sample_size(baseline=0.35, mde=0.03)
+
+# SWD presents to executives
+swd = SWDSkill("Q2 JTBD Report")
+story = swd.build_story(protagonist="Product Committee",
+    imbalance="Business travelers struggle with booking",
+    call_to_action="Prioritize one-click rebook")
+```
+
 ## 📚 Resources / 资源
 
 - [README.md](README.md) — Full documentation
