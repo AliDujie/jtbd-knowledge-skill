@@ -128,6 +128,22 @@ cd jtbd-knowledge-skill
 python jtbd/tests/test_all.py
 ```
 
+## 🎯 When to Use Each JTBD School / 何时使用各学派
+
+| School | When to Use | Key Method | Use It For |
+|--------|------------|------------|------------|
+| **Klement** — Forces of Progress | Understanding *why users switch* products or adopt new ones | `analyze_forces()` + `generate_interview()` | Competitive switching analysis, emotional progress mapping, identifying Push/Pull/Anxiety/Habit dynamics |
+| **Ulwick ODI** — Outcome-Driven Innovation | *Quantitative* opportunity scoring, feature roadmaps, survey validation | `score_odi()` + `score_opportunity()` + `render_priority_matrix()` | Measuring underserved outcomes, P0/P1/P2 prioritization, Job Map 8-stage analysis |
+| **Wunker** — Jobs Atlas | Holistic 360° view of a Job including social, emotional, financial, and consumption-chain dimensions | `create_jobs_atlas()` + `generate_market_size_estimate()` | Investor pitches, TAM/SAM/SOM sizing, ABC Driver segmentation, multi-stakeholder Jobs |
+| **Kalbach** — Job Stories | Solution-agnostic requirement framing, agile user-story replacement, sprint planning | `create_jtbd_statement(format="job_story")` + job story generation | Writing testable Job Stories, VPC integration, When/I want to/So I can format |
+
+| 学派 | 适用场景 | 核心方法 | 用于 |
+|------|---------|---------|------|
+| **Klement** — 进步力量 | 理解*用户为何切换*产品或采用新产品 | `analyze_forces()` + `generate_interview()` | 竞品切换分析、情感进步映射、推拉焦虑惯性动力学 |
+| **Ulwick ODI** — 结果驱动创新 | *量化*机会评分、功能路线图、问卷验证 | `score_odi()` + `score_opportunity()` + `render_priority_matrix()` | 测量未满足结果、P0/P1/P2 优先级、Job Map 八阶段分析 |
+| **Wunker** — Jobs Atlas | Job 的 360° 全景视角（社会、情感、财务、消费链维度） | `create_jobs_atlas()` + `generate_market_size_estimate()` | 融资路演、TAM/SAM/SOM 估算、ABC 驱动力细分、多利益相关者 Jobs |
+| **Kalbach** — Job Stories | 无解决方案偏向的需求框架、替代敏捷用户故事、迭代规划 | `create_jtbd_statement(format="job_story")` + job story 生成 | 编写可测试的 Job Stories、VPC 集成、"当……我想要……以便……"格式 |
+
 ## 📚 Resources / 资源
 
 - [README.md](README.md) — Full documentation
