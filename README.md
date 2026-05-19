@@ -543,7 +543,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.80)**: Added Chinese Extended Ecosystem section with CEO/CPO/CMO/CTO advisor links, improving bilingual parity.
+**Latest (v3.1.81)**: Enhanced pipeline documentation with complete 4-skill end-to-end example, improved cross-skill collaboration table formatting.
+
+**Previous (v3.1.80)**: Added Chinese Extended Ecosystem section with CEO/CPO/CMO/CTO advisor links, improving bilingual parity.
 
 **Previous (v3.1.79)**: Added cross-skill collaboration table linking 5 ecosystem skills, improved Pro Tips section.
 
