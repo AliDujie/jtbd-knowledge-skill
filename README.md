@@ -180,9 +180,9 @@ def analyze_switching_forces(scenario: str):
     return jtbd.analyze_forces(scenario)
 
 @tool
-def generate_job_story(job: str, format: str = "kalbach"):
-    """Generate a Job Story in the specified format (klement/outcome/job_story/traditional)."""
-    return jtbd.generate_job_description(job, format)
+def generate_job_story(job: str, verb: str, progress: str, format: str = "klement"):
+    """Generate a JTBD statement in the specified format (klement/outcome/job_story/traditional)."""
+    return jtbd.create_jtbd_statement(verb, progress, format=format)
 ```
 
 ### Agent Workflow Pattern
