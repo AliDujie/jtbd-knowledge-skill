@@ -555,7 +555,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
 - [CHANGELOG.md](CHANGELOG.md) — Version history
 - [SECURITY.md](SECURITY.md) — Security policy and responsible use
-- [knowledge/](knowledge/) — JTBD methodology knowledge documents
+- [references/](references/) — JTBD methodology knowledge documents (15 guides covering theory, research methods, analysis frameworks, and ODI methodology)
 - [references/](references/) — Interview and survey template files
 
 ## 📄 License
