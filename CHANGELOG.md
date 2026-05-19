@@ -1,3 +1,23 @@
+## v3.1.85 (2026-05-19)
+- Repo maintenance: synced versions across README/SKILL.md/pyproject.toml
+- Enhanced Jobs Atlas section with practical example
+- Improved cross-skill collaboration links
+
+## v3.1.84 (2026-05-19)
+- Added JTBD school selection pro tip, improved ecosystem chain reference
+
+## v3.1.83 (2026-05-19)
+- Added JTBD school guide to USAGE.md and improved README completeness
+
+## v3.1.82 (2026-05-19)
+- README + SKILL.md maintenance
+
+## v3.1.81 (2026-05-19)
+- Synced versions and improved ecosystem cross-references
+
+## v3.1.80 (2026-05-19)
+- Initial maintenance pass
+
 ## v3.1.79 (2026-05-16)
 - Fixed footer version mismatch (v3.1.75 → v3.1.78) in README.md
 - Verified ecosystem cross-references and bilingual consistency across all 7 skills

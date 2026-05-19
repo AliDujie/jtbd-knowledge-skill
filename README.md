@@ -2,11 +2,17 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.1.82-blue)
+![Version](https://img.shields.io/badge/version-3.1.85-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
 ![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
+
+## 🆕 What's New in v3.1.85
+
+- **School Selection Guide**: Added JTBD school selection pro tip with practical decision tree
+- **Ecosystem Chain**: Improved cross-skill pipeline with complete 6-skill example
+- **Version Sync**: Aligned all version numbers across README/SKILL.md/pyproject.toml
 
 ## 🇨🇳 中文概览
 
