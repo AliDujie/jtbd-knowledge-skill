@@ -186,6 +186,18 @@ story = swd.build_story(protagonist="Product Committee",
     call_to_action="Prioritize one-click rebook")
 ```
 
+## 🔗 Extended Ecosystem / 扩展生态
+
+JTBD 需求洞察可与 AliDujie 管理层 Advisor 技能结合,将用户 Jobs 转化为商业决策:
+
+| Extended Skill | Collaboration Scenario |
+|---------------|------------------------|
+| [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD market sizing → CEO investment decisions / JTBD 市场规模估算 → CEO 投资决策 |
+| [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD opportunity scores → CPO roadmap adjustment / JTBD 机会评分 → CPO 产品路线图调整 |
+| [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD competitive analysis → CMO brand differentiation / JTBD 竞争分析 → CMO 品牌差异化定位 |
+| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD tech-related Jobs → CTO technology investment priorities / JTBD 技术相关 Jobs → CTO 技术投资优先级 |
+| [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD findings → CEO plan review & 10x opportunity / JTBD 发现 → CEO 计划审查与 10x 机会识别 |
+
 ## 📚 Resources / 资源
 
 - [README.md](README.md) — Full documentation

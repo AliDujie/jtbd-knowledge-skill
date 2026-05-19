@@ -86,7 +86,7 @@ vpd.analyze_canvas(product_name="旅行预订", jobs=[{"description": "快速找
 - [ ] **全面分析** - `skill.analyze(include_ceo_analysis=True)`
 - [ ] **Jobs Atlas** - `skill.create_jobs_atlas("产品名")`
 
-[English](README.md#quick-start-5-minutes) | [中文](#中文说明)
+[English](README.md#-quick-start-5-minutes) | [中文概览](README.md#-中文概览)
 
 ## 💼 Why Teams Choose JTBD
 
@@ -384,7 +384,7 @@ result = skill.analyze(include_ceo_analysis=True)
 
 ## Python 工具包
 
-位于 `jtbd/` 目录,纯标准库实现,无外部依赖。版本 3.1.45。
+位于 `jtbd/` 目录,纯标准库实现,无外部依赖。版本 3.1.85。
 
 | 模块 | 核心类/函数 | 用途 | 学派来源 |
 |---|---|---|---|

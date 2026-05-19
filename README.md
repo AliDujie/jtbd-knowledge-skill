@@ -8,8 +8,48 @@
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
 ![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
 
+## 🎯 Why Use This Skill?
+
+**JTBD answers a question other methods can't**: *Why do users switch from your product to a competitor — or never buy at all?*
+
+Traditional user research asks **"what features do you want?"** and gets surface-level answers. JTBD asks **"what Job are you trying to get done?"** and reveals the hidden forces driving user behavior.
+
+| You Want | This Skill Gives You |
+|----------|--------------------|
+| To understand why users churn | Four Forces analysis (Push / Pull / Anxiety / Habit) |
+| To prioritize the right features | Opportunity scoring + ODI algorithm |
+| To differentiate from competitors | Jobs-based competitive landscape |
+| To write better marketing copy | Switch-interview-derived messaging framework |
+| To pitch investors | TAM/SAM/SOM from Job data |
+
+### 🎯 为什么要用这个技能?
+
+JTBD 回答了一个其他方法无法回答的问题：**用户为什么从你的产品切换到竞品——或者根本不来买?**
+
+传统用户研究问"你想要什么功能",只能得到表面答案。JTBD 问"你想完成什么任务",揭示了驱动用户行为的隐性力量。
+
+| 你需要 | 这个技能提供 |
+|-------|------------|
+| 理解用户流失原因 | 四力分析(推力/拉力/焦虑/惯性) |
+| 优先做对的功能 | 机会评分 + ODI 算法 |
+| 与竞品差异化 | 基于 Jobs 的竞争格局 |
+| 写出更好的营销文案 | 基于 Switch 访谈的消息框架 |
+| 向投资人做 pitch | 从 Job 数据推导 TAM/SAM/SOM |
+
+**Try it in 3 lines / 三行代码开始使用:**
+
+```python
+from jtbd import JTBDSkill
+skill = JTBDSkill("Your Product")
+skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
+```
+
 ## 🆕 What's New in v3.1.85
 
+- **Version Consistency Fixed**: Aligned `jtbd/__init__.py` version to 3.1.85 (was 3.1.79)
+- **Bilingual Navigation**: Fixed broken cross-links between SKILL.md ↔ README.md
+- **"Why Use This Skill?" Section**: Added dedicated value proposition with bilingual CN/EN content
+- **Extended Ecosystem**: Added CEO/CPO/CMO/CTO advisor cross-references to USAGE.md
 - **School Selection Guide**: Added JTBD school selection pro tip with practical decision tree
 - **Ecosystem Chain**: Improved cross-skill pipeline with complete 6-skill example
 - **Version Sync**: Aligned all version numbers across README/SKILL.md/pyproject.toml
@@ -582,7 +622,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.82)**: Added Pro Tips entry on JTBD school selection strategy (start with Klement, layer on Ulwick), improved version numbering.
+**Latest (v3.1.85)**: Fixed version consistency across `__init__.py` / SKILL.md / pyproject.toml (all now `3.1.85`), improved bilingual navigation links, added bilingual "Why Use This Skill?" section, updated Extended Ecosystem cross-references.
+
+**Previous (v3.1.82)**: Added Pro Tips entry on JTBD school selection strategy (start with Klement, layer on Ulwick), improved version numbering.
 
 **Previous (v3.1.81)**: Enhanced pipeline documentation with complete 4-skill end-to-end example, improved cross-skill collaboration table formatting.
 
