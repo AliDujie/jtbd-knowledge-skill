@@ -613,3 +613,17 @@ JTBD 需求洞察可与管理层技能结合,将用户 Jobs 转化为商业决�
 
 ### 💡 Pro Tip / 专业技巧
 JTBD 是 AliDujie 生态系统的**需求洞察核心**。最强大的用法是将 JTBD 四力分析(Push/Pull/Anxiety/Habit)与 [UDM](https://github.com/AliDujie/universal-design-methods) 访谈结合使用:用 UDM 收集定性数据,用 JTBD 结构化分析,将发现交给 [VPD](https://github.com/AliDujie/value-proposition-design) 映射到画布,用 [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) 验证机会分数,最终通过 [SWD](https://github.com/AliDujie/storytelling-with-data) 向高管呈现。这套组合拳能覆盖从用户洞察到商业决策的完整链条。
+
+## ❓ FAQ / 常见问题
+
+**Q: JTBD 和传统用户研究有什么区别？**
+传统用户研究关注"用户想要什么功能"，JTBD 关注"用户想要完成什么工作"。JTBD 让你理解用户"雇用"产品来实现的进步，而不仅是功能偏好。
+
+**Q: 机会分数多少值得投入？**
+四维模型（满分 10）：7.5 分以上是高机会。ODI 算法（满分 30）：12 分以上是优先投资领域。分数=挣扎强度×重要性×(重要性-满意度)。
+
+**Q: 我应该从哪个学派开始？**
+推荐从 Klement 进步力量模型开始（Push/Pull/Anxiety/Habit），这是最容易上手的切入点。理解用户为什么切换后，再叠加 Ulwick ODI 做量化评分。
+
+**Q: Job Story 和用户故事有什么区别？**
+用户故事关注"谁"（As a [角色]...），Job Story 关注"为什么"（When [场景]...）。Job Story 上下文更丰富、与解决方案无关。
