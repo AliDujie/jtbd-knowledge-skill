@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.1.80-blue)
+![Version](https://img.shields.io/badge/version-3.1.82-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -485,6 +485,7 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 - **Non-consumption is the biggest competitor**: Don't just compare to direct rivals — analyze what users do when they *don't* use any product
 - **Cross-validate with QuantUX**: JTBD opportunity scores + QuantUX MaxDiff = dual-method priority validation
 - **Interview the moment, not the product**: Ask about the specific moment someone decided to switch — not what features they like about your app
+- **Start with one school**: Klement's Forces of Progress is the most accessible entry point; layer on Ulwick ODI when you need quantifiable scores
 - **Chain with ecosystem**: [Persona](https://github.com/AliDujie/web-persona-skill) defines who → JTBD discovers what → [UDM](https://github.com/AliDujie/universal-design-methods) validates how → [VPD](https://github.com/AliDujie/value-proposition-design) maps value → [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) quantifies → [SWD](https://github.com/AliDujie/storytelling-with-data) presents
 
 ## 🛡️ Common Pitfalls & How to Avoid Them
@@ -543,7 +544,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.81)**: Enhanced pipeline documentation with complete 4-skill end-to-end example, improved cross-skill collaboration table formatting.
+**Latest (v3.1.82)**: Added Pro Tips entry on JTBD school selection strategy (start with Klement, layer on Ulwick), improved version numbering.
+
+**Previous (v3.1.81)**: Enhanced pipeline documentation with complete 4-skill end-to-end example, improved cross-skill collaboration table formatting.
 
 **Previous (v3.1.80)**: Added Chinese Extended Ecosystem section with CEO/CPO/CMO/CTO advisor links, improving bilingual parity.
 
