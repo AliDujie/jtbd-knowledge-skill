@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.1.87-blue)
+![Version](https://img.shields.io/badge/version-3.1.89-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -43,6 +43,12 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.1.89
+
+- **JTBD Interview Scenario Cards**: Added 3 ready-to-use interview scenarios (switch, ODI, churn)
+- **Opportunity Score Benchmarks**: Added industry benchmark reference table for ODI scoring
+- **Version Sync**: Aligned version across all files
 
 ## 🆕 What's New in v3.1.87
 
@@ -676,6 +682,46 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 - **Start with one school**: Klement's Forces of Progress is the most accessible entry point; layer on Ulwick ODI when you need quantifiable scores
 - **Chain with ecosystem**: [Persona](https://github.com/AliDujie/web-persona-skill) defines who → JTBD discovers what → [UDM](https://github.com/AliDujie/universal-design-methods) validates how → [VPD](https://github.com/AliDujie/value-proposition-design) maps value → [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) quantifies → [SWD](https://github.com/AliDujie/storytelling-with-data) presents
 
+## 🎙️ JTBD Interview Scenarios / JTBD 访谈场景卡片
+
+3 ready-to-use interview scenario templates:
+
+### Scenario 1: Switch Interview (Klement / 切换访谈)
+**When**: Understanding why users moved from a competitor to your product.
+```python
+skill.generate_interview("Switch Interview", interview_type="switch")
+# Covers: Struggle moment → First alternatives → Push/Pull → Anxiety/Habit → Progress verification
+```
+**Key question**: "Tell me about the very first time you realized your old solution wasn't working."
+
+### Scenario 2: ODI Interview (Ulwick / 成果驱动访谈)
+**When**: Quantifying importance and satisfaction of desired outcomes.
+```python
+skill.generate_interview("ODI Interview", interview_type="odi")
+# Covers: Job definition → Desired outcomes → Competitive alternatives → Unmet needs
+```
+**Key question**: "When you're [doing job], what does 'done well' look like to you?"
+
+### Scenario 3: Churn Interview (Wunker / 流失回溯访谈)
+**When**: Understanding why users abandoned your product.
+```python
+skill.generate_interview("Churn Interview", interview_type="churn")
+# Covers: Last use experience → Trigger event → Alternative considered → Switching barriers
+```
+**Key question**: "What was happening in your life/work the last time you used our product?"
+
+## 📊 Opportunity Score Benchmarks / 机会评分基准
+
+| ODI Score | Interpretation | Priority | Recommended Action |
+|-----------|---------------|----------|--------------------|
+| ≥ 15 | Huge opportunity | P0 | Invest immediately |
+| 12-14 | Strong opportunity | P0/P1 | Major investment area |
+| 9-11 | Moderate opportunity | P1 | Evaluate carefully |
+| 6-8 | Weak opportunity | P2 | Monitor only |
+| ≤ 5 | No opportunity | P3 | Ignore or delegate |
+
+> 📌 Formula: `Opportunity = Importance + max(Importance - Satisfaction, 0)`. Max = 20. Use `skill.score_odi("Job", importance=9, satisfaction=4)` → **14**.
+
 ## 🛡️ Common Pitfalls & How to Avoid Them
 
 | Pitfall | How JTBD Helps |
@@ -747,7 +793,10 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.89)**: Repo maintenance — converted "When NOT to Use JTBD" to bilingual CN/EN table format, added Structured Thinking Model cross-reference, enhanced SEO-friendly headings.
+
+**Latest (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
+
+**Previous (v3.1.88)**: Repo maintenance — converted "When NOT to Use JTBD" to bilingual CN/EN table format, added Structured Thinking Model cross-reference, enhanced SEO-friendly headings.
 
 **Previous (v3.1.87)**: Repo maintenance — added Recommended Learning Path, unified ecosystem chain references, improved bilingual consistency, added 6-skill pipeline example with UDM + QuantUX steps, added Research Method Bridge section.
 
