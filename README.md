@@ -474,6 +474,55 @@ story = swd.build_story(protagonist="Product VP",
 
 **Each skill has a unique role — together they cover the full research lifecycle.**
 
+## 🎤 JTBD Interview Templates / JTBD 访谈模板
+
+Ready-to-use templates for the most common JTBD research scenarios:
+
+### Template 1: Switch Interview (Klement Forces of Progress)
+```python
+from jtbd import JTBDSkill
+jtbd = JTBDSkill("My Product")
+
+# Generate a structured switch interview guide
+guide = jtbd.generate_interview("Switch Interview", ["competition", "push", "anxiety"])
+# Covers: What pushed them away, what pulled them in, what worries remain, what habits linger
+```
+
+### Template 2: Opportunity Scoring Workshop (Ulwick ODI)
+```python
+jtbd = JTBDSkill("My Product")
+
+# Score 5 Jobs from a discovery session
+jobs = [
+    ("Track project progress", 4, 3, 4, 4),   # struggle=4, alternative=3, market=4, budget=4
+    ("Coordinate with team", 3, 2, 5, 3),
+    ("Report to stakeholders", 2, 1, 4, 2),
+]
+for job, s, a, m, b in jobs:
+    score = jtbd.score_opportunity(job, struggle=s, alternative=a, market=m, budget=b)
+    print(f"{job}: {score}")
+
+# Use ODI for validation
+odi = jtbd.score_odi("Track project progress", importance=8, satisfaction=3)
+# → Opportunity Score: 41 (high — "Important but underperforming")
+```
+
+### Template 3: Jobs Atlas Mapping (Wunker)
+```python
+jtbd = JTBDSkill("Travel Booking Platform")
+atlas = jtbd.create_jobs_atlas("Travel Booking Platform")
+atlas.set_core_job("Find suitable accommodation during business trips")
+atlas.add_related_job("Manage travel expense reports")
+atlas.add_driver("circumstances", "Urgent trip, 2-hour window", influence_level=5)
+# → 7-dimension panorama: functional, emotional, social, financial, related, consumption chain, context
+```
+
+### 💡 Pro Tip / 专业技巧
+> **The "Before and After" question**: When interviewing, always ask "What was happening right before you decided to switch?" The struggle moment reveals more than feature feedback ever will.
+>
+> **"之前之后"问题**: 访谈时永远要问"你决定切换之前发生了什么？" 挣扎时刻比功能反馈揭示更多真相。
+
+
 ## 📖 Knowledge Base (15 Documents)
 
 | File | Topic | Key Content |
@@ -698,7 +747,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.88)**: Repo maintenance — converted "When NOT to Use JTBD" to bilingual CN/EN table format, added Structured Thinking Model cross-reference, enhanced SEO-friendly headings.
+**Latest (v3.1.89)**: Repo maintenance — converted "When NOT to Use JTBD" to bilingual CN/EN table format, added Structured Thinking Model cross-reference, enhanced SEO-friendly headings.
 
 **Previous (v3.1.87)**: Repo maintenance — added Recommended Learning Path, unified ecosystem chain references, improved bilingual consistency, added 6-skill pipeline example with UDM + QuantUX steps, added Research Method Bridge section.
 
