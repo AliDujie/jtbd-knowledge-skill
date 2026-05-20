@@ -186,6 +186,38 @@ story = swd.build_story(protagonist="Product Committee",
     call_to_action="Prioritize one-click rebook")
 ```
 
+## 💡 Best Practices / 最佳实践
+
+1. **Start with Switch Interviews / 从转换访谈开始**
+   Before asking "what do you want?", ask "why did you switch?" — the Four Forces analysis reveals hidden anxieties and habits that feature requests never surface.
+   *先问"你为什么切换"而不是"你想要什么"——四力分析揭示功能需求永远找不到的隐性焦虑和惯性。*
+
+2. **ODI > Opinion / 机会评分胜过主观判断**
+   Use `score_odi()` with importance ≥ 7 and satisfaction ≤ 5 to find high-opportunity Jobs. This formula from Ulwick's methodology beats committee debates every time.
+   *用 `score_odi()`（重要性≥7、满意度≤5）找到高机会 Jobs——Ulwick 的公式永远胜过委员会辩论。*
+
+3. **Four schools, one workflow / 四大学派，一条工作流**
+   Start with Klement (understand forces) → layer on Ulwick (quantify opportunity) → use Wunker (Jobs Atlas for context) → finalize with Kalbach (Job Stories for execution).
+   *从 Klement 开始（理解力量）→ Ulwick 量化（机会评分）→ Wunker 全景（Jobs Atlas）→ Kalbach 执行（Job Stories）。*
+
+4. **Chain JTBD → VPD → QuantUX / 串联 JTBD→VPD→QuantUX**
+   JTBD discovers high-opportunity Jobs → VPD maps them to value propositions → QuantUX validates with A/B tests. Each skill's output feeds the next.
+   *JTBD 发现高机会 Jobs → VPD 映射到价值主张 → QuantUX 用 A/B 测试验证——每个技能的产出都是下一个的输入。*
+
+## ⛔ When NOT to Use JTBD / 何时不使用
+
+JTBD is the demand insight engine — discover what users really hire your product to do. Use other AliDujie skills when:
+
+| Need | Use Instead | Why |
+|------|-------------|-----|
+| Create user personas, segmentation | [Web Persona](https://github.com/AliDujie/web-persona-skill) | Evidence-driven persona creation |
+| Choose research methods, run interviews | [UDM](https://github.com/AliDujie/universal-design-methods) | JTBD interviews feed into UDM methodology |
+| Value proposition canvas, PMF | [VPD](https://github.com/AliDujie/value-proposition-design) | JTBD Jobs → VPD canvas mapping |
+| Quantitative A/B testing, HEART metrics | [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD opportunity scores → QuantUX MaxDiff |
+| Data visualization, executive stories | [SWD](https://github.com/AliDujie/storytelling-with-data) | JTBD findings → SWD executive narrative |
+
+> 💡 **Better together**: JTBD discovers Jobs → VPD maps to canvas → QuantUX validates → SWD presents.
+
 ## 🔗 Extended Ecosystem / 扩展生态
 
 JTBD 需求洞察可与 AliDujie 管理层 Advisor 技能结合,将用户 Jobs 转化为商业决策:
