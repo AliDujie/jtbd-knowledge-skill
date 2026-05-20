@@ -236,3 +236,25 @@ JTBD 需求洞察可与 AliDujie 管理层 Advisor 技能结合,将用户 Jobs �
 - [SKILL.md](SKILL.md) — Agent-facing skill definition
 - [INSTALL.md](INSTALL.md) — Installation guide
 - [CHANGELOG.md](CHANGELOG.md) — Version history
+
+## ❓ FAQ / Troubleshooting
+
+**Q: Which JTBD school should I start with?**
+Klement's Forces of Progress is the most accessible — start with `analyze_forces()` to understand why users switch. Then layer on Ulwick's ODI (`score_odi()`) for quantitative opportunity scoring.
+*从 Klement 的进步力量开始最易上手，用 `analyze_forces()` 理解用户为什么切换。再叠加 Ulwick 的 ODI 做量化机会评分。*
+
+**Q: My opportunity score is high — should I build this feature immediately?**
+Not necessarily. High opportunity score means the Job is underserved, but validate with actual user evidence first. Run UDM contextual interviews to confirm the Job exists, then QuantUX to size the market.
+*高机会评分意味着该 Job 被低估，但需先用 UDM 访谈验证，再用 QuantUX 评估市场规模。*
+
+**Q: Can I use JTBD for B2B products?**
+Yes. The "Job" in B2B is often "get my team to work efficiently" or "reduce operational risk." Switch interviews reveal the forces that drive org-level purchasing decisions.
+*B2B 同样适用。B2B 中的"Job"通常是"让团队高效工作"或"降低运营风险"。*
+
+**Q: How many Jobs should I analyze?**
+Focus on the top 5-8 Jobs. More than that creates analysis paralysis. Use ODI scoring to rank them by importance-satisfaction gap.
+*聚焦最重要的 5-8 个 Job。用 ODI 评分按重要性-满意度差距排序。*
+
+**Q: How does JTBD chain with other skills?**
+Persona defines who → JTBD discovers what they need → UDM designs research → QuantUX validates → VPD maps value → SWD presents. See the ecosystem pipeline in README.md.
+*Persona 定义用户→JTBD 发现需求→UDM 设计研究→QuantUX 验证→VPD 映射价值→SWD 呈现。*
