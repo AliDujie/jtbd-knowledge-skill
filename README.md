@@ -1,4 +1,4 @@
-# JTBD (Jobs to Be Done) Knowledge Skill v3.0
+# JTBD (Jobs to Be Done) Knowledge Skill v3.1
 
 > **Understand What Users Really Hire Your Product to Do.**
 
@@ -689,7 +689,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.86)**: Repo maintenance — added Recommended Learning Path, unified ecosystem chain references, improved bilingual consistency.
+**Latest (v3.1.87)**: Repo maintenance — added Recommended Learning Path, unified ecosystem chain references, improved bilingual consistency, added 6-skill pipeline example with UDM + QuantUX steps, added Research Method Bridge section.
 
 **Previous (v3.1.85)**: Fixed version consistency across `__init__.py` / SKILL.md / pyproject.toml (all now `3.1.85`), improved bilingual navigation links, added bilingual "Why Use This Skill?" section, updated Extended Ecosystem cross-references.
 
