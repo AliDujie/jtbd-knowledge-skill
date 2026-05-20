@@ -148,6 +148,7 @@ s = SWDSkill("Report")           # Present to stakeholders
 | Create user personas, user segmentation | → [Web Persona](https://github.com/AliDujie/web-persona-skill) |
 | Value proposition canvas, experiment validation | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) |
 | Turn research into data narratives and charts | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) |
+| Business framework analysis (SWOT, PESTEL, etc.) | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) |
 
 > 💡 JTBD focuses on "what job users hire your product to do": discover Jobs → score opportunities → fill VPD canvas.
 
@@ -161,6 +162,7 @@ s = SWDSkill("Report")           # Present to stakeholders
 | 需要创建人物角色、用户细分、设计指导 | → [Web Persona](https://github.com/AliDujie/web-persona-skill) |
 | 需要价值主张画布、实验验证、优先级排序 | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) |
 | 需要将研究结果转化为数据叙事、图表呈现 | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) |
+| 商业框架分析（SWOT、PESTEL等） | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) |
 
 > 💡 JTBD 聚焦"用户想完成什么工作"：发现 Jobs → 机会评分 → VPD 画布填充。
 
