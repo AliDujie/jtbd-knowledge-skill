@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.1.85-blue)
+![Version](https://img.shields.io/badge/version-3.1.86-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -43,6 +43,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.1.86
+
+- **Recommended Learning Path**: Added structured 5-step learning guide for progressive JTBD mastery
+- **Pipeline Consistency**: Unified ecosystem chain references across all 6 AliDujie skills
 
 ## 🆕 What's New in v3.1.85
 
@@ -622,7 +627,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.85)**: Fixed version consistency across `__init__.py` / SKILL.md / pyproject.toml (all now `3.1.85`), improved bilingual navigation links, added bilingual "Why Use This Skill?" section, updated Extended Ecosystem cross-references.
+**Latest (v3.1.86)**: Repo maintenance — added Recommended Learning Path, unified ecosystem chain references, improved bilingual consistency.
+
+**Previous (v3.1.85)**: Fixed version consistency across `__init__.py` / SKILL.md / pyproject.toml (all now `3.1.85`), improved bilingual navigation links, added bilingual "Why Use This Skill?" section, updated Extended Ecosystem cross-references.
 
 **Previous (v3.1.82)**: Added Pro Tips entry on JTBD school selection strategy (start with Klement, layer on Ulwick), improved version numbering.
 
@@ -631,6 +638,14 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 **Previous (v3.1.80)**: Added Chinese Extended Ecosystem section with CEO/CPO/CMO/CTO advisor links, improving bilingual parity.
 
 **Previous (v3.1.79)**: Added cross-skill collaboration table linking 5 ecosystem skills, improved Pro Tips section.
+
+### 📖 Recommended Learning Path
+
+1. **Start with the README** — Quick start + 30-second example
+2. **Read USAGE.md** — Detailed workflows for all 13 capabilities with code examples
+3. **Explore references/** — Deep dive into 15 JTBD methodology documents (theory, Forces of Progress, ODI, Jobs Atlas, case studies)
+4. **Try the full pipeline** — Chain all 6 AliDujie skills end-to-end (see [Complete Pipeline Example](#-complete-pipeline-example-persona--jtbd--vpd--swd))
+5. **Customize via config** — Adjust AnalysisConfig and school preference (see [INSTALL.md](INSTALL.md))
 
 ## 📚 Resources
 
