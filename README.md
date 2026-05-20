@@ -44,6 +44,11 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+## 🆕 What's New in v3.1.87
+
+- **6-Skill Pipeline Example**: Added complete end-to-end pipeline with UDM + QuantUX steps
+- **Research Method Bridge**: JTBD now explicitly shows how qualitative Jobs feed into UDM research design and QuantUX validation
+
 ## 🆕 What's New in v3.1.86
 
 - **Recommended Learning Path**: Added structured 5-step learning guide for progressive JTBD mastery
@@ -426,6 +431,48 @@ print(story)
 ```
 
 This pipeline flows: **Persona** (who) → **JTBD** (what they need) → **VPD** (how we deliver value) → **SWD** (how we communicate it).
+
+### 🔀 Full 6-Skill Pipeline: End-to-End
+
+The complete AliDujie UX Research pipeline adds UDM (research methodology) and QuantUX (statistical validation):
+
+```python
+from persona import PersonaSkill
+from jtbd import JTBDSkill
+from udm import UDMSkill
+from quantux import QuantUXSkill
+from vpd import VPDSkill
+from swd import SWDSkill
+
+# 1. Persona → define who
+persona = PersonaSkill("Travel Booking")
+
+# 2. JTBD → discover what they need
+jtbd = JTBDSkill("Travel Booking")
+score = jtbd.score_opportunity("Quick booking", struggle=4, alternative=3, market=5, budget=4)
+
+# 3. UDM → design the research study
+udm = UDMSkill("Travel Booking")
+methods = udm.recommend_methods("Understand booking friction", phase=1)
+guide = udm.generate_interview("Booking Flow", "contextual")
+
+# 4. QuantUX → validate with data
+qx = QuantUXSkill("Travel Booking")
+n = qx.calculate_ab_sample_size(baseline=0.35, mde=0.03)
+ab = qx.analyze_ab_test("Old Flow", 5000, 1750, "New Flow", 5000, 1900)
+
+# 5. VPD → map validated needs to value prop
+vpd = VPDSkill("Travel Booking", "Business Travelers")
+vpd.analyze_canvas(product_name="Travel Booking", jobs=[{"description": "Quick booking"}])
+
+# 6. SWD → present to leadership
+swd = SWDSkill("Q1 Report")
+story = swd.build_story(protagonist="Product VP",
+    imbalance="Booking takes 90s vs 30s industry standard",
+    call_to_action="Approve optimization budget")
+```
+
+**Each skill has a unique role — together they cover the full research lifecycle.**
 
 ## 📖 Knowledge Base (15 Documents)
 
