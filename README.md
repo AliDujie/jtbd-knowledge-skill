@@ -552,13 +552,22 @@ python jtbd/tests/test_all.py
 python -m pytest jtbd/tests/test_all.py -v
 ```
 
-## 📋 When NOT to Use JTBD
+## 📋 When NOT to Use JTBD / 什么时候不该用 JTBD
 
-- **Choosing research methods or designing interviews** → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods)
-- **Statistical analysis or A/B testing** → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research)
-- **Creating user personas** → [Web Persona](https://github.com/AliDujie/web-persona-skill)
-- **Value proposition canvas analysis** → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design)
-- **Data visualization & storytelling** → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data)
+| Your Need | Recommended Skill |
+|-----------|------------------|
+| Choosing research methods or designing interviews | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) |
+| Statistical analysis or A/B testing | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) |
+| Creating user personas / user segmentation | → [Web Persona](https://github.com/AliDujie/web-persona-skill) |
+| Value proposition canvas analysis | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) |
+| Data visualization & storytelling | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) |
+| Business framework analysis (SWOT, PESTEL) | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) |
+| 选择研究方法、设计访谈 | → [Universal Design Methods](https://github.com/AliDujie/universal-design-methods) |
+| 定量统计分析、A/B 测试 | → [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) |
+| 创建用户画像 | → [Web Persona](https://github.com/AliDujie/web-persona-skill) |
+| 价值主张画布分析 | → [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) |
+| 数据可视化与高管汇报 | → [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) |
+| 商业框架分析 | → [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) |
 
 ## 📚 References
 
@@ -689,7 +698,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
-**Latest (v3.1.87)**: Repo maintenance — added Recommended Learning Path, unified ecosystem chain references, improved bilingual consistency, added 6-skill pipeline example with UDM + QuantUX steps, added Research Method Bridge section.
+**Latest (v3.1.88)**: Repo maintenance — converted "When NOT to Use JTBD" to bilingual CN/EN table format, added Structured Thinking Model cross-reference, enhanced SEO-friendly headings.
+
+**Previous (v3.1.87)**: Repo maintenance — added Recommended Learning Path, unified ecosystem chain references, improved bilingual consistency, added 6-skill pipeline example with UDM + QuantUX steps, added Research Method Bridge section.
 
 **Previous (v3.1.85)**: Fixed version consistency across `__init__.py` / SKILL.md / pyproject.toml (all now `3.1.85`), improved bilingual navigation links, added bilingual "Why Use This Skill?" section, updated Extended Ecosystem cross-references.
 
