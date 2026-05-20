@@ -670,6 +670,21 @@ skill = JTBDSkill("My Product", config=config)
 
 See [INSTALL.md](INSTALL.md) for full configuration options and agent integration guides.
 
+## ✅ Best Practices / 最佳实践
+
+1. **Four schools, one framework** — Don't pick a side. Use Klement's Forces of Progress for understanding switching behavior, Ulwick's ODI for opportunity scoring, Wunker's Jobs Atlas for mapping the job landscape, and Kalbach's Job Stories for actionable implementation. Each covers a different gap.
+2. **Always run outcome-driven prioritization** — After interviews, use `run_outcome_driven_prioritization()` with opportunity scores to separate "important but underperforming" (high-value opportunities) from "nice-to-have" features.
+3. **Map competition at the Job level, not product level** — Use `analyze_competition()` to surface indirect competitors solving the same Job. Your biggest competitor might be "doing nothing" or a spreadsheet.
+4. **Chain with VPD for fit validation** — JTBD reveals what users need; VPD confirms your value proposition matches. Use JTBD's `create_jobs_atlas()` output as VPD's `customer_profile` input.
+5. **Market sizing early** — Run `analyze_market_size()` before investing in product development. JTBD can reveal a large TAM that feature-focused approaches miss entirely.
+
+## ⚠️ Limitations / 局限性
+
+- **Qualitative foundation** — JTBD interviews require real conversations with users. The skill structures and guides the process but cannot replace actual human interaction.
+- **School-specific outputs vary** — Each of the four JTBD schools produces different deliverables. Use `run_jtbd_full_analysis()` for a unified view, or pick a specific school when you need deep specialization.
+- **Not a replacement for quantitative validation** — JTBD identifies Jobs and opportunities; QuantUX or A/B testing are needed to validate at scale.
+- **Bilingual documentation only** — Pro Tips and guides are provided in CN/EN only; localization to other languages requires community contributions.
+
 ## 📊 Version History
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
