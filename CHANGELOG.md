@@ -1,3 +1,13 @@
+## v3.1.90 (2026-05-21)
+- Added Ecosystem Pipeline Diagram showing full 6-skill flow
+- Enhanced Opportunity Score Examples with real-world scenarios
+- Version sync across README/SKILL.md/pyproject.toml/__init__.py
+
+## v3.1.89 (2026-05-20)
+- Added JTBD Interview Scenario Cards (3 ready-to-use scenarios)
+- Added Opportunity Score Benchmarks table
+- Version sync across all files
+
 ## v3.1.85 (2026-05-19)
 - Repo maintenance: synced versions across README/SKILL.md/pyproject.toml
 - Enhanced Jobs Atlas section with practical example
