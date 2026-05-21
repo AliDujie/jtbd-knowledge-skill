@@ -1,14 +1,16 @@
 ---
 name: jtbd-knowledge-skill
-version: "3.1.90"
+version: "3.1.92"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派--Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合--
   提供 13 项可执行能力和 15 篇方法论知识库。附带完整 Python API(JTBDSkill 统一入口),
   覆盖访谈→问卷→评分→优先级→竞争→营销→增长→描述→Job Map→Outcome→Stories→障碍→Atlas
   全流程,以及 CEO 决策视角的市场规模估算、优先级评分与商业化可行性分析。
-![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
+author: "渡劫"
 ---
+
+![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
 
 # JTBD (Jobs to Be Done) v3.0 执行技能
 

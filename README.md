@@ -44,6 +44,12 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+## 🆕 What's New in v3.1.92
+
+- **SKILL.md Frontmatter Fix**: Synced version to 3.1.92, added `author` field, fixed badge placement
+- **SKILL.md Badge Leak Fix**: Moved markdown badge outside YAML frontmatter boundary (invalid YAML)
+- **Ecosystem Consistency**: Verified cross-references across all 6 AliDujie skills
+
 ## 🆕 What's New in v3.1.91
 
 - **Try-It-Now Section**: Added one-line runnable examples under Quick Start for instant exploration

@@ -1,4 +1,5 @@
 ## v3.1.92 (2026-05-22)
+- SKILL.md frontmatter: synced version to 3.1.92, added `author` field, moved badge outside YAML boundary
 - Repo maintenance: added 'JTBD Decision Guardrails' section (when to use vs other skills)
 - Enhanced ecosystem cross-reference table with 6-skill pipeline code examples
 - Added bilingual 'Switch Interview Quick Card' to Pro Tips
