@@ -1,3 +1,9 @@
+## v3.1.92 (2026-05-22)
+- Repo maintenance: added 'JTBD Decision Guardrails' section (when to use vs other skills)
+- Enhanced ecosystem cross-reference table with 6-skill pipeline code examples
+- Added bilingual 'Switch Interview Quick Card' to Pro Tips
+- Updated version across README/SKILL.md/pyproject.toml/__init__.py
+
 ## v3.1.90 (2026-05-21)
 - Added Ecosystem Pipeline Diagram showing full 6-skill flow
 - Enhanced Opportunity Score Examples with real-world scenarios
