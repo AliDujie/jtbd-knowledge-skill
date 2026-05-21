@@ -367,6 +367,36 @@ Atlas → VPD canvas + SWD story → Stakeholder-ready presentation
 JTBD is the **need insight layer** — it sits after Persona definition and before VPD canvas filling:
 
 ```
+┌─────────────────────────────────────────────────────────────┐
+│                    AliDujie UX Research Ecosystem            │
+│                                                             │
+│   ┌──────────────┐                                          │
+│   │   Persona    │ 👤 用户定义层 — 创建证据驱动的人物角色      │
+│   └──────┬───────┘                                          │
+│          │ 研究数据                                           │
+│   ┌──────▼───────┐    ┌──────────────┐                      │
+│   │ JTBD 本技能  │◄──►│  UDM Skill   │ 📖 方法论核心 — 100种 │
+│   └──────┬───────┘    └──────┬───────┘    设计研究方法       │
+│          │ 需求洞察           │ 定性发现                      │
+│   ┌──────▼───────┐    ┌──────▼───────┐                      │
+│   │  VPD Skill   │◄──►│  QuantUX     │ 📊 定量研究 — HEART/  │
+│   └──────┬───────┘    └──────┬───────┘    A-B/MaxDiff        │
+│          │ 价值主张           │ 定量验证                      │
+│          └──────────┬────────┘                               │
+│                     │ 研究发现                                │
+│              ┌──────▼───────┐                                │
+│              │  SWD Skill   │ 📈 数据叙事 — 数据可视化与汇报    │
+│              └──────┬───────┘                                │
+│                     │ 数据洞察                                │
+│              ┌──────▼───────┐                                │
+│              │  STM Skill   │ 🧠 战略分析 — 商业框架与决策      │
+│              └──────────────┘                                │
+│                                                             │
+│  工作流: Persona → JTBD/UDM → QuantUX → VPD → SWD → STM    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+```
 Persona → JTBD → UDM → QuantUX → VPD → SWD → STM
             ↑ You are here
 ```
