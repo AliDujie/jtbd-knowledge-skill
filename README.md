@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.1.92-blue)
+![Version](https://img.shields.io/badge/version-3.1.93-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -43,6 +43,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.1.93
+
+- **Ecosystem Badge Update**: Updated AliDujie ecosystem badge consistency check across all 6 skills
+- **Version Bump**: Synced version to 3.1.93 across README/SKILL.md/pyproject.toml/__init__.py
 
 ## 🆕 What's New in v3.1.92
 
