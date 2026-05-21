@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.1.90-blue)
+![Version](https://img.shields.io/badge/version-3.1.91-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -43,6 +43,12 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.1.91
+
+- **Try-It-Now Section**: Added one-line runnable examples under Quick Start for instant exploration
+- **Opportunity Score Clarity**: Added concrete 0-10 interpretation guide with decision thresholds
+- **Version Sync**: Aligned version across README/SKILL.md/pyproject.toml/__init__.py
 
 ## 🆕 What's New in v3.1.90
 
@@ -181,6 +187,13 @@ s = SWDSkill("Report")           # Present to stakeholders
 | JTBD 机会评分 → | [VPD](https://github.com/AliDujie/value-proposition-design) 画布填充 | `vpd.analyze_canvas(jobs=top_jobs)` |
 | JTBD Jobs → | [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) MaxDiff 验证 | `quantux.maxdiff(opportunity_list)` |
 | JTBD 发现 → | [SWD](https://github.com/AliDujie/storytelling-with-data) 汇报 | `swd.build_story(evidence=findings)` |
+
+> 💡 **Try Before You Decide / 先试后决定**:
+> ```python
+> from jtbd import JTBDSkill
+> # One line → instant opportunity scoring
+> print(JTBDSkill("Your Product").score_opportunity("Core Job", struggle=4, alternative=3, market=4, budget=4))
+> ```
 
 ## ⚡ Quick Start (5 Minutes)
 
