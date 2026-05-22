@@ -1,4 +1,4 @@
-# JTBD (Jobs to Be Done) Knowledge Skill v3.1
+# JTBD (Jobs to Be Done) Knowledge Skill
 
 > **Understand What Users Really Hire Your Product to Do.**
 
