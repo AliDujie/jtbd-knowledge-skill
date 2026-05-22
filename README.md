@@ -914,7 +914,17 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.1.90)**: Repo maintenance — added Ecosystem Pipeline Diagram, enhanced Opportunity Score Examples, synced versions.
+**Latest (v3.2.01)**: Repo maintenance — fixed version mismatch in README H1 (was v3.1, badge shows v3.2.01), ecosystem cross-reference verification across all 6 AliDujie skills.
+
+**Previous (v3.2.00)**: Repo maintenance — fixed `__init__.py` version consistency, verified ecosystem docs.
+
+**Previous (v3.1.93)**: Repo maintenance — version sync across all files, ecosystem badge consistency check.
+
+**Previous (v3.1.92)**: Repo maintenance — added `author` field to SKILL.md, fixed badge placement, moved markdown badge outside YAML frontmatter.
+
+**Previous (v3.1.91)**: Added one-line runnable examples under Quick Start, added concrete 0-10 interpretation guide with decision thresholds, synced versions.
+
+**Previous (v3.1.90)**: Added Ecosystem Pipeline Diagram, enhanced Opportunity Score Examples, synced versions.
 
 **Previous (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
 
