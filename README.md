@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.00-blue)
+![Version](https://img.shields.io/badge/version-3.2.01-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -46,7 +46,9 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 ## 🆕 What's New in v3.2.01
 
-- **Version Sync**: Aligned README badge, SKILL.md frontmatter, __init__.py, and pyproject.toml to 3.2.00+ (were ahead)
+- **Repo Maintenance**: Version sync across README badge, SKILL.md, pyproject.toml, __init__.py
+- **Ecosystem Cross-Reference Verification**: Verified all 6-skill pipeline links across AliDujie skills
+- **Version Bump**: Synced version to 3.2.01
 
 ## 🆕 What's New in v3.2.00
 

@@ -1,3 +1,7 @@
+## v3.2.01 (2026-05-22)
+- Repo maintenance: version sync across README badge, SKILL.md, pyproject.toml, __init__.py
+- Ecosystem cross-reference verification across all 6 AliDujie skills
+
 ## v3.1.93 (2026-05-22)
 - Ecosystem badge consistency check across all 6 AliDujie skills
 - Version bump to 3.1.93 across README/SKILL.md/pyproject.toml/__init__.py
