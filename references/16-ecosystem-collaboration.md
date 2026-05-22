@@ -9,10 +9,21 @@
 JTBD 是 7 技能工作流的 **需求洞察层**，理解"用户为什么这样做"：
 
 ```
-Persona → JTBD (你在这里) → UDM → QuantUX → VPD → SWD
+Persona → JTBD (你在这里) → UDM → QuantUX → VPD → SWD → STM
 ```
 
-## JTBD 与其他技能的协作
+## JTBD 与 6 个核心技能的协作
+
+### JTBD → Persona：从 Jobs 到用户细分
+
+JTBD 的任务聚类为 Persona 提供数据驱动的细分基础：
+
+| JTBD 输出 | → Persona 输入 | 说明 |
+|-----------|---------------|------|
+| Job 任务聚类 | Persona 行为模式 | 相似 Jobs 的用户归为一组 |
+| 四力分析结果 | Persona 动机描述 | Push/Pull 驱动角色动机 |
+| 挣扎时刻 | Persona 痛点 | JTBD 发现的核心痛点写入 Persona |
+| 机会评分 | Persona 优先级 | 高机会 Jobs 对应的用户群为高优先 Persona |
 
 ### JTBD → UDM：从洞察到研究方法
 
@@ -59,6 +70,17 @@ JTBD 的机会评分和四力分析是天然的故事素材：
 | 四力分析 | 力场图 | 力场图 |
 | Job 重要性 vs 满意度 | 差距分析 | 散点图 |
 
+### JTBD → STM：从需求洞察到战略框架
+
+JTBD 发现的市场机会需要 STM 的战略框架来评估决策：
+
+| JTBD 输出 | → STM 输入 | 战略框架 |
+|-----------|-----------|---------|
+| 市场机会评分 | 市场吸引力评估 | PESTEL 分析 |
+| 竞争分析结果 | 行业竞争格局 | 五力模型 |
+| 机会领域 | 战略选择评估 | 增长份额矩阵 |
+| Job 聚类结果 | 细分市场定位 | 战略群组分析 |
+
 ## JTBD 独立使用 vs 协作使用
 
 ### 适合独立使用的场景
@@ -73,6 +95,7 @@ JTBD 的机会评分和四力分析是天然的故事素材：
 - **完整产品优化**：JTBD → VPD → QuantUX → SWD
 - **新市场进入**：Persona → JTBD → UDM → QuantUX
 - **投资决策**：JTBD → VPD (商业化路径) → SWD
+- **战略规划**：STM (PESTEL/五力) → JTBD (市场机会评估) → STM (决策建议)
 
 ## 端到端工作流示例
 

@@ -155,8 +155,9 @@ JTBD doesn't work in isolation — it's the **demand insight layer** that plugs 
 | [Quantitative UX Research](https://github.com/AliDujie/Quantitative-UX-Research) | Quantitative validation | JTBD opportunity scores → QuantUX A/B tests and MaxDiff validate priorities |
 | [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) | Product-market fit | JTBD Jobs → VPD canvas filling → experiment validation |
 | [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) | Data storytelling | JTBD insights → SWD chart selection → executive narrative |
+| [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | Strategic framework | STM PESTEL/Five Forces → JTBD market opportunity → STM decision support |
 
-> 💡 **Recommended chain:** Persona (define who) → JTBD (discover what Jobs) → VPD (map to canvas) → QuantUX (validate) → SWD (present to stakeholders)
+> 💡 **Recommended chain:** Persona (define who) → JTBD (discover what Jobs) → VPD (map to canvas) → QuantUX (validate) → SWD (present to stakeholders) → STM (strategic decision)
 
 ### Quick Cross-Skill Example / 跨技能示例
 
@@ -215,8 +216,9 @@ JTBD is the demand insight engine — discover what users really hire your produ
 | Value proposition canvas, PMF | [VPD](https://github.com/AliDujie/value-proposition-design) | JTBD Jobs → VPD canvas mapping |
 | Quantitative A/B testing, HEART metrics | [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) | JTBD opportunity scores → QuantUX MaxDiff |
 | Data visualization, executive stories | [SWD](https://github.com/AliDujie/storytelling-with-data) | JTBD findings → SWD executive narrative |
+| Strategic analysis frameworks (PESTEL, Five Forces) | [STM](https://github.com/AliDujie/Structured-Thinking-Model) | STM provides strategic context → JTBD quantifies market opportunity |
 
-> 💡 **Better together**: JTBD discovers Jobs → VPD maps to canvas → QuantUX validates → SWD presents.
+> 💡 **Better together**: JTBD discovers Jobs → VPD maps to canvas → QuantUX validates → SWD presents → STM guides strategy.
 
 ## 🔗 Extended Ecosystem / 扩展生态
 
