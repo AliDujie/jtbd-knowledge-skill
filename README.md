@@ -44,6 +44,13 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+## 🆕 What's New in v3.2.00
+
+- **Structured Thinking Model Cross-Reference**: Added explicit STM skill link in ecosystem footer and pipeline diagram
+- **Ecosystem Pipeline Enhancement**: Added forward/backward reference arrows showing STM→JTBD strategic analysis loop
+- **References Directory Enhancement**: Added explicit references/ and jtbd/ source links to Resources section
+- **Version Bump**: Synced version to 3.2.00 across README/SKILL.md/pyproject.toml/__init__.py
+
 ## 🆕 What's New in v3.1.93
 
 - **Ecosystem Badge Update**: Updated AliDujie ecosystem badge consistency check across all 6 skills
@@ -891,6 +898,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 - [CHANGELOG.md](CHANGELOG.md) — Version history
 - [SECURITY.md](SECURITY.md) — Security policy and responsible use
 - [references/](references/) — 15 JTBD methodology knowledge documents (theory, research methods, analysis frameworks, ODI methodology) + interview and survey template files
+- [jtbd/](jtbd/) — Core Python module source code
 
 ## 📄 License
 
