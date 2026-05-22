@@ -109,6 +109,10 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces of Progress, Ulwick's ODI (Opportunity-Driven Innovation), Wunker's Jobs Atlas, and Kalbach's Job Stories — with **13 executable capabilities** and **15 methodology knowledge documents**. Covers the full workflow: interviews → surveys → scoring → prioritization → competition → marketing → growth → Jobs Atlas, plus CEO-level market sizing and commercialization analysis.
 
+## 🎯 Why Teams Choose JTBD
+
+*New here?* JTBD (Jobs to Be Done) reveals **why users switch** from your product to a competitor — or never buy at all. Instead of asking "what features do you want?", JTBD asks "what Job are you trying to get done?" Based on a fusion of 4 schools: Klement, Ulwick, Wunker, and Kalbach.
+
 ## 🌟 Why JTBD?
 
 | Challenge | Without JTBD | With JTBD |
@@ -359,6 +363,47 @@ Atlas → VPD canvas + SWD story → Stakeholder-ready presentation
 | `generate_market_size_estimate(jobs)` | TAM/SAM/SOM derivation, key assumptions, phased validation plan |
 | `generate_priority_scoring(jobs)` | Composite opportunity scoring, P0/P1/P2 resource allocation |
 | `generate_commercialization_feasibility(jobs)` | WTP, ROI, payback period, Go/No-Go decision |
+
+## 🍽️ Quick Recipes / 快速食谱
+
+### Recipe: "Why are users switching to our competitor?" (1 hour)
+```python
+from jtbd import JTBDSkill
+j = JTBDSkill("My Product")
+
+# Step 1: Analyze the switching forces
+forces = j.analyze_forces("Users switching to Competitor X")
+# Push: What frustrations drove them away?
+# Pull: What attracted them to the competitor?
+# Anxiety: What worries them about the switch?
+# Habit: What keeps them anchored to the old solution?
+
+# Step 2: Score the opportunity
+score = j.score_opportunity("Core Job Competitor Does Better",
+    struggle=4, alternative=3, market=4, budget=4)
+# → High score = invest here to win back users
+```
+
+### Recipe: "Which features should we prioritize?" (30 min)
+```python
+j = JTBDSkill("My Product")
+
+# Score multiple Jobs and rank by opportunity
+jobs = [
+    ("Fast onboarding", 4, 3, 5, 4),    # struggle=4, alt=3, market=5, budget=4
+    ("Team collaboration", 3, 2, 4, 3),
+    ("Export to PDF", 2, 1, 3, 2),
+]
+for job, s, a, m, b in jobs:
+    print(f"{job}: {j.score_opportunity(job, s, a, m, b)}")
+
+# ODI scoring for high-impact items:
+print(j.score_odi("Fast onboarding", importance=9, satisfaction=4))
+# → Opportunity Score: 58 (very high — "Important but underperforming")
+```
+
+> 💡 **Pro Tip**: Always start with `analyze_forces()` — understanding *why* users switch reveals more than feature feedback. The "struggle moment" is where innovation opportunities hide.
+
 
 ## 🔄 Four Schools of Progress
 
