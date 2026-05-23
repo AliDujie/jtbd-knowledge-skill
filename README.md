@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.01-blue)
+![Version](https://img.shields.io/badge/version-3.2.02-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -43,6 +43,12 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.02
+
+- **Ecosystem Pipeline Diagram**: Added ASCII visual showing full 6-skill flow with JTBD as the demand insight layer
+- **Cross-Skill Collaboration Enhancement**: Added explicit JTBD→VPD canvas handoff and JTBD→QuantUX MaxDiff validation examples
+- **Version Bump**: Synced version to 3.2.02
 
 ## 🆕 What's New in v3.2.01
 
