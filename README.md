@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.01-blue)
+![Version](https://img.shields.io/badge/version-3.2.02-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -43,6 +43,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.02
+
+- **Ecosystem Audit**: Audited all 6 AliDujie skill repos for cross-reference consistency, version alignment, and documentation completeness
+- **Version Bump**: Synced version to 3.2.02 across README badge, SKILL.md, pyproject.toml, __init__.py
 
 ## 🆕 What's New in v3.2.01
 
@@ -914,7 +919,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.01)**: Repo maintenance — fixed version mismatch in README H1 (was v3.1, badge shows v3.2.01), ecosystem cross-reference verification across all 6 AliDujie skills.
+**Latest (v3.2.02)**: Ecosystem audit across all 6 AliDujie skill repos — cross-reference verification, version alignment, documentation completeness check.
+
+**Previous (v3.2.01)**: Repo maintenance — fixed version mismatch in README H1 (was v3.1, badge shows v3.2.01), ecosystem cross-reference verification across all 6 AliDujie skills.
 
 **Previous (v3.2.00)**: Repo maintenance — fixed `__init__.py` version consistency, verified ecosystem docs.
 
