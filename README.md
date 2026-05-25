@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.02-blue)
+![Version](https://img.shields.io/badge/version-3.2.03-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -43,6 +43,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.03
+
+- **Duplicate Header Consolidation**: Merged `🎯 Why Teams Choose JTBD` + `🌟 Why JTBD?` into one bilingual section `🎯 Why Teams Choose JTBD / 为什么选择 JTBD`. Removed duplicate `💡 为什么选择 JTBD？` section. Top-level `🎯 Why Use This Skill?` section preserved as the quick-pitch entry point.
+- **Version Bump**: Synced to 3.2.03
 
 ## 🆕 What's New in v3.2.02
 
@@ -120,11 +125,13 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces of Progress, Ulwick's ODI (Opportunity-Driven Innovation), Wunker's Jobs Atlas, and Kalbach's Job Stories — with **13 executable capabilities** and **15 methodology knowledge documents**. Covers the full workflow: interviews → surveys → scoring → prioritization → competition → marketing → growth → Jobs Atlas, plus CEO-level market sizing and commercialization analysis.
 
-## 🎯 Why Teams Choose JTBD
+## 🎯 Why Teams Choose JTBD / 为什么选择 JTBD
 
 *New here?* JTBD (Jobs to Be Done) reveals **why users switch** from your product to a competitor — or never buy at all. Instead of asking "what features do you want?", JTBD asks "what Job are you trying to get done?" Based on a fusion of 4 schools: Klement, Ulwick, Wunker, and Kalbach.
 
-## 🌟 Why JTBD?
+> **JTBD 是整个 AliDujie UX 研究生态的需求洞察核心。** 用户不是"想要"什么功能，而是"雇用"产品来完成生活中的某个任务（Job）。JTBD 融合四大学派（Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories），13 项执行能力从访谈→问卷→评分→竞争→营销→增长→Jobs Atlas 全流程覆盖。配合 CEO 决策视角（市场规模估算、优先级评分、商业化可行性），让需求洞察直接驱动商业决策。
+>
+> *"JTBD 让我们不再问'你想要什么功能'，而是'你在什么场景下想要完成什么'——答案完全不同。"*
 
 | Challenge | Without JTBD | With JTBD |
 |-----------|-------------|----------|
@@ -142,12 +149,6 @@ A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces 
 | Time to feature prioritization | Weeks of debate | **Hours** (opportunity scoring) | ~90% faster |
 | Competitive differentiation | Feature parity chase | **Job-based whitespace** identified | Strategic |
 | Marketing message resonance | Generic claims | **Switch-interview-derived** messaging | 3× engagement |
-
-## 💡 为什么选择 JTBD？
-
-> **JTBD 是整个 AliDujie UX 研究生态的需求洞察核心。** 用户不是"想要"什么功能，而是"雇用"产品来完成生活中的某个任务（Job）。JTBD 融合四大学派（Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories），13 项执行能力从访谈→问卷→评分→竞争→营销→增长→Jobs Atlas 全流程覆盖。配合 CEO 决策视角（市场规模估算、优先级评分、商业化可行性），让需求洞察直接驱动商业决策。
->
-> *"JTBD 让我们不再问'你想要什么功能'，而是'你在什么场景下想要完成什么'——答案完全不同。"*
 
 ## 🔗 生态快速开始
 
