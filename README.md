@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.02-blue)
+![Version](https://img.shields.io/badge/version-3.2.03-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -44,10 +44,10 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
-## 🆕 What's New in v3.2.02
+## 🆕 What's New in v3.2.03
 
 - **Ecosystem Audit**: Audited all 6 AliDujie skill repos for cross-reference consistency, version alignment, and documentation completeness
-- **Version Bump**: Synced version to 3.2.02 across README badge, SKILL.md, pyproject.toml, __init__.py
+- **Version Bump**: Synced version to 3.2.03 across README badge, SKILL.md, pyproject.toml, __init__.py
 
 ## 🆕 What's New in v3.2.01
 
@@ -227,6 +227,42 @@ s = SWDSkill("Report")           # Present to stakeholders
 > # One line → instant opportunity scoring
 > print(JTBDSkill("Your Product").score_opportunity("Core Job", struggle=4, alternative=3, market=4, budget=4))
 > ```
+
+### 🍳 Quick Recipes
+
+**Recipe 1: Switch Interview Analysis in 15 Minutes**
+```python
+from jtbd import JTBDSkill
+skill = JTBDSkill("Travel App")
+
+# Analyze why users switched from competitor
+forces = skill.analyze_forces("Users switching from Booking.com to our app",
+    interview_type="switch")
+print(forces)
+# → Push: "Booking.com is too cluttered" / Pull: "Cleaner UX"
+# → Anxiety: "Will reviews be accurate?" / Habit: "Always used Booking.com"
+
+# Score the opportunity based on switch dynamics
+score = skill.score_opportunity("Find trustworthy hotel reviews",
+    struggle=4, alternative=2, market=5, budget=4)
+# → Score: 8.2 / 10 — P0 priority
+```
+
+**Recipe 2: ODI Feature Prioritization in 10 Minutes**
+```python
+from jtbd import JTBDSkill
+skill = JTBDSkill("SaaS Platform")
+
+jobs = [
+    ("Onboard team members quickly", 9, 4),
+    ("Track project progress visually", 7, 6),
+    ("Automate weekly status reports", 8, 3),
+]
+for desc, imp, sat in jobs:
+    score = skill.score_odi(desc, importance=imp, satisfaction=sat)
+    print(f"{desc}: ODI Score = {score}")
+# → Automate reports: 13 (highest — invest here first)
+```
 
 ## ⚡ Quick Start (5 Minutes)
 
@@ -919,7 +955,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.02)**: Ecosystem audit across all 6 AliDujie skill repos — cross-reference verification, version alignment, documentation completeness check.
+**Latest (v3.2.03)**: Ecosystem audit across all 6 AliDujie skill repos — cross-reference verification, version alignment, documentation completeness check.
 
 **Previous (v3.2.01)**: Repo maintenance — fixed version mismatch in README H1 (was v3.1, badge shows v3.2.01), ecosystem cross-reference verification across all 6 AliDujie skills.
 

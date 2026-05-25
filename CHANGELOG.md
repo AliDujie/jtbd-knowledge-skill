@@ -1,3 +1,9 @@
+## v3.2.03 (2026-05-26)
+
+- Added Quick Recipes (Switch Interview Analysis, ODI Feature Prioritization)
+- Ecosystem cross-reference verification across all 6 AliDujie skill repos
+- Version sync across README badge/SKILL.md/pyproject.toml/__init__.py
+
 ## v3.2.02 (2026-05-25)
 
 - Ecosystem audit across all 6 AliDujie skill repos
