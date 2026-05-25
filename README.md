@@ -2,10 +2,11 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.04-blue)
+![Version](https://img.shields.io/badge/version-3.2.05-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
+![Examples](https://img.shields.io/badge/Examples-3%20runnable%20scripts-brightgreen)
 ![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
 
 ## 🎯 Why Use This Skill?
@@ -44,7 +45,12 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
-## 🆕 What's New in v3.2.03
+## 🆕 What's New in v3.2.05
+
+- **Repo Maintenance**: Added Examples badge (3 runnable scripts: opportunity scoring, four forces analysis, job stories), added examples/ reference to Resources section, ecosystem cross-reference audit
+- **Version Bump**: Synced to 3.2.05 across README badge, SKILL.md, pyproject.toml, __init__.py
+
+## 🆕 What's New in v3.2.04
 
 - **Duplicate Header Consolidation**: Merged `🎯 Why Teams Choose JTBD` + `🌟 Why JTBD?` into one bilingual section `🎯 Why Teams Choose JTBD / 为什么选择 JTBD`. Removed duplicate `💡 为什么选择 JTBD？` section. Top-level `🎯 Why Use This Skill?` section preserved as the quick-pitch entry point.
 - **Version Bump**: Synced to 3.2.03
@@ -963,6 +969,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 - [SKILL.md](SKILL.md) — Agent-facing skill definition and prompt templates
 - [USAGE.md](USAGE.md) — Detailed usage guide with code examples / 详细使用指南
 - [INSTALL.md](INSTALL.md) — Detailed installation guide and agent integration
+- [examples/](examples/) — Runnable Python examples (opportunity scoring, four forces analysis, job stories)
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
 - [CHANGELOG.md](CHANGELOG.md) — Version history
 - [SECURITY.md](SECURITY.md) — Security policy and responsible use
