@@ -926,7 +926,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.02)**: Ecosystem audit across all 6 AliDujie skill repos — cross-reference verification, version alignment, documentation completeness check.
+**Latest (v3.2.05)**: Added Examples badge (3 runnable scripts), ecosystem cross-reference audit across all 6 AliDujie skills, version sync across all files.
 
 **Previous (v3.2.01)**: Repo maintenance — fixed version mismatch in README H1 (was v3.1, badge shows v3.2.01), ecosystem cross-reference verification across all 6 AliDujie skills.
 
