@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.02-blue)
+![Version](https://img.shields.io/badge/version-3.2.03-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -44,6 +44,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.03
+
+- **Repo Maintenance**: Fixed duplicate examples/ entry in Resources section, corrected Version History "Latest" entry (v3.1.90 → v3.2.02), ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.03
 
 ## 🆕 What's New in v3.2.02
 
@@ -937,7 +942,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.1.90)**: Repo maintenance — added Ecosystem Pipeline Diagram, enhanced Opportunity Score Examples, synced versions.
+**Latest (v3.2.02)**: Added Ecosystem Pipeline Diagram, explicit JTBD→VPD canvas handoff and JTBD→QuantUX MaxDiff validation examples, version sync across all files.
 
 **Previous (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
 
@@ -968,7 +973,6 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 - [SKILL.md](SKILL.md) — Agent-facing skill definition and prompt templates
 - [USAGE.md](USAGE.md) — Detailed usage guide with code examples / 详细使用指南
 - [INSTALL.md](INSTALL.md) — Detailed installation guide and agent integration
-- [examples/](examples/) — Runnable Python examples (interview guide, opportunity analysis)
 - [examples/](examples/) — Runnable Python examples (interview guide, opportunity analysis)
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
 - [CHANGELOG.md](CHANGELOG.md) — Version history
