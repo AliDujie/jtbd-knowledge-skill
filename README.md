@@ -9,6 +9,21 @@
 ![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
 ![Examples](https://img.shields.io/badge/Examples-5%20runnable%20scripts-brightgreen)
 
+## 📑 Table of Contents
+
+- [Why Use This Skill?](#-why-use-this-skill)
+- [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
+- [Quick Decision: When to Use JTBD?](#-quick-decision-when-to-use-jtbd)
+- [Quick Start](#-quick-start-5-minutes)
+- [Ecosystem Quick Start](#-ecosystem-quick-start)
+- [Core Capabilities](#-13-capabilities)
+- [Real-World Use Cases](#-real-world-use-cases)
+- [AI Agent Integration](#-ai-agent-integration)
+- [FAQ / Troubleshooting](#-faq--troubleshooting)
+- [Resources](#-resources)
+
+---
+
 ## 🎯 Why Use This Skill?
 
 **JTBD answers a question other methods can't**: *Why do users switch from your product to a competitor — or never buy at all?*
