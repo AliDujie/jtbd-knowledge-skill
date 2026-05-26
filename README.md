@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.05-blue)
+![Version](https://img.shields.io/badge/version-3.2.06-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -44,6 +44,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.06
+
+- **Who This Skill Is For**: Added dedicated audience section targeting PMs, UX researchers, startup founders, strategists, and AI agent developers
+- **Version Bump**: Synced to 3.2.06
 
 ## 🆕 What's New in v3.2.05
 
@@ -299,6 +304,14 @@ report = skill.analyze(include_ceo_analysis=True)
 > skill = JTBDSkill("你的产品")
 > print(skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4))
 > ```
+
+## 👥 Who This Skill Is For
+
+- **Product Managers** — Identify 10x innovation opportunities through unmet user needs
+- **UX Researchers** — Conduct structured switch interviews that reveal why users change products
+- **Startup Founders** — Find whitespace in competitive markets using Jobs-to-be-Done lens
+- **Strategists** — Size markets by Jobs rather than demographics for better targeting
+- **AI Agent Developers** — Drop into any Python agent, run opportunity scoring and forces analysis
 
 ## 📋 Real-World Use Cases
 
