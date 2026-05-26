@@ -7,6 +7,7 @@
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
 ![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
+![Examples](https://img.shields.io/badge/Examples-2%20runnable%20scripts-brightgreen)
 
 ## 🎯 Why Use This Skill?
 
@@ -149,6 +150,22 @@ A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces 
 > **JTBD 是整个 AliDujie UX 研究生态的需求洞察核心。** 用户不是"想要"什么功能，而是"雇用"产品来完成生活中的某个任务（Job）。JTBD 融合四大学派（Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories），13 项执行能力从访谈→问卷→评分→竞争→营销→增长→Jobs Atlas 全流程覆盖。配合 CEO 决策视角（市场规模估算、优先级评分、商业化可行性），让需求洞察直接驱动商业决策。
 >
 > *"JTBD 让我们不再问'你想要什么功能'，而是'你在什么场景下想要完成什么'——答案完全不同。"*
+
+## 👥 Who This Skill Is For
+
+- **Product Managers** — Need to prioritize features based on real unmet needs, not competitor checklists or HiPPO opinions
+- **UX Researchers** — Want to understand *why* users switch products and identify innovation opportunities through Jobs discovery
+- **Startup Founders** — Need to discover underserved market whitespace before committing engineering resources
+- **Growth Marketers** — Want messaging frameworks derived from actual switching behavior, not generic value propositions
+- **AI Agent Developers** — Need a structured JTBD toolkit for qualitative interview analysis and opportunity scoring
+
+### 👥 这个技能适合谁
+
+- **产品经理** — 需要基于真实未满足需求而非竞品清单来排优先级
+- **UX 研究员** — 想理解用户为什么切换产品，通过 Jobs 发现创新机会
+- **创业者** — 需要在投入开发前发现未服务的市场空间
+- **增长营销人员** — 想要基于真实切换行为的消息框架，而非通用价值主张
+- **AI Agent 开发者** — 需要结构化的 JTBD 工具包用于定性访谈分析和机会评分
 
 ## 🔗 生态快速开始
 
@@ -951,6 +968,8 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 - [SKILL.md](SKILL.md) — Agent-facing skill definition and prompt templates
 - [USAGE.md](USAGE.md) — Detailed usage guide with code examples / 详细使用指南
 - [INSTALL.md](INSTALL.md) — Detailed installation guide and agent integration
+- [examples/](examples/) — Runnable Python examples (interview guide, opportunity analysis)
+- [examples/](examples/) — Runnable Python examples (interview guide, opportunity analysis)
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
 - [CHANGELOG.md](CHANGELOG.md) — Version history
 - [SECURITY.md](SECURITY.md) — Security policy and responsible use
