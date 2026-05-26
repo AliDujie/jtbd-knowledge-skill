@@ -1,6 +1,6 @@
 ---
 name: jtbd-knowledge-skill
-version: "3.2.03"
+version: "3.2.05"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派--Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合--
@@ -386,7 +386,7 @@ result = skill.analyze(include_ceo_analysis=True)
 
 ## Python 工具包
 
-位于 `jtbd/` 目录,纯标准库实现,无外部依赖。版本 3.2.00。
+位于 `jtbd/` 目录,纯标准库实现,无外部依赖。版本 3.2.05。
 
 | 模块 | 核心类/函数 | 用途 | 学派来源 |
 |---|---|---|---|

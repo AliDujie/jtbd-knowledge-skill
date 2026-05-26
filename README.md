@@ -2,10 +2,11 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.03-blue)
+![Version](https://img.shields.io/badge/version-3.2.05-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
+![Examples](https://img.shields.io/badge/Examples-3%20runnable%20scripts-brightgreen)
 ![Part of AliDujie Skills](https://img.shields.io/badge/AliDujie-UX%20Research%20Ecosystem-purple)
 
 ## 🎯 Why Use This Skill?
@@ -44,10 +45,20 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
-## 🆕 What's New in v3.2.03
+## 🆕 What's New in v3.2.05
+
+- **Repo Maintenance**: Added Examples badge (3 runnable scripts: opportunity scoring, four forces analysis, job stories), added examples/ reference to Resources section, ecosystem cross-reference audit
+- **Version Bump**: Synced to 3.2.05 across README badge, SKILL.md, pyproject.toml, __init__.py
+
+## 🆕 What's New in v3.2.04
+
+- **Duplicate Header Consolidation**: Merged `🎯 Why Teams Choose JTBD` + `🌟 Why JTBD?` into one bilingual section `🎯 Why Teams Choose JTBD / 为什么选择 JTBD`. Removed duplicate `💡 为什么选择 JTBD？` section. Top-level `🎯 Why Use This Skill?` section preserved as the quick-pitch entry point.
+- **Version Bump**: Synced to 3.2.03
+
+## 🆕 What's New in v3.2.02
 
 - **Ecosystem Audit**: Audited all 6 AliDujie skill repos for cross-reference consistency, version alignment, and documentation completeness
-- **Version Bump**: Synced version to 3.2.03 across README badge, SKILL.md, pyproject.toml, __init__.py
+- **Version Bump**: Synced version to 3.2.02 across README badge, SKILL.md, pyproject.toml, __init__.py
 
 ## 🆕 What's New in v3.2.01
 
@@ -120,11 +131,13 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces of Progress, Ulwick's ODI (Opportunity-Driven Innovation), Wunker's Jobs Atlas, and Kalbach's Job Stories — with **13 executable capabilities** and **15 methodology knowledge documents**. Covers the full workflow: interviews → surveys → scoring → prioritization → competition → marketing → growth → Jobs Atlas, plus CEO-level market sizing and commercialization analysis.
 
-## 🎯 Why Teams Choose JTBD
+## 🎯 Why Teams Choose JTBD / 为什么选择 JTBD
 
 *New here?* JTBD (Jobs to Be Done) reveals **why users switch** from your product to a competitor — or never buy at all. Instead of asking "what features do you want?", JTBD asks "what Job are you trying to get done?" Based on a fusion of 4 schools: Klement, Ulwick, Wunker, and Kalbach.
 
-## 🌟 Why JTBD?
+> **JTBD 是整个 AliDujie UX 研究生态的需求洞察核心。** 用户不是"想要"什么功能，而是"雇用"产品来完成生活中的某个任务（Job）。JTBD 融合四大学派（Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories），13 项执行能力从访谈→问卷→评分→竞争→营销→增长→Jobs Atlas 全流程覆盖。配合 CEO 决策视角（市场规模估算、优先级评分、商业化可行性），让需求洞察直接驱动商业决策。
+>
+> *"JTBD 让我们不再问'你想要什么功能'，而是'你在什么场景下想要完成什么'——答案完全不同。"*
 
 | Challenge | Without JTBD | With JTBD |
 |-----------|-------------|----------|
@@ -142,12 +155,6 @@ A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces 
 | Time to feature prioritization | Weeks of debate | **Hours** (opportunity scoring) | ~90% faster |
 | Competitive differentiation | Feature parity chase | **Job-based whitespace** identified | Strategic |
 | Marketing message resonance | Generic claims | **Switch-interview-derived** messaging | 3× engagement |
-
-## 💡 为什么选择 JTBD？
-
-> **JTBD 是整个 AliDujie UX 研究生态的需求洞察核心。** 用户不是"想要"什么功能，而是"雇用"产品来完成生活中的某个任务（Job）。JTBD 融合四大学派（Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories），13 项执行能力从访谈→问卷→评分→竞争→营销→增长→Jobs Atlas 全流程覆盖。配合 CEO 决策视角（市场规模估算、优先级评分、商业化可行性），让需求洞察直接驱动商业决策。
->
-> *"JTBD 让我们不再问'你想要什么功能'，而是'你在什么场景下想要完成什么'——答案完全不同。"*
 
 ## 🔗 生态快速开始
 
@@ -227,42 +234,6 @@ s = SWDSkill("Report")           # Present to stakeholders
 > # One line → instant opportunity scoring
 > print(JTBDSkill("Your Product").score_opportunity("Core Job", struggle=4, alternative=3, market=4, budget=4))
 > ```
-
-### 🍳 Quick Recipes
-
-**Recipe 1: Switch Interview Analysis in 15 Minutes**
-```python
-from jtbd import JTBDSkill
-skill = JTBDSkill("Travel App")
-
-# Analyze why users switched from competitor
-forces = skill.analyze_forces("Users switching from Booking.com to our app",
-    interview_type="switch")
-print(forces)
-# → Push: "Booking.com is too cluttered" / Pull: "Cleaner UX"
-# → Anxiety: "Will reviews be accurate?" / Habit: "Always used Booking.com"
-
-# Score the opportunity based on switch dynamics
-score = skill.score_opportunity("Find trustworthy hotel reviews",
-    struggle=4, alternative=2, market=5, budget=4)
-# → Score: 8.2 / 10 — P0 priority
-```
-
-**Recipe 2: ODI Feature Prioritization in 10 Minutes**
-```python
-from jtbd import JTBDSkill
-skill = JTBDSkill("SaaS Platform")
-
-jobs = [
-    ("Onboard team members quickly", 9, 4),
-    ("Track project progress visually", 7, 6),
-    ("Automate weekly status reports", 8, 3),
-]
-for desc, imp, sat in jobs:
-    score = skill.score_odi(desc, importance=imp, satisfaction=sat)
-    print(f"{desc}: ODI Score = {score}")
-# → Automate reports: 13 (highest — invest here first)
-```
 
 ## ⚡ Quick Start (5 Minutes)
 
@@ -955,7 +926,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.03)**: Ecosystem audit across all 6 AliDujie skill repos — cross-reference verification, version alignment, documentation completeness check.
+**Latest (v3.2.05)**: Added Examples badge (3 runnable scripts), ecosystem cross-reference audit across all 6 AliDujie skills, version sync across all files.
 
 **Previous (v3.2.01)**: Repo maintenance — fixed version mismatch in README H1 (was v3.1, badge shows v3.2.01), ecosystem cross-reference verification across all 6 AliDujie skills.
 
@@ -998,6 +969,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 - [SKILL.md](SKILL.md) — Agent-facing skill definition and prompt templates
 - [USAGE.md](USAGE.md) — Detailed usage guide with code examples / 详细使用指南
 - [INSTALL.md](INSTALL.md) — Detailed installation guide and agent integration
+- [examples/](examples/) — Runnable Python examples (opportunity scoring, four forces analysis, job stories)
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
 - [CHANGELOG.md](CHANGELOG.md) — Version history
 - [SECURITY.md](SECURITY.md) — Security policy and responsible use
