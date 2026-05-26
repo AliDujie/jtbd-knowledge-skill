@@ -327,6 +327,18 @@ report = skill.analyze(include_ceo_analysis=True)
 - **Strategists** — Size markets by Jobs rather than demographics for better targeting
 - **AI Agent Developers** — Drop into any Python agent, run opportunity scoring and forces analysis
 
+## 🚫 Common Mistakes / 常见错误
+
+| Mistake | What Happens | Fix |
+|---------|-------------|----- |
+| Confusing solution features with Jobs | "I want a faster search" instead of the underlying Job | Frame Jobs as verb + object + context — "quickly find accommodation during urgent trips" |
+| Writing Jobs too broad or too narrow | "Travel better" is useless; "click the blue button" is a task | Aim for the "Goldilocks zone" — specific enough to act on, broad enough for innovation |
+| Skipping Four Forces analysis | Missing why users don't switch despite dissatisfaction | Always run `analyze_forces()` to identify Anxiety and Habit barriers |
+| Treating JTBD as a one-time exercise | Market shifts create new Jobs over time | Re-run opportunity scoring quarterly with fresh interview data |
+| Using demographics instead of Jobs for segmentation | Same age group, completely different Jobs | Segment by Jobs (e.g., "quick business booking" vs. "budget family vacation") |
+
+> **把功能当任务？任务要写成动词+对象+情境。范围太宽或太窄？瞄准"金发姑娘"区间——具体到可行动，宽泛到可创新。跳过四力分析？用 `analyze_forces()` 找焦虑和习惯壁垒。JTBD做一次就行？每季度重跑机会评分。用人口统计分群？按任务分群。**
+
 ## 📋 Real-World Use Cases
 
 ### 1. Identifying Underserved Jobs in a Travel App
