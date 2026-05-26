@@ -316,6 +316,19 @@ report = skill.analyze(include_ceo_analysis=True)
 > print(skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4))
 > ```
 
+## 🚫 Common Mistakes / 常见错误
+
+| Mistake | What Happens | Fix |
+|---------|-------------|-----|
+| Asking "what features do you want?" | Surface-level answers, no real insight | Use JTBD's `analyze_forces()` to uncover Push/Pull/Anxiety/Habit dynamics |
+| Confusing demographics with Jobs | "35-year-old males want X" — useless | Focus on what users are trying to accomplish, not who they are |
+| Treating all competitors equally | Feature checklist misses the real competition | Use `analyze_competition()` — your biggest competitor might be "doing nothing" |
+| Skipping opportunity scoring | HiPPO drives the roadmap | Run `score_opportunity()` on all Jobs, then `render_priority_matrix()` |
+| Building without validating Jobs | Shipping features nobody hired you for | Chain JTBD → VPD → QuantUX: discover → design → validate |
+
+> **问"你想要什么功能"只能得到表面答案？用 `analyze_forces()` 挖掘四力。把人口统计当Jobs？关注用户想完成什么。竞品清单当竞争分析？用 `analyze_competition()` 发现"什么都不做"才是最大竞品。跳过机会评分？HiPPO会主导路线图。**
+
+
 ## 📋 Real-World Use Cases
 
 ### 1. Identifying Underserved Jobs in a Travel App
