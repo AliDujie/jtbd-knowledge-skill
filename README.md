@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3204)
+- [What's New](#-whats-new-in-v3205)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -978,7 +978,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.04)**: Fixed stale What's New TOC link (v3203 → v3204), updated Version History latest entry, ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
 
