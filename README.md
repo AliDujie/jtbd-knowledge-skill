@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.03-blue)
+![Version](https://img.shields.io/badge/version-3.2.04-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -973,7 +973,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.02)**: Added Ecosystem Pipeline Diagram, explicit JTBD→VPD canvas handoff and JTBD→QuantUX MaxDiff validation examples, version sync across all files.
+**Latest (v3.2.03)**: Added Ecosystem Pipeline Diagram, explicit JTBD→VPD canvas handoff and JTBD→QuantUX MaxDiff validation examples, version sync across all files.
 
 **Previous (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
 
