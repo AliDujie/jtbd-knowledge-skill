@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3203)
+- [What's New](#-whats-new-in-v3204)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -62,6 +62,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.05
+
+- **Repo Maintenance**: Fixed stale What's New TOC link (v3203 → v3204), updated Version History "Latest" entry (v3.2.03 → v3.2.04), ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.05
 
 ## 🆕 What's New in v3.2.03
 
@@ -973,7 +978,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.03)**: Added Ecosystem Pipeline Diagram, explicit JTBD→VPD canvas handoff and JTBD→QuantUX MaxDiff validation examples, version sync across all files.
+**Latest (v3.2.04)**: Fixed stale What's New TOC link (v3203 → v3204), updated Version History latest entry, ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
 
