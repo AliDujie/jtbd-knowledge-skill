@@ -11,13 +11,16 @@
 
 ## 📑 Table of Contents
 
+- [What's New](#-whats-new-in-v3203)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
+- [Who This Skill Is For](#-who-this-skill-is-for)
 - [Quick Decision: When to Use JTBD?](#-quick-decision-when-to-use-jtbd)
 - [Quick Start](#-quick-start-5-minutes)
 - [Ecosystem Quick Start](#-ecosystem-quick-start)
 - [Core Capabilities](#-13-capabilities)
 - [Real-World Use Cases](#-real-world-use-cases)
+- [Common Mistakes](#-common-mistakes--常见错误)
 - [AI Agent Integration](#-ai-agent-integration)
 - [FAQ / Troubleshooting](#-faq--troubleshooting)
 - [Resources](#-resources)
