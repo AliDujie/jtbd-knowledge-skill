@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3209)
+- [What's New](#-whats-new-in-v3210)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -63,6 +63,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.10
+
+- **Version History Fix**: Corrected stale Version History "Latest" entry (was pointing to v3.2.08 while badge shows 3.2.09), ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.10
 
 ## 🆕 What's New in v3.2.09
 
@@ -1048,7 +1053,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.08)**: Version consistency fix — bumped internal versions to 3.2.07, updated README badge to 3.2.08, fixed stale What's New TOC link, updated Version History latest entry, ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.10)**: Version History "Latest" entry corrected (was stale v3.2.08 while badge showed 3.2.09), ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
 
