@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.07-blue)
+![Version](https://img.shields.io/badge/version-3.2.08-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3206)
+- [What's New](#-whats-new-in-v3208)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -64,6 +64,12 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+## 🆕 What's New in v3.2.08
+
+- **Version Consistency Fix**: Bumped all internal versions to 3.2.07 (SKILL.md, pyproject.toml, jtbd/__init__.py), updated README badge to 3.2.08, fixed stale What's New TOC link (v3206 → v3207), updated Version History latest entry (v3.2.06 → v3.2.08)
+- **Ecosystem Cross-Reference Audit**: Verified all 6 AliDujie core skills + extended ecosystem URLs remain consistent across README.md and SKILL.md
+- **Version Bump**: Synced to 3.2.08
+
 ## 🆕 What's New in v3.2.06
 
 - **30-Second Quick Start**: Added one-liner Python examples for instant JTBD exploration — score, four forces, ODI, interview guide, Jobs Atlas, full analysis
@@ -74,8 +80,8 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 ## 🆕 What's New in v3.2.07
 
-- **TOC Audit**: Fixed stale What's New TOC link (v3205 → v3206), added missing "When NOT to Use JTBD" TOC entry, ecosystem cross-reference audit across all 6 AliDujie skills
-- **Version Bump**: Synced to 3.2.07
+- **Version Bump**: Internal versions (SKILL.md, pyproject.toml, jtbd/__init__.py) synced to 3.2.07
+- **Ecosystem Cross-Reference Audit**: Verified all 6 AliDujie skills
 
 ## 🆕 What's New in v3.2.05
 
@@ -1037,7 +1043,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.06)**: Added 30-Second Quick Start with one-liner Python examples, JTBD School Selection Guide quick-ref table, Opportunity Score Benchmarks, ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.08)**: Version consistency fix — bumped internal versions to 3.2.07, updated README badge to 3.2.08, fixed stale What's New TOC link, updated Version History latest entry, ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
 
