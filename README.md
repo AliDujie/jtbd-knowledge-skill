@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.06-blue)
+![Version](https://img.shields.io/badge/version-3.2.07-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3205)
+- [What's New](#-whats-new-in-v3206)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -24,6 +24,7 @@
 - [AI Agent Integration](#-ai-agent-integration)
 - [FAQ / Troubleshooting](#-faq--troubleshooting)
 - [Resources](#-resources)
+- [When NOT to Use JTBD](#-when-not-to-use-jtbd--什么时候不该用-jtbd)
 
 ---
 
@@ -70,6 +71,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 - **Opportunity Score Benchmarks**: Enhanced benchmarks table with score interpretations and decision thresholds
 - **Ecosystem Link Audit**: Verified cross-reference consistency across all 6 AliDujie skills
 - **Version Bump**: Synced to 3.2.06
+
+## 🆕 What's New in v3.2.07
+
+- **TOC Audit**: Fixed stale What's New TOC link (v3205 → v3206), added missing "When NOT to Use JTBD" TOC entry, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.07
 
 ## 🆕 What's New in v3.2.05
 
