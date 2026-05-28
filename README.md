@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.08-blue)
+![Version](https://img.shields.io/badge/version-3.2.09-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3208)
+- [What's New](#-whats-new-in-v3209)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -63,6 +63,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.09
+
+- **Repo Maintenance**: Version sync across SKILL.md/pyproject.toml/__init__.py (all → 3.2.09), README badge set to 3.2.09, ecosystem cross-reference audit across all 6 AliDujie skills, updated example scripts to use current API signatures (score_odi, add_force, generate_analysis_report, create_job_stories, add_story)
+- **Version Bump**: Synced to 3.2.09
 
 ## 🆕 What's New in v3.2.08
 
