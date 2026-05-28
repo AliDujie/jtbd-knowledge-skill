@@ -1,6 +1,6 @@
 ---
 name: jtbd-knowledge-skill
-version: "3.2.05"
+version: "3.2.06"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派--Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合--
@@ -130,6 +130,18 @@ vpd.analyze_canvas(product_name="旅行预订", jobs=[{"description": "快速找
 
 **进步力量模型**:推力(Push)、拉力(Pull)、焦虑(Anxiety)、惯性(Inertia)。净推动力 = (推力+拉力) - (焦虑+惯性)。
 
+## 🗺️ JTBD School Selection Guide / JTBD 流派选择指南
+
+| 使用场景 | 最佳流派 | 核心方法 |
+|---------|---------|--------|
+| "用户为什么切换?" | **Klement** | 进步力量,切换访谈 |
+| "功能排优先级?" | **Ulwick (ODI)** | 机会算法,Job Map |
+| "全任务全景?" | **Wunker** | Jobs Atlas 七维度,ABC Drivers |
+| "写用户故事?" | **Kalbach** | Job Stories 格式 |
+| "完整发现流程" | **全部四家** | Klement → Ulwick → Wunker → Kalbach |
+
+> 💡 **推荐**: 从 **Klement** 开始(最易上手),需要量化评分时叠加 **Ulwick ODI**。
+
 ## 🌟 为什么选择 JTBD?
 
 - **经典方法论** - 融合四大 JTBD 学派(Klement 进步力量、Ulwick ODI、Wunker Jobs Atlas、Kalbach Job Stories),全球 500+ 企业采用的需求洞察框架
@@ -158,6 +170,27 @@ report = skill.analyze(include_ceo_analysis=True)
 ```
 
 > 💡 **5 分钟上手**: `from jtbd import JTBDSkill` → 纯标准库,零依赖,开箱即用。
+
+## ⚡ 30秒快速开始
+
+复制任意一行即可开始探索 JTBD:
+
+```python
+from jtbd import JTBDSkill
+
+# 一行: 机会评分
+print(JTBDSkill("你的产品").score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4))
+
+# 一行: ODI 评分
+print(JTBDSkill("你的产品").score_odi("核心任务", importance=8, satisfaction=3))
+
+# 两行: 四力分析
+jtbd = JTBDSkill("你的产品")
+print(jtbd.analyze_forces("用户从竞品切换"))
+
+# 两行: 完整分析 + CEO 决策
+print(jtbd.analyze(include_ceo_analysis=True))
+```
 
 ## 触发条件
 

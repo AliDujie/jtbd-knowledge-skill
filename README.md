@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.05-blue)
+![Version](https://img.shields.io/badge/version-3.2.06-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -62,6 +62,14 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.06
+
+- **30-Second Quick Start**: Added one-liner Python examples for instant JTBD exploration — score, four forces, ODI, interview guide, Jobs Atlas, full analysis
+- **JTBD School Selection Guide**: Added quick-ref table mapping use cases to which JTBD school to use (Klement, Ulwick, Wunker, Kalbach)
+- **Opportunity Score Benchmarks**: Enhanced benchmarks table with score interpretations and decision thresholds
+- **Ecosystem Link Audit**: Verified cross-reference consistency across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.06
 
 ## 🆕 What's New in v3.2.05
 
@@ -434,6 +442,25 @@ Atlas → VPD canvas + SWD story → Stakeholder-ready presentation
 | `generate_priority_scoring(jobs)` | Composite opportunity scoring, P0/P1/P2 resource allocation |
 | `generate_commercialization_feasibility(jobs)` | WTP, ROI, payback period, Go/No-Go decision |
 
+## 🗺️ JTBD School Selection Guide / JTBD 流派选择指南
+
+Not sure which JTBD school to start with? Use this quick-ref table:
+
+| Use Case / 使用场景 | Best School / 最佳流派 | Why / 为什么 | Key Method / 核心方法 |
+|----------|-----------|--------|--------------------|
+| "Why are users switching?" 用户为什么切换? | **Klement** | Reveals emotional + functional switching forces | Forces of Progress, Switch Interviews |
+| "What features to prioritize?" 功能排优先级? | **Ulwick (ODI)** | Quantifiable opportunity scoring for roadmaps | Opportunity Algorithm, Job Map, Outcome Statements |
+| "Map the full job landscape" 全任务全景? | **Wunker** | 7-dimensional panorama with context drivers | Jobs Atlas, ABC Drivers, obstacle diagnosis |
+| "Write user stories / specs" 写用户故事/规格? | **Kalbach** | Solution-agnostic, context-rich format | Job Stories (When... I want... So I can...) |
+| "Design a survey to validate" 设计验证问卷? | **Ulwick (ODI)** | Pairs outcomes with importance/satisfaction scales | ODI outcome pairing, quantitative validation |
+| "Understand adoption barriers" 理解采用障碍? | **Wunker** | Diagnoses why users resist adopting | Jobs Atlas obstacles, ABC attitude analysis |
+| "Write marketing copy" 写营销文案? | **Klement** | Resonates with struggle → progress narrative | Push/Pull/Anxiety/Habit messaging framework |
+| "Full discovery workflow" 完整发现流程? | **All Four** | Each school covers a different gap | Start Klement → Ulwick → Wunker → Kalbach |
+
+> 💡 **Recommendation / 建议**: Start with **Klement's Forces of Progress** — it's the most accessible entry point. Add **Ulwick ODI** when you need quantifiable scores for prioritization.
+>
+> **推荐**: 从 **Klement 进步力量模型** 开始——最容易上手。需要量化评分做优先级时叠加 **Ulwick ODI**。
+
 ## 🍽️ Quick Recipes / 快速食谱
 
 ### Recipe: "Why are users switching to our competitor?" (1 hour)
@@ -771,16 +798,42 @@ jtbd-knowledge-skill/
 
 ## ⚡ 30-Second Quick Start / 30秒快速开始
 
+> Copy-paste any one-liner to start exploring JTBD instantly.
+
 ```python
 from jtbd import JTBDSkill
 
-# One-liner: score a job opportunity
+# 1️⃣ Score a job opportunity (one-liner)
 print(JTBDSkill("Your Product").score_opportunity("Core task", struggle=4, alternative=3, market=4, budget=4))
+# → {"score": 7.6, "level": "high", "action": "..."}
 
-# Two-liner: four forces analysis
+# 2️⃣ ODI scoring (one-liner)
+print(JTBDSkill("Your Product").score_odi("Core task", importance=8, satisfaction=3))
+# → {"odi_score": 13, "odi_level": "high", ...}
+
+# 3️⃣ Four forces analysis (two-liners)
 jtbd = JTBDSkill("Your Product")
 forces = jtbd.analyze_forces("Users switching from competitor")
+print(forces)
+# → Push / Pull / Anxiety / Habit mapping
+
+# 4️⃣ Generate Switch interview guide (two-liners)
+print(jtbd.generate_interview("Switch Interview", ["competition", "push", "anxiety"]))
+# → Structured interview questions
+
+# 5️⃣ Create Jobs Atlas (three-liners)
+atlas = jtbd.create_jobs_atlas("Your Product")
+atlas.set_core_job("Help users complete their core task quickly")
+print(atlas.build())
+# → 7-dimension panorama
+
+# 6️⃣ Full analysis with CEO decision support (two-liners)
+report = jtbd.analyze(include_ceo_analysis=True)
+print(report)
+# → Full report + market sizing + priority scoring
 ```
+
+**零依赖纯 Python — 无需 `pip install`。** Copy any line above to explore JTBD immediately.
 
 ## 🧪 Testing
 
@@ -978,7 +1031,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.06)**: Added 30-Second Quick Start with one-liner Python examples, JTBD School Selection Guide quick-ref table, Opportunity Score Benchmarks, ecosystem cross-reference audit across all 6 AliDujie skills.
+
+**Previous (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
 
