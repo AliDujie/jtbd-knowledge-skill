@@ -1,3 +1,35 @@
+## v3.2.10 (2026-05-29)
+
+- Correct stale Version History "Latest" entry (was pointing to v3.2.08 while badge shows 3.2.09)
+- Ecosystem cross-reference audit across all 6 AliDujie skills
+
+## v3.2.09 (2026-05-29)
+
+- Sync versions to 3.2.09 across README/SKILL.md/pyproject.toml/__init__.py
+- Fix TOC link (v3208→v3209)
+- Update example scripts to use current API signatures (score_odi, add_force, generate_analysis_report, create_job_stories, add_story)
+- Ecosystem cross-reference audit across all 6 AliDujie skills
+
+## v3.2.08 (2026-05-29)
+
+- Bump all internal versions to 3.2.07 (SKILL.md, pyproject.toml, jtbd/__init__.py)
+- Update README badge to 3.2.08
+- Fix stale What's New TOC link (v3206 → v3207)
+- Update Version History latest entry (v3.2.06 → v3.2.08)
+- Ecosystem cross-reference audit across all 6 AliDujie skills
+
+## v3.2.07 (2026-05-29)
+
+- Sync internal versions (SKILL.md, pyproject.toml, jtbd/__init__.py) to 3.2.07
+- Ecosystem cross-reference audit across all 6 AliDujie skills
+
+## v3.2.06 (2026-05-29)
+
+- Add 30-Second Quick Start with one-liner Python examples
+- Add JTBD School Selection Guide quick-ref table
+- Enhance Opportunity Score Benchmarks with score interpretations
+- Ecosystem link audit across all 6 AliDujie skills
+
 ## v3.2.05 (2026-05-26)
 
 - Repo maintenance: added Examples badge (3 runnable scripts), added examples/ reference to Resources section, ecosystem cross-reference audit
