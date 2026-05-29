@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.11-blue)
+![Version](https://img.shields.io/badge/version-3.2.12-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3211)
+- [What's New](#-whats-new-in-v3212)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -63,6 +63,11 @@ from jtbd import JTBDSkill
 skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
+
+## 🆕 What's New in v3.2.12
+
+- **CHANGELOG Maintenance**: Merged duplicate v3.2.10 entries in CHANGELOG.md, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.12
 
 ## 🆕 What's New in v3.2.11
 
@@ -1058,7 +1063,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.11)**: Version History "Latest" entry corrected (was stale v3.2.10 while badge showed 3.2.11), merged duplicate entries, fixed out-of-order v3.2.06/v3.2.07, ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.12)**: Version History "Latest" entry corrected (was stale v3.2.10 while badge showed 3.2.11), merged duplicate entries, fixed out-of-order v3.2.06/v3.2.07, ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
 

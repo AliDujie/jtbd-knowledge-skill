@@ -1,12 +1,12 @@
-## v3.2.10 (2026-05-29)
+## v3.2.12 (2026-05-29)
 
+- Repo maintenance: version bump 3.2.11→3.2.12, CHANGELOG duplicate v3.2.10 entries merged, ecosystem cross-reference audit across all 6 AliDujie skills
+
+## v3.2.11 (2026-05-29)
+
+- Merge duplicate v3.2.10 CHANGELOG entries into single consolidated entry
 - Document missing example scripts (01_opportunity_scoring, 02_four_forces, 03_job_stories) in examples/README.md
 - Update main README examples reference to include all 5 scripts
-- Version sync across README/SKILL.md/pyproject.toml/__init__.py
-
-
-## v3.2.10 (2026-05-29)
-
 - Correct stale Version History "Latest" entry (was pointing to v3.2.08 while badge shows 3.2.09)
 - Ecosystem cross-reference audit across all 6 AliDujie skills
 
