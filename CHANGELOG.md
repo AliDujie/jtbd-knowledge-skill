@@ -1,3 +1,7 @@
+## v3.2.13 (2026-05-29)
+
+- Repo maintenance: version bump 3.2.12→3.2.13, CHANGELOG duplicate entries consolidation, ecosystem cross-reference audit
+
 ## v3.2.12 (2026-05-29)
 
 - Repo maintenance: version bump 3.2.11→3.2.12, CHANGELOG duplicate v3.2.10 entries merged, ecosystem cross-reference audit across all 6 AliDujie skills
