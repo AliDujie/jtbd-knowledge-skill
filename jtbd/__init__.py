@@ -43,7 +43,7 @@
     report = skill.generate_analysis_report()
 """
 
-__version__ = "3.2.09"
+__version__ = "3.2.10"
 
 from .config import (
     AnalysisConfig, FORCE_TYPES, FORCE_LABELS, KNOWLEDGE_FILES,

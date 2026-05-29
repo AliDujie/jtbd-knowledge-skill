@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.09-blue)
+![Version](https://img.shields.io/badge/version-3.2.10-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -68,6 +68,12 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 - **Version History Fix**: Corrected stale Version History "Latest" entry (was pointing to v3.2.08 while badge shows 3.2.09), ecosystem cross-reference audit across all 6 AliDujie skills
 - **Version Bump**: Synced to 3.2.10
+
+## 🆕 What's New in v3.2.10
+
+- **Version Bump**: Bumped to 3.2.10 — aligned README badge, SKILL.md, pyproject.toml, __init__.py
+- **Repo Maintenance**: Documented all example scripts in examples/README.md (opportunity scoring, four forces, job stories were missing), ecosystem cross-reference audit across all 6 AliDujie skills
+
 
 ## 🆕 What's New in v3.2.09
 
