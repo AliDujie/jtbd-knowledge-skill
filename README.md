@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.10-blue)
+![Version](https://img.shields.io/badge/version-3.2.11-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3210)
+- [What's New](#-whats-new-in-v3211)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -64,20 +64,19 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
-## 🆕 What's New in v3.2.10
+## 🆕 What's New in v3.2.11
 
-- **Version History Fix**: Corrected stale Version History "Latest" entry (was pointing to v3.2.08 while badge shows 3.2.09), ecosystem cross-reference audit across all 6 AliDujie skills
-- **Version Bump**: Synced to 3.2.10
+- **Repo Maintenance**: Merged duplicate v3.2.10 entries, fixed out-of-order v3.2.06/v3.2.07 (v3.2.06 before v3.2.07 for proper chronology), updated Version History "Latest" entry to v3.2.11, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.11
 
 ## 🆕 What's New in v3.2.10
 
 - **Version Bump**: Bumped to 3.2.10 — aligned README badge, SKILL.md, pyproject.toml, __init__.py
 - **Repo Maintenance**: Documented all example scripts in examples/README.md (opportunity scoring, four forces, job stories were missing), ecosystem cross-reference audit across all 6 AliDujie skills
 
-
 ## 🆕 What's New in v3.2.09
 
-- **Repo Maintenance**: Version sync across SKILL.md/pyproject.toml/__init__.py (all → 3.2.09), README badge set to 3.2.09, ecosystem cross-reference audit across all 6 AliDujie skills, updated example scripts to use current API signatures (score_odi, add_force, generate_analysis_report, create_job_stories, add_story)
+- **Version History Fix**: Corrected stale Version History "Latest" entry (was pointing to v3.2.08 while badge shows 3.2.09), ecosystem cross-reference audit across all 6 AliDujie skills
 - **Version Bump**: Synced to 3.2.09
 
 ## 🆕 What's New in v3.2.08
@@ -86,6 +85,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 - **Ecosystem Cross-Reference Audit**: Verified all 6 AliDujie core skills + extended ecosystem URLs remain consistent across README.md and SKILL.md
 - **Version Bump**: Synced to 3.2.08
 
+## 🆕 What's New in v3.2.07
+
+- **Version Bump**: Internal versions (SKILL.md, pyproject.toml, jtbd/__init__.py) synced to 3.2.07
+- **Ecosystem Cross-Reference Audit**: Verified all 6 AliDujie skills
+
 ## 🆕 What's New in v3.2.06
 
 - **30-Second Quick Start**: Added one-liner Python examples for instant JTBD exploration — score, four forces, ODI, interview guide, Jobs Atlas, full analysis
@@ -93,11 +97,6 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 - **Opportunity Score Benchmarks**: Enhanced benchmarks table with score interpretations and decision thresholds
 - **Ecosystem Link Audit**: Verified cross-reference consistency across all 6 AliDujie skills
 - **Version Bump**: Synced to 3.2.06
-
-## 🆕 What's New in v3.2.07
-
-- **Version Bump**: Internal versions (SKILL.md, pyproject.toml, jtbd/__init__.py) synced to 3.2.07
-- **Ecosystem Cross-Reference Audit**: Verified all 6 AliDujie skills
 
 ## 🆕 What's New in v3.2.05
 
