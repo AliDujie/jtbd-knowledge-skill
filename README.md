@@ -2,7 +2,7 @@
 
 > **Understand What Users Really Hire Your Product to Do.**
 
-![Version](https://img.shields.io/badge/version-3.2.13-blue)
+![Version](https://img.shields.io/badge/version-3.2.14-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3213)
+- [What's New](#-whats-new-in-v3214)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -64,127 +64,28 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+
+## 🆕 What's New in v3.2.14
+
+- **README Cleanup**: Consolidated 18 redundant What's New entries into a summary line with CHANGELOG link, reducing README by ~103 lines while preserving full history reference
+- **Version Bump**: Synced to 3.2.14
+
 ## 🆕 What's New in v3.2.13
 
-- **Repo Maintenance**: Version bump 3.2.12→3.2.13, CHANGELOG duplicate entries consolidation, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Repo Maintenance**: Version bump 3.2.12→3.2.13, CHANGELOG dedup, ecosystem cross-reference audit across all 6 AliDujie skills
 - **Version Bump**: Synced to 3.2.13
 
 ## 🆕 What's New in v3.2.12
 
-- **CHANGELOG Maintenance**: Merged duplicate v3.2.10 entries in CHANGELOG.md, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Repo Maintenance**: Version bump 3.2.11→3.2.12, CHANGELOG duplicate v3.2.10 merge, ecosystem cross-reference audit across all 6 AliDujie skills
 - **Version Bump**: Synced to 3.2.12
 
 ## 🆕 What's New in v3.2.11
 
-- **Repo Maintenance**: Merged duplicate v3.2.10 entries, fixed out-of-order v3.2.06/v3.2.07 (v3.2.06 before v3.2.07 for proper chronology), updated Version History "Latest" entry to v3.2.11, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version History Fix**: Corrected stale Version History "Latest" entry, ecosystem cross-reference audit across all 6 AliDujie skills
 - **Version Bump**: Synced to 3.2.11
 
-## 🆕 What's New in v3.2.10
-
-- **Version Bump**: Bumped to 3.2.10 — aligned README badge, SKILL.md, pyproject.toml, __init__.py
-- **Repo Maintenance**: Documented all example scripts in examples/README.md (opportunity scoring, four forces, job stories were missing), ecosystem cross-reference audit across all 6 AliDujie skills
-
-## 🆕 What's New in v3.2.09
-
-- **Version History Fix**: Corrected stale Version History "Latest" entry (was pointing to v3.2.08 while badge shows 3.2.09), ecosystem cross-reference audit across all 6 AliDujie skills
-- **Version Bump**: Synced to 3.2.09
-
-## 🆕 What's New in v3.2.08
-
-- **Version Consistency Fix**: Bumped all internal versions to 3.2.07 (SKILL.md, pyproject.toml, jtbd/__init__.py), updated README badge to 3.2.08, fixed stale What's New TOC link (v3206 → v3207), updated Version History latest entry (v3.2.06 → v3.2.08)
-- **Ecosystem Cross-Reference Audit**: Verified all 6 AliDujie core skills + extended ecosystem URLs remain consistent across README.md and SKILL.md
-- **Version Bump**: Synced to 3.2.08
-
-## 🆕 What's New in v3.2.07
-
-- **Version Bump**: Internal versions (SKILL.md, pyproject.toml, jtbd/__init__.py) synced to 3.2.07
-- **Ecosystem Cross-Reference Audit**: Verified all 6 AliDujie skills
-
-## 🆕 What's New in v3.2.06
-
-- **30-Second Quick Start**: Added one-liner Python examples for instant JTBD exploration — score, four forces, ODI, interview guide, Jobs Atlas, full analysis
-- **JTBD School Selection Guide**: Added quick-ref table mapping use cases to which JTBD school to use (Klement, Ulwick, Wunker, Kalbach)
-- **Opportunity Score Benchmarks**: Enhanced benchmarks table with score interpretations and decision thresholds
-- **Ecosystem Link Audit**: Verified cross-reference consistency across all 6 AliDujie skills
-- **Version Bump**: Synced to 3.2.06
-
-## 🆕 What's New in v3.2.05
-
-- **Repo Maintenance**: Fixed stale What's New TOC link (v3203 → v3204), updated Version History "Latest" entry (v3.2.03 → v3.2.04), ecosystem cross-reference audit across all 6 AliDujie skills
-- **Version Bump**: Synced to 3.2.05
-
-## 🆕 What's New in v3.2.03
-
-- **Repo Maintenance**: Fixed duplicate examples/ entry in Resources section, corrected Version History "Latest" entry (v3.1.90 → v3.2.02), ecosystem cross-reference audit across all 6 AliDujie skills
-- **Version Bump**: Synced to 3.2.03
-
-## 🆕 What's New in v3.2.02
-
-- **Ecosystem Pipeline Diagram**: Added ASCII visual showing full 6-skill flow with JTBD as the demand insight layer
-- **Cross-Skill Collaboration Enhancement**: Added explicit JTBD→VPD canvas handoff and JTBD→QuantUX MaxDiff validation examples
-- **Version Bump**: Synced version to 3.2.02
-
-## 🆕 What's New in v3.2.01
-
-- **Repo Maintenance**: Version sync across README badge, SKILL.md, pyproject.toml, __init__.py
-- **Ecosystem Cross-Reference Verification**: Verified all 6-skill pipeline links across AliDujie skills
-- **Version Bump**: Synced version to 3.2.01
-
-## 🆕 What's New in v3.2.00
-
-- **Structured Thinking Model Cross-Reference**: Added explicit STM skill link in ecosystem footer and pipeline diagram
-- **Ecosystem Pipeline Enhancement**: Added forward/backward reference arrows showing STM→JTBD strategic analysis loop
-- **References Directory Enhancement**: Added explicit references/ and jtbd/ source links to Resources section
-- **Version Bump**: Synced version to 3.2.00 across README/SKILL.md/pyproject.toml/__init__.py
-
-## 🆕 What's New in v3.1.93
-
-- **Ecosystem Badge Update**: Updated AliDujie ecosystem badge consistency check across all 6 skills
-- **Version Bump**: Synced version to 3.1.93 across README/SKILL.md/pyproject.toml/__init__.py
-
-## 🆕 What's New in v3.1.92
-
-- **SKILL.md Frontmatter Fix**: Synced version to 3.1.92, added `author` field, fixed badge placement
-- **SKILL.md Badge Leak Fix**: Moved markdown badge outside YAML frontmatter boundary (invalid YAML)
-- **Ecosystem Consistency**: Verified cross-references across all 6 AliDujie skills
-
-## 🆕 What's New in v3.1.91
-
-- **Try-It-Now Section**: Added one-line runnable examples under Quick Start for instant exploration
-- **Opportunity Score Clarity**: Added concrete 0-10 interpretation guide with decision thresholds
-- **Version Sync**: Aligned version across README/SKILL.md/pyproject.toml/__init__.py
-
-## 🆕 What's New in v3.1.90
-
-- **Ecosystem Pipeline Diagram**: Added ASCII visual pipeline diagram showing full 6-skill flow
-- **Opportunity Score Examples**: Added 2 more concrete examples with real-world scenarios
-- **Version Sync**: Aligned version across README/SKILL.md/pyproject.toml/__init__.py
-
-## 🆕 What's New in v3.1.89
-
-- **JTBD Interview Scenario Cards**: Added 3 ready-to-use interview scenarios (switch, ODI, churn)
-- **Opportunity Score Benchmarks**: Added industry benchmark reference table for ODI scoring
-- **Version Sync**: Aligned version across all files
-
-## 🆕 What's New in v3.1.87
-
-- **6-Skill Pipeline Example**: Added complete end-to-end pipeline with UDM + QuantUX steps
-- **Research Method Bridge**: JTBD now explicitly shows how qualitative Jobs feed into UDM research design and QuantUX validation
-
-## 🆕 What's New in v3.1.86
-
-- **Recommended Learning Path**: Added structured 5-step learning guide for progressive JTBD mastery
-- **Pipeline Consistency**: Unified ecosystem chain references across all 6 AliDujie skills
-
-## 🆕 What's New in v3.1.85
-
-- **Version Consistency Fixed**: Aligned `jtbd/__init__.py` version to 3.1.85 (was 3.1.79)
-- **Bilingual Navigation**: Fixed broken cross-links between SKILL.md ↔ README.md
-- **"Why Use This Skill?" Section**: Added dedicated value proposition with bilingual CN/EN content
-- **Extended Ecosystem**: Added CEO/CPO/CMO/CTO advisor cross-references to USAGE.md
-- **School Selection Guide**: Added JTBD school selection pro tip with practical decision tree
-- **Ecosystem Chain**: Improved cross-skill pipeline with complete 6-skill example
-- **Version Sync**: Aligned all version numbers across README/SKILL.md/pyproject.toml
+> **📦 Earlier versions (v3.2.10 → v3.1.45)**: Added JTBD statement quick reference (functional/emotional/social templates), outcome-driven innovation scoring, JTBD × Kano matrix integration, competitor JTBD analysis framework, hire/fire decision tree, cross-skill demand-to-value pipeline recipes. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
 ## 🇨🇳 中文概览
 
