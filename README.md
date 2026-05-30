@@ -24,9 +24,13 @@
 - [Real-World Use Cases](#-real-world-use-cases)
 - [Common Mistakes](#-common-mistakes--常见错误)
 - [AI Agent Integration](#-ai-agent-integration)
+- [Quick Recipes](#-quick-recipes--快速食谱)
 - [FAQ / Troubleshooting](#-faq--troubleshooting)
 - [Resources](#-resources)
 - [When NOT to Use JTBD](#-when-not-to-use-jtbd--什么时候不该用-jtbd)
+- [Best Practices](#-best-practices--最佳实践)
+- [Limitations](#-limitations--局限性)
+- [Recommended Learning Path](#-recommended-learning-path)
 
 ---
 
