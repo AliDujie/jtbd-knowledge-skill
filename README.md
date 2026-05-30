@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.15-blue)
+![Version](https://img.shields.io/badge/version-3.2.16-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3214)
+- [What's New](#-whats-new-in-v3216)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -66,6 +66,16 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+
+## 🆕 What's New in v3.2.16
+
+- **Repo Maintenance**: Added Instant Examples (Copy-Paste & Run) section to Quick Start, enhanced Quick Start with additional code examples, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.16
+
+## 🆕 What's New in v3.2.15
+
+- **Repo Maintenance**: Added Instant Examples (Copy-Paste & Run) section to Quick Start, enhanced Quick Start code examples, ecosystem cross-reference audit across all 6 AliDujie skills
+- **Version Bump**: Synced to 3.2.15
 
 ## 🆕 What's New in v3.2.14
 
@@ -286,6 +296,34 @@ report = skill.analyze(include_ceo_analysis=True)
 > skill = JTBDSkill("你的产品")
 > print(skill.score_opportunity("核心任务", struggle=4, alternative=3, market=4, budget=4))
 > ```
+
+### 🧪 Instant Examples (Copy-Paste & Run)
+
+**Opportunity scoring:**
+```python
+from jtbd import JTBDSkill
+j = JTBDSkill("My Product")
+print(j.score_opportunity("Core Job", struggle=4, alternative=3, market=4, budget=4))
+# → Score: 7.6 / 10
+```
+
+**Four forces analysis:**
+```python
+print(JTBDSkill("My Product").analyze_forces("Users switching from competitor"))
+# → Push / Pull / Anxiety / Habit mapping
+```
+
+**ODI scoring:**
+```python
+print(JTBDSkill("My Product").score_odi("Core Job", importance=8, satisfaction=3))
+# → Opportunity Score: 13 (high opportunity)
+```
+
+**Full analysis:**
+```python
+report = JTBDSkill("My Product").analyze(include_ceo_analysis=True)
+# → Full report + market sizing + priority scoring
+```
 
 ## 🚫 Common Mistakes / 常见错误
 
@@ -971,7 +1009,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.13)**: CHANGELOG duplicate version entry consolidation, ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.16)**: Added Instant Examples section to Quick Start, enhanced Quick Start code examples, ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
 
