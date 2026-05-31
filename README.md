@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.17-blue)
+![Version](https://img.shields.io/badge/version-3.2.18-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -70,6 +70,11 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+
+## 🆕 What's New in v3.2.18
+
+- **Repo Maintenance 2026-05-31**: README quality audit across all 6 AliDujie skill repos — verified structural completeness, TOC links, code examples, ecosystem cross-references, and bilingual coverage
+- **Version Bump**: Synced to 3.2.18
 
 ## 🆕 What's New in v3.2.17
 
