@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.23-blue)
+![Version](https://img.shields.io/badge/version-3.2.24-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3221)
+- [What's New](#-whats-new-in-v3223)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -71,9 +71,9 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.23
+## 🆕 What's New in v3.2.24
 
-- **Repo maintenance 2026-06-01**: Added Ecosystem FAQ section with 4 cross-skill Q&As, version sync (fixed `__init__.py` 3.2.21 → 3.2.23). Version bump 3.2.22 → 3.2.23.
+- **Repo maintenance 2026-06-01**: Fixed stale What's New TOC anchor (v3221 → v3223 → v3224), TOC anchor verification, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
 
 > **📦 Earlier versions (v3.2.22 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
