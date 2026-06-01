@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.19-blue)
+![Version](https://img.shields.io/badge/version-3.2.20-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -71,7 +71,7 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.19
+## 🆕 What's New in v3.2.20
 
 - **Repo maintenance 2026-06-01**: TOC anchor version fix (v3216 → v3219), ecosystem cross-reference audit across all 6 AliDujie skills
 - **Repo Maintenance 2026-05-31**: README quality audit across all 6 AliDujie skill repos — verified structural completeness, TOC links, code examples, ecosystem cross-references, and bilingual coverage
@@ -991,12 +991,56 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 - **Not a replacement for quantitative validation** — JTBD identifies Jobs and opportunities; QuantUX or A/B testing are needed to validate at scale.
 - **Bilingual documentation only** — Pro Tips and guides are provided in CN/EN only; localization to other languages requires community contributions.
 
+## 🏃 JTBD Research Sprint Template (2 Weeks) / JTBD 研究冲刺模板
+
+| Day | Activity | JTBD Capability | Deliverable |
+|-----|----------|----------------|-------------|
+| 1 | Define job scope + boundaries | Job mapping setup | Job scope document |
+| 2-4 | Switch interviews (5 users) | `generate_interview()` | Interview transcripts |
+| 5 | Four Forces analysis | `analyze_forces()` | Push/Pull/Anxiety/Habit map |
+| 6-7 | Job stories generation | `generate_job_stories()` | Job stories (all formats) |
+| 8 | Outcome identification | `identify_outcomes()` | Outcome statements |
+| 9 | Opportunity scoring | `score_opportunity()` | Opportunity scores |
+| 10 | Competitive solutions map | `map_competition()` | Competitor landscape |
+| 11 | Growth barrier identification | `analyze_obstacles()` | Barrier analysis |
+| 12 | Innovation opportunities | `find_innovations()` | Innovation roadmap |
+| 13 | Business decision framework | `business_decisions()` | Strategic recommendations |
+| 14 | Handoff to VPD for canvas | Export findings | VPD canvas inputs |
+
+**Minimum viable (3 days)**: 3 switch interviews → Four Forces analysis → top 3 opportunity scores. Get from user stories to prioritized opportunities fast.
+
+## 📊 JTBD Quick-Ref / JTBD 速查
+
+### Opportunity Score Interpretation
+| Opportunity Score | Priority | Action |
+|-------------------|----------|--------|
+| ≥ 30 | Critical | Immediate investment |
+| 20-29 | High | Plan for next quarter |
+| 10-19 | Moderate | Monitor and validate |
+| < 10 | Low | Keep on backlog |
+
+### Four Forces Framework
+| Force | Direction | Example Question |
+|-------|-----------|-----------------|
+| **Push** 😤 | Current → New | "What frustrates you about your current solution?" |
+| **Pull** 🧲 | New ← Current | "What attracts you to the new option?" |
+| **Anxiety** 😰 | New → Current | "What worries you about switching?" |
+| **Habit** 🔒 | Current → Current | "What keeps you using the old solution?" |
+
+### Job Story Formats
+| Format | Structure | Best For |
+|--------|-----------|----------|
+| Intercom | When [situation], I want to [motivation], so I can [outcome] | Product requirements |
+| Kalbach | When [context], I want to [need], so I can [benefit] | User story mapping |
+| Hill | Given [situation], when [trigger], I want [action] | Sprint planning |
+| Troeth | I need to [goal] because [reason] | Executive summaries |
+
 ## 📊 Version History
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.19)**: TOC anchor version fix (v3216 → v3219), What's New version sync, ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.20)**: Repo maintenance — added JTBD Research Sprint Template, JTBD Quick-Ref tables (Opportunity Score interpretation, Four Forces framework, Job Story formats), and ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.2.17)**: CHANGELOG sync (backfilled 3 missing version entries), consolidated redundant What's New entries, ecosystem cross-reference audit across all 6 AliDujie skills.
 
