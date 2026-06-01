@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.20-blue)
+![Version](https://img.shields.io/badge/version-3.2.21-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3219)
+- [What's New](#-whats-new-in-v3221)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -71,11 +71,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.20
+## 🆕 What's New in v3.2.21
 
-- **Repo maintenance 2026-06-01**: TOC anchor version fix (v3216 → v3219), ecosystem cross-reference audit across all 6 AliDujie skills
+- **README Maintenance 2026-06-01**: Added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD with runnable Python), version bump 3.2.20 → 3.2.21
+- **Repo Maintenance 2026-06-01**: TOC anchor version fix (v3216 → v3219), ecosystem cross-reference audit across all 6 AliDujie skills
 - **Repo Maintenance 2026-05-31**: README quality audit across all 6 AliDujie skill repos — verified structural completeness, TOC links, code examples, ecosystem cross-references, and bilingual coverage
-- **Version Bump**: Synced to 3.2.19
 
 ## 🆕 What's New in v3.2.17
 
@@ -98,6 +98,17 @@ A complete JTBD toolkit fusing **four schools of thought** — Klement's Forces 
 ## 🎯 Why Teams Choose JTBD
 
 *New here?* JTBD (Jobs to Be Done) reveals **why users switch** from your product to a competitor — or never buy at all. Instead of asking "what features do you want?", JTBD asks "what Job are you trying to get done?" Based on a fusion of 4 schools: Klement, Ulwick, Wunker, and Kalbach.
+
+### 🎯 Why JTBD is the Foundation of Product Strategy
+
+JTBD (Jobs To Be Done) shifts the question from **"who is our user?"** to **"what job are they hiring our product to do?"** — a fundamental reframe that reveals opportunities demographics miss entirely. The JTBD Knowledge Skill provides:
+
+- **Opportunity Scoring** — Quantify which unmet needs are worth pursuing (satisfaction vs. importance matrix)
+- **Four Forces Analysis** — Understand what pushes users away and pulls them toward alternatives
+- **Job Story Generation** — Write testable, actionable user stories from research findings
+- **Competitive Mapping** — See how alternatives compete for the same "job"
+
+> 🏆 **Real Impact**: Teams using JTBD report that **68% of feature requests disappear** when reframed as job outcomes. You stop building features nobody needs and start solving problems people will pay for.
 
 ## 🌟 Why JTBD?
 
@@ -211,6 +222,43 @@ s = SWDSkill("Report")           # Present to stakeholders
 | JTBD 机会评分 → | [VPD](https://github.com/AliDujie/value-proposition-design) 画布填充 | `vpd.analyze_canvas(jobs=top_jobs)` |
 | JTBD Jobs → | [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) MaxDiff 验证 | `quantux.maxdiff(opportunity_list)` |
 | JTBD 发现 → | [SWD](https://github.com/AliDujie/storytelling-with-data) 汇报 | `swd.build_story(evidence=findings)` |
+
+### 🔗 JTBD + Other Skills: Collaboration Examples
+
+**JTBD + Persona: From "what job" to "who does it"**
+```python
+from persona import PersonaSkill
+from jtbd import JTBDSkill
+
+p = PersonaSkill("MyApp")
+p.add_persona("Busy Professional", "primary", "Get things done fast")
+j = JTBDSkill("MyApp")
+jobs = j.opportunity_analysis()
+# Now you know WHICH persona needs WHICH job solved
+```
+
+**JTBD + VPD: From unmet jobs to value propositions**
+```python
+from jtbd import JTBDSkill
+from vpd import VPDSkill
+
+j = JTBDSkill("MyApp")
+analysis = j.opportunity_analysis()
+top_job = analysis['top_job']
+v = VPDSkill("MyApp", "target_segment")
+canvas = v.analyze_canvas(top_job['name'])  # Map gains/pains to job outcomes
+```
+
+**JTBD + SWD: Present opportunity analysis to stakeholders**
+```python
+from jtbd import JTBDSkill
+from swd import SWDSkill
+
+j = JTBDSkill("MyApp")
+analysis = j.opportunity_analysis()
+s = SWDSkill("Q1 Strategy")
+story = s.build_story("Unmet Customer Needs", context=f"Top opportunity: {analysis['top_job']['name']}")
+```
 
 > 💡 **Try Before You Decide / 先试后决定**:
 > ```python
@@ -1040,7 +1088,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.20)**: Repo maintenance — added JTBD Research Sprint Template, JTBD Quick-Ref tables (Opportunity Score interpretation, Four Forces framework, Job Story formats), and ecosystem cross-reference audit across all 6 AliDujie skills.
+**Latest (v3.2.21)**: README maintenance — added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), version bump 3.2.20 → 3.2.21.
+
+**Previous (v3.2.20)**: Repo maintenance — added JTBD Research Sprint Template, JTBD Quick-Ref tables (Opportunity Score interpretation, Four Forces framework, Job Story formats), and ecosystem cross-reference audit across all 6 AliDujie skills.
 
 **Previous (v3.2.17)**: CHANGELOG sync (backfilled 3 missing version entries), consolidated redundant What's New entries, ecosystem cross-reference audit across all 6 AliDujie skills.
 

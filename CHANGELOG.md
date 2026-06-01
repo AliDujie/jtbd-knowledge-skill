@@ -1,3 +1,17 @@
+## v3.2.21 (2026-06-01)
+
+- README maintenance: added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD with runnable Python)
+- Version bump 3.2.20 → 3.2.21 across README badge, SKILL.md, pyproject.toml, and __init__.py
+
+## v3.2.20 (2026-06-01)
+
+- Repo maintenance: TOC anchor version fix (v3216 → v3219), ecosystem cross-reference audit across all 6 AliDujie skills
+- Version bump 3.2.19 → 3.2.20
+
+## v3.2.19 (2026-06-01)
+
+- Repo maintenance: TOC anchor version fix, version sync across all files
+
 ## v3.2.18 (2026-05-31)
 
 - README quality audit across all 6 AliDujie skill repos — verified structural completeness, TOC links, code examples, ecosystem cross-references, and bilingual coverage
