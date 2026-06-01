@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.21-blue)
+![Version](https://img.shields.io/badge/version-3.2.22-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -71,20 +71,12 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.21
+## 🆕 What's New in v3.2.22
 
-- **README Maintenance 2026-06-01**: Added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD with runnable Python), version bump 3.2.20 → 3.2.21
-- **Repo Maintenance 2026-06-01**: TOC anchor version fix (v3216 → v3219), ecosystem cross-reference audit across all 6 AliDujie skills
-- **Repo Maintenance 2026-05-31**: README quality audit across all 6 AliDujie skill repos — verified structural completeness, TOC links, code examples, ecosystem cross-references, and bilingual coverage
+- **Repo maintenance 2026-06-01**: Consolidated 2 What's New sections to 1 + archive, added JTBD × Kano matrix integration section, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.21 → 3.2.22.
 
-## 🆕 What's New in v3.2.17
+> **📦 Earlier versions (v3.2.21 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
-- **CHANGELOG Sync**: Backfilled v3.2.13→v3.2.17 entries in CHANGELOG.md (was 3 versions behind), ecosystem cross-reference audit across all 6 AliDujie skills
-- **Version Bump**: Synced to 3.2.16
-
-> **📦 Recent versions (v3.2.15 → v3.2.11)**: CHANGELOG sync, README cleanup, Version History fixes, CHANGELOG dedup. Full changelog in [CHANGELOG.md](CHANGELOG.md).
-
-> **📦 Earlier versions (v3.2.10 → v3.1.45)**: Added JTBD statement quick reference (functional/emotional/social templates), outcome-driven innovation scoring, JTBD × Kano matrix integration, competitor JTBD analysis framework, hire/fire decision tree, cross-skill demand-to-value pipeline recipes. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
 ## 🇨🇳 中文概览
 

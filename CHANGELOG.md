@@ -1,4 +1,4 @@
-## v3.2.21 (2026-06-01)
+## v3.2.22 (2026-06-01)
 
 - README maintenance: added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD with runnable Python)
 - Version bump 3.2.20 → 3.2.21 across README badge, SKILL.md, pyproject.toml, and __init__.py
