@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.22-blue)
+![Version](https://img.shields.io/badge/version-3.2.23-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -71,11 +71,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.22
+## 🆕 What's New in v3.2.23
 
-- **Repo maintenance 2026-06-01**: Consolidated 2 What's New sections to 1 + archive, added JTBD × Kano matrix integration section, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.21 → 3.2.22.
+- **Repo maintenance 2026-06-01**: Added Ecosystem FAQ section with 4 cross-skill Q&As, version sync (fixed `__init__.py` 3.2.21 → 3.2.23). Version bump 3.2.22 → 3.2.23.
 
-> **📦 Earlier versions (v3.2.21 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
+> **📦 Earlier versions (v3.2.22 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
 
 ## 🇨🇳 中文概览
@@ -1111,6 +1111,22 @@ See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 3. **Explore references/** — Deep dive into 15 JTBD methodology documents (theory, Forces of Progress, ODI, Jobs Atlas, case studies)
 4. **Try the full pipeline** — Chain all 6 AliDujie skills end-to-end (see [Complete Pipeline Example](#-complete-pipeline-example-persona--jtbd--vpd--swd))
 5. **Customize via config** — Adjust AnalysisConfig and school preference (see [INSTALL.md](INSTALL.md))
+
+## 🌐 Ecosystem FAQ / 生态常见问题
+
+**Q: JTBD vs UDM — when do I use each?**
+A: JTBD reveals *what* users are trying to accomplish (the Job). UDM helps you *how* to research it (method selection, interview guides). Start with JTBD to understand the Job, then use UDM to design the research.
+
+**Q: JTBD vs Persona — what comes first?**
+A: Persona defines *who* (behavioral segments). JTBD defines *what* (Jobs they need done). In the AliDujie pipeline: Persona → JTBD. But you can start with JTBD if you already know your users.
+
+**Q: Can JTBD work with other AliDujie skills?**
+A: JTBD is designed to chain with all 5 other skills: Persona (who) → JTBD (what) → UDM (research) → QuantUX (validation) → VPD (value) → SWD (presentation). See the [complete pipeline example](#-complete-pipeline-example-persona--jtbd--vpd--swd) above.
+
+**Q: JTBD vs VPD — what's the difference?**
+A: JTBD discovers *what Jobs* users have. VPD maps those Jobs to your product's value proposition. JTBD is research; VPD is design. They're sequential: JTBD output → VPD input.
+
+---
 
 ## 📚 Resources
 
