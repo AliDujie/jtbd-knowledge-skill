@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.24-blue)
+![Version](https://img.shields.io/badge/version-3.2.25-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#-whats-new-in-v3224)
+- [What's New](#-whats-new-in-v3225)
 - [Why Use This Skill?](#-why-use-this-skill)
 - [Why Teams Choose JTBD](#-why-teams-choose-jtbd)
 - [Who This Skill Is For](#-who-this-skill-is-for)
@@ -71,9 +71,9 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.24
+## 🆕 What's New in v3.2.25
 
-- **Repo maintenance 2026-06-01**: Fixed stale What's New TOC anchor (v3221 → v3223 → v3224), TOC anchor verification, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
+- **Repo maintenance 2026-06-02**: Fixed stale What's New TOC anchor (v3223 → v3224), Version History consistency audit, ecosystem cross-reference audit, TOC anchor verification, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
 
 > **📦 Earlier versions (v3.2.22 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
@@ -1080,7 +1080,9 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.21)**: README maintenance — added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), version bump 3.2.20 → 3.2.21.
+**Latest (v3.2.25)**: Repo maintenance 2026-06-02 — TOC anchor verification (v3223 → v3224), Version History consistency audit (corrected stale v3.2.21 → v3.2.25), ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
+
+**Previous (v3.2.21)**: README maintenance — added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), version bump 3.2.20 → 3.2.21.
 
 **Previous (v3.2.20)**: Repo maintenance — added JTBD Research Sprint Template, JTBD Quick-Ref tables (Opportunity Score interpretation, Four Forces framework, Job Story formats), and ecosystem cross-reference audit across all 6 AliDujie skills.
 
