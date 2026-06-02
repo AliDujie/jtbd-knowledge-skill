@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.27-blue)
+![Version](https://img.shields.io/badge/version-3.2.28-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3227)
+- [What's New](#whats-new-in-v3228)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -70,6 +70,10 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+
+## 🆕 What's New in v3.2.28
+
+- **Repo Maintenance 2026-06-03**: Added Beginner's First JTBD Analysis (60-min job discovery with 7 steps), version bump 3.2.27→3.2.28.
 
 ## 🆕 What's New in v3.2.27
 
@@ -1142,6 +1146,140 @@ A: JTBD discovers *what Jobs* users have. VPD maps those Jobs to your product's 
 - [SECURITY.md](SECURITY.md) — Security policy and responsible use
 - [references/](references/) — 15 JTBD methodology knowledge documents (theory, research methods, analysis frameworks, ODI methodology) + interview and survey template files
 - [jtbd/](jtbd/) — Core Python module source code
+
+## 🧪 Beginner's First JTBD Analysis — 60-Minute Job Discovery / 新手入门教程
+
+> **Goal:** Discover your users' core Jobs-to-be-Done and prioritize opportunities.
+> **目标：** 发现用户的核心 JTBD 并排序机会。
+> **Time:** ~60 minutes | **Prerequisites:** Python 3.8+
+
+### Step 1: Initialize (1 min)
+
+```python
+from jtbd import JTBDSkill
+jtbd = JTBDSkill("FreshMart 生鲜电商")
+```
+
+### Step 2: Create Your JTBD Statement (5 min)
+
+Define the core job your users are hiring your product for:
+
+```python
+statement = jtbd.create_jtbd_statement(
+    situation="Cooking dinner after work",
+    motivation="Get fresh ingredients fast",
+    outcome="Cook a healthy meal in 20 minutes"
+)
+print(statement)
+# → "When cooking dinner after work, I want to get fresh ingredients fast, so I can cook a healthy meal in 20 minutes"
+```
+
+### Step 3: Score Opportunity (10 min)
+
+Evaluate each potential Job on 4 dimensions (1-5 scale):
+
+```python
+# Score: struggle=4 (hard to find fresh food), alternative=3 (existing options mediocre),
+# market=4 (large addressable market), budget=4 (willing to pay premium)
+opportunity = jtbd.score_opportunity(
+    "Get fresh dinner ingredients fast",
+    struggle=4, alternative=3, market=4, budget=4
+)
+print(f"Opportunity Score: {opportunity['score']}")
+# → Score: 75/100 — High opportunity, worth pursuing
+```
+
+| Score Range | Verdict | Action |
+|-------------|---------|--------|
+| 80-100 | 🟢 Gold mine | Invest heavily |
+| 60-79 | 🟡 Strong opportunity | Test and validate |
+| 40-59 | 🟠 Moderate | Consider niche play |
+| < 40 | 🔴 Low | Skip or reframe |
+
+### Step 4: Analyze Forces of Progress (10 min)
+
+Map the push/pull/anxiety/habit dynamics that drive switching:
+
+```python
+forces = jtbd.add_force(
+    "Switch to FreshMart",
+    push=["Supermarket too far", "Quality inconsistent"],
+    pull=["App is convenient", "Better product photos"],
+    anxiety=["Will it arrive fresh?", "Returns are complicated"],
+    habits=["Always used the same supermarket"]
+)
+```
+
+### Step 5: Generate Interview Guide (10 min)
+
+Create JTBD-style interviews to discover unmet needs:
+
+```python
+guide = jtbd.generate_interview("Grocery Shopping", "timeline")
+print(guide)
+# → Timeline-based questions: first thought → passive look → active shopping → purchase → consumption
+```
+
+### Step 6: Create Outcome Statements (10 min)
+
+Break the Job into measurable desired outcomes:
+
+```python
+outcomes = jtbd.create_outcome_statements("Get fresh dinner ingredients fast")
+print(outcomes)
+# → "Minimize time between deciding and receiving ingredients"
+# → "Maximize confidence in produce freshness"
+# → "Minimize effort required to compare options"
+```
+
+### Step 7: Prioritize with ODI Scoring (7 min)
+
+Score outcomes by importance vs satisfaction gap:
+
+```python
+odi = jtbd.score_odi(
+    outcomes=[
+        {"name": "Minimize delivery time", "importance": 5, "satisfaction": 2},
+        {"name": "Maximize freshness confidence", "importance": 5, "satisfaction": 3},
+    ]
+)
+print(odi)
+# → Opportunities ranked by underserved: delivery time > freshness
+```
+
+### ✅ Tutorial Checklist
+
+- [ ] Initialized JTBD with your product name
+- [ ] Created JTBD statement
+- [ ] Scored at least 2 opportunities
+- [ ] Mapped forces of progress
+- [ ] Generated JTBD interview guide
+- [ ] Created outcome statements
+- [ ] Prioritized with ODI scoring
+
+### 🔀 What's Next?
+
+Chain JTBD findings with other AliDujie skills:
+
+```python
+# JTBD → UDM research → VPD canvas → SWD presentation
+from jtbd import JTBDSkill
+from udm import UDMSkill
+from vpd import VPDSkill
+from swd import SWDSkill
+
+jtbd = JTBDSkill("FreshMart")
+opportunity = jtbd.score_opportunity("Get fresh dinner fast", struggle=4, alternative=3, market=4, budget=4)
+
+udm = UDMSkill("FreshMart")
+interview = udm.generate_interview("Grocery Jobs", "contextual")
+
+vpd = VPDSkill("FreshMart", "Busy Professionals")
+canvas = vpd.analyze_canvas(product_name="FreshMart", jobs=[{"description": "Get dinner ingredients fast"}])
+
+swd = SWDSkill("JTBD Findings")
+story = swd.build_story(context="JTBD opportunity analysis", use_case="executive_presentation")
+```
 
 ## 📄 License
 
