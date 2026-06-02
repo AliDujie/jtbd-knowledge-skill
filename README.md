@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.26-blue)
+![Version](https://img.shields.io/badge/version-3.2.27-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3226)
+- [What's New](#whats-new-in-v3227)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -71,7 +71,7 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.26
+## 🆕 What's New in v3.2.27
 
 - **Repo Maintenance 2026-06-02**: Version bump to 3.2.26, ecosystem cross-reference audit across all 6 AliDujie skills.
 
@@ -898,6 +898,7 @@ JTBD need insights can be combined with management skills to turn Jobs data into
 | [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD competitive analysis → CMO brand differentiation |
 | [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD tech-related Jobs → CTO technology investment priorities |
 | [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD findings → CEO plan review & 10x opportunity |
+| [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | STM frameworks → JTBD validates market hypotheses |
 
 ## 🤝 Contributing
 
