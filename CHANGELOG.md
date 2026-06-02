@@ -1,4 +1,8 @@
 ## v3.2.23 (2026-06-01)
+## [3.2.26] - 2026-06-02
+
+- Repo maintenance: Version bump to 3.2.26, ecosystem cross-reference audit across all 6 AliDujie skills.
+
 
 - README maintenance: added Ecosystem FAQ section with 4 cross-skill Q&As, version bump 3.2.22 → 3.2.23
 
