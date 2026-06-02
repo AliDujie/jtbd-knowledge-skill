@@ -75,7 +75,7 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 - **Repo Maintenance 2026-06-02**: Version bump to 3.2.26, ecosystem cross-reference audit across all 6 AliDujie skills.
 
-> **📦 Earlier versions (v3.2.22 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
+> **📦 Earlier versions (v3.2.18 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
 
 ## 🇨🇳 中文概览
