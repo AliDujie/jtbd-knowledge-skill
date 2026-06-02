@@ -75,3 +75,15 @@ python 05_job_stories.py
 - No `pip install` required — JTBD is zero-dependency
 - Feed JTBD insights into VPD for canvas development
 - See [USAGE.md](../USAGE.md) for detailed API documentation
+
+## 🔗 Ecosystem Integration / 生态集成
+
+JTBD is the "why" layer of the AliDujie UX Research Ecosystem. Chain it with other skills:
+
+- **Persona → JTBD**: [Persona](https://github.com/AliDujie/web-persona-skill) segments → JTBD needs discovery per persona
+- **UDM → JTBD**: [UDM](https://github.com/AliDujie/universal-design-methods) interview transcripts → JTBD force analysis
+- **JTBD → QuantUX**: JTBD opportunity scores → [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) validation experiments
+- **JTBD → VPD**: JTBD customer jobs → [VPD](https://github.com/AliDujie/value-proposition-design) canvas filling
+- **JTBD → SWD**: JTBD opportunity reports → [SWD](https://github.com/AliDujie/storytelling-with-data) data narratives
+
+See the [full pipeline example](../README.md#complete-pipeline-example) in README.md for a 6-skill end-to-end workflow.
