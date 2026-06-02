@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3225)
+- [What's New](#whats-new-in-v3226)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -73,11 +73,7 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 ## 🆕 What's New in v3.2.26
 
-## 🆕 What's New in v3226
-
 - **Repo Maintenance 2026-06-02**: Version bump to 3.2.26, ecosystem cross-reference audit across all 6 AliDujie skills.
-
-- **Repo maintenance 2026-06-02**: Fixed stale What's New TOC anchor (v3223 → v3224), Version History consistency audit, ecosystem cross-reference audit, TOC anchor verification, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
 
 > **📦 Earlier versions (v3.2.22 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
 
