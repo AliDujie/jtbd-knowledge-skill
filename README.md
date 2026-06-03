@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3229)
+- [What's New](#whats-new-in-v3230)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -1093,7 +1093,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.28)**: Repo maintenance 2026-06-02 — TOC anchor verification, Version History consistency audit, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
+**Latest (v3.2.30)**: Repo maintenance 2026-06-03 — Updated TOC anchor (v3.2.29 → v3.2.30), ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
 
 **Previous (v3.2.21)**: README maintenance — added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), version bump 3.2.20 → 3.2.21.
 
