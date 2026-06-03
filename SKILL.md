@@ -1,6 +1,6 @@
 ---
 name: jtbd-knowledge-skill
-version: "3.2.30"
+version: "3.2.31"
 description: >
   JTBD (Jobs to Be Done) v3.0 完整工具集。融合四大学派--Klement 进步力量、
   Ulwick ODI 机会算法、Wunker Jobs Atlas 七维度、Kalbach Job Stories 整合--
