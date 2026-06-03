@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.29-blue)
+![Version](https://img.shields.io/badge/version-3.2.30-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -70,6 +70,10 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+
+## 🆕 What's New in v3.2.30
+
+- **Repo Maintenance 2026-06-03**: Enhanced beginner tutorial with ODI scoring benchmark table, improved cross-skill pipeline example with UDM + QuantUX integration, version bump 3.2.29→3.2.30.
 
 ## 🆕 What's New in v3.2.29
 
