@@ -1,3 +1,7 @@
+## [3.2.30] - 2026-06-03
+
+- Repo maintenance: CHANGELOG backfill for v3.2.30, TOC anchor verification, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.29→3.2.30.
+
 ## [3.2.29] - 2026-06-03
 
 - Repo maintenance: add ecosystem integration section to examples README, version bump.
