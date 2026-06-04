@@ -1,3 +1,11 @@
+## [3.2.32] - 2026-06-04
+
+- Repo maintenance: CHANGELOG backfill for v3.2.31 entry, updated Version History Latest entry to v3.2.31, version consistency audit across all files, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.31→3.2.32.
+
+## [3.2.31] - 2026-06-04
+
+- Repo maintenance: Audit completed, verified version consistency across all files, confirmed ecosystem cross-references are intact across all 6 AliDujie skills. Version bump 3.2.30→3.2.31.
+
 ## [3.2.30] - 2026-06-03
 
 - Repo maintenance: CHANGELOG backfill for v3.2.30, TOC anchor verification, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.29→3.2.30.

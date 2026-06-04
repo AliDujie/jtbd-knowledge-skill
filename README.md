@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.31-blue)
+![Version](https://img.shields.io/badge/version-3.2.32-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -1097,7 +1097,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.30)**: Repo maintenance 2026-06-03 — Updated TOC anchor (v3.2.29 → v3.2.30), ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
+**Latest (v3.2.31)**: Repo maintenance 2026-06-03 — Updated TOC anchor (v3.2.29 → v3.2.30), ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
 
 **Previous (v3.2.21)**: README maintenance — added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), version bump 3.2.20 → 3.2.21.
 
