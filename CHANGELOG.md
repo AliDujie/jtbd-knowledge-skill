@@ -1,3 +1,8 @@
+## [3.2.35] - 2026-06-05 (PM)
+
+- Added 4 new Quick Recipes: Job Story creation (10 min), competitive landscape mapping by Job (20 min), marketing copy generation from switch interviews (15 min), market size estimation from Job data (10 min).
+- Version bump 3.2.34→3.2.35.
+
 ## [3.2.34] - 2026-06-04 (PM)
 
 - Repo maintenance: Verified version consistency across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, confirmed TOC anchors intact, version bump 3.2.33→3.2.34.
