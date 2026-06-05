@@ -24,6 +24,7 @@
 - [Real-World Use Cases](#real-world-use-cases)
 - [Common Mistakes](#common-mistakes)
 - [AI Agent Integration](#ai-agent-integration)
+- [Ecosystem Integration](#ecosystem-integration)
 - [Quick Recipes](#quick-recipes)
 - [FAQ / Troubleshooting](#faq-troubleshooting)
 - [Resources](#resources)
