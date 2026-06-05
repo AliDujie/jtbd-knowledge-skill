@@ -1,3 +1,8 @@
+## [3.2.36] - 2026-06-05 (Evening)
+
+- Added PR template and CODEOWNERS for better contribution workflow
+- Ecosystem cross-reference audit across all 6 AliDujie skills
+
 ## [3.2.35] - 2026-06-05 (PM)
 
 - Added 4 new Quick Recipes: Job Story creation (10 min), competitive landscape mapping by Job (20 min), marketing copy generation from switch interviews (15 min), market size estimation from Job data (10 min).

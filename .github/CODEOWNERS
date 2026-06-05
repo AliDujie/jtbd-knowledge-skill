@@ -1,0 +1,6 @@
+# CODEOWNERS for AliDujie UX Research Ecosystem
+# Default owners for everything
+* @AliDujie
+
+# Python package ownership
+jtbd/ @AliDujie
