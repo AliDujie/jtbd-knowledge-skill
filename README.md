@@ -72,11 +72,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3236
+## 🆕 What's New in v3.2.36
 
 - **Repo Maintenance 2026-06-05 (Evening)**: Added PR template and CODEOWNERS, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.35→3.2.36.
 
-## 🆕 What's New in v3235
+## 🆕 What's New in v3.2.35
 
 - Added 4 new Quick Recipes: Job Story creation, competitive landscape mapping, marketing copy generation, market size estimation. Version bump 3.2.34→3.2.35.
 
