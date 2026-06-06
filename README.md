@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.36-blue)
+![Version](https://img.shields.io/badge/version-3.2.37-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3236)
+- [What's New](#whats-new-in-v3237)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -71,6 +71,10 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+
+## 🆕 What's New in v3.2.37
+
+- **Repo Maintenance 2026-06-06 (Evening)**: TOC anchor verification, version consistency audit, duplicate entry cleanup, ecosystem cross-reference validation across all 6 AliDujie skills. Version bump 3.2.36→3.2.37.
 
 ## 🆕 What's New in v3.2.36
 
