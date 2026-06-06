@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.37-blue)
+![Version](https://img.shields.io/badge/version-3.2.38-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3237)
+- [What's New](#whats-new-in-v3238)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -32,6 +32,11 @@
 - [Best Practices](#best-practices)
 - [Limitations](#limitations)
 - [Recommended Learning Path](#recommended-learning-path)
+- [Beginner's First JTBD Analysis](#beginners-first-jtbd-analysis--60-minute-job-discovery--新手入门教程)
+
+## 🆕 What's New in v3.2.38
+
+- **Repo Maintenance 2026-06-06 (Night)**: SKILL.md version sync (3.2.36→3.2.38 to match pyproject.toml/__init__.py/README badge), added missing Beginner's First JTBD Analysis TOC entry. Version bump 3.2.37→3.2.38.
 
 ---
 
@@ -1222,6 +1227,10 @@ A: JTBD is designed to chain with all 5 other skills: Persona (who) → JTBD (wh
 **Q: JTBD vs VPD — what's the difference?**
 A: JTBD discovers *what Jobs* users have. VPD maps those Jobs to your product's value proposition. JTBD is research; VPD is design. They're sequential: JTBD output → VPD input.
 
+## 🆕 What's New in v3.2.38
+
+- **Repo Maintenance 2026-06-06 (Night)**: SKILL.md version sync (3.2.36→3.2.38 to match pyproject.toml/__init__.py/README badge), added missing Beginner's First JTBD Analysis TOC entry. Version bump 3.2.37→3.2.38.
+
 ---
 
 ## 📚 Resources
@@ -1373,6 +1382,10 @@ story = swd.build_story(context="JTBD opportunity analysis", use_case="executive
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+## 🆕 What's New in v3.2.38
+
+- **Repo Maintenance 2026-06-06 (Night)**: SKILL.md version sync (3.2.36→3.2.38 to match pyproject.toml/__init__.py/README badge), added missing Beginner's First JTBD Analysis TOC entry. Version bump 3.2.37→3.2.38.
 
 ---
 
