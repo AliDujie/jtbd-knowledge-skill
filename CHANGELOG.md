@@ -1,4 +1,25 @@
-## [3.2.32] - 2026-06-04
+## [3.2.39] - 2026-06-07 (Morning)
+
+- Repo maintenance: Duplicate "What's New" entry cleanup across README.md (found entries leaked into FAQ, Resources, and License sections). All stray duplicate What's New entries removed. Version sync across README badge, SKILL.md, pyproject.toml, __init__.py. Ecosystem cross-reference validation.
+
+## [3.2.36] - 2026-06-05 (Evening)
+
+- Added PR template and CODEOWNERS for better contribution workflow
+- Ecosystem cross-reference audit across all 6 AliDujie skills
+
+## [3.2.35] - 2026-06-05 (PM)
+
+- Added 4 new Quick Recipes: Job Story creation (10 min), competitive landscape mapping by Job (20 min), marketing copy generation from switch interviews (15 min), market size estimation from Job data (10 min).
+- Version bump 3.2.34→3.2.35.
+
+## [3.2.34] - 2026-06-04 (PM)
+
+- Repo maintenance: Verified version consistency across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, confirmed TOC anchors intact, version bump 3.2.33→3.2.34.
+
+## [3.2.33] - 2026-06-04 (PM)
+
+- Repo maintenance: Verified version consistency across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, fixed stale TOC anchor (v3231 → v3233), version bump 3.2.32→3.2.33.
+
 
 - Repo maintenance: CHANGELOG backfill for v3.2.31 entry, updated Version History Latest entry to v3.2.31, version consistency audit across all files, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.31→3.2.32.
 
