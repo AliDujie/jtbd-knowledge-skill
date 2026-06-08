@@ -72,11 +72,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3235
+## 🆕 What's New in v3.2.35
 
 - **Repo Maintenance 2026-06-05**: Version consistency audit across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, verified TOC anchors, cleaned up duplicate SECURITY.md entry in web-persona-skill Resources table. Version bump 3.2.34→3.2.35.
 
-## 🆕 What's New in v3234
+## 🆕 What's New in v3.2.34
 
 - **Repo Maintenance 2026-06-04 (PM)**: Verified version consistency across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, fixed stale TOC anchor, version bump 3.2.33→3.2.34.
 
