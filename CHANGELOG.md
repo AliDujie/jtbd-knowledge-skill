@@ -194,6 +194,11 @@
 
 # Changelog
 
+## [3.2.40] - 2026-06-09
+
+- **Repo Maintenance**: merge conflict resolution + version sync + README restore + ecosystem audit
+
+
 ## v3.1.78 (2026-05-16)
 
 - Repo maintenance: Added `__version__` to `__all__` export list, fixed trailing whitespace in README

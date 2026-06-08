@@ -4,11 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-<<<<<<< HEAD
-![Version](https://img.shields.io/badge/version-3.2.36-blue)
-=======
-[![Version](https://img.shields.io/badge/version-3.2.39-blue)](CHANGELOG.md)
->>>>>>> 8cc5d4e25636c566557dc5050733ff26e2dd4cfc
+![Version](https://img.shields.io/badge/version-3.2.40-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -17,11 +13,7 @@
 
 ## 📑 Table of Contents
 
-<<<<<<< HEAD
 - [What's New](#whats-new-in-v3235)
-=======
-- [What's New](#whats-new-in-v3238)
->>>>>>> 8cc5d4e25636c566557dc5050733ff26e2dd4cfc
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -40,17 +32,6 @@
 - [Best Practices](#best-practices)
 - [Limitations](#limitations)
 - [Recommended Learning Path](#recommended-learning-path)
-- [Beginner's First JTBD Analysis](#beginners-first-jtbd-analysis--60-minute-job-discovery--新手入门教程)
-
-## 🆕 What's New in v3.2.39
-
-- **Repo Maintenance 2026-06-07 (Morning)**: Duplicate "What's New" entry cleanup across FAQ and License sections. All stray duplicate What's New entries removed (found 2 instances after line 1200). Ecosystem cross-reference validation. Version bump 3.2.38→3.2.39.
-
----
-
-## 🆕 What's New in v3.2.38
-
-- **Repo Maintenance 2026-06-06 (Night)**: SKILL.md version sync (3.2.36→3.2.38 to match pyproject.toml/__init__.py/README badge), added missing Beginner's First JTBD Analysis TOC entry. Version bump 3.2.37→3.2.38.
 
 ---
 
@@ -91,25 +72,13 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-<<<<<<< HEAD
 ## 🆕 What's New in v3235
 
 - **Repo Maintenance 2026-06-05**: Version consistency audit across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, verified TOC anchors, cleaned up duplicate SECURITY.md entry in web-persona-skill Resources table. Version bump 3.2.34→3.2.35.
 
 ## 🆕 What's New in v3234
-=======
-## 🆕 What's New in v3.2.37
->>>>>>> 8cc5d4e25636c566557dc5050733ff26e2dd4cfc
 
-- **Repo Maintenance 2026-06-06 (Evening)**: TOC anchor verification, version consistency audit, duplicate entry cleanup, ecosystem cross-reference validation across all 6 AliDujie skills. Version bump 3.2.36→3.2.37.
-
-## 🆕 What's New in v3.2.36
-
-- **Repo Maintenance 2026-06-05 (Evening)**: Added PR template and CODEOWNERS, ecosystem cross-reference audit across all 6 AliDujie skills. Version bump 3.2.35→3.2.36.
-
-## 🆕 What's New in v3.2.35
-
-- Added 4 new Quick Recipes: Job Story creation, competitive landscape mapping, marketing copy generation, market size estimation. Version bump 3.2.34→3.2.35.
+- **Repo Maintenance 2026-06-04 (PM)**: Verified version consistency across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, fixed stale TOC anchor, version bump 3.2.33→3.2.34.
 
 ## 🆕 What's New in v3.2.33
 
@@ -565,62 +534,6 @@ print(j.score_odi("Fast onboarding", importance=9, satisfaction=4))
 ```
 
 > 💡 **Pro Tip**: Always start with `analyze_forces()` — understanding *why* users switch reveals more than feature feedback. The "struggle moment" is where innovation opportunities hide.
-
-### Recipe: "Write a Job Story for our sprint" (10 min)
-```python
-j = JTBDSkill("Travel App")
-story = j.create_job_story(
-    situation="Planning a business trip on Sunday night",
-    motivation="Find a hotel near the client's office",
-    outcome="Book in under 2 minutes"
-)
-print(story)
-# → "When planning a business trip on Sunday night, I want to find a hotel near the client's office, so I can book in under 2 minutes"
-```
-
-### Recipe: "Map the competitive landscape by Job" (20 min)
-```python
-j = JTBDSkill("Meal Delivery")
-competition = j.analyze_competition(
-    job="Get dinner without cooking",
-    competitors=[
-        {"name": "Cooking at home", "share": 0.40, "strength": "Cheap", "weakness": "Time-consuming"},
-        {"name": "Restaurant delivery", "share": 0.30, "strength": "Variety", "weakness": "Expensive"},
-        {"name": "Frozen meals", "share": 0.20, "strength": "Fast", "weakness": "Unhealthy"},
-        {"name": "Our product", "share": 0.10, "strength": "Healthy+Fast", "weakness": "Limited selection"},
-    ]
-)
-print(competition)
-# → Job-level competitive landscape, not product-feature comparison
-```
-
-### Recipe: "Generate marketing copy from switch interviews" (15 min)
-```python
-j = JTBDSkill("Productivity App")
-copy = j.generate_marketing_copy(
-    forces={
-        "push": ["Current tool is too complex", "Switching costs are high"],
-        "pull": ["Simpler UI", "Better mobile experience"],
-        "anxiety": ["Will I lose my data?", "Team needs retraining"]
-    },
-    audience="Team leads at mid-size companies"
-)
-print(copy)
-# → Messaging that addresses the real switching motivations, not feature lists
-```
-
-### Recipe: "Estimate market size from Job data" (10 min)
-```python
-j = JTBDSkill("Meal Delivery")
-tam = j.analyze_market_size(
-    job="Get a healthy dinner without cooking",
-    population_size=50_000_000,
-    target_frequency="3 times/week",
-    willingness_to_pay=35
-)
-print(f"TAM: ¥{tam['tam_annual']/1e9:.1f}B/year")
-# → Market size estimated from Job frequency and WTP, not demographics
-```
 
 
 ## 🔄 Four Schools of Progress
@@ -1249,6 +1162,8 @@ A: JTBD is designed to chain with all 5 other skills: Persona (who) → JTBD (wh
 **Q: JTBD vs VPD — what's the difference?**
 A: JTBD discovers *what Jobs* users have. VPD maps those Jobs to your product's value proposition. JTBD is research; VPD is design. They're sequential: JTBD output → VPD input.
 
+---
+
 ## 📚 Resources
 
 - [SKILL.md](SKILL.md) — Agent-facing skill definition and prompt templates
@@ -1398,6 +1313,8 @@ story = swd.build_story(context="JTBD opportunity analysis", use_case="executive
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+---
 
 **Built with ❤️ as part of the AliDujie UX Research Ecosystem**
 
