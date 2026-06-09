@@ -1,3 +1,7 @@
+## [3.2.40] - 2026-06-10
+
+- Repo maintenance: consolidated What's New entries, CHANGELOG version sync, ecosystem cross-reference audit
+
 ## [3.2.39] - 2026-06-07 (Morning)
 
 - Repo maintenance: Duplicate "What's New" entry cleanup across README.md (found entries leaked into FAQ, Resources, and License sections). All stray duplicate What's New entries removed. Version sync across README badge, SKILL.md, pyproject.toml, __init__.py. Ecosystem cross-reference validation.

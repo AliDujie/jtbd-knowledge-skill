@@ -72,40 +72,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.35
+## 🆕 What's New in v3.2.40
 
-- **Repo Maintenance 2026-06-05**: Version consistency audit across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, verified TOC anchors, cleaned up duplicate SECURITY.md entry in web-persona-skill Resources table. Version bump 3.2.34→3.2.35.
+- **Repo Maintenance 2026-06-10**: Consolidated 8 What's New entries into 1, synced CHANGELOG to v3.2.40, ecosystem cross-reference audit across all 6 AliDujie skills
 
-## 🆕 What's New in v3.2.34
-
-- **Repo Maintenance 2026-06-04 (PM)**: Verified version consistency across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, fixed stale TOC anchor, version bump 3.2.33→3.2.34.
-
-## 🆕 What's New in v3.2.33
-
-- **Repo Maintenance 2026-06-04 (PM)**: Verified version consistency across all files (README badge, SKILL.md, pyproject.toml, __init__.py), ecosystem cross-reference audit across all 6 AliDujie skills, fixed stale TOC anchor (v3231 → v3233), version bump 3.2.32→3.2.33.
-
-## 🆕 What's New in v3.2.31
-
-- **Repo Maintenance 2026-06-04**: Audit completed, verified version consistency across all files, confirmed ecosystem cross-references are intact across all 6 AliDujie skills, version bump 3.2.30→3.2.31.
-
-## 🆕 What's New in v3.2.30
-
-- **Repo Maintenance 2026-06-03**: Enhanced beginner tutorial with ODI scoring benchmark table, improved cross-skill pipeline example with UDM + QuantUX integration, version bump 3.2.29→3.2.30.
-
-## 🆕 What's New in v3.2.29
-
-- **Repo Maintenance 2026-06-03**: Version sync fix (`__version__` in `__init__.py` aligned with `pyproject.toml` 3.2.29), TOC anchor verification, ecosystem cross-reference audit across all 6 AliDujie skills.
-
-## 🆕 What's New in v3.2.28
-
-- **Repo Maintenance 2026-06-03**: Added Beginner's First JTBD Analysis (60-min job discovery with 7 steps), version bump 3.2.27→3.2.28.
-
-## 🆕 What's New in v3.2.27
-
-- **Repo Maintenance 2026-06-02**: Version bump to 3.2.26, ecosystem cross-reference audit across all 6 AliDujie skills.
-
-> **📦 Earlier versions (v3.2.18 → v3.1.45)**: "Why JTBD is the Foundation of Product Strategy" promo, cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), CHANGELOG sync, TOC anchor fixes, JTBD statement quick reference, outcome-driven innovation scoring, competitor JTBD analysis framework, hire/fire decision tree, ecosystem cross-reference audits. Full changelog in [CHANGELOG.md](CHANGELOG.md).
-
+> **📦 Full history**: See [CHANGELOG.md](CHANGELOG.md) for complete version details.
 
 ## 🇨🇳 中文概览
 
