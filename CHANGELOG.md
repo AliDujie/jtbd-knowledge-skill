@@ -1,3 +1,11 @@
+## [3.2.42] - 2026-06-12
+
+- Repo maintenance 2026-06-12: Version sync audit (README/pyproject 3.2.42, SKILL.md 3.2.41 → 3.2.42), cross-reference validation across all 6 AliDujie skills
+
+## [3.2.41] - 2026-06-10 PM
+
+- Post-maintenance sync: SKILL.md version update to 3.2.41, ecosystem cross-reference final check
+
 ## [3.2.40] - 2026-06-10
 
 - Repo maintenance: consolidated What's New entries, CHANGELOG version sync, ecosystem cross-reference audit
