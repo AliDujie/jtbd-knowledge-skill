@@ -74,7 +74,8 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 ## 🆕 What's New in v3.2.42
 
-- **Repo Maintenance 2026-06-12**: Version sync audit (SKILL.md 3.2.41→3.2.42), CHANGELOG entries for 3.2.41-3.2.42, ecosystem cross-reference validation across all 6 AliDujie skills
+- **Repo Maintenance 2026-06-12 PM**: Bilingual "What's Next / 下一步" cross-skill navigation tables added, Quick Start section enhanced with CN translations, ecosystem cross-reference validation
+- **Repo Maintenance 2026-06-12 AM**: Version sync audit (SKILL.md 3.2.41→3.2.42), CHANGELOG entries for 3.2.41-3.2.42, ecosystem cross-reference validation across all 6 AliDujie skills
 - **Repo Maintenance 2026-06-10**: Consolidated 8 What's New entries into 1, synced CHANGELOG to v3.2.40, ecosystem cross-reference audit across all 6 AliDujie skills
 
 > **📦 Full history**: See [CHANGELOG.md](CHANGELOG.md) for complete version details.
@@ -260,11 +261,13 @@ story = s.build_story("Unmet Customer Needs", context=f"Top opportunity: {analys
 > print(JTBDSkill("Your Product").score_opportunity("Core Job", struggle=4, alternative=3, market=4, budget=4))
 > ```
 
-## ⚡ Quick Start (5 Minutes)
+## ⚡ Quick Start (5 Minutes) / 快速开始（5 分钟）
 
-### Install
+### Install / 安装
 
 ```bash
+# Copy the skill to your agent's skills directory
+# 将技能复制到你 Agent 的技能目录
 cp -r jtbd-knowledge-skill /your/agent/skills/
 ```
 
@@ -1247,9 +1250,19 @@ print(odi)
 - [ ] Created outcome statements
 - [ ] Prioritized with ODI scoring
 
-### 🔀 What's Next?
+### 🔀 What's Next? / 下一步？
 
 Chain JTBD findings with other AliDujie skills:
+
+将 JTBD 发现与其他 AliDujie 技能串联：
+
+| 你的下一步 | 推荐技能 | 作用 |
+|-----------|---------|------|
+| 定义目标用户 | [Persona](https://github.com/AliDujie/web-persona-skill) | 人物角色创建 |
+| 定性研究验证 | [UDM](https://github.com/AliDujie/universal-design-methods) | 访谈 + 可用性测试 |
+| 定量三角验证 | [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) | 大规模验证假设 |
+| 价值主张映射 | [VPD](https://github.com/AliDujie/value-proposition-design) | 画布 + PMF |
+| 数据故事呈现 | [SWD](https://github.com/AliDujie/storytelling-with-data) | 三幕叙事 |
 
 ```python
 # JTBD → UDM research → VPD canvas → SWD presentation
