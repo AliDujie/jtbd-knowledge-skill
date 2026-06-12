@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3240)
+- [What's New](#whats-new-in-v3242)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -876,30 +876,19 @@ python -m pytest jtbd/tests/test_all.py -v
 | Demand-Side Sales | Bob Moesta (2021) | Switch interviews, Forces of Progress |
 | Jobs to Be Done | Tony Ulwick (2016) | ODI methodology, opportunity algorithm |
 
-### 🔗 扩展生态 (Extended Ecosystem)
+## 🔗 Extended Ecosystem / 扩展生态
 
+JTBD need insights can be combined with management skills to turn Jobs data into business decisions.
 JTBD 需求洞察可与管理技能结合，将 Jobs 数据转化为商业决策：
 
-| 扩展技能 | 协作场景 |
-|---------|----------|
-| [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD 市场规模估算 → CEO 投资决策 |
-| [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD 机会评分 → CPO 产品路线图调整 |
-| [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD 竞争分析 → CMO 品牌差异化定位 |
-| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD 技术相关 Jobs → CTO 技术投资优先级 |
-| [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD 发现 → CEO 计划审查与 10 倍机会识别 |
-
-## 🔗 Extended Ecosystem
-
-JTBD need insights can be combined with management skills to turn Jobs data into business decisions:
-
-| Extended Skill | Collaboration Scenario |
-|---------------|----------------------|
-| [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD market sizing → CEO investment decisions |
-| [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD opportunity scores → CPO roadmap adjustment |
-| [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD competitive analysis → CMO brand differentiation |
-| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD tech-related Jobs → CTO technology investment priorities |
-| [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD findings → CEO plan review & 10x opportunity |
-| [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | STM frameworks → JTBD validates market hypotheses |
+| Extended Skill 扩展技能 | Collaboration Scenario 协作场景 |
+|----------------------|--------------------------------|
+| [CEO Advisor](https://github.com/AliDujie/ceo-advisor) | JTBD market sizing → CEO investment decisions / JTBD 市场规模估算 → CEO 投资决策 |
+| [CPO Advisor](https://github.com/AliDujie/cpo-advisor) | JTBD opportunity scores → CPO roadmap adjustment / JTBD 机会评分 → CPO 产品路线图调整 |
+| [CMO Advisor](https://github.com/AliDujie/cmo-advisor) | JTBD competitive analysis → CMO brand differentiation / JTBD 竞争分析 → CMO 品牌差异化定位 |
+| [CTO Advisor](https://github.com/AliDujie/cto-advisor) | JTBD tech-related Jobs → CTO tech investment priorities / JTBD 技术相关 Jobs → CTO 技术投资优先级 |
+| [Plan CEO Review](https://github.com/AliDujie/plan-ceo-review) | JTBD findings → CEO plan review & 10x opportunity / JTBD 发现 → CEO 计划审查与 10 倍机会识别 |
+| [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) | STM frameworks → JTBD validates market hypotheses / STM 分析框架 → JTBD 验证市场假设 |
 
 ## 🤝 Contributing
 
