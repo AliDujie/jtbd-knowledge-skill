@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.45-blue)
+![Version](https://img.shields.io/badge/version-3.2.46-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -72,7 +72,9 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.45
+## 🆕 What's New in v3.2.46
+
+- **Repo Maintenance 2026-06-14**: Ecosystem cross-reference parity audit, consolidated maintenance entries, version sync across all artifacts (3.2.45 → 3.2.46), README readability improvements
 
 - **Repo Maintenance 2026-06-13 PM**: Enhanced "Why Use This Skill?" section with Try-It-Now code example at top, added ecosystem pipeline diagram after Why section, consolidated What's New entries
 
