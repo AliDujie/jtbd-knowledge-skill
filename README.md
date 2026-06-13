@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.44-blue)
+![Version](https://img.shields.io/badge/version-3.2.45-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3244)
+- [What's New](#whats-new-in-v3245)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -72,7 +72,9 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.44
+## 🆕 What's New in v3.2.45
+
+- **Repo Maintenance 2026-06-13 PM**: Enhanced "Why Use This Skill?" section with Try-It-Now code example at top, added ecosystem pipeline diagram after Why section, consolidated What's New entries
 
 - **Repo Maintenance 2026-06-13 AM**: TOC anchor fix (v3242→v3244), version sync across all artifacts (README/pyproject.toml/SKILL.md), ecosystem cross-reference validation
 

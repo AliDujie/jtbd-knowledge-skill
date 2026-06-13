@@ -1,3 +1,10 @@
+## [3.2.45] - 2026-06-13
+
+- Enhanced "Why Use This Skill?" section with ecosystem pipeline diagram and cross-skill collaboration summary
+- Consolidated What's New entries for clarity
+- Version sync across all artifacts (README/pyproject.toml/SKILL.md/__init__.py: 3.2.44 → 3.2.45)
+- Ecosystem cross-reference validation across all 6 AliDujie skills
+
 ## [3.2.44] - 2026-06-13
 
 - TOC anchor fix (#whats-new-in-v3242 → v3244), version sync across all artifacts (README/pyproject.toml/SKILL.md: 3.2.43 → 3.2.44)
