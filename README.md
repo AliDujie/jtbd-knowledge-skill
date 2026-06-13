@@ -1081,21 +1081,11 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (3.2.42)**: Repo maintenance 2026-06-04 PM — Version consistency audit across all files, ecosystem cross-reference verification across all 6 AliDujie skills, TOC anchor confirmation. Version bump.
+**Latest (v3.2.45)**: Repo maintenance 2026-06-13 PM — Enhanced "Why Use This Skill?" section with ecosystem pipeline diagram and cross-skill collaboration summary, consolidated What's New entries, version sync across all artifacts (README/pyproject.toml/SKILL.md/__init__.py: 3.2.44 → 3.2.45), ecosystem cross-reference validation across all 6 AliDujie skills.
 
-**Previous (v3.2.33)**: Repo maintenance 2026-06-04 PM — Version consistency audit across all files, ecosystem cross-reference verification across all 6 AliDujie skills, TOC anchor fix. Version bump.
+**Previous (v3.2.44)**: TOC anchor fix (#whats-new-in-v3242 → v3244), version sync across all artifacts (README/pyproject.toml/SKILL.md: 3.2.43 → 3.2.44), ecosystem cross-reference validation.
 
-**Previous (v3.2.31)**: Repo maintenance 2026-06-03 — Updated TOC anchor (v3.2.29 → v3.2.30), ecosystem cross-reference audit across all 6 AliDujie skills. Version bump.
-
-**Previous (v3.2.21)**: README maintenance — added "Why JTBD is the Foundation of Product Strategy" promotional section, added cross-skill collaboration code examples (JTBD + Persona/VPD/SWD), version bump 3.2.20 → 3.2.21.
-
-**Previous (v3.2.20)**: Repo maintenance — added JTBD Research Sprint Template, JTBD Quick-Ref tables (Opportunity Score interpretation, Four Forces framework, Job Story formats), and ecosystem cross-reference audit across all 6 AliDujie skills.
-
-**Previous (v3.2.17)**: CHANGELOG sync (backfilled 3 missing version entries), consolidated redundant What's New entries, ecosystem cross-reference audit across all 6 AliDujie skills.
-
-**Previous (v3.2.05)**: Fixed stale What's New TOC link (v3.2.04 → v3.2.05), updated Version History latest entry (v3.2.04 → v3.2.05), ecosystem cross-reference audit across all 6 AliDujie skills.
-
-**Previous (v3.1.89)**: Repo maintenance — added JTBD Interview Scenario Cards (3 scenarios), added Opportunity Score Benchmarks table, synced versions across all files.
+**Previous (v3.2.43)**: Enhanced "What's Next" pipeline code example to include all 6 skills (Persona → JTBD → UDM → QuantUX → VPD → SWD end-to-end), ecosystem cross-reference validation.
 
 **Previous (v3.1.88)**: Repo maintenance — converted "When NOT to Use JTBD" to bilingual CN/EN table format, added Structured Thinking Model cross-reference, enhanced SEO-friendly headings.
 
