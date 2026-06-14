@@ -4,7 +4,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.47-blue)
+![Version](https://img.shields.io/badge/version-3.2.48-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3247)
+- [What's New](#whats-new-in-v3248)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -72,7 +72,9 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3.2.47
+## 🆕 What's New in v3.2.48
+
+- **Repo Maintenance 2026-06-14**: Version sync across all artifacts (3.2.47 → 3.2.48), added Structured Thinking Model (STM) cross-reference to examples/README.md ecosystem section, enhanced ecosystem documentation consistency
 
 - **Repo Maintenance 2026-06-14 PM**: Fixed stale What's New TOC anchor (v3246 → v3247), enhanced Python version badge parity check
 

@@ -85,5 +85,6 @@ JTBD is the "why" layer of the AliDujie UX Research Ecosystem. Chain it with oth
 - **JTBD → QuantUX**: JTBD opportunity scores → [QuantUX](https://github.com/AliDujie/Quantitative-UX-Research) validation experiments
 - **JTBD → VPD**: JTBD customer jobs → [VPD](https://github.com/AliDujie/value-proposition-design) canvas filling
 - **JTBD → SWD**: JTBD opportunity reports → [SWD](https://github.com/AliDujie/storytelling-with-data) data narratives
+- **JTBD → STM**: JTBD market analysis → [STM](https://github.com/AliDujie/Structured-Thinking-Model) strategic frameworks
 
-See the [full pipeline example](../README.md#complete-pipeline-example) in README.md for a 6-skill end-to-end workflow.
+See the [full pipeline example](../README.md#complete-pipeline-example) in README.md for a 7-skill end-to-end workflow.
