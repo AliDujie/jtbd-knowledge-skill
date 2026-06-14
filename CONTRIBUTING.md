@@ -67,6 +67,7 @@ When contributing, consider how JTBD fits into the broader AliDujie UX Research 
 - [Value Proposition Design](https://github.com/AliDujie/value-proposition-design) — JTBD 发现的"工作"映射到 VPD 画布
 - [Web Persona](https://github.com/AliDujie/web-persona-skill) — JTBD 细分可与 Persona 角色结合
 - [Storytelling with Data](https://github.com/AliDujie/storytelling-with-data) — JTBD 分析结果可交给 SWD 进行数据叙事
+- [Structured Thinking Model](https://github.com/AliDujie/Structured-Thinking-Model) — JTBD 竞争格局可用 STM 战略框架分析
 
 ---
 
