@@ -725,7 +725,7 @@ def test_knowledge_search():
 
 def test_version():
     from jtbd import __version__
-    assert __version__ == "3.1.45"
+    assert __version__ == "3.2.52"
     print("✅ test_version passed")
 
 
