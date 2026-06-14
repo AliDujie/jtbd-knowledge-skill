@@ -6,7 +6,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.51-blue)
+![Version](https://img.shields.io/badge/version-3.2.52-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -15,7 +15,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3251)
+- [What's New](#whats-new-in-v3252)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -74,7 +74,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3251
+## 🆕 What's New in v3252
+
+- **Repo Maintenance 2026-06-15 PM**: Version bump 3.2.51 → 3.2.52, ecosystem documentation consistency audit, cross-skill collaboration table validation, incremental content review.
+
+## 🆕 What's New in v3.2.51
 
 - **Repo Maintenance 2026-06-15 AM**: Version bump 3.2.50 → 3.2.51, consolidated daily maintenance entries, ecosystem documentation consistency audit.
 
