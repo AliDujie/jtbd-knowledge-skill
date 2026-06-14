@@ -6,7 +6,7 @@
 
 📖 [GitHub Repository](https://github.com/AliDujie/jtbd-knowledge-skill)
 
-![Version](https://img.shields.io/badge/version-3.2.50-blue)
+![Version](https://img.shields.io/badge/version-3.2.51-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
@@ -15,7 +15,7 @@
 
 ## 📑 Table of Contents
 
-- [What's New](#whats-new-in-v3250)
+- [What's New](#whats-new-in-v3251)
 - [Why Use This Skill?](#why-use-this-skill)
 - [Why Teams Choose JTBD](#why-teams-choose-jtbd)
 - [Who This Skill Is For](#who-this-skill-is-for)
@@ -73,6 +73,10 @@ skill = JTBDSkill("Your Product")
 skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
+
+## 🆕 What's New in v3251
+
+- **Repo Maintenance 2026-06-15 AM**: Version bump 3.2.50 → 3.2.51, consolidated daily maintenance entries, ecosystem documentation consistency audit.
 
 ## 🆕 What's New in v3.2.50
 
@@ -1094,6 +1098,8 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
+
+**Latest (v3.2.51)**: Repo maintenance 2026-06-15 AM — Version bump 3.2.50 → 3.2.51, consolidated daily maintenance entries, ecosystem documentation consistency audit.
 
 **Latest (v3.2.50)**: Repo maintenance 2026-06-14 PM — Version bump 3.2.49 → 3.2.50, consolidated daily maintenance entries, finalized ecosystem documentation across all 6 AliDujie skills.
 
