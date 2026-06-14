@@ -1,3 +1,7 @@
+## v3.2.50 (2026-06-14)
+
+- Fixed stale TOC anchor (#whats-new-in-v3248 → v3250), version sync across all artifacts (3.2.49 → 3.2.50), ecosystem cross-reference validation.
+
 ## v3.2.48 (2026-06-14)
 
 - Version sync across all artifacts (3.2.47 → 3.2.48)
