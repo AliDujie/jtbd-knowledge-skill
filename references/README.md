@@ -31,6 +31,8 @@ This directory contains methodology reference documents for the JTBD Knowledge s
 
 These reference documents are consulted by the AI Agent during JTBD analysis, covering the complete knowledge system from theory to practice. `16-ecosystem-collaboration.md` provides end-to-end collaboration workflows between JTBD and other skills.
 
+> 💡 **完整生态链**: Persona (用户定义) → JTBD (深层需求) → UDM (方法引擎) → VPD (价值设计) → QuantUX (数据验证) → SWD (数据叙事) → [STM](https://github.com/AliDujie/Structured-Thinking-Model) (战略决策)
+
 ## 🌐 技能生态关联 / Skill Ecosystem Connections
 
 JTBD 负责理解用户深层需求，与全链路技能协同：
@@ -40,6 +42,7 @@ JTBD 负责理解用户深层需求，与全链路技能协同：
 - **JTBD → VPD**: JTBD 发现的"工作" → VPD 映射到价值主张画布
 - **JTBD → Persona**: JTBD 的切换行为分析 → Persona 补充行为型角色维度
 - **JTBD → SWD**: JTBD 的分析报告 → SWD 进行高管汇报改造
+- **JTBD → STM**: JTBD 的市场分析可输入 [STM](https://github.com/AliDujie/Structured-Thinking-Model) 进行战略框架构建
 
 ## 来源 / Source
 
