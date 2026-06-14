@@ -74,9 +74,9 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 
 ## 🆕 What's New in v3.2.47
 
-- **Repo Maintenance 2026-06-14 PM**: Fixed stale What's New TOC anchor (v3246 → v3247), consolidated maintenance entries, enhanced Python version badge parity check, consolidated maintenance entries
+- **Repo Maintenance 2026-06-14 PM**: Fixed stale What's New TOC anchor (v3246 → v3247), enhanced Python version badge parity check
 
-- **Repo Maintenance 2026-06-14**: Ecosystem cross-reference parity audit, consolidated maintenance entries, version sync across all artifacts (3.2.45 → 3.2.46), README readability improvements
+- **Repo Maintenance 2026-06-14**: Ecosystem cross-reference parity audit, version sync across all artifacts (3.2.45 → 3.2.46), README readability improvements
 
 - **Repo Maintenance 2026-06-13 PM**: Enhanced "Why Use This Skill?" section with Try-It-Now code example at top, added ecosystem pipeline diagram after Why section, consolidated What's New entries
 
@@ -1085,7 +1085,7 @@ See [INSTALL.md](INSTALL.md) for full configuration options and agent integratio
 See [CHANGELOG.md](CHANGELOG.md) for full release notes.
 
 
-**Latest (v3.2.46)**: Repo maintenance 2026-06-14 PM — Fixed stale What's New TOC anchor (v3246 → v3247), consolidated maintenance entries, consolidated maintenance entries.
+**Latest (v3.2.47)**: Repo maintenance 2026-06-14 PM — Fixed stale What's New TOC anchor (v3246 → v3247), version sync across all artifacts.
 
 **Previous (v3.2.45)**: Repo maintenance 2026-06-13 PM — Enhanced "Why Use This Skill?" section with ecosystem pipeline diagram and cross-skill collaboration summary, consolidated What's New entries, version sync across all artifacts (README/pyproject.toml/SKILL.md/__init__.py: 3.2.44 → 3.2.45), ecosystem cross-reference validation across all 6 AliDujie skills.
 
