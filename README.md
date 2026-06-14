@@ -74,12 +74,11 @@ skill.analyze(include_ceo_analysis=True)  # Full analysis + CEO decision support
 ```
 
 
-## 🆕 What's New in v3252
+## 🆕 What's New in v3253
 
 - **Repo Maintenance 2026-06-15**: Version bump 3.2.52 → 3.2.53, consolidated older What's New entries, added Four Forces + Opportunity Scoring combo recipe, cross-skill collaboration consistency check.
 
 
-- **Repo Maintenance 2026-06-15 PM**: Version bump 3.2.51 → 3.2.52, ecosystem documentation consistency audit, cross-skill collaboration table validation, incremental content review.
 
 ## 🆕 What's New in v3.2.51
 
