@@ -19,6 +19,19 @@ All examples use **zero dependencies** — pure Python standard library only.
 
 ## Available Examples / 可用示例
 
+### Expected Output Preview / 输出预览
+
+```
+>>> Opportunity Scoring for: Meal Delivery App
+>>>
+>>>  Job: "Quickly find a restaurant that delivers fast" (Score: 27.0)
+>>>       Importance: 8.2 | Satisfaction: 5.5 | Opportunity: HIGH
+>>>  Job: "Track my order in real-time" (Score: 21.0)
+>>>       Importance: 7.8 | Satisfaction: 5.7 | Opportunity: HIGH
+>>>  Job: "Reorder from my favorites" (Score: 12.0)
+>>>       Importance: 6.5 | Satisfaction: 5.8 | Opportunity: MEDIUM
+```
+
 ### 01_interview_guide.py
 Switch interview guide generation with Forces of Progress framework.
 生成基于"进步力量"框架的切换访谈提纲。
